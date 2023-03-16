@@ -1,13 +1,13 @@
 import React from 'react'
-
+import { NavLink } from 'react-router-dom'
 export default function Navbar() {
   const arrow = require("../images/down.png")
 
 
   return (
     <nav>
-      <div className='active'>HOME</div>
-      <div>ABOUT US<img src={arrow} alt=""/></div>
+      <NavLink to="/"><div>  HOME</div></NavLink>
+      <NavLink to="/governingbody">ABOUT US<img src={arrow} alt=""/></NavLink>
       <div>ACADEMICS<img src={arrow} alt=""/></div>
       <div>ADMISSION<img src={arrow} alt=""/></div>
       <div>ALUMINI<img src={arrow} alt=""/></div>

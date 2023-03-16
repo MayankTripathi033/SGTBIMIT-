@@ -5,9 +5,11 @@ export default function ImageCarousel() {
   return (
     <div>
       <Carousel
-        infiniteLoop="true"
-        autoPlay="true"
-        emulateTouch="true">
+        infiniteLoop={true}
+        autoPlay={true}
+        emulateTouch={true}
+        >
+
         <div className="carousel-item">
           <img src={require("../images/1.png")} alt="carousel-1" />
         </div>

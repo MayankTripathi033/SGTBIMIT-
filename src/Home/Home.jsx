@@ -4,10 +4,13 @@ import Welcome from './Welcome'
 import ImageCarousel from './ImageCarousel'
 
 export default function Home() {
+  
+
+
   return (
-   <>
-   <ImageCarousel />
-   <Welcome />
-   </>
+    <>
+      <ImageCarousel />
+      <Welcome />
+    </>
   )
 }
