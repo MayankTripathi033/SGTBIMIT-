@@ -1,0 +1,155 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Carousel */
+.thumbs-wrapper {
+    display: none;
+}
+
+
+/* Header */
+header{
+    background-image: linear-gradient(#478ac9, #ec640c);
+    display: flex;
+    flex-direction: column;
+}
+.header-top{
+    margin-inline: auto;
+    display: flex;
+    width: 60vw;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-top button{
+    border: none;
+    outline: none;
+    background-color: #ec640c;
+    margin-inline: 1.5rem;
+    padding: 1.5rem;
+    color: white;
+    letter-spacing: .125em;
+    font-weight: 700;
+    border-radius: 1.5rem;
+}
+.logo{
+    height: 150px;
+}
+.header-news{
+    margin-inline: auto;
+}
+
+
+
+/* NavBar */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(#478ac9, #ec640c);
+    color: white;
+    padding: 1.5rem;
+    gap: 2rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+nav>* {
+    display: flex;
+    gap: .7rem;
+    padding-block: 1rem;
+    align-items: center;
+    cursor: pointer;
+}
+
+.active,
+nav>*:hover {
+    border-bottom: 2px solid rgb(71, 138, 201);
+}
+
+
+nav img {
+    width: 8px;
+    height: 8px;
+}
+
+/* Welcome */
+.welcome {
+    background-color: #478ac9;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    ;
+}
+
+.welcome-wrapper {
+    display: flex;
+    color: white;
+
+}
+
+.welcome-img {
+    width: 531px;
+    height: 632px;
+    border-radius: 3rem;
+    object-fit: cover;
+    margin-top: 5rem;
+    margin-left: 3.2rem;
+}
+
+.welcome-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome-text h1 {
+    text-align: center;
+    padding: 2rem;
+    font-size: 2.5rem;
+}
+
+.welcome-text p {
+    margin-inline: 2rem;
+    font-size: 1.375rem;
+    line-height: 2;
+    text-align: justify;
+}
+
+/* welcome buttons */
+.learn-more-btn {
+    margin: 2rem 4rem 0 auto;
+    border: none;
+    outline: none;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    background-color: #2cccc4;
+    color: white;
+    letter-spacing: .1rem;
+    font-size: 1.125rem;
+}
+
+.develop-skills-btn {
+    margin: auto auto 6rem auto;
+    border: none;
+    outline: none;
+    padding: 2rem 16rem;
+    text-transform: uppercase;
+    background-color: #2cccc4;
+    color: white;
+    letter-spacing: .1rem;
+    font-size: 1.5rem;
+}
+
