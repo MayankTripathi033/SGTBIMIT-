@@ -1,10 +1,12 @@
 import React from 'react'
+import AOS from 'aos'
 
 export default function Welcome() {
+  
   return (
-    <section className="welcome">
+    <section className="welcome"  data-aos="fade-up">
       <div className="welcome-wrapper">
-        <img src="https://assets.nicepagecdn.com/c86f032b/4353070/images/guruteghbahadur.jpg" alt="" className='welcome-img' />
+        <img src="https://assets.nicepagecdn.com/c86f032b/4353070/images/guruteghbahadur.jpg" alt="" className='welcome-img'/>
         <div className='welcome-text'>
           <h1>
             Welcome to SGTBIMIT

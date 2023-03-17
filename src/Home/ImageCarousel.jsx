@@ -1,6 +1,5 @@
 import React from 'react'
 import { Carousel } from 'react-responsive-carousel'
-
 export default function ImageCarousel() {
   return (
     <div>
@@ -8,6 +7,7 @@ export default function ImageCarousel() {
         infiniteLoop={true}
         autoPlay={true}
         emulateTouch={true}
+        interval={2000}
         >
 
         <div className="carousel-item">

@@ -10,6 +10,7 @@ export default function AdminisCarousel() {
     <section className='adminis-section'>
       <Carousel
         infiniteLoop={true}
+        interval = {3000}
         emulateTouch={true}
         className='adminis-carousel' 
 
