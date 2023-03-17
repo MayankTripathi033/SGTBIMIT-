@@ -10,15 +10,16 @@ export default function AdminisCarousel() {
     <section className='adminis-section'>
       <Carousel
         infiniteLoop={true}
-        interval = {3000}
+        interval = {4000}
         emulateTouch={true}
-        className='adminis-carousel' 
+        className='adminis-carousel'
+        autoPlay={true} 
 
       >
         {adminisArray && adminisArray.map((adminis) => (
-          <div className="adminis">
+          <div className="adminis" key={adminis._id}>
             <img src={`http://localhost:5000${adminis.image}`} alt="cant load" />
-            <h2 className="adminis-heading" key={adminis._id}>{adminis.name}
+            <h2 className="adminis-heading" >{adminis.name}
               <strong className='position'> {adminis.position}
               </strong>
             </h2>
