@@ -16,7 +16,7 @@ export default function AdminisCarousel() {
       >
         {adminisArray && adminisArray.map((adminis) => (
           <div className="adminis">
-            <img src={adminis.image} alt="cant load" />
+            <img src={`http://localhost:5000${adminis.image}`} alt="cant load" />
             <h2 className="adminis-heading" key={adminis._id}>{adminis.name}
               <strong className='position'> {adminis.position}
               </strong>
