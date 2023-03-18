@@ -595,3 +595,77 @@ text-align: center;
     border-radius: 2.5rem;
     margin-right: 1rem;
 }
+
+/* director read more */
+
+.dir-readmore{
+    width:70vw;
+    margin-inline: auto;
+
+
+}
+.cont{
+    position: relative;
+    width: max-content;
+    margin-inline: auto;
+    padding-top: 3rem;
+}
+
+.gradient{
+    background: linear-gradient(to top,rgb(0, 0, 0),transparent);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.cont img{
+    width:800px;
+
+}
+.title{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 4rem;
+    font-size: 2rem;
+    color: white;
+}
+.dir-readmore h2{
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 3rem;
+}
+.dir-readmore h3{
+    font-size: 1.8rem;
+    text-align: center;
+
+}
+.dir-readmore p{
+    font-size: 1.5rem;
+    text-align: justify;
+
+}
+
+/* socity */
+.society{
+    text-align: center;
+    width: 80vw;
+    margin-inline: auto;
+    padding-top: 2rem;
+}
+.society h1{
+    font-size: 2rem;
+}
+.society h2{
+    font-size:1.7rem;
+}
+.society p{
+    font-size: 1.7rem;
+    color: rgba(0, 0, 0, 0.8);
+    text-align: justify;
+}
+.society img{
+    width:700px;
+}
+.nsslink{
+    font-size: 2rem;
+}
