@@ -15,9 +15,9 @@ function App() {
       <Navbar></Navbar>
       <Routes>
         <Route index element={<Home/>}></Route>
-        <Route path= 'governingbody' element={<AdminisCarousel/>}/>
+        <Route path= 'governingbody' element={ <AdminisCarousel/> }/>
         <Route path= "about" element={ <About/> }/>
-        <Route path = "vision"/>
+        <Route path = "vision" element = { <Vision/> }/>
       </Routes>
     </Router>
   );
