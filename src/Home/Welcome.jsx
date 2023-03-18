@@ -1,13 +1,16 @@
 import React from 'react'
-
+import AOS from 'aos'
 export default function Welcome() {
+  AOS.init({
+    startEvent: 'load'
+  })
   
   return (
-    <section className="welcome"  data-aos="fade-up">
+    <section className="welcome">
       <div className="welcome-wrapper">
-        <img src="https://assets.nicepagecdn.com/c86f032b/4353070/images/guruteghbahadur.jpg" alt="" className='welcome-img'/>
-        <div className='welcome-text'>
-          <h1>
+        <img src="https://assets.nicepagecdn.com/c86f032b/4353070/images/guruteghbahadur.jpg" alt="" className='welcome-img' data-aos="flip-right" data-aos-offset="300"/>
+        <div className='welcome-text' data-aos="flip-left" data-aos-offset="300">
+          <h1 >
             Welcome to SGTBIMIT
           </h1>
           <p>
@@ -15,11 +18,11 @@ export default function Welcome() {
 
           </p>
           <button className="learn-more-btn" type="button">
-          <a href="/">Learn More</a>
+          <a href="/"  >Learn More</a>
         </button>
         </div>
       </div>
-      <button className="develop-skills-btn" type="button">Develop your skills with SGTBIMIT</button>
+      <button className="develop-skills-btn" type="button" data-aos="zoom-in" data-aos-offset="300">Develop your skills with SGTBIMIT</button>
     </section>
 
   )

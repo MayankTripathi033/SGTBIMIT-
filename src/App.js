@@ -6,10 +6,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './styles.css'
 import AdminisCarousel from './GoverningBody/AdminisCarousel.jsx'
 import About from './About/About'
-import AOS from 'aos'
 
 function App() {
-AOS.init()
 
   return (
     <Router>

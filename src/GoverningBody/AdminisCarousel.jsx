@@ -3,11 +3,12 @@ import useFetch from '../useFetch'
 import { Carousel } from 'react-responsive-carousel'
 
 export default function AdminisCarousel() {
-  const adminisArray = useFetch("http://localhost:5000/Administration/Administration_Display")
+  const {data: adminisArray, isPending} = useFetch("http://localhost:5000/Administration/Administration_Display")
 
   return (
 
     <section className='adminis-section'>
+      {isPending && <div className="loading">Loading...</div> }
       <Carousel
         infiniteLoop={true}
         interval = {4000}
@@ -18,16 +19,13 @@ export default function AdminisCarousel() {
       >
         {adminisArray && adminisArray.map((adminis) => (
           <div className="adminis" key={adminis._id}>
-            <img src={`http://localhost:5000${adminis.image}`} alt="cant load" />
+            <img src={`http://localhost:5000${adminis.image}`} alt="cant load" className='adminis-img'/>
             <h2 className="adminis-heading" >{adminis.name}
-              <strong className='position'> {adminis.position}
-              </strong>
+              <strong className='position'> {adminis.position}</strong>
             </h2>
             <strong className="short-note">WAHEGURU JI KA KHALSA, WAHEGURU JI KI FATEH!!
               <strong>{adminis.shortNote}</strong>
             </strong>
-
-
             <p className="long-note"> {adminis.longNote} </p>
           </div>
         ))}

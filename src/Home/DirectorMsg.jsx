@@ -5,7 +5,7 @@ export default function DirectorMsg() {
     <div className="director-msg">
       <div className="bg-img"></div>
       <div className='director-container'>
-        <h1 className='director-heading'>DIRECTOR'S MESSAGE</h1>
+        <h1 className='director-heading' data-aos="zoom-in" data-aos-offset="300" data-aos-duration="3000">DIRECTOR'S MESSAGE</h1>
         <img src={require("../images/director.jpg")} alt="" />
         <h1 className='wmk'>WAHEGURU JI KA KHALSA, WAHEGURU JI KI FATEH!!</h1>
         <p className='dr-short-note'> “Those who walk on the path of truth shall be praised throughout the world”<br />
