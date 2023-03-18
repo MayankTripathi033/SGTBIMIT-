@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './styles.css'
 import AdminisCarousel from './GoverningBody/AdminisCarousel.jsx'
 import About from './About/About'
-
+import Vision from './Vision'
 function App() {
 
   return (
@@ -15,8 +15,9 @@ function App() {
       <Navbar></Navbar>
       <Routes>
         <Route index element={<Home/>}></Route>
-        <Route path='governingbody' element={<AdminisCarousel/>}></Route>
-        <Route path="about" element={ <About/> }></Route>
+        <Route path= 'governingbody' element={<AdminisCarousel/>}/>
+        <Route path= "about" element={ <About/> }/>
+        <Route path = "vision"/>
       </Routes>
     </Router>
   );
