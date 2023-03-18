@@ -4,7 +4,10 @@ import Welcome from './Welcome'
 import ImageCarousel from './ImageCarousel'
 import Testimonials from './Testimonials'
 import DirectorMsg from './DirectorMsg'
-
+import Placements from './Placements'
+import Collaboration from './Collaboration'
+import Recruiters from './Recruiters'
+import Map from './Map'
 export default function Home() {
   
 
@@ -15,6 +18,11 @@ export default function Home() {
       <Welcome />
       <Testimonials />
       <DirectorMsg />
+      <Placements />
+      <Collaboration />
+      <Recruiters />
+      <Map />
+      
     </>
   )
 }

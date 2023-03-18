@@ -353,11 +353,15 @@ nav img {
 
 /* director msg */
 .director-msg{
+    padding: 2rem;
+    color: white;
     display: flex;
     justify-content: center;
     position: relative;
     z-index: -2;
     background: url("https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/2cc1a632c8c5511c86638369/jhhhhhh.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .director-msg img{
     z-index: 1;
@@ -373,4 +377,138 @@ nav img {
     background-color:#478ac9;
     opacity: 0.7;
     z-index: -1;
+}
+
+
+.director-container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 45%;
+    background-color:#77aad9; ;
+    
+}
+
+.director-container img{
+    height: 500px;
+    width: 500px;
+    margin-inline: auto;
+
+
+
+}
+
+.director-heading{
+    font-size:3.8rem;
+    text-align: center;
+    
+}
+
+.wmk{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.dr-short-note{
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.dr-long-note{
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+/* Collaborations */
+
+.for-color{
+    background-color:#4c7397;
+}
+.collab{
+   
+    color:#2cccc4;
+    text-align: center;
+    font-size: 3rem;
+    padding: 2rem;
+}
+.collab-part1{
+    display: flex;
+    padding: 2rem;
+    padding-inline:20rem;
+    gap:15rem;   
+    
+
+}
+.collab-part2{
+    display: flex;
+    padding-inline:20rem;
+    gap: 15rem;   
+}
+
+/* Recruiters */
+
+.recr-heading{
+font-size: 2.5rem;
+padding: 2rem;
+text-align: center;
+}
+.recruiters{
+    display: flex;
+    gap: 32rem;
+    padding: 1rem;
+}
+
+/* map */
+
+.map .upper-btns{
+    background-image: linear-gradient(to right, #478ac9, #ec640c);
+    border-style: solid;
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: 0px;
+    margin: 12px auto 0 25px;
+    padding: 10px 208px 11px;
+    color: white;
+    width:50rem;
+    padding-block: 1rem;
+}
+
+.map{
+    background-color:#2cccc4;
+    padding-left: 5em;
+    padding-top: 2rem;
+    display: flex;
+    gap: 5rem;
+    color: white;
+    font-size: 1.5rem;
+}
+.map-location{
+    height: 40rem;
+    width: 40rem;
+    margin-left: auto;
+}
+
+.map-button > *{
+    text-align: center;
+}
+.lower-btn{
+    padding: 1rem 2rem;
+    color: white;
+    background-color: green;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background-color: #ec640c !important;
+    border-radius: 2.5rem;
+}
+
+
+.lower-input{
+    border: none;
+    outline: none;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    border-radius: 2.5rem;
+    margin-right: 1rem;
 }
