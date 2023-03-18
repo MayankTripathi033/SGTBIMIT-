@@ -1,10 +1,7 @@
 import React from 'react'
-import AOS from 'aos'
+
 export default function Welcome() {
-  AOS.init({
-    startEvent: 'load'
-  })
-  
+
   return (
     <section className="welcome">
       <div className="welcome-wrapper">

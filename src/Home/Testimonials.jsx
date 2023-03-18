@@ -1,10 +1,8 @@
-import Aos from 'aos'
+
 import React from 'react'
 
 export default function Testimonials() {
-    Aos.init({
-        startEvent: 'load'
-    })
+
     return(
 
     <>

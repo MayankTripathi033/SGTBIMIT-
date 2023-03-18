@@ -286,7 +286,7 @@ nav img {
 .about {
     width: 55%;
     margin-inline: auto;
-
+    margin-bottom: 7rem;
 }
 
 .about-title {
@@ -319,6 +319,7 @@ nav img {
     text-align: justify;
     line-height: 1.5rem;
     font-size: 1.25rem;
+
 }
 /* cards */
 .test {
@@ -557,7 +558,7 @@ text-align: center;
 
 .map{
     background-color:#2cccc4;
-    padding-left: 5em;
+    padding-inline: 5em;
     padding-top: 2rem;
     display: flex;
     gap: 5rem;

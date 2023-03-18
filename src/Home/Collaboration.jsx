@@ -6,9 +6,9 @@ export default function Collaboration() {
   return (
     <>
       <div className='for-color'>
-        <h1 className='collab'>COLLABORATIONS</h1>
+        <h1 className='collab' data-aos="zoom-in" data-aos-offset="300">COLLABORATIONS</h1>
 
-        <div className='collab-part1'>
+        <div className='collab-part1' data-aos="fade-down" data-aos-offset="300">
 
           <div className='collab1'>
             <img src={require("../images/Sharekhan.jpg")} alt="" />
@@ -20,7 +20,7 @@ export default function Collaboration() {
             <img src={require("../images/Sharekhan.jpg")} alt="" />
           </div>
         </div>
-        <div className='collab-part2'>
+        <div className='collab-part2' data-aos="fade-up" data-aos-offset="300">
           <div className='collab4'>
             <img src={require("../images/Sharekhan.jpg")} alt="" />
           </div>
