@@ -8,12 +8,12 @@ export default function Collaboration() {
         <div className="collab-container">
           <h1>Collaborations</h1>
           <div className="collab-grid">
-            <img src={img} alt="cant load" />
-            <img src={img} alt="cant load" />
-            <img src={img} alt="cant load" />
-            <img src={img} alt="cant load" />
-            <img src={img} alt="cant load" />
-            <img src={img} alt="cant load" />
+            <div><img src={img} alt="cant load"/></div>
+            <div><img src={img} alt="cant load"/></div>
+            <div><img src={img} alt="cant load"/></div>
+            <div><img src={img} alt="cant load"/></div>
+            <div><img src={img} alt="cant load"/></div>
+            <div><img src={img} alt="cant load"/></div>
           </div>
         </div>
     </section>

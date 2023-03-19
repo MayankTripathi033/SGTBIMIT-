@@ -174,20 +174,48 @@ nav {
 nav>* {
     display: flex;
     gap: .7rem;
-    padding-block: 1rem;
     align-items: center;
     cursor: pointer;
+    position: relative;
 }
-
+.nav-item>a{
+    padding-block: 1rem;
+}
 .active,
-nav>*:hover {
+.nav-item>a:hover {
     border-bottom: 2px solid rgb(71, 138, 201);
 }
 
-
+nav>*:hover .dropdown{
+    display: block;
+}
 nav img {
     width: 8px;
     height: 8px;
+}
+.dropdown{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ec640c;
+    width: max-content;
+    z-index: 10;
+    padding-block: min(2rem, 2vh);
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+}
+.dropdown-item{
+    padding-block: min(1rem, 1vh);
+    padding-right: min(4rem, 4vw);
+    padding-left: min(1rem, 1vw);
+}
+.dropdown-active-item .dropdown-item{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-item:hover{
+    background-color: #478ac9;
 }
 
 /* Welcome */
@@ -364,11 +392,11 @@ nav img {
 
 /* cards */
 .test {
-
     display: flex;
     padding-inline: 10rem;
     gap: 2rem;
     font-style: italic;
+    padding-bottom: min(3rem, 3vh)
 }
 
 
@@ -560,7 +588,15 @@ nav img {
     place-items: center;
 }
 
-
+.collab-grid > *{
+    overflow: hidden;
+}
+.collab-grid img{
+    transition: 250ms;
+}
+.collab-grid img:hover{
+    transform: scale(1.1);
+}
 .collab-container h1 {
     color: #2cccc4;
     text-align: center;
@@ -612,7 +648,8 @@ nav img {
     color: white;
     font-size: 1.5rem;
     width: 90%;
-    margin: min(4rem, 4vw)auto;
+    margin: min(4rem, 4vw) auto;
+    overflow: hidden;
 }
 
 .map-location {
