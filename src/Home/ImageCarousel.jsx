@@ -9,6 +9,7 @@ export default function ImageCarousel() {
         emulateTouch={true}
         interval={2000}
         className="home-carousel"
+        width = "100%"
         >
 
         <div className="carousel-item">

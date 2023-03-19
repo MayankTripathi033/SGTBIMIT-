@@ -5,10 +5,14 @@
     font-family: sans-serif;
 }
 
+html{
+    margin: 0;
+    width: 100%;
+}
 body {
     margin: 0;
     min-height: 100vh;
-    min-width: 100vw;
+    width: 100%;
     margin: 0;
 }
 
@@ -20,7 +24,8 @@ a {
 button {
     cursor: pointer;
 }
-.loading{
+
+.loading {
     text-align: center;
 }
 
@@ -103,9 +108,10 @@ dialog {
 .control-dots {
     display: none;
 }
+
 .home-carousel-container {
     position: relative;
-    width: 100vw !important;
+    width: 100%;
 }
 
 .home-carousel {
@@ -154,14 +160,14 @@ header {
 nav {
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     background-image: linear-gradient(#478ac9, #ec640c);
     color: white;
     padding: 1.5rem;
     gap: 2rem;
     font-size: 1.125rem;
     font-weight: 600;
-    width: 100vw;
+    width: 100%;
 }
 
 nav>* {
@@ -254,7 +260,7 @@ nav img {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 100%;
 }
 
 .adminis-carousel {
@@ -265,15 +271,22 @@ nav img {
 .control-arrow {
     position: absolute !important;
     top: 50% !important;
-    right: 0 !important;
     width: 50px !important;
     height: 50px !important;
     transform: translateY(-50%) !important;
     background-color: #ec640c !important;
     border-radius: 50% !important;
 
+
+
 }
 
+.control-next{
+    right: 0 !important;
+}
+.control-prev{
+    left: 0 !important;
+}
 .adminis {
     display: flex;
     gap: 3rem;
@@ -381,7 +394,7 @@ nav img {
     color: #478ac9;
 }
 
-.card-1{
+.card-1 {
     background-color: #2cccc4;
 
 }
@@ -491,32 +504,37 @@ nav img {
     text-align: center;
 }
 
-/* Placeinters */
-.placements{
-    width: 100vw;
+/* Placements */
+.placements {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 3rem;
 }
 
-.placements-container{
+.placements-container {
     margin-inline: auto;
 }
-.placements-container > h1{
+
+.placements-container>h1 {
     color: #2cccc4;
     text-align: center;
     font-size: 3rem;
 }
-.placements img{
+
+.placements img {
     width: 60%;
     aspect-ratio: 1;
     border-radius: 10px;
+    border: 2px solid black;
 }
-.placement-grid{
+
+.placement-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
-.place-card{
+
+.place-card {
     width: 400px;
     display: flex;
     flex-direction: column;
@@ -525,65 +543,85 @@ nav img {
 
 /* Collaboration */
 
-.collab-grid{
-    display: grid;
-    grid-template-columns: repeat(3, 300px);
-    gap: 2rem;
-}
-
-.collab-container{
+.collab-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 3rem;
     background-color: #478ac9;
+    margin-inline: auto;
 }
-.collab-container h1{
+
+.collab-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    gap: 2rem;
+    place-items: center;
+}
+
+
+.collab-container h1 {
     color: #2cccc4;
     text-align: center;
-    font-size: 2rem;
     font-size: 4rem;
 }
 
 /* Recruiters */
 
-    .recruiters-imgs{
-        display: flex;
-        justify-content: space-between;
-    }
-
-/* map */
-
-.map .upper-btns {
-    background-image: linear-gradient(to right, #478ac9, #ec640c);
-    border-style: solid;
-    font-weight: 700;
-    font-size: 1.25rem;
-    letter-spacing: 0px;
-    margin: 12px auto 0 25px;
-    padding: 10px 208px 11px;
-    color: white;
-    width: 50rem;
-    padding-block: 1rem;
+.recruiters h1{
+    text-align: center;
+    color: #77aad9;
+    font-size: min(3rem, 3vw);
 }
 
-.map {
+.recruiters-imgs {
+    display: flex;
+    justify-content: space-between;
+    padding: min(2rem, 2vw)
+
+}
+.recruiters-imgs img{
+    width: clamp(200px, 20vw, 400px);
+    border: 2px solid black;
+    aspect-ratio: 1;
+}
+
+/* map */
+.map-btns{
+    display: flex;
+    flex-direction: column;
+    gap: min(2vh, 2rem)
+}
+.map .upper-btns {
+    background-image: linear-gradient(to right, #478ac9, #ec640c);
+    font-weight: 700;
+    font-size: 1.25rem;
+    padding: 10px 11px;
+    color: white;
+    padding-block: 1rem;
+}
+.map-section{
     background-color: #2cccc4;
+}
+.map {
     padding-inline: 5em;
     padding-top: 2rem;
-    display: flex;
+    display: grid;
     gap: 5rem;
     color: white;
     font-size: 1.5rem;
+    grid-template-columns: 50% 50%;
+    width: 80%;
+    margin-inline: auto;
 }
 
 .map-location {
-    height: 40rem;
-    width: 40rem;
+    width: 100%;
+    height: 100%;
     margin-left: auto;
 }
 
-.map-button>* {
+.address > * {
     text-align: center;
 }
 
@@ -612,10 +650,8 @@ nav img {
 /* director read more */
 
 .dir-readmore {
-    width: 70vw;
+    width: 70%;
     margin-inline: auto;
-
-
 }
 
 .cont {
@@ -667,7 +703,7 @@ nav img {
 /* socity */
 .society {
     text-align: center;
-    width: 80vw;
+    width: 80%;
     margin-inline: auto;
     padding-top: 2rem;
 }

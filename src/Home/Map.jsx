@@ -2,14 +2,16 @@ import React from 'react'
 
 export default function Map() {
   return (
-    <>
+    <section className="map-section">
       <div className="map">
-        <div className='map-button' data-aos="fade-right" data-aos-offset="300">
-          <button type='button' className='upper-btns'> RESEARCH AND PUBLICATION</button><br />
-          <button type='button' className='upper-btns'>CAMPUS TOUR</button> <br />
-          <button type='button' className='upper-btns'>DOWNLOAD BROCHURE</button><br />
-          <h1 className='map-head'> GET IN TOUCH: </h1>
-          <p className='map-content'>Sri Guru Tegh Bahadur Institute Of Management and Information Technology <br />
+        <div className='address' data-aos="fade-right" data-aos-offset="300">
+          <div className="map-btns">
+            <button type='button' className='upper-btns'> RESEARCH AND PUBLICATION</button>
+            <button type='button' className='upper-btns'>CAMPUS TOUR</button>
+            <button type='button' className='upper-btns'>DOWNLOAD BROCHURE</button>
+          </div>
+          <h1> GET IN TOUCH: </h1>
+          <p className='address-content'>Sri Guru Tegh Bahadur Institute Of Management and Information Technology <br />
             Add:Adjacent to Gurudwara Nanak Piao, State Bank Colony, Near Model Town Metro Station, Delhi-110009 <br />
             Tel:+91-9899333224, <br />
             Email:sgtbimit@hotmail.com</p>
@@ -21,6 +23,6 @@ export default function Map() {
         </div>
 
       </div>
-    </>
+    </section>
   )
 }
