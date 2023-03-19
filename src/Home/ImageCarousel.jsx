@@ -2,12 +2,13 @@ import React from 'react'
 import { Carousel } from 'react-responsive-carousel'
 export default function ImageCarousel() {
   return (
-    <div>
+    <div className='home-carousel-container'>
       <Carousel
         infiniteLoop={true}
         autoPlay={true}
         emulateTouch={true}
         interval={2000}
+        className="home-carousel"
         >
 
         <div className="carousel-item">

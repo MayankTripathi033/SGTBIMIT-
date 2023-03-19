@@ -1,14 +1,20 @@
 import React from 'react'
+import useFetch from '../useFetch'
 
 export default function Recruiters() {
+  const {data: recruiters, isPending} = useFetch("http://localhost:5000/Recruiters/recruiters_Display")
+
   return (
-    <>
-      <h1 className='recr-heading' data-aos="fade-left" data-aos-offset="300"> OUR RECRUITERS</h1>
-      <div className='recruiters' data-aos="fade-right" data-aos-offset="300">
-        <img src={require("../images/idbi.jpg")} alt="" />
-        <img src={require("../images/Sharekhan.jpg")} alt="" />
-        <img src={require("../images/firstnaukri.jpg")} alt="" />
+    <section className='recruiters'>
+      <div className="recuiters-container">
+        <h1 data-aos="fade-right" data-aos-offset="300"> OUR RECRUITERS</h1>
+        {isPending && <div className="loading"></div> }
+        {recruiters && <div className='recruiters-imgs'>
+          {recruiters.map((recruiter, i) =>{
+            return <img src={recruiter.image} key={i} alt="cant load"  data-aos="fade-right" data-aos-delay={`${i}00`}/>
+          })}
+        </div>}
       </div>
-    </>
+    </section>
   )
 }

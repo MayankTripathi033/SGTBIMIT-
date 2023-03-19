@@ -1,26 +1,41 @@
 
 import React from 'react'
+import useFetch from '../useFetch'
+import { Carousel } from 'react-responsive-carousel'
 
 export default function Testimonials() {
+    const { data: testimonials, isPending } = useFetch("http://localhost:5000/Testimonial/Testimonial_Display")
+    let testimonialsSecondSlide = []
+    testimonials && (testimonialsSecondSlide = testimonials.splice(3))
+    return (
 
-    return(
+        <>
+            <h1 className='t-heading' data-aos="zoom-in-up" data-aos-offset="300">TESTIMONIALS</h1>
+            {isPending && <div className="loading">Loading...</div>}
+            {testimonials && <Carousel>
+                <div className="test">
+                    {testimonials.map((testimonial, i) => {
+                        console.log(i)
+                        return (
+                            <div className={`card card-${i}`} data-aos="zoom-in-up" data-aos-delay={`${i}00`} data-aos-offset="300">
+                                <h1>{testimonial.name}</h1>
+                                <p>{testimonial.detail}</p>
+                            </div>)
 
-    <>
-    <h1 className='t-heading'>TESTIMONIALS</h1>
-    <div className="test">
-        <div className="card" data-aos="zoom-in-up" data-aos-offset="300">
-            <h1>Himanshu Upadhyay</h1>
-            <p>"SGTBIMIT helps students excel in studies as well as extra curricular activities which includes sports , divinity society , placement cells etc."</p>
-        </div>
-        <div className="card card-2" data-aos="zoom-in-up" data-aos-delay="100" data-aos-offset="300">
-            <h1>Himanshu Upadhyay</h1>
-            <p>"SGTBIMIT helps students excel in studies as well as extra curricular activities which includes sports , divinity society , placement cells etc."</p>
-        </div>
-        <div className="card" data-aos="zoom-in-up" data-aos-delay="200" data-aos-offset="300">
-            <h1>Himanshu Upadhyay</h1>
-            <p>"SGTBIMIT helps students excel in studies as well as extra curricular activities which includes sports , divinity society , placement cells etc."</p>
-        </div>
-    </div>
-    </>
+                    })}
+                </div>
+                <div className="test">
+                    {testimonialsSecondSlide.map((testimonial, i) => {
+                        console.log(i)
+                        return (
+                            <div className={`card card-${i}`} data-aos="zoom-in-up" data-aos-delay={`${i}00`} data-aos-offset="300">
+                                <h1>{testimonial.name}</h1>
+                                <p>{testimonial.detail}</p>
+                            </div>)
+
+                    })}
+                </div>
+            </Carousel>}
+        </>
     )
 }

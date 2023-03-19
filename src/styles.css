@@ -9,6 +9,7 @@ body {
     margin: 0;
     min-height: 100vh;
     min-width: 100vw;
+    margin: 0;
 }
 
 a {
@@ -19,11 +20,16 @@ a {
 button {
     cursor: pointer;
 }
+.loading{
+    text-align: center;
+}
+
 
 /* Admission Dialog Form */
 
-.admission-dialog{
-    position: fixed;;
+.admission-dialog {
+    position: fixed;
+    ;
     width: 600px;
     height: 600px;
     background-color: #ec640c;
@@ -35,28 +41,31 @@ button {
     color: white;
     align-items: center;
 }
-.admission-dialog h1{
+
+.admission-dialog h1 {
     margin-bottom: 3rem;
 }
-.admission-dialog::backdrop{
+
+.admission-dialog::backdrop {
     background-color: rgba(0, 0, 0, 0.7);
 }
-.close-btn{
+
+.close-btn {
     width: 40px;
     aspect-ratio: 1;
     margin-left: auto;
     cursor: pointer;
 }
-.admission-form{
+
+.admission-form {
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    
+
 }
 
 .admission-form input[type=text],
-.admission-form input[type=email]
-{
+.admission-form input[type=email] {
     border: none;
     padding: 1rem 3rem;
     background: transparent;
@@ -65,7 +74,7 @@ button {
     background-color: rgba(0, 0, 0, 0.05);
 }
 
-.admission-form input[type=submit]{
+.admission-form input[type=submit] {
     background: #2cccc4;
     border: none;
     padding: 1.5rem;
@@ -74,23 +83,33 @@ button {
 }
 
 .admission-form input[type=text]::placeholder,
-.admission-form input[type=email]::placeholder{
-    color: rgba(255,255,255, 0.7);
+.admission-form input[type=email]::placeholder {
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .admission-form input[type=text]:focus,
-.admission-form input[type=email]:focus{
+.admission-form input[type=email]:focus {
     border: none;
     outline: none;
     background-color: rgba(0, 0, 0, 0.2);
 }
-dialog{
+
+dialog {
     display: none;
-}   
+}
+
 /* Carousel */
 .thumbs-wrapper,
 .control-dots {
     display: none;
+}
+.home-carousel-container {
+    position: relative;
+    width: 100vw !important;
+}
+
+.home-carousel {
+    width: 100% !important;
 }
 
 
@@ -135,13 +154,14 @@ header {
 nav {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; 
     background-image: linear-gradient(#478ac9, #ec640c);
     color: white;
     padding: 1.5rem;
     gap: 2rem;
     font-size: 1.125rem;
     font-weight: 600;
+    width: 100vw;
 }
 
 nav>* {
@@ -236,11 +256,13 @@ nav img {
     align-items: center;
     width: 100vw;
 }
+
 .adminis-carousel {
     margin-inline: auto;
     width: clamp(750px, 70vw, 1000px) !important;
 }
-.control-arrow{
+
+.control-arrow {
     position: absolute !important;
     top: 50% !important;
     right: 0 !important;
@@ -251,6 +273,7 @@ nav img {
     border-radius: 50% !important;
 
 }
+
 .adminis {
     display: flex;
     gap: 3rem;
@@ -258,12 +281,15 @@ nav img {
     margin-inline: 60px;
     margin-block: 2rem;
 }
-.adminis img{
-    margin-inline: auto;;
+
+.adminis img {
+    margin-inline: auto;
+    ;
     width: 150px !important;
     aspect-ratio: 1;
     border-radius: 50%;
 }
+
 .adminis-heading,
 .short-note {
     display: flex;
@@ -321,12 +347,13 @@ nav img {
     font-size: 1.25rem;
 
 }
+
 /* cards */
 .test {
 
     display: flex;
     padding-inline: 10rem;
-    gap:2rem;
+    gap: 2rem;
     font-style: italic;
 }
 
@@ -340,7 +367,7 @@ nav img {
 
 }
 
-.t-heading{
+.t-heading {
     text-align: center;
     font-size: 3rem;
     color: #ec640c;
@@ -351,91 +378,51 @@ nav img {
 
     text-align: center;
     font-size: 2.3rem;
-    color: #478ac9 ;
+    color: #478ac9;
 }
-.card-2{
+
+.card-1{
     background-color: #2cccc4;
 
 }
-.card-2 h1, .card-2 p{
+
+.card-1 h1,
+.card-1 p {
     color: white !important;
 }
 
-.card{
+.card {
     padding: 1rem 3rem;
     border-radius: 2rem;
 }
 
 /* director msg */
-.director-msg{
+.director-msg {
     display: flex;
     justify-content: center;
     position: relative;
     z-index: -2;
     background: url("https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/2cc1a632c8c5511c86638369/jhhhhhh.jpg");
 }
-.director-msg img{
+
+.director-msg img {
     z-index: 1;
     border-radius: 5rem;
 }
 
-.bg-img{
+.bg-img {
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    background-color:#478ac9;
+    background-color: #478ac9;
     opacity: 0.7;
     z-index: -1;
 }
-/* cards */
-.test {
-
-    display: flex;
-    padding-inline: 10rem;
-    gap:2rem;
-    font-style: italic;
-}
-
-
-
-.test p {
-    text-align: center;
-    font-size: 1.7rem;
-    color: rgba(0, 0, 0, 0.7);
-    line-height: 1.6;
-
-}
-
-.t-heading{
-    text-align: center;
-    font-size: 3rem;
-    color: #ec640c;
-}
-
-
-.test h1 {
-
-    text-align: center;
-    font-size: 2.3rem;
-    color: #478ac9 ;
-}
-.card-2{
-    background-color: #2cccc4;
-
-}
-.card-2 h1, .card-2 p{
-    color: white !important;
-}
-
-.card{
-    padding: 1rem 3rem;
-    border-radius: 2rem;
-}
 
 /* director msg */
-.director-msg{
+.director-msg {
     padding: 2rem;
     color: white;
     display: flex;
@@ -446,33 +433,35 @@ nav img {
     background-repeat: no-repeat;
     background-size: cover;
 }
-.director-msg img{
+
+.director-msg img {
     z-index: 1;
     border-radius: 5rem;
 }
 
-.bg-img{
+.bg-img {
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    background-color:#478ac9;
+    background-color: #478ac9;
     opacity: 0.7;
     z-index: -1;
 }
 
 
-.director-container{
+.director-container {
     display: flex;
     flex-direction: column;
     height: 100%;
     width: 45%;
-    background-color:#77aad9; ;
-    
+    background-color: #77aad9;
+    ;
+
 }
 
-.director-container img{
+.director-container img {
     height: 500px;
     width: 500px;
     margin-inline: auto;
@@ -481,69 +470,91 @@ nav img {
 
 }
 
-.director-heading{
-    font-size:3.8rem;
+.director-heading {
+    font-size: 3.8rem;
     text-align: center;
-    
+
 }
 
-.wmk{
+.wmk {
     font-size: 2rem;
     text-align: center;
 }
 
-.dr-short-note{
+.dr-short-note {
     font-size: 1.8rem;
     text-align: center;
 }
 
-.dr-long-note{
+.dr-long-note {
     font-size: 1.7rem;
     text-align: center;
 }
 
-/* Collaborations */
-
-.for-color{
-    background-color:#4c7397;
+/* Placeinters */
+.placements{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 }
-.collab{
-   
-    color:#2cccc4;
+
+.placements-container{
+    margin-inline: auto;
+}
+.placements-container > h1{
+    color: #2cccc4;
     text-align: center;
     font-size: 3rem;
-    padding: 2rem;
 }
-.collab-part1{
+.placements img{
+    width: 60%;
+    aspect-ratio: 1;
+    border-radius: 10px;
+}
+.placement-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.place-card{
+    width: 400px;
     display: flex;
-    padding: 2rem;
-    padding-inline:20rem;
-    gap:15rem;   
-    
+    flex-direction: column;
+    align-items: center;
+}
 
+/* Collaboration */
+
+.collab-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    gap: 2rem;
 }
-.collab-part2{
+
+.collab-container{
     display: flex;
-    padding-inline:20rem;
-    gap: 15rem;   
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 3rem;
+    background-color: #478ac9;
+}
+.collab-container h1{
+    color: #2cccc4;
+    text-align: center;
+    font-size: 2rem;
+    font-size: 4rem;
 }
 
 /* Recruiters */
 
-.recr-heading{
-font-size: 2.5rem;
-padding: 2rem;
-text-align: center;
-}
-.recruiters{
-    display: flex;
-    gap: 32rem;
-    padding: 1rem;
-}
+    .recruiters-imgs{
+        display: flex;
+        justify-content: space-between;
+    }
 
 /* map */
 
-.map .upper-btns{
+.map .upper-btns {
     background-image: linear-gradient(to right, #478ac9, #ec640c);
     border-style: solid;
     font-weight: 700;
@@ -552,12 +563,12 @@ text-align: center;
     margin: 12px auto 0 25px;
     padding: 10px 208px 11px;
     color: white;
-    width:50rem;
+    width: 50rem;
     padding-block: 1rem;
 }
 
-.map{
-    background-color:#2cccc4;
+.map {
+    background-color: #2cccc4;
     padding-inline: 5em;
     padding-top: 2rem;
     display: flex;
@@ -565,16 +576,18 @@ text-align: center;
     color: white;
     font-size: 1.5rem;
 }
-.map-location{
+
+.map-location {
     height: 40rem;
     width: 40rem;
     margin-left: auto;
 }
 
-.map-button > *{
+.map-button>* {
     text-align: center;
 }
-.lower-btn{
+
+.lower-btn {
     padding: 1rem 2rem;
     color: white;
     background-color: green;
@@ -587,7 +600,7 @@ text-align: center;
 }
 
 
-.lower-input{
+.lower-input {
     border: none;
     outline: none;
     padding: 1rem 2rem;
@@ -598,30 +611,33 @@ text-align: center;
 
 /* director read more */
 
-.dir-readmore{
-    width:70vw;
+.dir-readmore {
+    width: 70vw;
     margin-inline: auto;
 
 
 }
-.cont{
+
+.cont {
     position: relative;
     width: max-content;
     margin-inline: auto;
     padding-top: 3rem;
 }
 
-.gradient{
-    background: linear-gradient(to top,rgb(0, 0, 0),transparent);
+.gradient {
+    background: linear-gradient(to top, rgb(0, 0, 0), transparent);
     position: absolute;
     width: 100%;
     height: 100%;
 }
-.cont img{
-    width:800px;
+
+.cont img {
+    width: 800px;
 
 }
-.title{
+
+.title {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -629,43 +645,51 @@ text-align: center;
     font-size: 2rem;
     color: white;
 }
-.dir-readmore h2{
+
+.dir-readmore h2 {
     font-size: 2rem;
     text-align: center;
     padding-top: 3rem;
 }
-.dir-readmore h3{
+
+.dir-readmore h3 {
     font-size: 1.8rem;
     text-align: center;
 
 }
-.dir-readmore p{
+
+.dir-readmore p {
     font-size: 1.5rem;
     text-align: justify;
 
 }
 
 /* socity */
-.society{
+.society {
     text-align: center;
     width: 80vw;
     margin-inline: auto;
     padding-top: 2rem;
 }
-.society h1{
+
+.society h1 {
     font-size: 2rem;
 }
-.society h2{
-    font-size:1.7rem;
+
+.society h2 {
+    font-size: 1.7rem;
 }
-.society p{
+
+.society p {
     font-size: 1.7rem;
     color: rgba(0, 0, 0, 0.8);
     text-align: justify;
 }
-.society img{
-    width:700px;
+
+.society img {
+    width: 700px;
 }
-.nsslink{
+
+.nsslink {
     font-size: 2rem;
 }
