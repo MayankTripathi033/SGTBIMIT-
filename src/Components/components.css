@@ -1,0 +1,96 @@
+/* Header */
+header {
+    background-image: linear-gradient(#478ac9, #ec640c);
+    display: flex;
+    flex-direction: column;
+}
+
+.header-top {
+    margin-inline: auto;
+    display: flex;
+    width: clamp(1000px, 70vw, 1500px);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-top button {
+    border: none;
+    outline: none;
+    background-color: #ec640c;
+    margin-inline: 1.5rem;
+    padding: 1.5rem;
+    color: white;
+    letter-spacing: .125em;
+    font-weight: 700;
+    border-radius: 1.5rem;
+}
+
+.logo {
+    height: 150px;
+}
+
+.header-news {
+    margin-inline: auto;
+}
+
+
+/* NavBar */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(#478ac9, #ec640c);
+    color: white;
+    padding: 1.5rem;
+    gap: 2rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    width: 100%;
+}
+
+nav>* {
+    display: flex;
+    gap: .7rem;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+.nav-item>a{
+    padding-block: 1rem;
+}
+.active,
+.nav-item>a:hover {
+    border-bottom: 2px solid rgb(71, 138, 201);
+}
+
+nav>*:hover .dropdown{
+    display: block;
+}
+nav img {
+    width: 8px;
+    height: 8px;
+}
+.dropdown{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ec640c;
+    width: max-content;
+    z-index: 10;
+    padding-block: min(2rem, 2vh);
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+}
+.dropdown-item{
+    padding-block: min(1rem, 1vh);
+    padding-right: min(4rem, 4vw);
+    padding-left: min(1rem, 1vw);
+}
+.dropdown-active-item .dropdown-item{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-item:hover{
+    background-color: #478ac9;
+}

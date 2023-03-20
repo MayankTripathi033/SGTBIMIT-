@@ -1,0 +1,29 @@
+/* society */
+.society {
+    text-align: center;
+    width: 80%;
+    margin-inline: auto;
+    padding-top: 2rem;
+}
+
+.society h1 {
+    font-size: 2rem;
+}
+
+.society h2 {
+    font-size: 1.7rem;
+}
+
+.society p {
+    font-size: 1.7rem;
+    color: rgba(0, 0, 0, 0.8);
+    text-align: justify;
+}
+
+.society img {
+    width: 700px;
+}
+
+.nsslink {
+    font-size: 2rem;
+}

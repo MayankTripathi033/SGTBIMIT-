@@ -8,10 +8,11 @@ import AdminisCarousel from './GoverningBody/AdminisCarousel.jsx'
 import About from './About/About'
 import Vision from './Vision/Vision'
 import DirectorReadMore from './DirectorReadMore/DirectorReadMore'
-import Divinity from './Society/Divinity'
-import SmartYouth from './Society/SmartYouth'
-import Literary from './Society/Literary'
-import Nss from './Society/Nss'
+import Divinity from './Society/pages/Divinity'
+import SmartYouth from './Society/pages/SmartYouth'
+import Literary from './Society/pages/Literary'
+import Nss from './Society/pages/Nss'
+import Footer from './Components/Footer'
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
         <Route path="society/literary" element={<Literary />} />
         <Route path="society/nss-cell" element={<Nss />} />
       </Routes>
+      <Footer></Footer>
     </Router>
   );
 }

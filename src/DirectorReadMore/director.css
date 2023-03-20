@@ -1,0 +1,52 @@
+/* director read more */
+
+.dir-readmore {
+    width: 70%;
+    margin-inline: auto;
+}
+
+.cont {
+    position: relative;
+    width: max-content;
+    margin-inline: auto;
+    padding-top: 3rem;
+}
+
+.gradient {
+    background: linear-gradient(to top, rgb(0, 0, 0), transparent);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.cont img {
+    width: 800px;
+
+}
+
+.title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 4rem;
+    font-size: 2rem;
+    color: white;
+}
+
+.dir-readmore h2 {
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 3rem;
+}
+
+.dir-readmore h3 {
+    font-size: 1.8rem;
+    text-align: center;
+
+}
+
+.dir-readmore p {
+    font-size: 1.5rem;
+    text-align: justify;
+
+}

@@ -1,5 +1,6 @@
 import React from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css"
+import './home.css'
 import Welcome from './Welcome'
 import ImageCarousel from './ImageCarousel'
 import Testimonials from './Testimonials'
@@ -10,6 +11,7 @@ import Recruiters from './Recruiters'
 import Map from './Map'
 import Admission from './Admission'
 import AOS from 'aos'
+
 export default function Home() {
   
   window.addEventListener("load", (e)=>{
