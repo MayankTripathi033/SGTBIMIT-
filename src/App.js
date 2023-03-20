@@ -13,6 +13,12 @@ import SmartYouth from './Society/pages/SmartYouth'
 import Literary from './Society/pages/Literary'
 import Nss from './Society/pages/Nss'
 import Footer from './Components/Footer'
+import Fineart from './Society/pages/Fineart'
+import Cultural from './Society/pages/Cultural'
+import Soch from './Society/pages/Soch'
+import Saarang from './Society/pages/Saarang'
+import Eco from './Society/pages/Eco'
+import SwachhBharat from './Society/pages/SwachhBharat'
 
 function App() {
 
@@ -30,7 +36,13 @@ function App() {
         <Route path="society/smart-youth" element={<SmartYouth />} />
         <Route path="society/literary" element={<Literary />} />
         <Route path="society/nss-cell" element={<Nss />} />
-      </Routes>
+        <Route path="society/fine-art" element={<Fineart />} />
+        <Route path="society/cultural" element={<Cultural />}/>
+        <Route path="society/soch" element={<Soch />}/>
+        <Route path="society/saarang" element={<Saarang />}/>
+        <Route path="society/eco-club" element={<Eco />}/>
+        <Route path='society/swachh-bharat' element={<SwachhBharat />}/>
+        </Routes>
       <Footer></Footer>
     </Router>
   );

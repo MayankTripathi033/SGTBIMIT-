@@ -463,11 +463,11 @@ dialog {
 .recruiters-imgs {
     display: flex;
     justify-content: space-between;
-    padding: min(2rem, 2vw)
+    padding: min(2rem, 2vw);
 
 }
 .recruiters-imgs img{
-    width: clamp(200px, 20vw, 400px);
+    width: min(20vw, 400px);
     border: 2px solid black;
     aspect-ratio: 1;
 }

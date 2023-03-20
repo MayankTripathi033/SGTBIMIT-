@@ -3,27 +3,29 @@
     text-align: center;
     width: 80%;
     margin-inline: auto;
-    padding-top: 2rem;
+    padding-top: min(2rem,2vw);
 }
 
 .society h1 {
-    font-size: 2rem;
+    font-size: min(2rem,2vw);
 }
 
 .society h2 {
-    font-size: 1.7rem;
+    font-size: min(1.7rem,1.7vw);
 }
 
 .society p {
-    font-size: 1.7rem;
+    font-size: min(1.7rem,17vw);
     color: rgba(0, 0, 0, 0.8);
     text-align: justify;
 }
 
 .society img {
-    width: 700px;
+    width: min(700px,70vw);
+    aspect-ratio: 7/5;
+    border: 2px solid black;
 }
 
 .nsslink {
-    font-size: 2rem;
+    font-size: min(2rem,2vw);
 }
