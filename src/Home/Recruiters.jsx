@@ -7,7 +7,7 @@ export default function Recruiters() {
   return (
     <section className='recruiters'>
       <div className="recuiters-container">
-        <h1 data-aos="fade-right" data-aos-offset="300"> OUR RECRUITERS</h1>
+        <h1 data-aos="fade-right"> OUR RECRUITERS</h1>
         {isPending && <div className="loading"></div> }
         {recruiters && <div className='recruiters-imgs'>
           {recruiters.map((recruiter, i) =>{

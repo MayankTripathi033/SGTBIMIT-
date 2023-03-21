@@ -1,4 +1,5 @@
 import React from 'react'
+import AOS from 'aos'
 import Home from './Home/Home.jsx'
 import Navbar from './Components/Navbar'
 import Header from './Components/Header'
@@ -18,10 +19,12 @@ import Cultural from './Society/pages/Cultural'
 import Soch from './Society/pages/Soch'
 import Saarang from './Society/pages/Saarang'
 import Eco from './Society/pages/Eco'
-import SwachhBharat from './Society/pages/SwachhBharat'
+import SwachhBharat from './Society/pages/SwachhBharat' 
 
 function App() {
-
+  AOS.init({
+    startEvent: 'load'
+  })
   return (
     <Router>
       <Header></Header>

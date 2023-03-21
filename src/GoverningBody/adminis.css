@@ -1,0 +1,46 @@
+/* Administration */
+.adminis-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.adminis-carousel {
+    margin-inline: auto;
+    width: clamp(750px, 70vw, 1000px) !important;
+}
+
+
+.adminis {
+    display: flex;
+    gap: 3rem;
+    flex-direction: column;
+    margin-inline: auto;
+    margin-block: 2rem;
+}
+
+.adminis img {
+    margin-inline: auto;
+    ;
+    width: 150px !important;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+
+.adminis-heading,
+.short-note {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem
+}
+
+.short-note {
+    font-size: 1.125rem;
+    ;
+}
+
+.long-note {
+    text-align: justify;
+    line-height: 2rem;
+}

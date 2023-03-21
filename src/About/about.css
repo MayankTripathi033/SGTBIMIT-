@@ -1,0 +1,108 @@
+/* About */
+
+.about {
+    width: 55%;
+    margin-inline: auto;
+    margin-bottom: 7rem;
+}
+
+.about-title {
+    text-align: center;
+    font-size: 3rem;
+    color: #ec640c;
+    font-weight: 700;
+    margin-top: 2.5rem;
+}
+
+.about-content {
+    display: flex;
+    gap: 5rem;
+    margin-top: 2rem;
+}
+
+.about-content p {
+    text-align: justify;
+    line-height: 2rem;
+    font-size: 1.37rem;
+}
+
+.clg-img {
+    width: 420px;
+    aspect-ratio: 1.4/1.1;
+    object-fit: cover;
+}
+
+.history-container p {
+    text-align: justify;
+    line-height: 1.5rem;
+    font-size: 1.25rem;
+
+}
+
+/* Testimonial cards */
+
+.test-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: min(3rem, 3vh);
+}
+.test {
+    display: grid;
+    margin-inline: auto;
+    gap: min(2rem, 1vw);
+    grid-template-columns: repeat(3, 1fr);
+    
+
+}
+.test-carousel{
+    width: min(1200px, 100%) !important;
+    margin-inline:  auto !important;
+}
+
+
+
+.test p {
+    font-style: italic;
+    text-align: center;
+    font-size: min(1.2rem, 1.7vw);
+    color: rgba(0, 0, 0, 0.7);
+    line-height: 1.6;
+
+
+}
+
+.t-heading {
+    
+    text-align: center;
+    font-size: min(3rem, 3vw);
+    color: #ec640c;
+}
+
+
+.test h1 {
+    
+    text-align: center;
+    font-size: min(2.3rem, 2.3vw);
+    color: #478ac9;
+}
+
+.card-1 {
+    background-color: #2cccc4;
+
+}
+
+.card-1 h1,
+.card-1 p {
+    color: white !important;
+}
+
+.card {
+    padding: min(1rem, 1vh) min(3rem, 3vw);
+    border-radius: 2rem;
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

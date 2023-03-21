@@ -9,33 +9,33 @@ export default function Testimonials() {
     testimonials && (testimonialsSecondSlide = testimonials.splice(3))
     return (
 
-        <>
+        <section className = "test-section">
             <h1 className='t-heading' data-aos="zoom-in-up" data-aos-offset="300">TESTIMONIALS</h1>
             {isPending && <div className="loading">Loading...</div>}
-            {testimonials && <Carousel>
-                <div className="test">
-                    {testimonials.map((testimonial, i) => {
-                        console.log(i)
-                        return (
-                            <div className={`card card-${i}`} data-aos="zoom-in-up" data-aos-delay={`${i}00`} data-aos-offset="300">
-                                <h1>{testimonial.name}</h1>
-                                <p>{testimonial.detail}</p>
-                            </div>)
+            {testimonials &&
+                <Carousel className='test-carousel'>
+                    <div className="test">
+                        {testimonials.map((testimonial, i) => {
+                            return (
+                                <div className={`card card-${i}`} data-aos="zoom-in-up" data-aos-delay={`${i}00`} data-aos-offset="300" key={testimonial._id}>
+                                    <h1>{testimonial.name}</h1>
+                                    <p>{testimonial.detail}</p>
+                                </div>)
 
-                    })}
-                </div>
-                <div className="test">
-                    {testimonialsSecondSlide.map((testimonial, i) => {
-                        console.log(i)
-                        return (
-                            <div className={`card card-${i}`} data-aos="zoom-in-up" data-aos-delay={`${i}00`} data-aos-offset="300">
-                                <h1>{testimonial.name}</h1>
-                                <p>{testimonial.detail}</p>
-                            </div>)
+                        })}
+                    </div>
+                    <div className="test">
+                        {testimonialsSecondSlide.map((testimonial, i) => {
+                            return (
+                                <div className={`card card-${i}`} data-aos="zoom-in-up" data-aos-delay={`${i}00`} data-aos-offset="300" key={testimonial._id}>
+                                    <h1>{testimonial.name}</h1>
+                                    <p>{testimonial.detail}</p>
+                                </div>)
 
-                    })}
-                </div>
-            </Carousel>}
-        </>
+                        })}
+                    </div>
+                </Carousel>
+            }
+        </section>
     )
 }

@@ -1,24 +1,30 @@
+.mobile{
+    display: none;
+}
+
+
 /* Header */
 header {
     background-image: linear-gradient(#478ac9, #ec640c);
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .header-top {
     margin-inline: auto;
     display: flex;
-    width: clamp(1000px, 70vw, 1500px);
+    width: min(1000px, 100%);
     justify-content: space-between;
     align-items: center;
 }
 
-.header-top button {
+.header-btns button {
     border: none;
     outline: none;
     background-color: #ec640c;
     margin-inline: 1.5rem;
-    padding: 1.5rem;
+    padding: min(1.5rem, 1.5vw);
     color: white;
     letter-spacing: .125em;
     font-weight: 700;
@@ -32,7 +38,11 @@ header {
 .header-news {
     margin-inline: auto;
 }
-
+@media(max-width: 1000px){
+    .menu{
+        margin-inline: 2.5rem;
+    }
+}
 
 /* NavBar */
 nav {
@@ -41,36 +51,45 @@ nav {
     justify-content: center;
     background-image: linear-gradient(#478ac9, #ec640c);
     color: white;
-    padding: 1.5rem;
-    gap: 2rem;
-    font-size: 1.125rem;
+    padding: min(1.5rem, 1.5vw);
+    gap: min(2rem, 1vw);
+    font-size: min(1.125rem, 1.5vw);
     font-weight: 600;
-    width: 100%;
+}
+
+.nav-item>a {
+    display: flex;
+    gap: min(.7rem, 1vw);
+    align-items: center;
 }
 
 nav>* {
     display: flex;
-    gap: .7rem;
-    align-items: center;
+    gap: min(.7rem, 1.3vw);
     cursor: pointer;
     position: relative;
+    align-items: center;
 }
-.nav-item>a{
+
+.nav-item>a {
     padding-block: 1rem;
 }
+
 .active,
 .nav-item>a:hover {
     border-bottom: 2px solid rgb(71, 138, 201);
 }
 
-nav>*:hover .dropdown{
+nav>*:hover .dropdown {
     display: block;
 }
+
 nav img {
     width: 8px;
     height: 8px;
 }
-.dropdown{
+
+.dropdown {
     display: none;
     position: absolute;
     top: 100%;
@@ -81,16 +100,120 @@ nav img {
     padding-block: min(2rem, 2vh);
     box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.5);
     border-radius: 1rem;
+    transition: 250ms;
 }
-.dropdown-item{
+
+.dropdown-item {
     padding-block: min(1rem, 1vh);
     padding-right: min(4rem, 4vw);
     padding-left: min(1rem, 1vw);
 }
-.dropdown-active-item .dropdown-item{
+
+.dropdown-active-item .dropdown-item {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-.dropdown-item:hover{
+.dropdown-item:hover {
     background-color: #478ac9;
+}
+
+.courses-dropdown {
+    top: 0;
+    left: 100%;
+    display: none !important;
+}
+
+.courses-dropdown-container:hover .courses-dropdown {
+    display: block !important;
+}
+
+
+@media(max-width: 1000px) {
+    .mobile{
+        display: block;
+    }
+    .desktop{
+        display: none;
+    }
+    nav{
+        position: fixed;
+        visibility: hidden;
+        top: 0;
+        left: 0;
+        height: 100%;
+        min-width: 70svw;
+        flex-direction: column;
+        z-index: 11;
+        font-size: large;
+        overflow-y: auto;
+        transform: translateX(-100%);
+        transition: 250ms;
+        justify-content: start;
+        box-shadow: 0 0 0 200vw rgba(0, 0, 0, 0.8);
+    }
+    .nav-item{
+        flex-direction: column;
+        transition: 250ms;
+    }
+    .dropdown{
+        display: none;
+        position: relative;
+        inset: auto;
+    }
+    nav>*:hover .dropdown{
+        display: none;
+    }
+    .mobile-header-btns{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+        align-items: center;
+
+    }
+    .header-btns button{
+        padding-block: 2rem;
+    }
+    .nav-close{
+        display: flex;
+        justify-content: end;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    .nav-close-btn{
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Footer */
+
+footer {
+    background-color: #333333;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-grid{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    width: min(1000px, 100%);
+    justify-content: center;
+    padding: min(4rem, 4vw);
+    gap: min(4rem, 4vw);
+}
+.footer-grid img{
+    width: min(75px, 10vw);
+    margin-inline: auto;
+}
+footer p{
+    color: white;
+    text-align: center;
+}
+
+@media(max-width: 800px){
+    .footer-grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
 }

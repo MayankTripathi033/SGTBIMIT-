@@ -13,8 +13,8 @@ export default function Placements() {
         {isPending && <div className="loading">Loading...</div> }
         {placementArray && <div className="placement-grid">
           {placementArray.map((placement, i) => {
-            return <div className="place-card">
-              <img src={`http://localhost:5000${placement.image}`} alt="cant load" className='placement-img' data-aos="zoom-out" data-aos-delay={`${i}00`}/>
+            return <div className="place-card" key={placement._id} data-aos="zoom-out" data-aos-delay={`${i}00`}>
+              <img src={`http://localhost:5000${placement.image}`} alt="cant load" className='placement-img' />
               <h1> {placement.name} </h1>
               <p> {placement.companyName} </p>
             </div>

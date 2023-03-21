@@ -9,14 +9,12 @@ import Placements from './Placements'
 import Collaboration from './Collaboration'
 import Recruiters from './Recruiters'
 import Map from './Map'
-import Admission from './Admission'
-import AOS from 'aos'
+import Admission from './Admission' 
 
 export default function Home() {
   
   window.addEventListener("load", (e)=>{
     document.querySelector(".admission-dialog").showModal()
-    AOS.init()
   })
 
   return (

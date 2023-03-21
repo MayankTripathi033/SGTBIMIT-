@@ -1,5 +1,6 @@
 import React from 'react'
 import AOS from  'aos'
+import './about.css'
 export default function About() {
     AOS.init(
         {startEvent: 'load'}

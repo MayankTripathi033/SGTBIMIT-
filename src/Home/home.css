@@ -100,12 +100,12 @@ dialog {
 }
 
 .welcome-img {
-    width: 30%;
+    width: min(531px, 80%);
     aspect-ratio: 531/632;
     border-radius: 3rem;
     object-fit: cover;
-    margin-top: 5rem;
-    margin-left: 3.2rem;
+    margin-top: min(5rem, 10vw);
+    margin-inline: auto;
 }
 
 .welcome-text {
@@ -115,206 +115,54 @@ dialog {
 
 .welcome-text h1 {
     text-align: center;
-    padding: 2rem;
-    font-size: 2.5rem;
+    padding: min(2rem, 2vw);
+    font-size: min(2.5rem, 5vw);
 }
 
 .welcome-text p {
-    margin-inline: 2rem;
-    font-size: 1.375rem;
+    margin-inline: min(1.5rem, 3vw);
+    font-size: min(1.375rem, 2.75vw);
     line-height: 2;
     text-align: justify;
 }
 
+@media(max-width: 1000px){
+    .welcome-wrapper{
+        flex-direction: column;
+    }
+}
+
 /* welcome buttons */
 .learn-more-btn {
-    margin: 2rem 4rem 0 auto;
+    margin: min(2rem,2vw) min(4rem, 4vw) min(2rem, 4vw) auto;
     border: none;
     outline: none;
-    padding: 1rem 2rem;
+    padding: min(1rem, 2vh) min(2rem, 2vw);
     text-transform: uppercase;
     background-color: #2cccc4;
     color: white;
     letter-spacing: .1rem;
-    font-size: 1.125rem;
+    font-size: min(1.125rem, 2.5vw);
 }
 
 .develop-skills-btn {
-    margin: auto auto 6rem auto;
+    margin: auto auto min(6rem, 6vw) auto;
     border: none;
     outline: none;
-    padding: 2rem 16rem;
+    padding: min(2rem, 2vw) min(16rem, 16vw);
     text-transform: uppercase;
     background-color: #2cccc4;
     color: white;
     letter-spacing: .1rem;
-    font-size: 1.5rem;
-}
-
-/* Administration */
-.adminis-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.adminis-carousel {
-    margin-inline: auto;
-    width: clamp(750px, 70vw, 1000px) !important;
-}
-
-
-.adminis {
-    display: flex;
-    gap: 3rem;
-    flex-direction: column;
-    margin-inline: 60px;
-    margin-block: 2rem;
-}
-
-.adminis img {
-    margin-inline: auto;
-    ;
-    width: 150px !important;
-    aspect-ratio: 1;
-    border-radius: 50%;
-}
-
-.adminis-heading,
-.short-note {
-    display: flex;
-    flex-direction: column;
-    gap: .5rem
-}
-
-.short-note {
-    font-size: 1.125rem;
-    ;
-}
-
-.long-note {
-    text-align: justify;
-    line-height: 2rem;
-}
-
-/* About */
-
-.about {
-    width: 55%;
-    margin-inline: auto;
-    margin-bottom: 7rem;
-}
-
-.about-title {
-    text-align: center;
-    font-size: 3rem;
-    color: #ec640c;
-    font-weight: 700;
-    margin-top: 2.5rem;
-}
-
-.about-content {
-    display: flex;
-    gap: 5rem;
-    margin-top: 2rem;
-}
-
-.about-content p {
-    text-align: justify;
-    line-height: 2rem;
-    font-size: 1.37rem;
-}
-
-.clg-img {
-    width: 420px;
-    aspect-ratio: 1.4/1.1;
-    object-fit: cover;
-}
-
-.history-container p {
-    text-align: justify;
-    line-height: 1.5rem;
-    font-size: 1.25rem;
-
-}
-
-/* cards */
-.test {
-    display: flex;
-    padding-inline: 10rem;
-    gap: 2rem;
-    font-style: italic;
-    padding-bottom: min(3rem, 3vh)
+    font-size: min(1.5rem, 5vw);
 }
 
 
 
-.test p {
-    text-align: center;
-    font-size: 1.7rem;
-    color: rgba(0, 0, 0, 0.7);
-    line-height: 1.6;
-
-}
-
-.t-heading {
-    text-align: center;
-    font-size: 3rem;
-    color: #ec640c;
-}
-
-
-.test h1 {
-
-    text-align: center;
-    font-size: 2.3rem;
-    color: #478ac9;
-}
-
-.card-1 {
-    background-color: #2cccc4;
-
-}
-
-.card-1 h1,
-.card-1 p {
-    color: white !important;
-}
-
-.card {
-    padding: 1rem 3rem;
-    border-radius: 2rem;
-}
 
 /* director msg */
 .director-msg {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    z-index: -2;
-    background: url("https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/2cc1a632c8c5511c86638369/jhhhhhh.jpg");
-}
-
-.director-msg img {
-    z-index: 1;
-    border-radius: 5rem;
-}
-
-.bg-img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: #478ac9;
-    opacity: 0.7;
-    z-index: -1;
-}
-
-/* director msg */
-.director-msg {
-    padding: 2rem;
+    padding: min(4rem, 4vw);
     color: white;
     display: flex;
     justify-content: center;
@@ -345,40 +193,37 @@ dialog {
 .director-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     height: 100%;
-    width: 45%;
+    width: min(600px, 100%);
     background-color: #77aad9;
-    ;
 
 }
 
 .director-container img {
-    height: 500px;
-    width: 500px;
+    height: min(500px, 50vw);
+    aspect-ratio: 1;
     margin-inline: auto;
-
-
-
 }
 
 .director-heading {
-    font-size: 3.8rem;
+    font-size: min(3.8rem, 8vw);
     text-align: center;
 
 }
 
 .wmk {
-    font-size: 2rem;
+    font-size: min(2rem, 4vw);
     text-align: center;
 }
 
 .dr-short-note {
-    font-size: 1.8rem;
+    font-size: min(1.8rem, 3.6vw);
     text-align: center;
 }
 
 .dr-long-note {
-    font-size: 1.7rem;
+    font-size: min(1.7rem, 3.4vw);
     text-align: center;
 }
 
@@ -387,21 +232,24 @@ dialog {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: min(3rem, 3vh);
 }
 
 .placements-container {
     margin-inline: auto;
 }
+.placements h1{
+    font-size: min(2rem, 2.5vw);
+}
 
 .placements-container>h1 {
     color: #2cccc4;
     text-align: center;
-    font-size: 3rem;
+    font-size: min(3rem, 5vw);
 }
 
 .placements img {
-    width: 60%;
+    width: min(300px, 80%);
     aspect-ratio: 1;
     border-radius: 10px;
     border: 2px solid black;
@@ -410,10 +258,12 @@ dialog {
 .placement-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    width: min(1000px, 100%);
+    place-items: center;
 }
 
 .place-card {
-    width: 400px;
+    width: min(400px, 20vw);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -425,39 +275,49 @@ dialog {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 3rem;
+    padding-bottom: min(3rem, 3vh);
     background-color: #478ac9;
     margin-inline: auto;
 }
 
 .collab-grid {
     display: grid;
-    grid-template-columns: repeat(3, 300px);
-    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: min(2rem, 5vw);
     place-items: center;
 }
 
-.collab-grid > *{
+.collab-grid>* {
     overflow: hidden;
 }
-.collab-grid img{
+
+.collab-grid img {
     transition: 250ms;
+    width: min(300px, 30vw)
 }
-.collab-grid img:hover{
+
+.collab-grid img:hover {
     transform: scale(1.1);
 }
+
 .collab-container h1 {
     color: #2cccc4;
     text-align: center;
-    font-size: 4rem;
+    font-size: min(4rem, 7vw);
+}
+
+@media(max-width: 1000px){
+    .collab-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* Recruiters */
 
-.recruiters h1{
+.recruiters h1 {
     text-align: center;
     color: #77aad9;
-    font-size: min(3rem, 3vw);
+    font-size: min(3rem, 6vw);
 }
 
 .recruiters-imgs {
@@ -466,36 +326,40 @@ dialog {
     padding: min(2rem, 2vw);
 
 }
-.recruiters-imgs img{
+
+.recruiters-imgs img {
     width: min(20vw, 400px);
     border: 2px solid black;
     aspect-ratio: 1;
 }
 
 /* map */
-.map-btns{
+.map-btns {
     display: flex;
     flex-direction: column;
     gap: min(2vh, 2rem)
 }
+
 .map .upper-btns {
     background-image: linear-gradient(to right, #478ac9, #ec640c);
     font-weight: 700;
-    font-size: 1.25rem;
+    font-size: min(1.25rem, 2.5vw);
     color: white;
-    padding-block: 1rem;
+    padding-block: min(1rem, 2vh);
 }
-.map-section{
+
+.map-section {
     background-color: #2cccc4;
     display: flex;
     width: 100%;
 }
+
 .map {
     display: grid;
     grid-template-columns: 45% 45%;
     justify-content: space-between;
     color: white;
-    font-size: 1.5rem;
+    font-size: min(1.5rem, 3vw);
     width: 90%;
     margin: min(4rem, 4vw) auto;
     overflow: hidden;
@@ -506,28 +370,40 @@ dialog {
     height: 100%;
 }
 
-.address > * {
+.address>* {
     text-align: center;
 }
 
 .lower-btn {
-    padding: 1rem 2rem;
+    padding: min(1rem, 1vh) min(2rem, 2vw);
     color: white;
     background-color: green;
     border: none;
     outline: none;
-    font-size: 1.5rem;
+    font-size: min(1.5rem, 3vw);
     font-weight: 700;
     background-color: #ec640c !important;
-    border-radius: 2.5rem;
+    border-radius: min(2.5rem, 2.5vw);
 }
 
 
 .lower-input {
     border: none;
     outline: none;
-    padding: 1rem 2rem;
-    font-size: 1.5rem;
-    border-radius: 2.5rem;
-    margin-right: 1rem;
+    padding-block: min(1rem, 1vh);
+    font-size: min(1.5rem, 3vw);
+    border-radius: min(2.5rem, 2.5vw);
+    margin-right: min(1rem, 1vw);
+    text-align: center;
+}
+@media (max-width: 1000px) {
+    .map{
+        display: flex;
+        flex-direction: column;
+    }
+    .map-location{
+        height: 400px;
+        margin-top: 4rem;
+    }
+    
 }

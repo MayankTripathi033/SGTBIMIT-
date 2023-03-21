@@ -3,7 +3,7 @@
     text-align: center;
     width: 80%;
     margin-inline: auto;
-    padding-top: min(2rem,2vw);
+    padding-top: min(2rem,2vh);
 }
 
 .society h1 {
@@ -15,7 +15,7 @@
 }
 
 .society p {
-    font-size: min(1.7rem,17vw);
+    font-size: min(1.7rem,1.7vw);
     color: rgba(0, 0, 0, 0.8);
     text-align: justify;
 }

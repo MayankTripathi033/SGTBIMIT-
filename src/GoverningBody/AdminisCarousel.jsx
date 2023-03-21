@@ -1,7 +1,7 @@
 import React from 'react'
 import useFetch from '../useFetch'
 import { Carousel } from 'react-responsive-carousel'
-
+import './adminis.css'
 export default function AdminisCarousel() {
   const {data: adminisArray, isPending} = useFetch("http://localhost:5000/Administration/Administration_Display")
 

@@ -1,5 +1,5 @@
 import React from 'react'
-
+import '../society.css'
 export default function Saarang() {
   return (
   <>
