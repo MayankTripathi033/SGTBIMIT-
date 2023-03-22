@@ -1,0 +1,42 @@
+.faculty * {
+    text-align: center;
+}
+
+.faculty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.faculty-content, .note {
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.75);
+}
+
+.faculty-container {
+    width: min(1100px, 100%);
+}
+
+.faculty-container h1 {
+    color: #ec640c;
+    font-size: min(3rem, 8vw);
+}
+
+.faculty-grid {
+    margin: min(2rem, 2vw);
+    display: grid;
+    grid-template-columns: repeat(3, min(380px, 40%));
+    justify-content: center;
+}
+
+.position {
+    color: #ec640c;
+    font-weight: 700;
+}
+
+@media(max-width: 1200px){
+    .faculty-grid{
+        grid-template-columns: repeat(2, min(380px, 40%));
+        place-content: center;
+    }
+}

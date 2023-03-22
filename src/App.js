@@ -20,7 +20,8 @@ import Soch from './Society/pages/Soch'
 import Saarang from './Society/pages/Saarang'
 import Eco from './Society/pages/Eco'
 import SwachhBharat from './Society/pages/SwachhBharat' 
-
+import Faculty from './Faculty/Faculty'
+import EResources from './EResources/EResources.jsx'
 function App() {
   AOS.init({
     startEvent: 'load'
@@ -45,6 +46,8 @@ function App() {
         <Route path="society/saarang" element={<Saarang />}/>
         <Route path="society/eco-club" element={<Eco />}/>
         <Route path='society/swachh-bharat' element={<SwachhBharat />}/>
+        <Route path='academics/faculty' element={<Faculty />}/>
+        <Route path='academics/e-resources' element={<EResources />}/>
         </Routes>
       <Footer></Footer>
     </Router>
