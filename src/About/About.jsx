@@ -24,7 +24,7 @@ export default function About() {
                     History
                 </div>
                 <p data-aos="fade-up">
-                <strong>Sri Gur data-aos="fade-up"u Tegh Bahadur Institute of Management & Information Technology</strong>, a SIKH Institution, was founded by the DSGMC, with the primary objective of providing University Education in a nice atmosphere for deserving students irrespective of caste and creed.
+                <strong>Sri Guru Tegh Bahadur Institute of Management & Information Technology</strong>, a SIKH Institution, was founded by the DSGMC, with the primary objective of providing University Education in a nice atmosphere for deserving students irrespective of caste and creed.
                 </p>
                 <p data-aos="fade-up">
                 It started functioning in 2008 with just 120 students on the rolls in two undergraduate courses of BCA & BBA. 

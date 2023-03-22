@@ -57,8 +57,8 @@ export default function Navbar() {
             <NavLink to="about" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">ABOUT SGTBIMIT</div>
             </NavLink>
-            <NavLink to="about/vission-and-mission" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
-              <div className="dropdown-item">VISSION AND MISSION</div>
+            <NavLink to="about/vision-and-mission" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+              <div className="dropdown-item">VISION AND MISSION</div>
             </NavLink>
           </div>
 

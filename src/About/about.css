@@ -22,8 +22,9 @@
 
 .about-content p {
     text-align: justify;
-    line-height: 2rem;
+    line-height: 1.8rem;
     font-size: 1.37rem;
+    width: 400px;
 }
 
 .clg-img {

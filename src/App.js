@@ -33,7 +33,7 @@ function App() {
         <Route index element={<Home />}></Route>
         <Route path="about" element={<About />} />
         <Route path='about/governing-body' element={<AdminisCarousel />} />
-        <Route path="about/vission-and-mission" element={<Vision />} />
+        <Route path="about/vision-and-mission" element={<Vision />} />
         <Route path="director-readmore" element={<DirectorReadMore />} />
         <Route path="society/divinity" element={<Divinity />} />
         <Route path="society/smart-youth" element={<SmartYouth />} />
