@@ -1,0 +1,104 @@
+.heading {
+    text-align: center;
+    font-weight: 700;
+    color: #ec640c;
+    font-size: 52px;
+    margin: 1.6rem;
+}
+
+.contents {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 500px;
+    gap: 3rem;
+    margin-top: 25px;
+}
+
+.con {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5rem;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.vh,
+.mh {
+    text-align: center;
+    font-weight: 700;
+    color: #ec640c;
+    font-size: 36px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.vv,
+.mm {
+    padding-bottom: 20px;
+    font-size: 20px;
+    text-align: justify;
+    line-height: 1.7rem;
+    font-weight: 500;
+}
+
+li {
+    padding-bottom: 15px;
+}
+
+.vimage {
+    width: 50%;
+    margin-right: 5rem;
+    margin-top: 7rem;
+}
+
+/*============== MEDIA QUERIES(MEDIUM DEVICES) =========*/
+@media screen and (max-width: 1024px) {
+    .heading {
+        margin: 1.6rem; 
+        text-align: center;
+    }
+
+    .contents {
+        display: flex;
+        flex-direction: column;
+        width: 650px;
+    }
+
+    .vv, .mm, .li{
+        padding-bottom: 0px;
+        padding-top: 5px;
+    }
+
+    .vimage{
+        align-items: center;
+        width: 600px;
+        height: 600px;
+        margin-left: 16%;
+    }
+}
+
+/*============== MEDIA QUERIES(SMALL DEVICES) =========*/
+@media screen and (max-width: 600px) {
+    .heading {
+        margin: 1.6rem; 
+        text-align: center;
+    }
+
+    .contents {
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+    }
+
+    .vv, .mm, .li{
+        padding-bottom: 0px;
+    }
+
+    .vimage{
+        align-items: center;
+        width: 600px;
+        height: 600px;
+        margin-left: 16%;
+    }
+}
