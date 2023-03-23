@@ -1,0 +1,35 @@
+.courses>h1{
+    font-size: mnin(4rem,8vw);
+    text-align: center;
+    color:#478ac9;
+    padding-left: 2rem;
+}
+.courses>p{
+    font-size: min(1.5rem,2vw);
+    text-align: justify;
+}
+.diploma h1{
+    font-size: min(3rem,6vw);
+    color: #ec640c;
+}
+.list-wrapper h1{
+    font-size: 1.3rem;
+    color: black;
+}
+.list-wrapper p{
+    font-size: 1.3rem;
+    text-align: justify;
+    padding-left: 5rem;
+}
+.diploma button{
+    font-size: 2rem;
+    background-color:#478ac9;
+    color: white;
+    border-radius: 0.5rem;
+    width: 80rem;
+    margin: 1rem;
+    padding: 1rem;
+}
+.diploma{
+    text-align: center;
+}
