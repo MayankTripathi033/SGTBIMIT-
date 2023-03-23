@@ -31,7 +31,7 @@ export default function Vision() {
                 social transformation.
               </li>
               <li>
-                Sample Item 3To promote progressive spirit, innovative ideas and
+                Sample item to promote progressive spirit, innovative ideas and
                 entrepreneurial platform.
               </li>
               <li>
