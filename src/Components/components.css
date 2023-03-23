@@ -54,8 +54,8 @@ header {
 .admission-dialog {
     visibility: hidden;
     position: fixed;
-    width: 600px;
-    height: 600px;
+    width: min(600px, 90%);
+    aspect-ratio: 1;
     background-color: #ec640c;
     border-radius: 10px;
     display: flex;
@@ -69,6 +69,7 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    padding-bottom: 2rem;
 }
 
 .admission-dialog h1 {
@@ -80,14 +81,14 @@ header {
 .close-btn {
     width: 40px;
     aspect-ratio: 1;
-    margin-left: auto;
+    margin: 1rem 1rem 1rem auto;
     cursor: pointer;
 }
 
 .admission-form {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: min(3rem, 6vw);
 
 }
 
@@ -242,13 +243,13 @@ nav img {
     }
 
     .dropdown {
-        display: none;
+        visibility: hidden;
         position: relative;
         inset: auto;
     }
 
     nav>*:hover .dropdown {
-        display: none;
+/*         display: none; */
     }
 
     .mobile-header-btns {
