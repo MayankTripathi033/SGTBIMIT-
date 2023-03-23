@@ -3,7 +3,6 @@
 
 .admission-dialog {
     position: fixed;
-    ;
     width: 600px;
     height: 600px;
     background-color: #ec640c;
@@ -126,15 +125,15 @@ dialog {
     text-align: justify;
 }
 
-@media(max-width: 1000px){
-    .welcome-wrapper{
+@media(max-width: 1000px) {
+    .welcome-wrapper {
         flex-direction: column;
     }
 }
 
 /* welcome buttons */
 .learn-more-btn {
-    margin: min(2rem,2vw) min(4rem, 4vw) min(2rem, 4vw) auto;
+    margin: min(2rem, 2vw) min(4rem, 4vw) min(2rem, 4vw) auto;
     border: none;
     outline: none;
     padding: min(1rem, 2vh) min(2rem, 2vw);
@@ -156,10 +155,91 @@ dialog {
     letter-spacing: .1rem;
     font-size: min(1.5rem, 5vw);
 }
+/* Testimonial cards */
+
+.test-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: min(3rem, 3vh);
+}
+.test {
+    display: grid;
+    margin-inline: auto;
+    gap: min(2rem, 1vw);
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+
+}
+.test-carousel{
+    width: min(1200px, 100%) !important;
+    margin-inline:  auto !important;
+}
 
 
 
+.test p {
+    font-style: italic;
+    text-align: center;
+    font-size: min(1.2rem, 2.5vw);
+    color: rgba(0, 0, 0, 0.7);
+    line-height: 1.6;
 
+
+}
+
+.t-heading {
+    
+    text-align: center;
+    font-size: min(3rem, 6vw);
+    color: #ec640c;
+}
+
+
+.test h1 {
+    
+    text-align: center;
+    font-size: min(2.3rem, 5vw);
+    color: #478ac9;
+}
+
+.card-1 {
+    background-color: #2cccc4;
+
+}
+
+.card-1 h1,
+.card-1 p {
+    color: white !important;
+}
+
+.card {
+    padding: min(1rem, 1vh) min(3rem, 3vw);
+    border-radius: 2rem;
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+@media(max-width: 600px){
+    .test{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, max-content);
+    }
+    .card{
+        padding: 3rem;
+    }
+    .test h1{
+        font-size: 2.5rem !important;
+    }
+    .test p{
+        font-size: 1.5rem !important;
+        text-align: justify;
+    }
+}
 /* director msg */
 .director-msg {
     padding: min(4rem, 4vw);
@@ -238,7 +318,8 @@ dialog {
 .placements-container {
     margin-inline: auto;
 }
-.placements h1{
+
+.placements h1 {
     font-size: min(2rem, 2.5vw);
 }
 
@@ -268,7 +349,8 @@ dialog {
     flex-direction: column;
     align-items: center;
 }
-.place-card p{
+
+.place-card p {
     font-size: min(1.5rem, 2.5vw);
 }
 
@@ -309,8 +391,8 @@ dialog {
     font-size: min(4rem, 7vw);
 }
 
-@media(max-width: 1000px){
-    .collab-grid{
+@media(max-width: 1000px) {
+    .collab-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -399,14 +481,16 @@ dialog {
     margin-right: min(1rem, 1vw);
     text-align: center;
 }
+
 @media (max-width: 1000px) {
-    .map{
+    .map {
         display: flex;
         flex-direction: column;
     }
-    .map-location{
+
+    .map-location {
         height: 400px;
         margin-top: 4rem;
     }
-    
+
 }

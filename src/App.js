@@ -27,14 +27,14 @@ import BbaBI from './Academics/Courses/BbaBI'
 import Bcom from './Academics/Courses/Bcom'
 
 
+import Faculty from './Faculty/Faculty'
+import EResources from './EResources/EResources.jsx'
 function App() {
   AOS.init({
     startEvent: 'load'
   })
   return (
     <Router>
-      <Header></Header>
-      <Navbar></Navbar>
       <Routes>
         <Route index element={<Home />}></Route>
         <Route path="about" element={<About />} />
@@ -57,8 +57,9 @@ function App() {
         <Route path='academics/courses/bbab&i' element={<BbaBI />}/>
         <Route path='academics/courses/bcom' element={<Bcom />}/>
       
+        <Route path='academics/faculty' element={<Faculty />}/>
+        <Route path='academics/e-resources' element={<EResources />}/>
         </Routes>
-      <Footer></Footer>
     </Router>
   );
 }

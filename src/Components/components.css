@@ -32,8 +32,9 @@ header {
 }
 
 .logo {
-    height: 150px;
+    height: min(150px, 20vw);
 }
+
 
 .header-news {
     margin-inline: auto;
@@ -41,7 +42,9 @@ header {
 @media(max-width: 1000px){
     .menu{
         margin-inline: 2.5rem;
+        height: 1.5rem;
     }
+
 }
 
 /* NavBar */
@@ -52,11 +55,14 @@ nav {
     background-image: linear-gradient(#478ac9, #ec640c);
     color: white;
     padding: min(1.5rem, 1.5vw);
-    gap: min(2rem, 1vw);
+    gap: min(2rem, 4vw);
     font-size: min(1.125rem, 1.5vw);
     font-weight: 600;
 }
-
+nav a{
+    color: white;
+    text-decoration: none;
+}
 .nav-item>a {
     display: flex;
     gap: min(.7rem, 1vw);
@@ -181,8 +187,8 @@ nav img {
         margin-bottom: 2rem;
     }
     .nav-close-btn{
-        width: 40px;
-        height: 40px;
+        width: 25px;
+        height: 25px;
     }
 }
 
