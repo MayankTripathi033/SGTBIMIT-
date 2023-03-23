@@ -20,6 +20,12 @@ import Soch from './Society/pages/Soch'
 import Saarang from './Society/pages/Saarang'
 import Eco from './Society/pages/Eco'
 import SwachhBharat from './Society/pages/SwachhBharat' 
+import Bca from './Academics/Courses/Bca'
+import Bba from './Academics/Courses/Bba'
+import BbaBI from './Academics/Courses/BbaBI'
+
+import Bcom from './Academics/Courses/Bcom'
+
 
 function App() {
   AOS.init({
@@ -45,6 +51,12 @@ function App() {
         <Route path="society/saarang" element={<Saarang />}/>
         <Route path="society/eco-club" element={<Eco />}/>
         <Route path='society/swachh-bharat' element={<SwachhBharat />}/>
+        <Route path='academics/courses/bca' element={<Bca />}/>
+        <Route path='academics/courses/bca' element={<Bca />} />
+        <Route path='academics/courses/bba' element={<Bba />}/>
+        <Route path='academics/courses/bbab&i' element={<BbaBI />}/>
+        <Route path='academics/courses/bcom' element={<Bcom />}/>
+      
         </Routes>
       <Footer></Footer>
     </Router>
