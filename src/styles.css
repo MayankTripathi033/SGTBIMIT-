@@ -24,7 +24,9 @@ button {
 .loading {
     text-align: center;
 }
-
+.show{
+    visibility: visible;
+}
 
 
 

@@ -1,4 +1,4 @@
-.mobile{
+.mobile {
     display: none;
 }
 
@@ -39,12 +39,86 @@ header {
 .header-news {
     margin-inline: auto;
 }
-@media(max-width: 1000px){
-    .menu{
+
+@media(max-width: 1000px) {
+    .menu {
         margin-inline: 2.5rem;
         height: 1.5rem;
     }
 
+}
+
+/* Admission Dialog Form */
+
+
+.admission-dialog {
+    visibility: hidden;
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    background-color: #ec640c;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.7),
+        0 0 50px 200vw rgba(0, 0, 0, 0.7);
+    color: white;
+    align-items: center;
+    z-index: 50;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.admission-dialog h1 {
+    margin-bottom: 3rem;
+}
+
+
+
+.close-btn {
+    width: 40px;
+    aspect-ratio: 1;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.admission-form {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+}
+
+.admission-form input[type=text],
+.admission-form input[type=email] {
+    border: none;
+    padding: 1rem 3rem;
+    background: transparent;
+    color: white;
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.admission-form input[type=submit] {
+    background: #2cccc4;
+    border: none;
+    padding: 1.5rem;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.admission-form input[type=text]::placeholder,
+.admission-form input[type=email]::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.admission-form input[type=text]:focus,
+.admission-form input[type=email]:focus {
+    border: none;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 /* NavBar */
@@ -59,10 +133,12 @@ nav {
     font-size: min(1.125rem, 1.5vw);
     font-weight: 600;
 }
-nav a{
+
+nav a {
     color: white;
     text-decoration: none;
 }
+
 .nav-item>a {
     display: flex;
     gap: min(.7rem, 1vw);
@@ -135,13 +211,15 @@ nav img {
 
 
 @media(max-width: 1000px) {
-    .mobile{
+    .mobile {
         display: block;
     }
-    .desktop{
+
+    .desktop {
         display: none;
     }
-    nav{
+
+    nav {
         position: fixed;
         visibility: hidden;
         top: 0;
@@ -157,19 +235,23 @@ nav img {
         justify-content: start;
         box-shadow: 0 0 0 200vw rgba(0, 0, 0, 0.8);
     }
-    .nav-item{
+
+    .nav-item {
         flex-direction: column;
         transition: 250ms;
     }
-    .dropdown{
+
+    .dropdown {
         display: none;
         position: relative;
         inset: auto;
     }
-    nav>*:hover .dropdown{
+
+    nav>*:hover .dropdown {
         display: none;
     }
-    .mobile-header-btns{
+
+    .mobile-header-btns {
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
@@ -177,16 +259,19 @@ nav img {
         align-items: center;
 
     }
-    .header-btns button{
+
+    .header-btns button {
         padding-block: 2rem;
     }
-    .nav-close{
+
+    .nav-close {
         display: flex;
         justify-content: flex-end;
         width: 100%;
         margin-bottom: 2rem;
     }
-    .nav-close-btn{
+
+    .nav-close-btn {
         width: 25px;
         height: 25px;
     }
@@ -201,7 +286,7 @@ footer {
     flex-direction: column;
 }
 
-.footer-grid{
+.footer-grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     width: min(1000px, 100%);
@@ -209,17 +294,19 @@ footer {
     padding: min(4rem, 4vw);
     gap: min(4rem, 4vw);
 }
-.footer-grid img{
+
+.footer-grid img {
     width: min(75px, 10vw);
     margin-inline: auto;
 }
-footer p{
+
+footer p {
     color: white;
     text-align: center;
 }
 
-@media(max-width: 800px){
-    .footer-grid{
+@media(max-width: 800px) {
+    .footer-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
