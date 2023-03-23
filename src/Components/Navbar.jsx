@@ -51,60 +51,60 @@ export default function Navbar() {
         <div className="nav-item" data-index="1">
           <NavLink to="/about"> ABOUT US<img src={arrow} alt="" /></NavLink>
           <div className="dropdown" data-index="1">
-            <NavLink to="about/governing-body" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/about/governing-body" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">GOVERNING BODY</div>
             </NavLink>
-            <NavLink to="about" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/about" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">ABOUT SGTBIMIT</div>
             </NavLink>
-            <NavLink to="about/vision-and-mission" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/about/vision-and-mission" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">VISION AND MISSION</div>
             </NavLink>
           </div>
 
         </div>
         <div className="nav-item" data-index="2">
-          <NavLink to="academics">ACADEMICS<img src={arrow} alt="" /></NavLink>
+          <NavLink to="/academics">ACADEMICS<img src={arrow} alt="" /></NavLink>
           <div className="dropdown" data-index="2">
             <div className="dropdown-item courses-dropdown-container">
-              <NavLink to="academics/courses" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>COURSES</NavLink>
+              <NavLink to="/academics/courses" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>COURSES</NavLink>
               <div className="dropdown courses-dropdown">
-                <NavLink to="academics/courses/bca" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+                <NavLink to="/academics/courses/bca" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
                   <div className="dropdown-item">BCA</div>
                 </NavLink>
-                <NavLink to="academics/courses/bba" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+                <NavLink to="/academics/courses/bba" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
                   <div className="dropdown-item">BBA</div>
                 </NavLink>
-                <NavLink to="academics/courses/bbab&i" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+                <NavLink to="/academics/courses/bbab&i" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
                   <div className="dropdown-item">BBA(B&I)</div>
                 </NavLink>
-                <NavLink to="academics/courses/bcom" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+                <NavLink to="/academics/courses/bcom" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
                   <div className="dropdown-item">BCOM</div>
                 </NavLink>
               </div>
             </div>
-            <NavLink to="academics/examinations" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/academics/examinations" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">EXAMINATIONS</div>
             </NavLink>
-            <NavLink to="academics/prev-year-papers" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/academics/prev-year-papers" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">PREVIOUS YEAR PAPERS</div>
             </NavLink>
-            <NavLink to="academics/syllabus" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/academics/syllabus" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">SYLLABUS</div>
             </NavLink>
-            <NavLink to="academics/academic-calender" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/academics/academic-calender" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">ACADEMIC CALENDAR</div>
             </NavLink>
-            <NavLink to="academics/e-resources" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/academics/e-resources" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">E-RESOURCES</div>
             </NavLink>
-            <NavLink to="academics/co-po-mapping" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/academics/co-po-mapping" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">CO-PO MAPPING</div>
             </NavLink>
-            <NavLink to="academics/research" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/academics/research" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">RESEARCH</div>
             </NavLink>
-            <NavLink to="academics/faculty" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/academics/faculty" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">FACULTY MEMBERS</div>
             </NavLink>
           </div>
@@ -113,13 +113,13 @@ export default function Navbar() {
         <div className="nav-item" data-index="3">
           <NavLink to="/admission">ADMISSION<img src={arrow} alt="" /></NavLink>
           <div className="dropdown" data-index="3">
-            <NavLink to="admission/governing-body" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/admission/governing-body" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">FEES</div>
             </NavLink>
-            <NavLink to="admission/courses-eligibility" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/admission/courses-eligibility" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">COURSES ELIGIBILITY</div>
             </NavLink>
-            <NavLink to="admission/notices" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/admission/notices" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">NOTICES</div>
             </NavLink>
           </div>
@@ -128,16 +128,16 @@ export default function Navbar() {
         <div className="nav-item" data-index="4">
           <NavLink to="/alumini">ALUMINI<img src={arrow} alt="" /></NavLink>
           <div className="dropdown" data-index="4">
-            <NavLink to="alumini/alumini-meet" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/alumini/alumini-meet" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">ALUMINI MEET</div>
             </NavLink>
-            <NavLink to="alumini/testimonials" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/alumini/testimonials" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">TESTIMONIALS</div>
             </NavLink>
-            <NavLink to="alumini/gallery" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/alumini/gallery" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">GALLERY</div>
             </NavLink>
-            <NavLink to="alumini/registration" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/alumini/registration" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">REGISTRATION</div>
             </NavLink>
           </div>
@@ -146,34 +146,34 @@ export default function Navbar() {
         <div className="nav-item" data-index="5">
           <NavLink to="/society">SOCIETY<img src={arrow} alt="" /></NavLink>
           <div className="dropdown" data-index="5">
-            <NavLink to="society/nss-cell" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/society/nss-cell" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">NSS CELL</div>
             </NavLink>
-            <NavLink to="society/literary" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/society/literary" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">LITERARY SOCIETY</div>
             </NavLink>
-            <NavLink to="society/fine-art" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/society/fine-art" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">FINE ART SOCIETY</div>
             </NavLink>
-            <NavLink to="society/cultural" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/society/cultural" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">CULTURAL SOCIETY</div>
             </NavLink>
-            <NavLink to="society/smart-youth" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/society/smart-youth" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">SMART YOUTH SOCIETY</div>
             </NavLink>
-            <NavLink to="society/divinity" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/society/divinity" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">DIVINITY SOCIETY</div>
             </NavLink>
-            <NavLink to="society/soch" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/society/soch" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">SOCH - THE DRAMATIC SOCIETY</div>
             </NavLink>
-            <NavLink to="society/saarang" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/society/saarang" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">SAARANG MUSIC SOCIETY</div>
             </NavLink>
-            <NavLink to="society/eco-club" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/society/eco-club" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">ECO CLUB</div>
             </NavLink>
-            <NavLink to="society/swachh-bharat" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/society/swachh-bharat" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">SWACHH BHARAT ABHIYAAN</div>
             </NavLink>
           </div>
@@ -182,13 +182,13 @@ export default function Navbar() {
         <div className="nav-item" data-index="6">
           <NavLink to="/events">EVENTS<img src={arrow} alt="" /></NavLink>
           <div className="dropdown" data-index="6">
-            <NavLink to="events/past" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/events/past" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">PAST EVENTS</div>
             </NavLink>
-            <NavLink to="events/upcoming" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/events/upcoming" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">UPCOMING EVENTS</div>
             </NavLink>
-            <NavLink to="events/past" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/events/past" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">GALLERY</div>
             </NavLink>
           </div>
@@ -197,16 +197,16 @@ export default function Navbar() {
         <div className="nav-item" data-index="7">
           <NavLink to="/industry-interface">INDUSTRY INTERFACE<img src={arrow} alt="" /></NavLink>
           <div className="dropdown" data-index="7">
-            <NavLink to="industry-interface/industrial-visit" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/industry-interface/industrial-visit" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">INDUSTRIAL VISIT</div>
             </NavLink>
-            <NavLink to="industry-interface/placements" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/industry-interface/placements" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">PLACEMENTS</div>
             </NavLink>
-            <NavLink to="industry-interface/summer-internship" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/industry-interface/summer-internship" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">SUMMER INTERNSHIP</div>
             </NavLink>
-            <NavLink to="industry-interface/corporate-speak" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/industry-interface/corporate-speak" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">CORPORATE SPEAK</div>
             </NavLink>
           </div>
@@ -215,16 +215,16 @@ export default function Navbar() {
         <div className="nav-item" data-index="8">
           <NavLink to="/naac">NAAC<img src={arrow} alt="" /></NavLink>
           <div className="dropdown" data-index="8">
-            <NavLink to="naac/r&d" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/naac/r&d" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">R&D</div>
             </NavLink>
-            <NavLink to="naac/iqac" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/naac/iqac" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">IQAC</div>
             </NavLink>
-            <NavLink to="naac/student-welfare" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/naac/student-welfare" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">STUDENT WELFARE</div>
             </NavLink>
-            <NavLink to="naac/edic" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/naac/edic" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">EDIC</div>
             </NavLink>
           </div>
