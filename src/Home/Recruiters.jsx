@@ -11,7 +11,7 @@ export default function Recruiters() {
         {isPending && <div className="loading"></div> }
         {recruiters && <div className='recruiters-imgs'>
           {recruiters.map((recruiter, i) =>{
-            return <img src={recruiter.image} key={i} alt="cant load"  data-aos="fade-right" data-aos-delay={`${i}00`}/>
+            return <img src="" key={i} alt="cant load"  data-aos="fade-right" data-aos-delay={`${i}00`}/>
           })}
         </div>}
       </div>

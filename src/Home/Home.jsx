@@ -10,6 +10,9 @@ import Collaboration from './Collaboration'
 import Recruiters from './Recruiters'
 import Map from './Map'
 import Admission from './Admission' 
+import Navbar from '../Components/Navbar'
+import Header from '../Components/Header'
+import Footer from '../Components/Footer'
 
 export default function Home() {
   
@@ -19,6 +22,8 @@ export default function Home() {
 
   return (
     <>
+      <Header></Header>
+      <Navbar></Navbar>
       <ImageCarousel />
       <Welcome />
       <Testimonials />
@@ -28,6 +33,7 @@ export default function Home() {
       <Recruiters />
       <Map />
       <Admission />
+      <Footer></Footer>
     </>
   )
 }

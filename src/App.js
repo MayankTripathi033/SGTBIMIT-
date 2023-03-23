@@ -28,8 +28,6 @@ function App() {
   })
   return (
     <Router>
-      <Header></Header>
-      <Navbar></Navbar>
       <Routes>
         <Route index element={<Home />}></Route>
         <Route path="about" element={<About />} />
@@ -49,7 +47,6 @@ function App() {
         <Route path='academics/faculty' element={<Faculty />}/>
         <Route path='academics/e-resources' element={<EResources />}/>
         </Routes>
-      <Footer></Footer>
     </Router>
   );
 }
