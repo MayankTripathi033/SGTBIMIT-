@@ -22,6 +22,8 @@ import Eco from './Society/pages/Eco'
 import SwachhBharat from './Society/pages/SwachhBharat' 
 import Faculty from './Faculty/Faculty'
 import EResources from './EResources/EResources.jsx'
+import Fees from './Fees/Fees.jsx'
+
 function App() {
   AOS.init({
     startEvent: 'load'
@@ -46,6 +48,7 @@ function App() {
         <Route path='society/swachh-bharat' element={<SwachhBharat />}/>
         <Route path='academics/faculty' element={<Faculty />}/>
         <Route path='academics/e-resources' element={<EResources />}/>
+        <Route path='admission/fees' element={<Fees />}/>
         </Routes>
     </Router>
   );

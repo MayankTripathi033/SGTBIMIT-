@@ -113,7 +113,7 @@ export default function Navbar() {
         <div className="nav-item" data-index="3">
           <NavLink to="/admission">ADMISSION<img src={arrow} alt="" /></NavLink>
           <div className="dropdown" data-index="3">
-            <NavLink to="/admission/governing-body" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/admission/fees" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">FEES</div>
             </NavLink>
             <NavLink to="/admission/courses-eligibility" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
