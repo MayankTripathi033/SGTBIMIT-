@@ -1,104 +1,108 @@
-.heading {
+.Vision_Container{
     text-align: center;
-    font-weight: 700;
-    color: #ec640c;
-    font-size: 52px;
-    margin: 1.6rem;
+    padding: 10px 0px;
 }
 
-.contents {
+.Vision_Container h1{
+    color: #ec640c;
+    font-size: 45px;
+}
+
+.Detail_ImageContainer{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    height: 500px;
-    gap: 3rem;
-    margin-top: 25px;
+    width: 1150px ;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
 }
 
-.con {
-    display: flex;
-    flex-direction: column;
-    margin-left: 5rem;
-    padding-left: 30px;
-    padding-right: 30px;
+.VisionDetail{
+    padding: 50px;
 }
 
-.vh,
-.mh {
-    text-align: center;
-    font-weight: 700;
+.VisionDetail h3{
     color: #ec640c;
-    font-size: 36px;
-    padding-bottom: 15px;
-    padding-top: 15px;
+    font-size: 30px;
 }
 
-.vv,
-.mm {
-    padding-bottom: 20px;
-    font-size: 20px;
+.VisionDetail p, ul li{
     text-align: justify;
-    line-height: 1.7rem;
-    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
 }
 
-li {
-    padding-bottom: 15px;
+.VisionDetail ul{
+    padding: 0px;
 }
 
-.vimage {
-    width: 50%;
-    margin-right: 5rem;
-    margin-top: 7rem;
+.VisionImage {
+    height: 750px;
+    width: 550px;
 }
 
-/*============== MEDIA QUERIES(MEDIUM DEVICES) =========*/
-@media screen and (max-width: 1024px) {
-    .heading {
-        margin: 1.6rem; 
-        text-align: center;
-    }
-
-    .contents {
-        display: flex;
-        flex-direction: column;
-        width: 650px;
-    }
-
-    .vv, .mm, .li{
-        padding-bottom: 0px;
-        padding-top: 5px;
-    }
-
-    .vimage{
-        align-items: center;
-        width: 600px;
-        height: 600px;
-        margin-left: 16%;
-    }
+.VisionImage img{
+    height: 750px;
+    width: 550px;
 }
 
-/*============== MEDIA QUERIES(SMALL DEVICES) =========*/
-@media screen and (max-width: 600px) {
-    .heading {
-        margin: 1.6rem; 
-        text-align: center;
+
+@media (max-width: 1300px) {
+    .Detail_ImageContainer{
+       width: 900px;
     }
 
-    .contents {
-        display: flex;
-        flex-direction: column;
+
+    .VisionImage {
+        height: 850px;
+        width: 450px;
+    }
+    
+    .VisionImage img{
+        height: 850px;
+        width: 450px;
+    }
+
+}
+
+@media (max-width:1000px){
+    .Detail_ImageContainer{
+        flex-wrap: wrap-reverse ;
         width: 500px;
     }
 
-    .vv, .mm, .li{
-        padding-bottom: 0px;
+    .VisionImage {
+        height: 450px;
+        width: 450px;
+    }
+    
+    .VisionImage img{
+        height: 450px;
+        width: 450px;
+    }
+}
+
+@media (max-width: 500px){
+    .Detail_ImageContainer{
+        width: 300px;
+    }
+    .VisionDetail{
+        padding: 0px;
     }
 
-    .vimage{
-        align-items: center;
-        width: 600px;
-        height: 600px;
-        margin-left: 16%;
+    .VisionDetail p, ul li{
+        font-size: 15px;
+        padding: 0px;
+    }
+
+    
+    .VisionImage {
+        height: 350px;
+        width: 320px;
+    }
+    
+    .VisionImage img{
+        height: 350px;
+        width: 320px;
     }
 }
