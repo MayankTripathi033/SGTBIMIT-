@@ -8,7 +8,8 @@
 
 .adminis-carousel {
     margin-inline: auto;
-    width: clamp(750px, 70vw, 1000px) !important;
+    width: min(1000px, 100%) !important;
+    padding: min(2rem,2vw);
 }
 
 
@@ -37,10 +38,11 @@
 
 .short-note {
     font-size: 1.125rem;
-    ;
 }
 
 .long-note {
     text-align: justify;
-    line-height: 2rem;
+    line-height: clamp(1.5rem, 2vw, 2rem);
+    padding: clamp(50px, 2vw, 100px);
+    color: rgba(0,0,0,0.9);
 }
