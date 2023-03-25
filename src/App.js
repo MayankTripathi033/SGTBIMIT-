@@ -22,11 +22,14 @@ import Eco from './Society/pages/Eco'
 import SwachhBharat from './Society/pages/SwachhBharat' 
 import Faculty from './Faculty/Faculty'
 import EResources from './EResources/EResources.jsx'
+import Fees from './Fees/Fees'
 import Admin from "../src/Admin/Admin"
 import Testimonials_ADD from './Pages/Testimonials/Testimonials_ADD/Testimonials_ADD.jsx'
 import Testimonial_Display from './Pages/Testimonials/Testimonials_Display/Testimonial_Display.jsx'
 import Society_Add from "../src/Pages/Society/Society_Add/Society_Add"
 import Society_Display from './Pages/Society/Society_Display/Society_Display.jsx'
+import Eligibility from './Course-Eligibility/Eligibility.jsx'
+import Notice from './Notices/Notices.jsx'
 function App() {
   AOS.init({
     startEvent: 'load'
@@ -51,6 +54,9 @@ function App() {
         <Route path='society/swachh-bharat' element={<SwachhBharat />}/>
         <Route path='academics/faculty' element={<Faculty />}/>
         <Route path='academics/e-resources' element={<EResources />}/>
+        <Route path='admission/fees' element = {<Fees />}/>
+        <Route path='admission/courses-eligibility' element = {<Eligibility />}/>
+        <Route path='admission/notices' element = {<Notice />}/>
         <Route path='/admin' element = {<Admin/>}/>
         <Route path='/admin/Testimonials_Add' element = {<Testimonials_ADD/>}/>
         <Route path='/admin/Testimonials_Display' element = {<Testimonial_Display/>}/>

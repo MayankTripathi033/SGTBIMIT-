@@ -32,7 +32,7 @@ export default function AdditionalDiploma() {
         <h1>Additional Diplomas / Certification Courses</h1>
         <div className="list-wrapper">
             <button onClick={(e)=>showHide(e)} >
-                DIGITAL MARKETTING
+                DIGITAL MARKETING
             </button>
             <h1 class='content'>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</h1>
 
