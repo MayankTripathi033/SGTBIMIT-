@@ -1,0 +1,25 @@
+.examination{
+    text-align: justify;
+    width: min(110rem,110vw);
+    padding-left: min(3.5rem,3.5vw);
+}
+
+
+.examination p{
+    font-size: min(1.4rem,3vw);
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.examination h1{
+    font-size: min(4rem,6vw);
+    background-color:#478ac9;
+    width: min(105rem,105vw);
+    text-align: center;
+}
+.examination h2{
+    font-size: min(1.8rem,2.3vw);
+}
+.examination li{
+    font-size: min(1.4rem,3vw);
+    color: rgba(0, 0, 0, 0.9);
+}

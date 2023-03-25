@@ -1,5 +1,4 @@
 import React from 'react'
-import {NavLink} from 'react-router-dom'
 export default function DirectorMsg() {
 
   return (
@@ -12,7 +11,7 @@ export default function DirectorMsg() {
         <p data-aos="zoom-in" className='dr-short-note'> “Those who walk on the path of truth shall be praised throughout the world”<br />
           <b data-aos="zoom-out">Sri Guru Granth Sahib Ji</b></p>
         <p data-aos="zoom-in" className="dr-long-note">We at Sri Guru Tegh Bahadur Institute of Management & Information Technology endeavor to follow Gurbani in letter and spirit.</p>
-        <a href="/director-readmore">READ MORE</a>
+        <div className="read-link"><a href="/director-readmore">READ MORE</a></div>
       </div>
     </div>
   )

@@ -1,0 +1,86 @@
+.Fees > h1{
+    color: #ec640c;
+    font-size: 45px;
+    text-align: center;
+}
+
+.structure
+{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.box 
+{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 520px;
+    border: 2px solid black;
+    border-radius: 1.6rem;
+    margin-bottom: 30px;
+}
+
+.icon
+{
+    width: 330px;
+    height: 130px;
+    margin: 7px 0px 0px 7px;
+    background-color: #ec640c;
+    /* border: 1px solid black; */
+    border-radius: 1rem;
+}
+
+.icon> h1{
+    /* border: 1px solid; */
+    margin-top: 50px;
+    font-size: 60px;
+    text-align: center;
+}
+
+.info{
+    width: 300px;
+    /* border: 1px solid; */
+    margin-left: 25px;
+}
+
+.info> h3{
+    text-align: center;
+    font-size: 25px;
+}
+
+.info > p{
+    font-size: 20px;
+    line-height: 30px;
+    text-align: justify;
+}
+.more
+{
+    border: 1px solid;
+    border-radius: 20px;
+    width: 150px;
+    height: 60px;
+    font-size: 15px;
+    margin: 5px 0 0 20px;
+}
+
+@media (max-width: 1300px) { 
+    .structure{
+        grid-template-columns: 2;
+        margin: 40px 10px 0 150px;
+    }
+ }
+
+ @media (max-width: 1000px) { 
+    .structure{
+        grid-template-columns: 1fr 1fr;
+        margin: 40px 0 0 27px;
+    }
+ }
+
+ @media (max-width: 500px) { 
+    .structure{
+        grid-template-columns: 1fr;
+        margin: 40px 0 0 12px;
+    }
+ }

@@ -2,19 +2,15 @@ import React, { useEffect } from 'react'
 
 
 export default function Admission() {
-    useEffect(() => {
-        document.querySelector(".admission-btn").addEventListener("click", (e) => {
-            e.preventDefault();
-            document.querySelector(".admission-dialog").showModal()
-        })
-        document.querySelector(".close-btn").addEventListener("click", () => {
-            document.querySelector(".admission-dialog").close()
-        })
-    }, [])
+    const closeHandle = (e)=>{
+        e.target.parentElement.classList.remove("show")
+    }
+
+
     return (
-        <div>
-            <dialog className='admission-dialog'>
-                <img src={require("../images/cancel.png")} alt="cant load" className='close-btn' />
+
+            <div className='admission-dialog'>
+                <img src={require("../images/cancel.png")} alt="cant load" className='close-btn' onClick={(e)=>closeHandle(e)} />
                 <h1 className='admission-title'>ADMISSION FORM</h1>
                 <form action="/AdmissionDetails" method="post" className='admission-form'>
                     <input type="text" placeholder='Name' className="admission-name" />
@@ -22,7 +18,7 @@ export default function Admission() {
                     <input type="text" placeholder='Phone Number' className="admission-number" />
                     <input type="submit" value="SUBMIT" />
                 </form>
-            </dialog>
-        </div>
+            </div>
+
     )
 }
