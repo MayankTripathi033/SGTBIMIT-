@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500&display=swap');
+
+
+.AdminMenuContainer {
+    width: 12%;
+    font-family: 'IBM Plex Sans', sans-serif;
+    padding: 20px;
+    height: 870px;
+    width: 250px;
+    border-right: 0.5px solid #f0f0f0;
+}
+
+.Categories {
+    text-align: center;
+}
+
+.categories_Header {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: center;
+    /* font-size: 15px; */
+    color: #4a4e69;
+    border-radius: 10px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.categories_Header:hover {
+    background-color: #cad2c5;
+}
+
+.categories_Header span {
+    display: flex;
+    align-items: center;
+}
+
+.categories_Header h3 {
+    text-transform: uppercase;
+    font-size: 15px;
+
+}
+
+.CatHeadIcons {
+    width: 35px;
+}
+
+.Categoriesdropdown {
+    background-color: #fafafa;
+    border-radius: 5px;
+}
+
+
+.Categoriesdropdown span p {
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 10px;
+    color: #4a4e69;
+}
+
+.Categoriesdropdown span p:hover {
+    background-color: #e6f4ff;
+    color: #2e86ff;
+}
+
+
+@media (min-width : 1495px){
+    .AdminMenuContainer{
+        height: 740px;
+    }
+}

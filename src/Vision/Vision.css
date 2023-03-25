@@ -1,38 +1,39 @@
-.Vision_Container{
+.Vision_Container {
     text-align: center;
     padding: 10px 0px;
 }
 
-.Vision_Container h1{
+.Vision_Container h1 {
     color: #ec640c;
     font-size: 45px;
 }
 
-.Detail_ImageContainer{
+.Detail_ImageContainer {
     display: flex;
     flex-direction: row;
-    width: 1150px ;
+    width: 1150px;
     margin: auto;
     justify-content: center;
     align-items: center;
 }
 
-.VisionDetail{
+.VisionDetail {
     padding: 50px;
 }
 
-.VisionDetail h3{
+.VisionDetail h3 {
     color: #ec640c;
     font-size: 30px;
 }
 
-.VisionDetail p, ul li{
+.VisionDetail p,
+ul li {
     text-align: justify;
     font-size: 20px;
     line-height: 27px;
 }
 
-.VisionDetail ul{
+.VisionDetail ul {
     padding: 0px;
 }
 
@@ -41,15 +42,15 @@
     width: 550px;
 }
 
-.VisionImage img{
+.VisionImage img {
     height: 750px;
     width: 550px;
 }
 
 
 @media (max-width: 1300px) {
-    .Detail_ImageContainer{
-       width: 900px;
+    .Detail_ImageContainer {
+        width: 900px;
     }
 
 
@@ -57,17 +58,17 @@
         height: 850px;
         width: 450px;
     }
-    
-    .VisionImage img{
+
+    .VisionImage img {
         height: 850px;
         width: 450px;
     }
 
 }
 
-@media (max-width:1000px){
-    .Detail_ImageContainer{
-        flex-wrap: wrap-reverse ;
+@media (max-width:1000px) {
+    .Detail_ImageContainer {
+        flex-wrap: wrap-reverse;
         width: 500px;
     }
 
@@ -75,33 +76,35 @@
         height: 450px;
         width: 450px;
     }
-    
-    .VisionImage img{
+
+    .VisionImage img {
         height: 450px;
         width: 450px;
     }
 }
 
-@media (max-width: 500px){
-    .Detail_ImageContainer{
+@media (max-width: 500px) {
+    .Detail_ImageContainer {
         width: 300px;
     }
-    .VisionDetail{
+
+    .VisionDetail {
         padding: 0px;
     }
 
-    .VisionDetail p, ul li{
+    .VisionDetail p,
+    ul li {
         font-size: 15px;
         padding: 0px;
     }
 
-    
+
     .VisionImage {
         height: 350px;
         width: 320px;
     }
-    
-    .VisionImage img{
+
+    .VisionImage img {
         height: 350px;
         width: 320px;
     }
