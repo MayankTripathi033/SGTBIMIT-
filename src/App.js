@@ -29,6 +29,7 @@ import Bcom from './Academics/Courses/Bcom'
 
 import Faculty from './Faculty/Faculty'
 import EResources from './EResources/EResources.jsx'
+import Examination from './Academics/Examination/Examination'
 function App() {
   AOS.init({
     startEvent: 'load'
@@ -59,6 +60,7 @@ function App() {
       
         <Route path='academics/faculty' element={<Faculty />}/>
         <Route path='academics/e-resources' element={<EResources />}/>
+        <Route path='academics/examinations' element={<Examination />}/>
         </Routes>
     </Router>
   );

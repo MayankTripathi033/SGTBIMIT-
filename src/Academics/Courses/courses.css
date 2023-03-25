@@ -1,8 +1,7 @@
 .courses>h1{
     font-size: mnin(4rem,8vw);
     text-align: center;
-    color:#478ac9;
-    padding-left: 2rem;
+    color:#ec640c;
 }
 .courses>p{
     font-size: min(1.5rem,2vw);
@@ -32,4 +31,9 @@
 }
 .diploma{
     text-align: center;
+    
+}
+.courses{
+    width: min(110rem,110vw);
+    padding-left: min(3rem,3vw);
 }

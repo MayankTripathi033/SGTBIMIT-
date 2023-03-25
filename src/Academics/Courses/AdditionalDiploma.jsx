@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 
+
 export default function AdditionalDiploma() {
     const showHide = (e)=>{
         document.querySelectorAll(".content").forEach((content)=>{
@@ -30,7 +31,7 @@ export default function AdditionalDiploma() {
     <div className='diploma'>
         <h1>Additional Diplomas / Certification Courses</h1>
         <div className="list-wrapper">
-            <button onClick={(e)=>showHide(e)}>
+            <button onClick={(e)=>showHide(e)} >
                 DIGITAL MARKETTING
             </button>
             <h1 class='content'>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</h1>
@@ -40,7 +41,7 @@ export default function AdditionalDiploma() {
             –Nibh nisl condimentum id venenatis. <br />
             –Diam volutpat commodo sed egestas egestas fringilla.</p> 
             <button onClick={(e)=>showHideOne(e)}>
-                Cloud Computing
+                CLOUD COMPUTING
             </button>
 
             <p class = "content-1">–Interdum velit euismod in pellentesque. <br />
@@ -48,7 +49,7 @@ export default function AdditionalDiploma() {
             –Nibh nisl condimentum id venenatis. <br />
             –Diam volutpat commodo sed egestas egestas fringilla.</p>
             <button onClick={(e)=>showHideTwo(e)}>
-            Mobile App Development
+            MOBILE APP DEVELOPMENT
             </button>
 
             <p class = "content-2">–Interdum velit euismod in pellentesque. <br />
@@ -56,7 +57,7 @@ export default function AdditionalDiploma() {
             –Nibh nisl condimentum id venenatis. <br />
             –Diam volutpat commodo sed egestas egestas fringilla.</p>  
 
-            
+       
         </div>
     </div>
     </>
