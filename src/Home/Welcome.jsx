@@ -5,7 +5,7 @@ export default function Welcome() {
   return (
     <section className="welcome">
       <div className="welcome-wrapper">
-        <img src="https://assets.nicepagecdn.com/c86f032b/4353070/images/guruteghbahadur.jpg" alt="" className='welcome-img' data-aos="flip-right" data-aos-offset="300"/>
+        <img src="https://assets.nicepagecdn.com/c86f032b/4353070/images/guruteghbahadur.jpg" alt="" className='welcome-img' data-aos="flip-right" data-aos-offset="300" />
         <div className='welcome-text' data-aos="flip-left" data-aos-offset="300">
           <h1>
             Welcome to SGTBIMIT
@@ -15,8 +15,8 @@ export default function Welcome() {
 
           </p>
           <button className="learn-more-btn" type="button">
-          <a href="/"  >Learn More</a>
-        </button>
+            <a href="/">Learn More</a>
+          </button>
         </div>
       </div>
       <button className="develop-skills-btn" type="button" data-aos="zoom-in" data-aos-offset="300">Develop your skills with SGTBIMIT</button>

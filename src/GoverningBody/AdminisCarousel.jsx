@@ -10,8 +10,8 @@ export default function AdminisCarousel() {
 
   return (
     <>
-    <Header></Header>
-    <Navbar></Navbar>
+      <Header></Header>
+      <Navbar></Navbar>
       <section className='adminis-section'>
         {isPending && <div className="loading">Loading...</div>}
         <Carousel

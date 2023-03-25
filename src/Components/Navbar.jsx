@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 export default function Navbar() {
   const arrow = require("../images/down.png")
-  useEffect(() => {
+/*   useEffect(() => {
     console.log(document.body.offsetWidth)
     document.querySelector(".menu").addEventListener("click", e => {
       document.querySelector("nav").style.transform = "translateX(0%)"
@@ -13,7 +13,7 @@ export default function Navbar() {
       document.querySelector("nav").style.visibility = "hidden"
     })
     if (document.body.offsetWidth < 1000) {
-      
+
       document.querySelectorAll(".dropdown").forEach(dropdown => {
         dropdown.style.display = "none"
       })
@@ -33,22 +33,39 @@ export default function Navbar() {
         })
       })
     }
-  }, [])
+  }, []) */
+  useEffect(()=>{
+    document.querySelector(".menu").addEventListener("click", e => {
+      document.querySelector("nav").style.transform = "translateX(0%)"
+      document.querySelector("nav").style.visibility = "visible"
+    })
+    document.querySelector(".nav-close-btn").addEventListener("click", () => {
+      document.querySelector("nav").style.transform = "translateX(-100%)"
+      document.querySelector("nav").style.visibility = "hidden"
+    })
+  },[])
+  const dropdownClickHandle = (e)=>{
+    if(document.body.offsetWidth > 1000) return
+
+    e.preventDefault()
+    e.target.parentElement.querySelector(".dropdown").classList.toggle("show")
+    console.log(e.target.parentElement.querySelector(".dropdown"))
+  }
 
   return (
     <>
       <nav>
         <div className='mobile nav-close'><img src={require("../images/cancel.png")} alt="cant load" className='nav-close-btn' /></div>
         <div className="mobile header-btns mobile-header-btns">
-          <button className="admission-btn" type="button" onClick={()=>{
-            document.querySelector("dialog").showModal()
+          <button className="admission-btn" type="button" onClick={() => {
+            document.querySelector(".admission-dialog").classList.add("show")
           }}>CLICK HERE FOR ADMISSIONS</button>
           <button className="student-login-btn" type="button">STUDENT - ERP LOGIN</button>
         </div>
         <div className="nav-item" data-index="0">
           <NavLink to="/" className='nav-item'>HOME</NavLink>
         </div>
-        <div className="nav-item" data-index="1">
+        <div className="nav-item" onClick={(e)=>dropdownClickHandle(e)} data-index="1">
           <NavLink to="/about"> ABOUT US<img src={arrow} alt="" /></NavLink>
           <div className="dropdown" data-index="1">
             <NavLink to="/about/governing-body" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
@@ -63,7 +80,7 @@ export default function Navbar() {
           </div>
 
         </div>
-        <div className="nav-item" data-index="2">
+        <div className="nav-item" onClick={(e)=>dropdownClickHandle(e)} data-index="2">
           <NavLink to="/academics">ACADEMICS<img src={arrow} alt="" /></NavLink>
           <div className="dropdown" data-index="2">
             <div className="dropdown-item courses-dropdown-container">
@@ -110,10 +127,10 @@ export default function Navbar() {
           </div>
 
         </div>
-        <div className="nav-item" data-index="3">
+        <div className="nav-item" onClick={(e)=>dropdownClickHandle(e)} data-index="3">
           <NavLink to="/admission">ADMISSION<img src={arrow} alt="" /></NavLink>
           <div className="dropdown" data-index="3">
-            <NavLink to="/admission/governing-body" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/admission/fees" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">FEES</div>
             </NavLink>
             <NavLink to="/admission/courses-eligibility" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
@@ -125,7 +142,7 @@ export default function Navbar() {
           </div>
 
         </div>
-        <div className="nav-item" data-index="4">
+        <div className="nav-item" onClick={(e)=>dropdownClickHandle(e)} data-index="4">
           <NavLink to="/alumini">ALUMINI<img src={arrow} alt="" /></NavLink>
           <div className="dropdown" data-index="4">
             <NavLink to="/alumini/alumini-meet" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
@@ -143,7 +160,7 @@ export default function Navbar() {
           </div>
 
         </div>
-        <div className="nav-item" data-index="5">
+        <div className="nav-item" onClick={(e)=>dropdownClickHandle(e)} data-index="5">
           <NavLink to="/society">SOCIETY<img src={arrow} alt="" /></NavLink>
           <div className="dropdown" data-index="5">
             <NavLink to="/society/nss-cell" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
@@ -179,7 +196,7 @@ export default function Navbar() {
           </div>
 
         </div>
-        <div className="nav-item" data-index="6">
+        <div className="nav-item" onClick={(e)=>dropdownClickHandle(e)} data-index="6">
           <NavLink to="/events">EVENTS<img src={arrow} alt="" /></NavLink>
           <div className="dropdown" data-index="6">
             <NavLink to="/events/past" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
@@ -194,7 +211,7 @@ export default function Navbar() {
           </div>
 
         </div>
-        <div className="nav-item" data-index="7">
+        <div className="nav-item" onClick={(e)=>dropdownClickHandle(e)} data-index="7">
           <NavLink to="/industry-interface">INDUSTRY INTERFACE<img src={arrow} alt="" /></NavLink>
           <div className="dropdown" data-index="7">
             <NavLink to="/industry-interface/industrial-visit" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
@@ -212,7 +229,7 @@ export default function Navbar() {
           </div>
 
         </div>
-        <div className="nav-item" data-index="8">
+        <div className="nav-item" onClick={(e)=>dropdownClickHandle(e)} data-index="8">
           <NavLink to="/naac">NAAC<img src={arrow} alt="" /></NavLink>
           <div className="dropdown" data-index="8">
             <NavLink to="/naac/r&d" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
