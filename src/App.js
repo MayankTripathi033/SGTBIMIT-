@@ -1,8 +1,6 @@
 import React from 'react'
 import AOS from 'aos'
 import Home from './Home/Home.jsx'
-import Navbar from './Components/Navbar'
-import Header from './Components/Header'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './styles.css'
 import AdminisCarousel from './GoverningBody/AdminisCarousel.jsx'
@@ -13,7 +11,6 @@ import Divinity from './Society/pages/Divinity'
 import SmartYouth from './Society/pages/SmartYouth'
 import Literary from './Society/pages/Literary'
 import Nss from './Society/pages/Nss'
-import Footer from './Components/Footer'
 import Fineart from './Society/pages/Fineart'
 import Cultural from './Society/pages/Cultural'
 import Soch from './Society/pages/Soch'
@@ -36,6 +33,8 @@ import Bba from './Academics/Courses/Bba'
 import BbaBI from './Academics/Courses/BbaBI'
 import Bca from './Academics/Courses/Bca'
 import Bcom from './Academics/Courses/Bcom'
+import Testimonial_Update from './Pages/Testimonials/Testimonial_Update/Testimonial_Update.jsx'
+import Society_Update from './Pages/Society/Society_Update/Society_Update.jsx'
 function App() {
   AOS.init({
     startEvent: 'load'
@@ -68,8 +67,10 @@ function App() {
         <Route path='/admin' element = {<Admin/>}/>
         <Route path='/admin/Testimonials_Add' element = {<Testimonials_ADD/>}/>
         <Route path='/admin/Testimonials_Display' element = {<Testimonial_Display/>}/>
+        <Route path='/admin/Testimonials_Update/:id' element = {<Testimonial_Update/>}/>
         <Route path='/admin/Society_Add' element = {<Society_Add/>}/>
         <Route path='/admin/Society_Display' element = {<Society_Display/>}/>
+        <Route path='/admin/Society_Update/:_id' element = {<Society_Update/>}/>
         <Route path='academics/courses/bba' element={<Bba />}/>
         <Route path='academics/courses/bbab&i' element={<BbaBI />}/>
         <Route path='academics/courses/bca' element={<Bca />}/>
