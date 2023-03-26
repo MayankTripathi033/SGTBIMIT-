@@ -1,8 +1,5 @@
 import React from 'react'
 import './courses.css'
-import NavBar from '../../Components/Navbar'
-import Header from '../../Components/Header'
-import Footer from '../../Components/Footer'
 import AdditionalDiploma from './AdditionalDiploma'
 import Navbar from '../../Components/Navbar.jsx'
 import Header from '../../Components/Header.jsx'
