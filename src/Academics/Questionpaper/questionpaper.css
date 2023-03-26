@@ -1,0 +1,29 @@
+.sem{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: min(1rem, 1vw) min(2rem,2vw);
+    background-color: rgba(0,0,0,0.1);
+    padding-inline: 1rem;
+    border-radius: 5px;
+}
+.sem img{
+    height: 30px;
+    width: 30px;
+}
+
+.quespapers{
+    margin: min(2rem, 2vw) min(2rem,2vw);
+}
+.quespapers h1{
+    font-size: min(3rem,6vw);
+    text-align: center;
+    background-color:#478ac9;
+
+}
+.quespapers h2{
+font-size: min(2rem,4vw);    
+}
+.quespapers p{
+    font-size: min(1rem,2vw);
+}

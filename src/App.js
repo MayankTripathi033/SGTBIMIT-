@@ -35,6 +35,7 @@ import Bca from './Academics/Courses/Bca'
 import Bcom from './Academics/Courses/Bcom'
 import Testimonial_Update from './Pages/Testimonials/Testimonial_Update/Testimonial_Update.jsx'
 import Society_Update from './Pages/Society/Society_Update/Society_Update.jsx'
+import Questionpaper from './Academics/Questionpaper/Questionpaper'
 function App() {
   AOS.init({
     startEvent: 'load'
@@ -75,6 +76,7 @@ function App() {
         <Route path='academics/courses/bbab&i' element={<BbaBI />}/>
         <Route path='academics/courses/bca' element={<Bca />}/>
         <Route path='academics/courses/bcom' element={<Bcom />}/>
+        <Route path='academics/prev-year-papers' element={<Questionpaper />}/>
         </Routes>
     </Router>
   );
