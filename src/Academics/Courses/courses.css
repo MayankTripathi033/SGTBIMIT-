@@ -4,7 +4,7 @@
     color:#ec640c;
 }
 .courses>p{
-    font-size: min(1.5rem,2vw);
+    font-size: min(1.5rem,4vw);
     text-align: justify;
 }
 .diploma h1{
@@ -12,7 +12,7 @@
     color: #ec640c;
 }
 .list-wrapper h1{
-    font-size: 1.3rem;
+    font-size: min(1.3rem, 4vw);
     color: black;
 }
 .list-wrapper p{
@@ -25,7 +25,7 @@
     background-color:#478ac9;
     color: white;
     border-radius: 0.5rem;
-    width: 80rem;
+    width: 90%;
     margin: 1rem;
     padding: 1rem;
 }
@@ -34,6 +34,5 @@
     
 }
 .courses{
-    width: min(110rem,110vw);
-    padding-left: min(3rem,3vw);
+    padding: min(3rem,3vw);
 }
