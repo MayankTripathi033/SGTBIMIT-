@@ -1,0 +1,39 @@
+.Testimonial_DisplayContainer{
+    display: flex;
+}
+
+.Testimonial_DetailContainer{
+    width: 100%;
+}
+
+.TesHeaderCard{
+    width :90%;
+    margin: auto;
+}
+
+.TesDisplayHeading h1{
+    font-size: 25px;
+    padding: 10px;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+}
+
+.TesDisplayCardContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.TesDisplayCard{
+    width: 450px;
+}
+
+.ant-card-head-title{
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    text-transform: capitalize;
+}
+
+
+.TestBin{
+    font-size: 20px;
+}

@@ -1,0 +1,50 @@
+.SocietyDisplayContainer {
+    display: flex;
+}
+
+.Society_Card {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.Society_Card h3{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 10px;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    text-decoration: none;
+    font-size: 30px;
+    margin: 0px;
+}
+
+.Society_Card_ImageDescription{
+    display: flex;
+    gap :20px
+}
+
+.Society_Card_ImageDescription img{
+    padding: 5px;
+    border-radius: 20px;
+    width: 600px;
+}
+
+.Society_Describe{
+    border-left: 1px solid #f0f0f0;
+    padding: 10px;
+}
+
+.Society_Describe h4{
+    border-bottom: 1px solid #f0f0f0;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    padding-bottom: 5px;
+    font-size: 18px;
+}
+
+.Society_Describe p{
+    text-align: justify ;
+    font-family: 'Abel', sans-serif;
+    font-family: 30px;
+    width: auto;
+}
