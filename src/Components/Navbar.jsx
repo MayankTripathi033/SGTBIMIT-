@@ -102,9 +102,6 @@ export default function Navbar() {
             <NavLink to="/academics/e-resources" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">E-RESOURCES</div>
             </NavLink>
-            <NavLink to="/academics/co-po-mapping" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
-              <div className="dropdown-item">CO-PO MAPPING</div>
-            </NavLink>
             <NavLink to="/academics/research" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">RESEARCH</div>
             </NavLink>
@@ -230,6 +227,9 @@ export default function Navbar() {
             </NavLink>
             <NavLink to="/naac/edic" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">EDIC</div>
+            </NavLink>
+            <NavLink to="/academics/co-po-mapping" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+              <div className="dropdown-item">CO-PO MAPPING</div>
             </NavLink>
           </div>
         </div>

@@ -1,9 +1,12 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import {useNavigate} from  'react-router-dom'
 export default function DirectorMsg() {
 
+  const navigate = useNavigate()
+
   return (
-    <div className="director-msg">
+    <section className="director-msg">
       <div className="bg-img"></div>
       <div className='director-container'>
         <h1 className='director-heading' data-aos="zoom-in" data-aos-offset="300" data-aos-duration="3000">
@@ -23,10 +26,10 @@ export default function DirectorMsg() {
         <p data-aos="zoom-in" className="dr-long-note">
           We at Sri Guru Tegh Bahadur Institute of Management & Information Technology endeavor to follow Gurbani in letter and spirit.
         </p>
-        <div className="read-link">
-          <Link to="/director-readmore">READ MORE <img src={require("../images/right.png")} alt="cant load" className='read-arrow' /> </Link>
-        </div>
+        <Link to="/director-readmore" className="read-link">
+          <p>READ MORE</p> <img src={require("../images/right.png")} alt="cant load" className='read-arrow' /> 
+        </Link>
       </div>
-    </div>
+    </section>
   )
 }
