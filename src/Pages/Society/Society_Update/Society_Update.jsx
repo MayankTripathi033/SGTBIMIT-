@@ -123,7 +123,7 @@ const Society_Update = () => {
                   SocietyUpdate();
                 }}
               >
-                Submit
+                Update
               </button>
             </div>
           </div>
