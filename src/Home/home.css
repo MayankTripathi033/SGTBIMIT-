@@ -15,7 +15,6 @@
 
 .welcome {
     background-color: #478ac9;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -27,7 +26,7 @@
 }
 
 .welcome-img {
-    width: min(531px, 80%);
+    width: min(531px, 40%);
     aspect-ratio: 531/632;
     border-radius: 3rem;
     object-fit: cover;
@@ -43,12 +42,12 @@
 .welcome-text h1 {
     text-align: center;
     padding: min(2rem, 2vw);
-    font-size: min(2.5rem, 5vw);
+    font-size: min(2.5rem, 7vw);
 }
 
 .welcome-text p {
     margin-inline: min(1.5rem, 3vw);
-    font-size: min(1.375rem, 2.75vw);
+    font-size: min(1.375rem, 4vw);
     line-height: 2;
     text-align: justify;
 }
@@ -70,18 +69,23 @@
     color: white;
     letter-spacing: .1rem;
     font-size: min(1.125rem, 2.5vw);
+    border-radius: 5rem;
+}
+.learn-more-btn a{
+    text-decoration: none;
+    color: white;
 }
 
 .develop-skills-btn {
-    margin: auto auto min(6rem, 6vw) auto;
+    margin: min(3rem, 6vw) auto min(3rem, 6vw) auto;
     border: none;
     outline: none;
-    padding: min(2rem, 2vw) min(16rem, 16vw);
+    padding: min(2rem, 2vw) min(16rem, 30vw);
     text-transform: uppercase;
     background-color: #2cccc4;
     color: white;
-    letter-spacing: .1rem;
-    font-size: min(1.5rem, 5vw);
+    font-size: min(2.5rem, 5vw);
+    border-radius: 5rem;
 }
 /* Testimonial cards */
 
@@ -101,7 +105,7 @@
 
 }
 .test-carousel{
-    width: min(1200px, 100%) !important;
+    width: min(1200px, 75%) !important;
     margin-inline:  auto !important;
 }
 
@@ -113,6 +117,8 @@
     font-size: min(1.2rem, 2.5vw);
     color: rgba(0, 0, 0, 0.7);
     line-height: 1.6;
+    text-overflow: ellipsis;
+    
 
 
 }
@@ -151,20 +157,28 @@
     justify-content: center;
 }
 
+.card p{
+    font-size: min(1rem, 2vw);
+}
 
-@media(max-width: 600px){
+@media(max-width: 1000px){
+    .test-carousel{
+        width: 400px !important;
+    }
     .test{
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3, max-content);
     }
+}
+@media(max-width: 600px){
     .card{
         padding: 3rem;
     }
     .test h1{
-        font-size: 2.5rem !important;
+        font-size: 2.2rem !important;
     }
     .test p{
-        font-size: 1.5rem !important;
+        font-size: 1rem !important;
         text-align: justify;
     }
 }
@@ -233,6 +247,19 @@
 .dr-long-note {
     font-size: min(1.7rem, 3.4vw);
     text-align: center;
+}
+.read-arrow{
+    height: min(2rem, 2vw) !important;
+    aspect-ratio: 1;
+}
+.read-link a {
+    text-decoration: none;
+    color: white;
+}
+.read-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Placements */

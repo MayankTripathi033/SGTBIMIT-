@@ -7,21 +7,22 @@
 }
 
 .society h1 {
-    font-size: min(2rem,2vw);
+    font-size: min(2rem,4vw);
+    color: white;
 }
 
 .society h2 {
-    font-size: min(1.7rem,1.7vw);
+    font-size: min(1.7rem,3.5vw);
 }
 
 .society p {
-    font-size: min(1.7rem,1.7vw);
+    font-size: min(1.7rem,3.5vw);
     color: rgba(0, 0, 0, 0.8);
     text-align: justify;
 }
 
 .society img {
-    width: min(700px,70vw);
+    width: min(700px,80vw);
     aspect-ratio: 7/5;
     border: 2px solid black;
 }
