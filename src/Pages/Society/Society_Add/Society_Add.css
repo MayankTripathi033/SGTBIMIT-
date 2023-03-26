@@ -1,0 +1,9 @@
+.Message_image {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+::-webkit-file-upload-button {
+    display: none;
+}
