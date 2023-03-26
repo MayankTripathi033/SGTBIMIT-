@@ -23,7 +23,7 @@ import SwachhBharat from './Society/pages/SwachhBharat'
 import Faculty from './Faculty/Faculty'
 import EResources from './EResources/EResources.jsx'
 import Examination from './Academics/Examination/Examination'
-import Fees from './Fees/Fees.jsx'
+
 import Syllabus from './Academics/Syllabus/Syllabus.jsx'
 
 import Fees from './Fees/Fees'
@@ -61,7 +61,6 @@ function App() {
         <Route path='academics/examinations' element={<Examination />}/>
         <Route path='admission/fees' element={<Fees />}/>
         <Route path='academics/syllabus' element={<Syllabus />}/>
-        <Route path='admission/fees' element = {<Fees />}/>
         <Route path='admission/courses-eligibility' element = {<Eligibility />}/>
         <Route path='admission/notices' element = {<Notice />}/>
         <Route path='/admin' element = {<Admin/>}/>
