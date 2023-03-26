@@ -31,6 +31,7 @@ import Faculty from './Faculty/Faculty'
 import EResources from './EResources/EResources.jsx'
 import Examination from './Academics/Examination/Examination'
 import Fees from './Fees/Fees.jsx'
+import Syllabus from './Academics/Syllabus/Syllabus.jsx'
 
 function App() {
   AOS.init({
@@ -63,6 +64,7 @@ function App() {
         <Route path='academics/e-resources' element={<EResources />}/>
         <Route path='academics/examinations' element={<Examination />}/>
         <Route path='admission/fees' element={<Fees />}/>
+        <Route path='academics/syllabus' element={<Syllabus />}/>
         </Routes>
     </Router>
   );

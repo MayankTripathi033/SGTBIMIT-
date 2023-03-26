@@ -1,9 +1,15 @@
 import React from 'react'
 import './courses.css'
 import AdditionalDiploma from './AdditionalDiploma'
+import Navbar from '../../Components/Navbar.jsx'
+import Header from '../../Components/Header.jsx'
+import Footer from '../../Components/Footer.jsx'
+
 export default function Bba() {
   return (
     <>
+    <Header></Header>
+    <Navbar></Navbar>
     <div className='courses'>
 
         <img src='' alt="cant load" data-aos="fade-up" />   
@@ -13,6 +19,7 @@ export default function Bba() {
         <AdditionalDiploma />
 
     </div>
+    <Footer></Footer>
     </>
     )
 }

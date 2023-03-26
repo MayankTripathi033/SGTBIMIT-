@@ -1,9 +1,14 @@
 import React from 'react'
 import './examination.css'
+import Navbar from '../../Components/Navbar.jsx'
+import Header from '../../Components/Header.jsx'
+import Footer from '../../Components/Footer.jsx'
 
 export default function Examination() {
-  return (<>
-  
+  return (
+  <>
+    <Header></Header>
+    <Navbar></Navbar>
     <div className='examination'>
         <h1>TIPS FOR STUDENTS</h1>
 
@@ -83,14 +88,10 @@ export default function Examination() {
 
 
 
-
-
-
-
-
-
-
     </div>
+    <Footer></Footer>
     </>
+    
+    
   )
 }

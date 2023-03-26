@@ -1,8 +1,8 @@
 import React from 'react'
 import './director.css'
-import Navbar from '../Components/Navbar'
-import Header from '../Components/Header'
-import Footer from '../Components/Footer'
+import Navbar from '../Components/Navbar.jsx'
+import Header from '../Components/Header.jsx'
+import Footer from '../Components/Footer.jsx'
 export default function DirectorReadMore() {
     return (
         <>
