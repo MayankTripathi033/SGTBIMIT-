@@ -18,7 +18,8 @@
 .list-wrapper p{
     font-size: 1.3rem;
     text-align: justify;
-    padding-left: 5rem;
+    width: 90%;
+    margin-inline: auto;
 }
 .diploma button{
     font-size: 2rem;
