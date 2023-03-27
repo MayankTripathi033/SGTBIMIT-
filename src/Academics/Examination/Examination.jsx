@@ -9,7 +9,7 @@ export default function Examination() {
   <>
     <Header></Header>
     <Navbar></Navbar>
-    <div className='examination'>
+    <section className='examination'>
         <h1>TIPS FOR STUDENTS</h1>
 
         <h2>IMPORTANT TIPS</h2>
@@ -88,7 +88,7 @@ export default function Examination() {
 
 
 
-    </div>
+    </section>
     <Footer></Footer>
     </>
     

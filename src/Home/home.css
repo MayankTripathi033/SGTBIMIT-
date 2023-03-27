@@ -227,7 +227,7 @@
     flex-direction: column;
     align-items: center;
     height: 100%;
-    width: min(600px, 100%);
+    width: min(900px, 100%);
     background-color: #77aad9;
     padding: min(2rem, 2vw);
     z-index: 11;

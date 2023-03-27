@@ -1,14 +1,14 @@
-.eli_container{
+.eli_container {
     text-align: center;
     padding: 10px 0;
 }
 
-.eli_container> h1{
+.eli_container>h1 {
     color: #ec640c;
     font-size: 45px;
 }
 
-.btns > button{
+.btns>button {
     font-size: 22px;
     width: 180px;
     height: 60px;
@@ -18,14 +18,29 @@
     background-color: #edb458;
 }
 
-h3{
+h3 {
     text-decoration: underline;
 }
 
-.info1, .info2, .info3, .info4 {
+.info1,
+.info2,
+.info3,
+.info4 {
     margin: 5px 20px;
     padding: 5px;
     background-color: #478ac9;
     border-radius: 15px;
     font-size: 17px;
+}
+
+@media (max-width:1000px) {
+    .btns > button{
+        margin: 10px 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .btns > button{
+        margin: 10px 20px;
+    }
 }
