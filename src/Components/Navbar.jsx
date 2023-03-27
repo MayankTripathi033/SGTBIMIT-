@@ -37,8 +37,18 @@ export default function Navbar() {
     }
   }, [])
 
+  const handleFloatClick = (e) => {
+    document.querySelector(".admission-dialog").classList.add("show")
+    document.querySelector(".admission-bg").classList.add("show-bg")
+  }
+
   return (
     <>
+      <div className="floating-btn"
+      onClick={(e)=>{handleFloatClick(e)}}
+      >
+        ADMISSION
+      </div>
       <nav>
         <div className='mobile nav-close'><img src={require("../images/cancel.png")} alt="cant load" className='nav-close-btn' /></div>
         <div className="mobile header-btns mobile-header-btns">

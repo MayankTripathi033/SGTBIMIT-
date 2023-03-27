@@ -35,7 +35,9 @@ button {
 .show{
     visibility: visible !important;
 }
-
+.show-bg{
+    display: block;
+}
 
 
 /* Carousel */
