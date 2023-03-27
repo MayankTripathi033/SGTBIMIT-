@@ -7,7 +7,8 @@ export default function Header() {
   const logo = require('../images/logo.png')
   useEffect(() => {
     document.querySelector(".admission-btn").addEventListener("click", (e) => {
-      document.querySelector(".admission-dialog").classList.toggle("show")
+      document.querySelector(".admission-dialog").classList.add("show")
+      document.querySelector(".admission-bg").classList.add("show-bg")
     })
   }, [])
   return (

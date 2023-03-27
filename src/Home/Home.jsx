@@ -18,6 +18,7 @@ export default function Home() {
 
   useEffect(() => {
     document.querySelector(".admission-dialog").classList.add("show")
+    document.querySelector(".admission-bg").classList.add("show-bg")
   }, [])
 
   return (
