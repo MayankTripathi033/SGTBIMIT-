@@ -24,9 +24,7 @@ export default function Navbar() {
           if (i !== 0) e.preventDefault()
           const dropdowns = document.querySelectorAll(`.dropdown`)
           dropdowns.forEach((dropdown, j) => {
-            dropdown.style.display = "none"
             if (dropdown.dataset.index === `${i}`) {
-
               if (dropdown.style.display === "none") {
                 dropdown.style.display = "block"
                 return
@@ -58,7 +56,7 @@ export default function Navbar() {
             <NavLink to="/about/governing-body" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">GOVERNING BODY</div>
             </NavLink>
-            <NavLink to="/about" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/about" className={({ isActive }) => isActive ? 'dropdown-active-item about-nav-link' : 'non-active'}>
               <div className="dropdown-item">ABOUT SGTBIMIT</div>
             </NavLink>
             <NavLink to="/about/vision-and-mission" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>

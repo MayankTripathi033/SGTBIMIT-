@@ -1,6 +1,14 @@
+:root{
+    --primary-clr: #243f56;
+    --secondary-clr: #4fb291;
+}
+
+
 *,
 *::before,
 *::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
     font-family: "Open Sans", sans-serif;
 }

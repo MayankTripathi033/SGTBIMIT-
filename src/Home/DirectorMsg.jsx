@@ -1,9 +1,7 @@
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
-import {useNavigate} from  'react-router-dom'
+import { Link } from 'react-router-dom'
 export default function DirectorMsg() {
 
-  const navigate = useNavigate()
 
   return (
     <section className="director-msg">
@@ -19,15 +17,15 @@ export default function DirectorMsg() {
         <p data-aos="zoom-in" className='dr-short-note'>
           “Those who walk on the path of truth shall be praised throughout the world”
           <br />
-          <b data-aos="zoom-out">S
-            ri Guru Granth Sahib Ji
+          <b data-aos="zoom-out">
+            Sri Guru Granth Sahib Ji
           </b>
         </p>
         <p data-aos="zoom-in" className="dr-long-note">
           We at Sri Guru Tegh Bahadur Institute of Management & Information Technology endeavor to follow Gurbani in letter and spirit.
         </p>
         <Link to="/director-readmore" className="read-link">
-          <p>READ MORE</p> <img src={require("../images/right.png")} alt="cant load" className='read-arrow' /> 
+          <p>READ MORE</p> <img src={require("../images/right.png")} alt="cant load" className='read-arrow' />
         </Link>
       </div>
     </section>

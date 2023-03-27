@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import useFetch from '../useFetch'
 import { Carousel } from 'react-responsive-carousel'
 import './adminis.css'
@@ -7,6 +7,10 @@ import Header from '../Components/Header'
 import Footer from '../Components/Footer'
 export default function AdminisCarousel() {
   const { data: adminisArray, isPending } = useFetch("http://localhost:5000/Administration/Administration_Display")
+
+  useEffect(()=>{
+    document.querySelector(".about-nav-link").classList.remove("dropdown-active-item")
+  },[])
 
   return (
     <>

@@ -13,7 +13,7 @@
 /* Welcome */
 
 .welcome {
-    background-color: #478ac9;
+    background-color: var(--primary-clr);
     display: flex;
     flex-direction: column;
     padding: min(2rem, 2vh);
@@ -66,11 +66,13 @@
     outline: none;
     padding: min(1rem, 2vh) min(2rem, 2vw);
     text-transform: uppercase;
-    background-color: #2cccc4;
+    background-color: transparent;
     color: white;
     letter-spacing: .1rem;
     font-size: min(1.125rem, 2.5vw);
     border-radius: 5rem;
+    border: 3px solid white;
+    transition: 250ms;
 }
 
 .learn-more-btn a {
@@ -82,12 +84,21 @@
     margin: min(3rem, 6vw) auto min(3rem, 6vw) auto;
     border: none;
     outline: none;
-    padding: min(2rem, 2vw) min(16rem, 30vw);
+    padding: min(2rem, 2vw) min(8rem, 15vw);
     text-transform: uppercase;
-    background-color: #2cccc4;
+    background-color: var(--secondary-clr);
     color: white;
     font-size: min(2.5rem, 5vw);
     border-radius: 5rem;
+    transition: 250ms;
+}
+
+.develop-skills-btn:hover{
+    background-color: var(--primary-clr);
+    outline: 3px solid white;
+}
+.learn-more-btn:hover{
+    background-color: var(--secondary-clr);
 }
 
 /* Testimonial cards */
@@ -120,19 +131,15 @@
     font-style: italic;
     text-align: center;
     font-size: min(1.2rem, 2.5vw);
-    color: rgba(0, 0, 0, 0.7);
+    color: rgba(0, 0, 0, 0.9);
     line-height: 1.6;
-    text-overflow: ellipsis;
-
-
-
 }
 
 .t-heading {
 
     text-align: center;
     font-size: min(3rem, 6vw);
-    color: #ec640c;
+    color: var(--secondary-clr);
 }
 
 
@@ -144,7 +151,7 @@
 }
 
 .card-1 {
-    background-color: #2cccc4;
+    background-color: var(--primary-clr);
 
 }
 
@@ -164,6 +171,9 @@
 
 .card p {
     font-size: min(1rem, 2vw);
+}
+.card h1{
+    color: var(--primary-clr);
 }
 
 @media(max-width: 1000px) {
@@ -216,7 +226,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    background-color: #478ac9;
+    background-color: var(--primary-clr);
     opacity: 0.7;
     z-index: 8;
 }
@@ -228,7 +238,7 @@
     align-items: center;
     height: 100%;
     width: min(900px, 100%);
-    background-color: #77aad9;
+    background-color: var(--primary-clr);
     padding: min(2rem, 2vw);
     z-index: 11;
 }
@@ -295,7 +305,7 @@
 }
 
 .placements-container>h1 {
-    color: #2cccc4;
+    color: var(--secondary-clr);
     text-align: center;
     font-size: min(3rem, 6vw);
 }
@@ -344,7 +354,7 @@
     flex-direction: column;
     align-items: center;
     padding-bottom: min(3rem, 3vh);
-    background-color: #478ac9;
+    background-color: var(--primary-clr);
     margin-inline: auto;
 }
 
@@ -369,7 +379,7 @@
 }
 
 .collab-container h1 {
-    color: #2cccc4;
+    color: var(--secondary-clr);
     text-align: center;
     font-size: min(4rem, 7vw);
 }
@@ -384,7 +394,7 @@
 
 .recruiters h1 {
     text-align: center;
-    color: #77aad9;
+    color: var(--secondary-clr);
     font-size: min(3rem, 6vw);
 }
 
@@ -409,7 +419,7 @@
 }
 
 .map .upper-btns {
-    background-image: linear-gradient(to right, #478ac9, #ec640c);
+    background-image: linear-gradient(to right, var(--secondary-clr), var(--primary-clr));
     font-weight: 700;
     font-size: min(1.25rem, 2.5vw);
     color: white;
@@ -417,7 +427,7 @@
 }
 
 .map-section {
-    background-color: #2cccc4;
+    background-color: var(--primary-clr);
     display: flex;
     width: 100%;
 }
@@ -443,14 +453,15 @@
 }
 
 .lower-btn {
-    padding: min(1rem, 1vh) min(2rem, 2vw);
-    color: white;
+    padding: min(1rem, 1vh) min(2rem, 4vw);
+    color: var(--primary-clr);
+    font-weight: 700;
     background-color: green;
     border: none;
     outline: none;
     font-size: min(1.5rem, 3vw);
     font-weight: 700;
-    background-color: #ec640c !important;
+    background-color: var(--secondary-clr) !important;
     border-radius: min(2.5rem, 2.5vw);
 }
 

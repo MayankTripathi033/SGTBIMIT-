@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../Components/Header";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
@@ -6,6 +6,9 @@ import visionimage from "../images/vision.jpg"
 import "./Vision.css";
 
 export default function Vision() {
+  useEffect(()=>{
+    document.querySelector(".about-nav-link").classList.remove("dropdown-active-item")
+  },[])
  
   return (
     <>
