@@ -8,18 +8,40 @@ import Footer from '../../Components/Footer.jsx'
 export default function BbaBI() {
   return (
   <>
-    <Header></Header>
-    <Navbar></Navbar>
+    <Header />
+    <Navbar />
     <div className='courses'>
     <img src='' alt="cant load" data-aos="fade-up" />
       <h1>BACHELORS OF BUSINESS ADMINISTRATION (BANKING & INSURANCE)</h1>
-      <p>Bachelor of Computer Applications (BCA) at Sri Guruteg Bahadur Institute of Management and Information Technology is a three years full-time degree course affiliated to GGSIP University. This course is designed and structured with the intent to provide our students with a dynamically stimulating environment, where the students can get transformed into highly skilled IT specialists. The curriculum has been designed to give the students an in-depth knowledge of various subjects related to Information Technology along with the basic concepts of management.The objective of the BCA Program at SGTBIMIT is to produce outstanding IT professionals who can apply the theoretical knowledge into practice in the real world and develop stand-alone live projects themselves. The approach is more practical by the virtue of various value addition Labs and Clubs apart from the classroom studies.The evolution of teaching pedagogy applied at SGTBIMIT makes the curriculum more dynamic as it incorporates not just learning through lectures but also applying the concepts with the help of Role Plays, Case Studies and other creative exercises.This undergraduate program equips the students with an in-depth understanding of technical concepts coupled with intensive industry exposure. The course curriculum is designed after a deep analysis of the requisitions from the industry stakeholders and focusing on the industry expectations from IT professionals. The Program also offers tremendous flexibility and learning opportunities through a credit-based approach.The salient features of the program include an emphasis on enhancing the students’ soft skills and providing them with optimum industry interaction through varied initiatives.</p>
-
-
+      <p>
+      A three-year full-time degree program in Bachelor of Business Administration 
+      (Banking and Insurance) is presented by Sri Guru Tegh Bahadur Institute of 
+      Management and Information Technology and is accredited by GGSIP University. 
+      It seeks to help students gain fundamental expertise in important facets of 
+      business management. It covers many business-related topics, including how to 
+      communicate, analyse situations, present one's own viewpoints in front of a 
+      large audience, make decisions using both quantitative and qualitative factors, 
+      and create a comprehensive understanding of the various business environments' 
+      functional domains. According to the curriculum, students participate in 
+      internships or summer training programs to gain practical experience working 
+      on real-world projects.
+      Throughout the course of its three years, this banking and insurance curriculum covers 
+      a wide range of topics, including IT (Information Technology), computer applications, 
+      accounting, economics, banking operations, Treasury operations, investment banking, 
+      rural finance, insurance, and loans. Six semesters make up the curriculum, of which 
+      four are shared by all students and the remaining two are dependent on their chosen speciality. 
+      The course will also give the students the opportunity to use cutting-edge methods to manage 
+      banking-related tasks and deliver outcomes quickly. Graduates with a BBA in Banking and 
+      Insurance can find employment in a wide range of industries and occupations. The majority 
+      of candidates may find employment through government banks.
+      Yet in order to apply for a post, they must forego a common position front exam. 
+      Applicants for MBA or PGDM programmes in banking and insurance should be highly motivated 
+      and have strong communication skills. Also, you may make a tonne of money with this degree. 
+      Starting out is simple.
+      </p>
       <AdditionalDiploma />
-
     </div>
-    <Footer></Footer>
+    <Footer />
     </>
   )
 }

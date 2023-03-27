@@ -5,19 +5,26 @@
     text-align: center;
 }
 
-.syllabus h2 {
-    font-size: min(2rem, 6vw);
-    padding: 10px;
-
+.btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
-
-.syllabus a {
-    font-size: min(1.5rem, 5vw);
-    padding: 10px;
-    word-wrap: break-word;
+.btn> a{
+    font-size: 22px;
+    font-weight: 700;
+    width: 180px;
+    height: 60px;
+    border-radius: 20px;
+    border: 1px solid black;
+    margin: 0 20px;
+    background-color: #edb458;
+    text-align: center;
+    text-decoration: none;
+    padding: 12px;
+    color: black;
 }
 
 .syllabus {
     margin: min(2rem,2vw);
-
 }

@@ -1,7 +1,8 @@
 .Fees > h1{
-    color: #ec640c;
-    font-size: 45px;
+    color: #4fb291;
+    font-size: 50px;
     text-align: center;
+    font-weight: 700;
 }
 
 .structure
@@ -26,7 +27,7 @@
     width: 330px;
     height: 130px;
     margin: 7px 0px 0px 7px;
-    background-color: #ec640c;
+    background-color: #243e55;
     /* border: 1px solid black; */
     border-radius: 1rem;
 }
@@ -36,6 +37,7 @@
     margin-top: 50px;
     font-size: 60px;
     text-align: center;
+    color: white;
 }
 
 .info{
@@ -62,7 +64,7 @@
     width: 150px;
     height: 60px;
     font-size: 15px;
-    margin: 5px 0 0 20px;
+    margin: 5px 0 0 85px;
 }
 
 @media (max-width: 1300px) { 
