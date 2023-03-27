@@ -18,7 +18,7 @@ export default function Faculty() {
                     <div className="faculty-grid">
                         {[...Array(24)].map((x, i) => {
                             return (
-                                <div className="card">
+                                <div className="faculty-card">
                                     <img src={require("../images/boy.png")} alt="cant load" />
                                     <h2 className="name">Jeffrey Brown</h2>
                                     <p className="position">creative leader</p>

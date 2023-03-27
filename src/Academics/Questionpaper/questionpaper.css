@@ -18,11 +18,14 @@
 .quespapers h1{
     font-size: min(3rem,6vw);
     text-align: center;
-    background-color:#478ac9;
-
+    background-color:var(--primary-clr);
+    color: var(--secondary-clr);
+    border-radius: 10px;
+    padding-block: 1rem;
 }
 .quespapers h2{
-font-size: min(2rem,4vw);    
+font-size: min(2rem,4vw);
+color: var(--primary-clr);    
 }
 .quespapers p{
     font-size: min(1rem,2vw);
