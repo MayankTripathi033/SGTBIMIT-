@@ -1,14 +1,14 @@
 /* About */
 
 .about {
-    width: 55%;
+    width: min(1000px, 100%);
     margin-inline: auto;
-    margin-bottom: 7rem;
+    margin-bottom: min(7rem, 7vw);
 }
 
 .about-title {
     text-align: center;
-    font-size: 3rem;
+    font-size: min(3rem, 6vw);
     color: #ec640c;
     font-weight: 700;
     margin-top: 2.5rem;
@@ -16,15 +16,16 @@
 
 .about-content {
     display: flex;
-    gap: 5rem;
+    gap: min(5rem, 5vw);
     margin-top: 2rem;
 }
 
 .about-content p {
     text-align: justify;
     line-height: 1.8rem;
-    font-size: 1.37rem;
-    width: 400px;
+    font-size: min(1.37rem, 3vw);
+    padding: 0px 15px;
+    width: 100%;
 }
 
 .clg-img {
@@ -36,7 +37,17 @@
 .history-container p {
     text-align: justify;
     line-height: 1.5rem;
-    font-size: 1.25rem;
+    font-size: min(1.37rem, 3vw);
+    width: 100%;
+    padding: 0px 15px;
 
 }
 
+@media(max-width: 1000px) {
+    .about-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}

@@ -1,19 +1,21 @@
 .syllabus h1{
     font-size: min(3rem,5vw);
     background-color:#478ac9;
-    width: min(110rem,110vw);
+    width: 100%;
     text-align: center;
 }
 .syllabus h2{
     font-size: min(1.8rem,3.2vw);
+    padding: 10px;
 
 }
 
 .syllabus a{
     font-size: min(1.5rem,3vw);
+    padding: 10px;
 }
 
 .syllabus{
-    margin-left: min(2rem,2vw);
+    /* margin-left: min(2rem,2vw);s */
 
 }
