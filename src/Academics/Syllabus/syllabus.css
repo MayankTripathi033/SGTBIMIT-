@@ -1,21 +1,23 @@
-.syllabus h1{
-    font-size: min(3rem,5vw);
-    background-color:#478ac9;
+.syllabus h1 {
+    font-size: min(3rem, 8vw);
+    background-color: #478ac9;
     width: 100%;
     text-align: center;
 }
-.syllabus h2{
-    font-size: min(1.8rem,3.2vw);
+
+.syllabus h2 {
+    font-size: min(2rem, 6vw);
     padding: 10px;
 
 }
 
-.syllabus a{
-    font-size: min(1.5rem,3vw);
+.syllabus a {
+    font-size: min(1.5rem, 5vw);
     padding: 10px;
+    word-wrap: break-word;
 }
 
-.syllabus{
-    /* margin-left: min(2rem,2vw);s */
+.syllabus {
+    margin: min(2rem,2vw);
 
 }

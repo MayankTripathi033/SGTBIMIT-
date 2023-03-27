@@ -5,12 +5,12 @@
 
 
 .examination p{
-    font-size: min(1.8rem,4vw);
+    font-size: min(1.5rem,4vw);
     color: rgba(0, 0, 0, 0.9);
 }
 
 .examination h1{
-    font-size: min(4rem,6vw);
+    font-size: min(4rem,8vw);
     background-color:#478ac9;
     text-align: center;
 }
@@ -18,6 +18,6 @@
     font-size: min(1.8rem,6vw);
 }
 .examination li{
-    font-size: min(1.8rem,4vw);
+    font-size: min(1.5rem,4vw);
     color: rgba(0, 0, 0, 0.9);
 }
