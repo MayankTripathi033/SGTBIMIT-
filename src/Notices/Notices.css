@@ -1,0 +1,50 @@
+.n_container > h1{
+    color: #ec640c;
+    font-size: 45px;
+    text-align: center;
+}
+
+.col{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    border: 2px solid #478ac9;
+    padding: 10px 40px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.b1, .b2, .b3, .b4, .b5, .b6{
+    border: 2px solid #ec640c;
+    margin: 5px 10px;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.nt > a{
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+    font-size: 22px;
+}
+
+.nc > p{
+    text-align: justify;
+}
+
+@media (max-width:1000px) {
+    .col{
+        grid-template-columns: 1fr 1fr;
+        padding: 20px 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .col{
+        grid-template-columns: 1fr;
+        margin: 20px;
+    }
+
+    .b1, .b2, .b3, .b4, .b5, .b6{
+        margin-bottom: 30px;
+    }    
+}
