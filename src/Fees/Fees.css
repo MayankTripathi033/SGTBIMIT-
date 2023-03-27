@@ -75,7 +75,7 @@
  @media (max-width: 1000px) { 
     .structure{
         grid-template-columns: 1fr 1fr;
-        margin: 40px 0 0 27px;
+        margin: 40px 0 0 40px;
     }
  }
 

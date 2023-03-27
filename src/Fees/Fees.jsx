@@ -26,7 +26,9 @@ export default function Fees() {
                             </p>
                         </div>
                         <div>
-                            <button className="more">Learn More</button>
+                            <button onClick={(e)=>{
+                                window.location.href = "./courses-eligibility";
+                            }} className="more">Learn More</button>
                         </div>
                     </div>
 
@@ -43,7 +45,9 @@ export default function Fees() {
                             </p>
                         </div>
                         <div>
-                            <button className="more">Learn More</button>
+                            <button onClick={(e)=>{
+                                window.location.href = "./courses-eligibility";
+                            }} className="more">Learn More</button>
                         </div>
                     </div>
 
@@ -60,7 +64,9 @@ export default function Fees() {
                             </p>
                         </div>
                         <div>
-                            <button className="more">Learn More</button>
+                            <button onClick={(e)=>{
+                                window.location.href = "./courses-eligibility";
+                            }} className="more">Learn More</button>
                         </div>
                     </div>
 
@@ -77,7 +83,9 @@ export default function Fees() {
                             </p>
                         </div>
                         <div>
-                            <button className="more">Learn More</button>
+                            <button onClick={(e)=>{
+                                window.location.href = "./courses-eligibility";
+                            }} className="more">Learn More</button>
                         </div>
                     </div>
                 </div>
