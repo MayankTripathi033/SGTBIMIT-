@@ -49,7 +49,7 @@ header {
     margin-inline: auto;
     color: white;
 }
-@media(max-width: 1110px){
+@media(max-width: 1125px){
     .header-btns button{
         width: 280px;
     }
