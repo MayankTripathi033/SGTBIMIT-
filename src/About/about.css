@@ -9,7 +9,7 @@
 .about-title {
     text-align: center;
     font-size: min(3rem, 6vw);
-    color: #ec640c;
+    color: var(--secondary-clr);
     font-weight: 700;
     margin-top: 2.5rem;
 }

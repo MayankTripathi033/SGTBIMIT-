@@ -4,7 +4,7 @@
 }
 
 .Vision_Container h1 {
-    color: #ec640c;
+    color: var(--secondary-clr);    
     font-size: 45px;
 }
 
@@ -22,7 +22,7 @@
 }
 
 .VisionDetail h3 {
-    color: #ec640c;
+    color: var(--secondary-clr);
     font-size: 30px;
 }
 

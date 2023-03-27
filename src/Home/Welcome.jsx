@@ -1,9 +1,11 @@
 import React from 'react'
-
+import {Link}  from 'react-router-dom'
 export default function Welcome() {
 
   return (
     <section className="welcome">
+      <div className="block left-block"></div>
+      <div className="block right-block"></div>
       <div className="welcome-wrapper">
         <img src="https://assets.nicepagecdn.com/c86f032b/4353070/images/guruteghbahadur.jpg" alt="" className='welcome-img' data-aos="flip-right" data-aos-offset="300" />
         <div className='welcome-text' data-aos="flip-left" data-aos-offset="300">
@@ -16,7 +18,7 @@ export default function Welcome() {
           </p>
           <button className="develop-skills-btn" type="button" data-aos="zoom-in" data-aos-offset="300">Develop your skills with SGTBIMIT</button>
           <button className="learn-more-btn" type="button">
-            <a href="/">Learn More</a>
+            <Link to="/about/governing-body">Learn More</Link>
           </button>
         </div>
       </div>

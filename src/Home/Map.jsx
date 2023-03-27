@@ -3,6 +3,8 @@ import React from 'react'
 export default function Map() {
   return (
     <section className="map-section">
+      <div className="block left-block"></div>
+      <div className="block right-block"></div>
       <div className="map">
         <div className='address' data-aos="fade-right" data-aos-offset="300">
           <div className="map-btns">
@@ -17,8 +19,8 @@ export default function Map() {
             Email:sgtbimit@hotmail.com</p>
           <p>Subscribe to our newsletter:</p>
           <div className="lower">
-          <input placeholder="Email" name="" id="" className='lower-input' />
-          <button type='button' className='lower-btn'>SUBMIT</button>
+            <input placeholder="Email" name="" id="" className='lower-input' />
+            <button type='button' className='lower-btn'>SUBMIT</button>
           </div>
         </div>
         <div className='map-loc' data-aos="fade-left">

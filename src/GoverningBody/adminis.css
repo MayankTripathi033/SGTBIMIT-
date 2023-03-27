@@ -4,27 +4,31 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    position: relative;
 }
 
 .adminis-carousel {
     margin-inline: auto;
     width: min(1000px, 100%) !important;
     padding: min(2rem,2vw);
+    overflow: visible !important;
+}
+.carousel-root{
+    overflow: visible !important;
 }
 
 
 .adminis {
     display: flex;
-    gap: 3rem;
+    gap: 1rem;
     flex-direction: column;
     margin-inline: auto;
-    margin-block: 2rem;
+    padding-inline: min(4rem, 8vw);
 }
 
 .adminis img {
     margin-inline: auto;
-    ;
-    width: 150px !important;
+    width: 200px !important;
     aspect-ratio: 1;
     border-radius: 50%;
 }
@@ -33,16 +37,16 @@
 .short-note {
     display: flex;
     flex-direction: column;
-    gap: .5rem
+    gap: .5rem;
 }
 
-.short-note {
-    font-size: 1.125rem;
-}
 
 .long-note {
     text-align: justify;
     line-height: clamp(1.5rem, 2vw, 2rem);
-    padding: clamp(50px, 2vw, 100px);
     color: rgba(0,0,0,0.9);
+
+}
+.position{
+    color: var(--primary-clr) !important;
 }

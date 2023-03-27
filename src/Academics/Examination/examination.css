@@ -11,13 +11,16 @@
 
 .examination h1{
     font-size: min(4rem,8vw);
-    background-color:#478ac9;
+    background-color:var(--primary-clr);
+    color: var(--secondary-clr);
     text-align: center;
+    border-radius: 10px;
 }
 .examination h2{
-    font-size: min(1.8rem,6vw);
+    font-size: min(1.8rem,5vw);
+    color: var(--primary-clr);
 }
 .examination li{
     font-size: min(1.5rem,4vw);
-    color: rgba(0, 0, 0, 0.9);
+    color: var(--secondary-clr);
 }

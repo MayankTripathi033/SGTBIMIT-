@@ -9,12 +9,14 @@ export default function Testimonials() {
     testimonials && (testimonialsSecondSlide = testimonials.splice(3))
     return (
 
-        <section className = "test-section">
+        <section className="test-section">
+            <div className="block left-block"></div>
+            <div className="block right-block"></div>
             <h1 className='t-heading' data-aos="zoom-in-up" data-aos-offset="300">TESTIMONIALS</h1>
             {isPending && <div className="loading">Loading...</div>}
             {testimonials &&
                 <Carousel className='test-carousel'
-                swipeable={false}
+                    swipeable={false}
                 >
                     <div className="test">
                         {testimonials.map((testimonial, i) => {

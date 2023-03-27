@@ -8,9 +8,11 @@ export default function Placements() {
   return (
 
     <section className='placements'>
+      <div className="block left-block"></div>
+      <div className="block right-block"></div>
       <div className="placements-container">
         <h1>PLACEMENTS AND INTERNSHIPS</h1>
-        {isPending && <div className="loading">Loading...</div> }
+        {isPending && <div className="loading">Loading...</div>}
         {placementArray && <div className="placement-grid">
           {placementArray.map((placement, i) => {
             return <div className="place-card" key={placement._id} data-aos="zoom-out" data-aos-delay={`${i}00`}>

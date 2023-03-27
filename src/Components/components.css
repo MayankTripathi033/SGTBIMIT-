@@ -130,12 +130,13 @@ header {
 }
 .hurry{
     font-style: italic;
+    font-size: min(1rem, 3vw);
 }
 .close-btn {
     position: absolute;
     right: 0;
     top: 0;
-    width: 40px;
+    width: min(2rem, 5vw);
     aspect-ratio: 1;
     margin: 1rem 1rem 1rem auto;
     cursor: pointer;
@@ -157,15 +158,17 @@ header {
     color: white;
     font-size: 1.5rem;
     border-bottom: 1px solid var(--secondary-clr);
+    font-family: cursive;
 }
 .admission-form select option{
     background-color: var(--primary-clr);
     color: white;
+    font-family: cursive;
 }
 .admission-form input[type=submit] {
     background: var(--secondary-clr);
     border: none;
-    padding: min(1.5rem, 1.5vw);
+    padding-block: min(1rem, 1vw);
     color: white;
     font-size: min(2rem, 5vw);
     font-weight: 700;

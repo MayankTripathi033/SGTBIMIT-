@@ -1,6 +1,6 @@
 .Fees > h1{
     color: #4fb291;
-    font-size: 50px;
+    font-size: min(4rem, 8vw);
     text-align: center;
     font-weight: 700;
 }
@@ -9,24 +9,28 @@
 {
     display: grid;
     grid-template-columns: repeat(2,1fr);
+    place-items: center;
+    width: min(1200px, 100%);
+    height: auto;
+    margin-inline: auto;
+    gap: min(2rem, 4vw);
+    margin-bottom: 2rem;
 }
 
 .box 
 {
     display: flex;
     flex-direction: column;
-    width: 350px;
-    height: 550px;
+    align-items: center;
     border: 2px solid black;
     border-radius: 1.6rem;
-    margin-bottom: 30px;
+    max-width: 90%;
 }
 
 .icon
 {
-    width: 330px;
-    height: 130px;
-    margin: 7px 0px 0px 7px;
+    width: 90%;
+    margin-inline: auto;
     background-color: #243e55;
     /* border: 1px solid black; */
     border-radius: 1rem;
@@ -34,40 +38,40 @@
 
 .icon> h1{
     /* border: 1px solid; */
-    margin-top: 50px;
-    font-size: 60px;
+    font-size: min(4rem, 10vw);
     text-align: center;
     color: white;
 }
 
 .info{
-    width: 300px;
     /* border: 1px solid; */
-    margin-left: 25px;
+    margin: min(2rem, 2vw);
 }
 
 .info> h3{
     text-align: center;
-    font-size: 25px;
+    font-size: min(2rem, 4vw);
 }
 
 .info > p{
-    font-size: 20px;
+    font-size: min(1.5rem, 3vw);
     line-height: 30px;
     text-align: justify;
 }
 
 .more
 {
-    border: 1px solid;
+    border: none;
     border-radius: 20px;
-    width: 150px;
-    height: 60px;
-    font-size: 15px;
-    margin: 5px 0 0 85px;
+    font-size: min(1rem, 3vw);
+    margin-inline: auto;
+    padding: 1rem 3rem;
+    margin-block: 1rem;
+    background-color: var(--secondary-clr);
+    color: white;
 }
 
-@media (max-width: 1300px) { 
+/* @media (max-width: 1300px) { 
     .structure{
         grid-template-columns: 2;
         margin: 40px 10px 0 150px;
@@ -85,5 +89,11 @@
     .structure{
         grid-template-columns: 1fr;
         margin: 40px 0 0 12px;
+    }
+ } */
+
+ @media(max-width: 800px){
+    .structure{
+        grid-template-columns: 1fr;
     }
  }
