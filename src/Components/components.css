@@ -9,6 +9,8 @@ header {
     display: flex;
     flex-direction: column;
     width: 100%;
+    padding-top: 2rem;
+    padding-inline: 1rem;
 }
 
 .header-top {
@@ -23,15 +25,15 @@ header {
     border: none;
     outline: none;
     background-color: var(--secondary-clr);
-    margin-inline: 1.5rem;
-    padding: min(1.5rem, 1.5vw);
-    width: 200px;
+    margin-left: 1.5rem;
+    padding: min(1.5rem, 3vw);
     color: white;
     letter-spacing: .125em;
     font-weight: 700;
     border-radius: 1.5rem;
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
     transition: 250ms;
+    font-size: min(1.5rem, 3vw);
 }
 
 .header-btns button:hover {
@@ -47,11 +49,18 @@ header {
     margin-inline: auto;
     color: white;
 }
-
+@media(max-width: 1110px){
+    .header-btns button{
+        width: 280px;
+    }
+}
 @media(max-width: 1000px) {
     .menu {
         margin-inline: 2.5rem;
         height: 1.5rem;
+    }
+    .header-btns button {
+        width: 300px;
     }
 
 }

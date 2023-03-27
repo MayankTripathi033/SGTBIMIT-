@@ -13,7 +13,9 @@ export default function Testimonials() {
             <h1 className='t-heading' data-aos="zoom-in-up" data-aos-offset="300">TESTIMONIALS</h1>
             {isPending && <div className="loading">Loading...</div>}
             {testimonials &&
-                <Carousel className='test-carousel'>
+                <Carousel className='test-carousel'
+                swipeable={false}
+                >
                     <div className="test">
                         {testimonials.map((testimonial, i) => {
                             return (
