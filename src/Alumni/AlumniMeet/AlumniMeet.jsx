@@ -12,7 +12,7 @@ const AlumniMeet = () => {
             <h1>ALUMNI MEET</h1>
             <h2>About Us</h2>
             <p>The Alumni Association of Sri Guru Tegh Bahadur Institute of Management and Information Technology evolved to bridge the wide chasm existing between college and career life. It is committed to all youngsters who graduate and face challenges of the competitive, professional world to remain a part of their alma mater. The idea took shape and the formation of the Alumni Association turned into reality. The reputation of an educational institution lies within its students – Past and Present. Faculty and staff also play a vital role. The reputation grows when it keeps producing successful graduates continuously – intelligent, innovative and effective in their respective fields.</p>
-            <p><b>Our mission:</b> <br />
+            <p><b>Our Mission:</b> <br />
                 <ul>
                     <li>To reunite the students with their alma mater.</li>
 

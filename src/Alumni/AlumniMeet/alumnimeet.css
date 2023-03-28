@@ -12,8 +12,11 @@
     margin-inline: auto;
 }
 .alumnimeet p{
-    font-size: min(1.3rem,2.6vw);
+    font-size: min(1.3rem,3vw);
     text-align: justify;
     width: min(1500px,90%);
     margin-inline: auto;
+}
+.alumnimeet li{
+    font-size: min(2rem,3vw);
 }
