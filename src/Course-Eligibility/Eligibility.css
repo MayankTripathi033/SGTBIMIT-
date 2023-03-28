@@ -4,7 +4,7 @@
 }
 
 .eli_container>h1 {
-    color: #4fb291;
+    color: var(--secondary-clr);
     font-size: 45px;
     font-weight: 700;
 }
@@ -16,7 +16,7 @@
     height: 60px;
     border-radius: 20px;
     margin: 0 20px;
-    background-color: #243e55;
+    background-color: var(--primary-clr);
     color: white;
 }
 

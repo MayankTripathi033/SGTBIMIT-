@@ -1,5 +1,5 @@
 .n_container > h1{
-    color: #ec640c;
+    color: var(--secondary-clr);
     font-size: 45px;
     text-align: center;
 }
@@ -7,23 +7,35 @@
 .col{
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    border: 2px solid #478ac9;
+    border: 2px solid var(--primary-clr);
+    background-color: var(--primary-clr);
     padding: 10px 40px;
     margin: 10px;
     border-radius: 10px;
 }
 
-.b1, .b2, .b3, .b4, .b5, .b6{
-    border: 2px solid #ec640c;
+/* .b1, .b2, .b3, .b4, .b5, .b6{
+    border: 2px solid var(--secondary-clr);
+    background-color: var(--secondary-clr);
     margin: 5px 10px;
     padding: 5px 10px;
     border-radius: 10px;
+    color: white;
+} */
+
+.b{
+    border: 2px solid var(--secondary-clr);
+    background-color: var(--secondary-clr);
+    margin: 5px 10px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: white;
 }
 
 .nt > a{
     font-weight: 600;
     text-decoration: none;
-    color: #000;
+    color: white;
     font-size: 22px;
 }
 
