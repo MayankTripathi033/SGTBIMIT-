@@ -14,8 +14,7 @@ export default function Questionpaper() {
                 <div clasName='bbaques'>
                     <h2>BBA</h2>
                     <div className="sem-container">
-                        <div className='sem'> <p>SEMESTER I</p> <a href="
-                        https://drive.google.com/drive/folders/1Z2JeDHM-_laAdt_DwhcyHQ0zmBcjXUc-"> <img src={require("../../images/download.png")} alt=""   /> </a></div>
+                        <div className='sem'> <p>SEMESTER I</p> <a href="https://drive.google.com/drive/folders/1Z2JeDHM-_laAdt_DwhcyHQ0zmBcjXUc-"><img src={require("../../images/download.png")} alt="" /> </a> </div>
                         <div className='sem'> <p>SEMESTER II</p> <a href="https://drive.google.com/drive/folders/1bRGsW3gPul89vbbOBMm200QVORyrhZpH"><img src={require("../../images/download.png")} alt="" /> </a> </div>
                         <div className='sem'> <p>SEMESTER III</p> <a href='https://drive.google.com/drive/folders/19oJ2H3KLFZv4XSqij9o2eRWOaX8DVeab'> <img src={require("../../images/download.png")} alt="" /> </a></div>
                         <div className='sem'> <p>SEMESTER IV</p> <a href="https://drive.google.com/drive/folders/1h4NFi7He6hN2iDKj-UD8jgCqpQWJvd_8"> <img src={require("../../images/download.png")} alt="" />  </a></div>
@@ -57,7 +56,6 @@ export default function Questionpaper() {
                     </div>
                 </div>
 
-                
 
 
 

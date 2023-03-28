@@ -1,0 +1,19 @@
+.alumnimeet h1{
+    font-size: min(3rem,6vw);
+    text-align: center;
+    color: var(--secondary-clr);  
+}
+.alumnimeet h2{
+    font-size: min(2rem,4vw);
+    background-color: var(--primary-clr);
+    color: white;
+    padding: min(0.8rem,0.8vw);
+    width: min(1500px,90%);
+    margin-inline: auto;
+}
+.alumnimeet p{
+    font-size: min(1.3rem,2.6vw);
+    text-align: justify;
+    width: min(1500px,90%);
+    margin-inline: auto;
+}

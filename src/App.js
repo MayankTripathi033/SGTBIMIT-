@@ -37,6 +37,7 @@ import Testimonial_Update from './Pages/Testimonials/Testimonial_Update/Testimon
 import Society_Update from './Pages/Society/Society_Update/Society_Update.jsx'
 import Questionpaper from './Academics/Questionpaper/Questionpaper'
 import AcademicCal from './Academics/AcademicCalendar/AcademicCal.jsx'
+import AlumniMeet from './Alumni/AlumniMeet/AlumniMeet.jsx'
 function App() {
   AOS.init({
     startEvent: 'load'
@@ -79,6 +80,7 @@ function App() {
         <Route path='/academics/courses/bcom' element={<Bcom />}/>
         <Route path='/academics/prev-year-papers' element={<Questionpaper />}/>
         <Route path='/academics/academic-calender' element={<AcademicCal />}/>
+        <Route path='/alumini/alumini-meet' element={<AlumniMeet />} />
         </Routes>
     </Router>
   );

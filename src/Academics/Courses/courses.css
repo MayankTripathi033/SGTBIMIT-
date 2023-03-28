@@ -39,3 +39,8 @@
 .courses{
     padding: min(3rem,3vw);
 }
+.content,
+.content-1,
+.content-2{
+    display: none;
+}
