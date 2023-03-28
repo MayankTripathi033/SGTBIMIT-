@@ -13,7 +13,7 @@ export default function Faculty() {
             <NavBar />
             <section className='faculty'>
                 <div className="faculty-container">
-                    <h1 className="faculty-title">Core Faculty</h1>
+                    <h1 className="faculty-title">CORE FACULTY</h1>
                     <p className="faculty-content">SGTBIMIT has very diversified and experienced faculties of their domains that works day in day out for their students to make them industry ready</p>
                     <div className="faculty-grid">
                         {[...Array(24)].map((x, i) => {

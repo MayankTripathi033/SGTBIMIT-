@@ -1,8 +1,9 @@
 .syllabus h1 {
     font-size: min(3rem, 8vw);
-    background-color: #478ac9;
+    background-color: var(--secondary-clr);
     width: 100%;
     text-align: center;
+    color: white;
 }
 
 .btn{
@@ -11,18 +12,18 @@
     justify-content: space-between;
 }
 .btn> a{
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 700;
     width: 180px;
     height: 60px;
     border-radius: 20px;
     border: 1px solid black;
-    margin: 0 20px;
-    background-color: #edb458;
+    margin: 0 30px;
+    background-color: var(--primary-clr);
     text-align: center;
     text-decoration: none;
     padding: 12px;
-    color: black;
+    color: white;
 }
 
 .syllabus {

@@ -2,7 +2,7 @@
     font-size: 40px;
     font-weight: 800;
     text-align: center;
-    color: #4fb291;
+    color: var(--secondary-clr);
 }
 .courses>p{
     font-size: min(1.5rem,4vw);
@@ -10,7 +10,7 @@
 }
 .diploma h1{
     font-size: 35px;
-    color: #4fb291;
+    color: var(--secondary-clr);
 }
 .list-wrapper h1{
     font-size: min(1.3rem, 4vw);
@@ -24,7 +24,7 @@
 }
 .diploma button{
     font-size: 2rem;
-    background-color: #243e55;
+    background-color: var(--primary-clr);
     color: white;
     border-radius: 0.5rem;
     width: 90%;
