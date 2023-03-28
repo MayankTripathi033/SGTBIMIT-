@@ -9,8 +9,8 @@ export default function Faculty() {
 
     return (
         <>
-            <Header></Header>
-            <NavBar></NavBar>
+            <Header />
+            <NavBar />
             <section className='faculty'>
                 <div className="faculty-container">
                     <h1 className="faculty-title">Core Faculty</h1>
@@ -30,7 +30,7 @@ export default function Faculty() {
                     </div>
                 </div>
             </section>
-            <Footer></Footer>
+            <Footer />
         </>
     )
 }

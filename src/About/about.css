@@ -1,9 +1,14 @@
 /* About */
 
 .about {
-    width: min(1000px, 100%);
+    width: 100%;
     margin-inline: auto;
     margin-bottom: min(7rem, 7vw);
+    position: relative;
+}
+.about-container{
+    width: min(1000px, 100%);
+    margin-inline: auto;
 }
 
 .about-title {
@@ -40,6 +45,8 @@
     font-size: min(1.37rem, 3vw);
     width: 100%;
     padding: 0px 15px;
+    width: min(1000px, 100%);
+    margin-inline: auto;
     
 
 }

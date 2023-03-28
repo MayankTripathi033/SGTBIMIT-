@@ -13,6 +13,8 @@ export default function About() {
             <Header />
             <Navbar />
             <section className='about'>
+                <div className="block left-block"></div>
+                <div className="block right-block"></div>
                 <div className='about-container'>
                     <div className='about-title' data-aos="fade-down" data-aos-offset="300">
                         About SGTBIMIT
@@ -49,7 +51,7 @@ export default function About() {
                     </p>
                 </div>
             </section>
-            <Footer/>
+            <Footer />
         </>
     )
 }

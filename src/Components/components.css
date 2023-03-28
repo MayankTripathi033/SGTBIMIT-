@@ -3,6 +3,19 @@
 }
 /* Floating Admissions Button */
 
+@keyframes animate{
+    0%{
+        background-color: var(--secondary-clr);
+    }
+    50%{
+        background-color: var(--primary-clr);
+    }
+    100%{
+        background-color: var(--secondary-clr);
+    }
+}
+
+
 .floating-btn{
     position: fixed;
     top: 50%;
@@ -15,6 +28,8 @@
     transform-origin: right;
     cursor: pointer;
     padding: 1rem 4rem;
+    animation: animate 1s infinite;
+    z-index: 102;
 
 
 }

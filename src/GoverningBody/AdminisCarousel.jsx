@@ -17,6 +17,7 @@ export default function AdminisCarousel() {
       <Header></Header>
       <Navbar></Navbar>
       <section className='adminis-section'>
+        
         <div className="block left-block"></div>
         <div className="block right-block"></div>
         {isPending && <div className="loading">Loading...</div>}
