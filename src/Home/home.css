@@ -85,8 +85,7 @@
     margin: min(3rem, 6vw) auto min(3rem, 6vw) auto;
     border: none;
     outline: none;
-    padding: min(2rem, 2vw) min(4rem, 8vw);
-    text-transform: uppercase;
+    padding: min(1rem, 2vw) min(2rem, 4vw);
     background-color: var(--secondary-clr);
     color: white;
     font-size: min(2.5rem, 5vw);

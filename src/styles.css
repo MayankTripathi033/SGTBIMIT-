@@ -76,6 +76,7 @@ button {
     transform: translateY(-50%) !important;
     background-color: #ec640c !important;
     border-radius: 50% !important;
+    background-color: var(--secondary-clr) !important;
 }
 
 .control-next{

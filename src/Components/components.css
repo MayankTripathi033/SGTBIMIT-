@@ -41,7 +41,7 @@
 
 /* Header */
 header {
-    background: var(--primary-clr);
+    background: var(--secondary-clr);
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -60,7 +60,7 @@ header {
 .header-btns button {
     border: none;
     outline: none;
-    background-color: var(--secondary-clr);
+    background-color: var(--primary-clr);
     margin-left: 1.5rem;
     padding: min(1.5rem, 3vw);
     color: white;
@@ -68,12 +68,11 @@ header {
     font-weight: 700;
     border-radius: 1.5rem;
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
-    transition: 250ms;
     font-size: min(1.5rem, 3vw);
 }
 
 .header-btns button:hover {
-    background-color: var(--primary-clr);
+    outline: 3px solid white;
 }
 
 .logo {
@@ -82,7 +81,7 @@ header {
 
 
 .header-news {
-    margin-inline: auto;
+    width: 100%;
     color: white;
 }
 @media(max-width: 1125px){
@@ -180,6 +179,11 @@ header {
     color: white;
     font-family: cursive;
 }
+
+.admission-form select:focus{
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.2);
+}
 .admission-form input[type=submit] {
     background: var(--secondary-clr);
     border: none;
@@ -213,6 +217,7 @@ nav {
     gap: min(2rem, 4vw);
     font-size: min(1.125rem, 1.5vw);
     font-weight: 600;
+    visibility: visible;
 }
 
 nav a {
@@ -240,7 +245,7 @@ nav>* {
 
 .active,
 .nav-item>a:hover {
-    border-bottom: 2px solid var(--primary-clr);
+    border-bottom: 2px solid var(--seondary-clr);
     margin-bottom: -2px;
 }
 
@@ -377,6 +382,7 @@ footer {
 .footer-grid img {
     width: min(75px, 10vw);
     margin-inline: auto;
+    cursor: pointer;
 }
 
 footer p {
