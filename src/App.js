@@ -36,6 +36,7 @@ import Bcom from './Academics/Courses/Bcom'
 import Testimonial_Update from './Pages/Testimonials/Testimonial_Update/Testimonial_Update.jsx'
 import Society_Update from './Pages/Society/Society_Update/Society_Update.jsx'
 import Questionpaper from './Academics/Questionpaper/Questionpaper'
+import AcademicCal from './Academics/AcademicCalendar/AcademicCal.jsx'
 function App() {
   AOS.init({
     startEvent: 'load'
@@ -72,11 +73,12 @@ function App() {
         <Route path='/admin/Society_Add' element = {<Society_Add/>}/>
         <Route path='/admin/Society_Display' element = {<Society_Display/>}/>
         <Route path='/admin/Society_Update/:_id' element = {<Society_Update/>}/>
-        <Route path='academics/courses/bba' element={<Bba />}/>
-        <Route path='academics/courses/bbab&i' element={<BbaBI />}/>
-        <Route path='academics/courses/bca' element={<Bca />}/>
-        <Route path='academics/courses/bcom' element={<Bcom />}/>
-        <Route path='academics/prev-year-papers' element={<Questionpaper />}/>
+        <Route path='/academics/courses/bba' element={<Bba />}/>
+        <Route path='/academics/courses/bbab&i' element={<BbaBI />}/>
+        <Route path='/academics/courses/bca' element={<Bca />}/>
+        <Route path='/academics/courses/bcom' element={<Bcom />}/>
+        <Route path='/academics/prev-year-papers' element={<Questionpaper />}/>
+        <Route path='/academics/academic-calender' element={<AcademicCal />}/>
         </Routes>
     </Router>
   );

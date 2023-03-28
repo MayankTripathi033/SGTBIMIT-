@@ -7,8 +7,8 @@
 }
 
 .society h1 {
-    font-size: min(2rem,4vw);
-    color: white;
+    font-size: min(3rem,6vw);
+    color:var(--secondary-clr);;
 }
 
 .society h2 {

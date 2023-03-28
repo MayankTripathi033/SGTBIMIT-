@@ -1,0 +1,25 @@
+.cal-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: min(1000px,80%);
+    margin-inline: auto;
+
+}
+.cal-grid>*{
+    border: 1px solid black;
+    text-align: center;
+    padding: min(1rem,1vw);
+}
+.heading{
+    font-weight: bolder;
+    font-size: min(2rem,4vw);
+    text-decoration: underline;
+}
+.acad-cal h1{
+    font-size: min(3rem,6vw);
+    text-align: center;
+    color:var(--secondary-clr) ;
+}
+.acad-cal{
+    margin: min(2rem,2vw);
+}
