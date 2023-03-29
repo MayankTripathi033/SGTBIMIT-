@@ -11,7 +11,7 @@ export default function BbaBI() {
     <Header />
     <Navbar />
     <div className='courses'>
-    <img src='' alt="cant load" data-aos="fade-up" />
+    <img src={require("../../images/bba.jpg")} alt="cant load" data-aos="fade-up" />
       <h1>BACHELORS OF BUSINESS ADMINISTRATION (BANKING & INSURANCE)</h1>
       <p>
       A three-year full-time degree program in Bachelor of Business Administration 

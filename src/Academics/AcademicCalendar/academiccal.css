@@ -6,9 +6,10 @@
 
 }
 .cal-grid>*{
-    border: 1px solid black;
+    border: 2px solid rgb(1, 39, 59);
     text-align: center;
     padding: min(1rem,1vw);
+    font-size: min(1.4rem,3.2vw);
 }
 .heading{
     font-weight: bolder;
@@ -21,5 +22,7 @@
     color:var(--secondary-clr) ;
 }
 .acad-cal{
-    margin: min(2rem,2vw);
+    background: url("../../images/bg-2.png");
+    background-size:contain;
+    margin-bottom: min(2rem,2vw);
 }

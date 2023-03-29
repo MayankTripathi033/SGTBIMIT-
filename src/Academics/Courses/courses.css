@@ -1,5 +1,5 @@
 .courses>h1{
-    font-size: 40px;
+    font-size: min(3rem,6vw);
     font-weight: 800;
     text-align: center;
     color: var(--secondary-clr);
@@ -7,9 +7,10 @@
 .courses>p{
     font-size: min(1.5rem,4vw);
     text-align: justify;
+    margin: 2rem;
 }
 .diploma h1{
-    font-size: 35px;
+    font-size: min(2rem,4vw);
     color: var(--secondary-clr);
 }
 .list-wrapper h1{
@@ -17,13 +18,13 @@
     color: black;
 }
 .list-wrapper p{
-    font-size: 1.3rem;
+    font-size: min(1.3rem,2.6vw);
     text-align: justify;
     width: 90%;
     margin-inline: auto;
 }
 .diploma button{
-    font-size: 2rem;
+    font-size: min(2rem,4vw);
     background-color: var(--primary-clr);
     color: white;
     border-radius: 0.5rem;
@@ -37,10 +38,17 @@
     
 }
 .courses{
-    padding: min(3rem,3vw);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .content,
 .content-1,
 .content-2{
     display: none;
+}
+
+.courses img{
+    margin-inline: auto;
+   
 }

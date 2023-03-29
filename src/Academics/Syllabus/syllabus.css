@@ -1,5 +1,7 @@
 .syllabus {
-    margin: min(2rem, 2vw);
+    background: url("../../images/bg-2.png");
+    background-size:110%;
+    margin-bottom: min(2rem,2vw);
 }
 
 .syllabus h1 {
