@@ -30,11 +30,11 @@
 
 .icon
 {
-    width: 90%;
+    width: 100%;
     margin-inline: auto;
     background-color: var(--primary-clr);
     /* border: 1px solid black; */
-    border-radius: 1rem;
+    border-radius: 1.5rem;
 }
 
 .icon> h1{
@@ -46,7 +46,7 @@
 
 .info{
     /* border: 1px solid; */
-    margin: min(2rem, 2vw);
+    margin: min(1.5rem, 2vw);
 }
 
 .info> h3{
@@ -58,6 +58,10 @@
     font-size: min(1.5rem, 3vw);
     line-height: 30px;
     text-align: justify;
+}
+
+.less > button{
+    margin-block: 0;
 }
 
 .more

@@ -1,3 +1,7 @@
+.syllabus {
+    margin: min(2rem, 2vw);
+}
+
 .syllabus h1 {
     font-size: min(3rem, 8vw);
     background-color: var(--secondary-clr);
@@ -6,26 +10,52 @@
     color: white;
 }
 
-.btn{
+.imptop {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-}
-.btn> a{
-    font-size: 24px;
-    font-weight: 700;
-    width: 180px;
-    height: 60px;
-    border-radius: 20px;
-    border: 1px solid black;
-    margin: 0 30px;
-    background-color: var(--primary-clr);
-    text-align: center;
-    text-decoration: none;
-    padding: 12px;
-    color: white;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 20px;
 }
 
-.syllabus {
-    margin: min(2rem,2vw);
+.imptop td {
+    border-bottom: 1px solid var(--secondary-clr);
+    border-right: 1px solid var(--secondary-clr);
+}
+
+.imptop li {
+    font-size: 17px;
+}
+
+.t {
+    display: flex;
+    justify-content: center;
+}
+
+.t table {
+    border: 2px solid var(--secondary-clr);
+}
+
+.t th {
+    border-bottom: 1px solid var(--primary-clr);
+}
+
+table {
+    border: 2px solid var(--primary-clr);
+    width: 500px;
+    height: 200px;
+}
+
+th {
+    border-bottom: 1px solid var(--secondary-clr);
+    font-size: 25px;
+}
+
+td {
+    text-align: center;
+    font-size: 20px;
+}
+
+td>a {
+    text-decoration: none;
 }

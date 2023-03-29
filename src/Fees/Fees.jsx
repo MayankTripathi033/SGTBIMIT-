@@ -63,7 +63,7 @@ export default function Fees() {
                                 Fee Noted: The mentioned fee structure is subject to change.
                             </p>
                         </div>
-                        <div>
+                        <div className="less">
                             <button onClick={(e)=>{
                                 window.location.href = "./courses-eligibility";
                             }} className="more">Learn More</button>
