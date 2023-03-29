@@ -5,6 +5,9 @@
     align-items: center;
     width: 100%;
     position: relative;
+    background: url("../images/bg-2.png");
+    background-size: cover;
+    
 }
 
 .adminis-carousel {
@@ -45,7 +48,9 @@
     text-align: justify;
     line-height: clamp(1.5rem, 2vw, 2rem);
     color: rgba(0,0,0,0.9);
-
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 2rem;
+    padding: 2rem;
 }
 .position{
     color: var(--primary-clr) !important;

@@ -5,6 +5,8 @@
     margin-inline: auto;
     margin-bottom: min(7rem, 7vw);
     position: relative;
+    background: url("../images/bg-2.png");
+    background-size:contain;
 }
 .about-container{
     width: min(1000px, 100%);

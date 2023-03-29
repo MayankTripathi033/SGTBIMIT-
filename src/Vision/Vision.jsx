@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Header from "../Components/Header";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
-import visionimage from "../images/vision.png"
+import visionimage from "../images/vision.jpg"
 import "./Vision.css";
 
 export default function Vision() {

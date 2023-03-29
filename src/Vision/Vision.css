@@ -1,6 +1,8 @@
 .Vision_Container {
     text-align: center;
     padding: 10px 0px;
+    background: url("../images/bg-2.png");
+    background-size:100%;
 }
 
 .Vision_Container h1 {
@@ -43,8 +45,9 @@ ul li {
 }
 
 .VisionImage img {
-    height: 750px;
-    width: 550px;
+    height: 550px;
+    width: 750px;
+    margin-top: 5rem;
 }
 
 
