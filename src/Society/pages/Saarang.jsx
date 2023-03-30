@@ -11,7 +11,7 @@ export default function Saarang() {
       <NavBar></NavBar>
       <div className='society'>
         <h1>SAARANG MUSIC SOCIETY</h1>
-        <img src='' alt="cant load" data-aos="fade-up" />
+        <img src={require("../../images/saarang.jpg")}  alt="cant load" data-aos="fade-up" />
         <h2>“Music is life that’s why our heart has beats”</h2>
         <p> <b> Where word’s fails, MUSIC Speaks……………</b> <br />
 

@@ -11,7 +11,7 @@ export default function Eco() {
       <NavBar></NavBar>
       <div className='society'>
         <h1>ECO CLUB</h1>
-        <img src="" alt="cant load" data-aos="fade-up" />
+        <img src={require("../../images/eco.jpg")}  alt="cant load" data-aos="fade-up" />
         <h2>“For every action, there is a Reaction”</h2>
         <p>We know that we are an integral part of the environment we live in and the solution to many environmental problems lies in our attitude towards the environment. The best way to bring about a change in this attitude in society is through students. Here comes the role of Eco Clubs which plays a very important role in creating environmental awareness amongst the future generation. It is a platform on which we get the knowledge about the environment and offers programs and activities to encourage others to reduce pollution, and plant new trees. In our institute we have an eco-club, which performs activities to save the environment, like planting trees, organizing poster competitions, rangoli competitions on various environmental issues.  New saplings are planted and the damaged/ rotten plants are replaced with fresh healthy ones to keep the campus and surroundings green.
 

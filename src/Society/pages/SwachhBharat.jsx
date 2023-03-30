@@ -11,7 +11,7 @@ export default function SwachhBharat() {
       <Navbar />
       <div className='society'>
         <h1>SWACHH BHARAT ABHIYAN</h1>
-        <img src="" alt="cant load" data-aos="fade-up" />
+        <img src={require("../../images/swachbharat.jpg")}  alt="cant load" data-aos="fade-up" />
         <p>
           In response to the call given by the Honourable Prime Minister Shri Narendra Modi, the Swachh Bharat Abhiyan campaing was launched at Sri Guru Tegh Bahadur Institute Of Management & Information Technology by the  Director Dr.Navneet Kaur & an enthusiastic bunch of students and faculty members became a part of this campaing on February 23, 2017. Massive awareness drive was undertaken through posters and word of mouth in the college.
 
