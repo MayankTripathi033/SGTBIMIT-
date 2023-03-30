@@ -19,7 +19,7 @@ export default function Navbar() {
       document.querySelectorAll(".dropdown").forEach(dropdown => {
         dropdown.style.display = "none"
       })
-      document.querySelectorAll(".nav-item>a").forEach((link, i) => {
+      document.querySelectorAll(".nav-item>*:first-child").forEach((link, i) => {
         link.addEventListener("click", e => {
           if (i !== 0) e.preventDefault()
           const dropdowns = document.querySelectorAll(`.dropdown`)
