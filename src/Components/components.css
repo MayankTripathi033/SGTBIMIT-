@@ -225,7 +225,7 @@ nav a {
     text-decoration: none;
 }
 
-.nav-item>a {
+.nav-item>*:first-child {
     display: flex;
     gap: min(.7rem, 1vw);
     align-items: center;
