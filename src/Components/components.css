@@ -244,8 +244,8 @@ nav>* {
 }
 
 .active,
-.nav-item>a:hover {
-    border-bottom: 2px solid var(--seondary-clr);
+.nav-item>*:first-child:hover {
+    border-bottom: 2px solid var(--secondary-clr);
     margin-bottom: -2px;
 }
 
@@ -271,7 +271,10 @@ nav img {
     border-radius: 1rem;
     transition: 250ms;
 }
-
+.left-dropdown{
+  left: auto;
+  right: 0;
+}
 .dropdown-item {
     padding-block: min(1rem, 1vh);
     padding-right: min(4rem, 4vw);
@@ -412,7 +415,7 @@ footer p {
     height: 140px;
     position: relative;
     margin-inline: auto;
-    margin-bottom: 10rem;
+    margin-block: 5rem;
   }
   
   .loader:before, .loader:after {

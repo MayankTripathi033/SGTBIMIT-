@@ -1,8 +1,11 @@
 /* director read more */
 
 .dir-readmore {
-    width: 70%;
+    width: 100%;
     margin-inline: auto;
+    padding: min(2rem, 2vw);
+    background: url("../images/bg-2.png");
+    background-size: 100%;
 }
 
 .cont {
@@ -10,6 +13,7 @@
     width: max-content;
     margin-inline: auto;
     padding-top: 3rem;
+    width: min(1000px, 100%);
 }
 
 .gradient {
@@ -20,8 +24,7 @@
 }
 
 .cont img {
-    width: 800px;
-
+    width: min(800px, 90%);
 }
 
 .title {
@@ -29,24 +32,36 @@
     bottom: 0;
     left: 0;
     padding: 4rem;
-    font-size: 2rem;
+    font-size: min(2rem, 5vw);
     color: white;
 }
 
 .dir-readmore h2 {
-    font-size: 2rem;
+    font-size: min(2rem, 5vw);
     text-align: center;
     padding-top: 3rem;
+    width: min(1000px, 100%);
+    margin-inline: auto;
+    color: var(--primary-clr);
 }
 
 .dir-readmore h3 {
-    font-size: 1.8rem;
+    font-size: min(1.8rem, 4vw);
     text-align: center;
-
+    width: min(1000px, 100%);
+    margin-inline: auto;
+    color: var(--primary-clr);
 }
 
 .dir-readmore p {
-    font-size: 1.5rem;
+    font-size: min(1.5rem, 3vw);
     text-align: justify;
+    width: min(1000px, 100%);
+    margin-inline: auto;
+}
 
+@media(max-width: 1000px){
+    .dir-readmore{
+        background-image: none;
+    }
 }

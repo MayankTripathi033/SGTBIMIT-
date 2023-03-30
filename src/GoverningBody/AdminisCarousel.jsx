@@ -5,6 +5,7 @@ import './adminis.css'
 import Navbar from '../Components/Navbar'
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'
+import Loader from '../Components/Loader'
 export default function AdminisCarousel() {
   const { data: adminisArray, isPending } = useFetch("http://localhost:5000/Administration/Administration_Display")
 
@@ -17,20 +18,18 @@ export default function AdminisCarousel() {
       <Header></Header>
       <Navbar></Navbar>
       <section className='adminis-section'>
-        
-        
-        {isPending && <div className="loading">Loading...</div>}
+
+
+        {isPending && <Loader />}
         <Carousel
           infiniteLoop={true}
           interval={4000}
-          emulateTouch={true}
           className='adminis-carousel'
           autoPlay={true}
-
         >
           {adminisArray && adminisArray.map((adminis) => (
             <div className="adminis" key={adminis._id}>
-              <img src={`http://localhost:5000${adminis.image}`} alt="cant load" className='adminis-img' />
+              <img src={`http://localhost:5000/Administration/AdministrationImageDisplay/${adminis._id}`} alt="cant load" className='adminis-img' />
               <h2 className="adminis-heading" >{adminis.name}
                 <strong className='position'> {adminis.position}</strong>
               </h2>
