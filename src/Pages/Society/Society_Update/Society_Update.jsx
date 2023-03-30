@@ -24,9 +24,8 @@ const Society_Update = () => {
     const TestSingleData = async () => {
       try {
         const data = (
-          await axios.post(
-            "http://localhost:5000/Society/Single_Society_Display",
-            { _id }
+          await axios.get(
+           `http://localhost:5000/Society/Single_Society_Display/${_id}`
           )
         ).data;
         setSocieUpdate({
@@ -52,7 +51,7 @@ const Society_Update = () => {
       formData.append("subdetail", societUpdate.subdetail);
       const data1 = (
         await axios.post(
-          "http://localhost:5000/Society/Society_Add",
+          `http://localhost:5000/Society/Society_Update/${_id}`,
           formData,
           {
             headers: {
@@ -96,27 +95,49 @@ const Society_Update = () => {
                 value={societUpdate.subdetail}
                 onChange={Onchagetesdetail}
               />
+
+              <textarea
+                name="detail"
+                id=""
+                cols="15"
+                rows="5"
+                placeholder="Message"
+                value={societUpdate.detail}
+                onChange={Onchagetesdetail}
+              ></textarea>
               <div className="Message_image">
-                <textarea
-                  name="detail"
-                  id=""
-                  cols="15"
-                  rows="5"
-                  placeholder="Message"
-                  value={societUpdate.detail}
-                  onChange={Onchagetesdetail}
-                ></textarea>
                 <input
                   type="file"
                   name="image"
+                  accept="image/*"
                   id="ImageUpload"
                   onChange={(e) => {
                     setFileData(e.target.files[0]);
                   }}
-                  style={{ width: "200px", height: "150px" }}
+                  style={{ width: "400px", height: "200px" }}
                 />
+                {filedata ? (
+                  <img
+                    src={URL.createObjectURL(filedata)}
+                    alt=""
+                    style={{
+                      width: "400px",
+                      height: "200px",
+                      borderRadius: "10px",
+                    }}
+                  />
+                ) : (
+                  <img
+                    src={`http://localhost:5000/Society/Society_Image_Display/${_id}`}
+                    alt=""
+                    style={{
+                      width: "400px",
+                      height: "200px",
+                      borderRadius: "10px",
+                    }}
+                  />
+                )}
               </div>
-
               <button
                 className="button-19"
                 onClick={() => {

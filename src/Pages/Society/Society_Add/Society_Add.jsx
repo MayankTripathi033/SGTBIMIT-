@@ -4,10 +4,27 @@ import AdminMenu from "../../../Components/AdminMenu/AdminMenu";
 import "./Society_Add.css";
 import "../../Testimonials/Testimonials_ADD/Testimonials_ADD";
 import axios from "axios";
+import Resizer from "react-image-file-resizer";
 
 const Society_Add = () => {
+
+  const resizeFile = (file) =>
+  new Promise((resolve) => {
+    Resizer.imageFileResizer(
+      file,
+      200,
+      200,
+      "JPEG",
+      100,
+      0,
+      // (uri) => {
+      //   resolve(uri);
+      // },
+    );
+  });
+
   const [societUpdate, setSocieUpdate] = useState({
-    name: "",
+    title: "",
     detail: "",
     subdetail: "",
   });
@@ -20,8 +37,10 @@ const Society_Add = () => {
   const SocietyAdd = async () => {
     try {
       let formData = new FormData();
-      formData.append("image", filedata);
-      formData.append("name", societUpdate.name);
+      let image = await resizeFile(filedata)
+      console.log(image);
+      formData.append("image", image);
+      formData.append("title", societUpdate.title);
       formData.append("detail", societUpdate.detail);
       formData.append("subdetail", societUpdate.subdetail);
       const data1 = (
@@ -105,8 +124,3 @@ const Society_Add = () => {
 };
 
 export default Society_Add;
-
-// name="image"
-//                     onChange={(e) => {
-//                       setFileData(e.target.files[0]);
-//                     }}

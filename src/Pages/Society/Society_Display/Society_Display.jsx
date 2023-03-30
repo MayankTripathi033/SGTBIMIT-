@@ -7,12 +7,10 @@ import { RiDeleteBin6Line } from "react-icons/ri";
 import { BiEditAlt } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
 
-
 const Society_Display = () => {
   const [render, setRender] = useState(0);
   const [getSociety, setSociety] = useState([]);
   const navigator = useNavigate("");
-
 
   useEffect(() => {
     const TestimonialsDataGet = async () => {
@@ -27,13 +25,21 @@ const Society_Display = () => {
       }
     };
     TestimonialsDataGet();
+    ImagesGet()
   }, [render]);
+
+  const ImagesGet = (value) =>{
+    return (<img
+      src={`http://localhost:5000/Society/Society_Image_Display/${value}`}
+      alt=""
+    />)
+  }
 
   const SocietyDelete = async (value) => {
     try {
-      const id = value;
-      console.log(id);
-      await axios.post("http://localhost:5000/Society/Society_Delete", { id });
+      const _id = value;
+      console.log(_id);
+      await axios.post(`http://localhost:5000/Society/Society_Delete/${_id}`);
       setRender(1);
     } catch (error) {
       console.log(error);
@@ -66,9 +72,7 @@ const Society_Display = () => {
                             color: "#adb5bd",
                           }}
                           onClick={() => {
-                            navigator(
-                              `/admin/Society_Update/${value._id}`
-                            );
+                            navigator(`/admin/Society_Update/${value._id}`);
                           }}
                         />
                         <RiDeleteBin6Line
@@ -81,7 +85,7 @@ const Society_Display = () => {
                       </span>
                     </h3>
                     <div className="Society_Card_ImageDescription">
-                      <img src={`http://localhost:5000${value.image}`} alt="" />
+                    {ImagesGet(value?._id)}
                       <div className="Society_Describe">
                         <h4>{value.subdetail}</h4>
                         <p>{value.detail}</p>
