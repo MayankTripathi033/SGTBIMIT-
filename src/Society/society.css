@@ -1,9 +1,10 @@
 /* society */
 .society {
     text-align: center;
-    width: 80%;
     margin-inline: auto;
     padding-top: min(2rem,2vh);
+    background: url("../images/bg-2.png");
+    background-size:100%;
 }
 
 .society h1 {
@@ -13,11 +14,14 @@
 
 .society h2 {
     font-size: min(1.7rem,3.5vw);
+    text-align: center;
 }
 
 .society p {
     font-size: min(1.7rem,3.5vw);
     color: rgba(0, 0, 0, 0.8);
+    padding-left: 23%;
+    width: 80%;
     text-align: justify;
 }
 
