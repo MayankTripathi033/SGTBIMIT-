@@ -54,6 +54,9 @@
 }
 
 @media(max-width: 1000px) {
+    .about{
+        background-image: none;
+    }
     .about-content {
         flex-direction: column;
         justify-content: center;

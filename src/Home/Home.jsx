@@ -33,7 +33,7 @@ export default function Home() {
       <Collaboration />
       <Recruiters />
       <Map />
-      <Admission />
+      <Admission /> 
       <Footer />
     </>
   )

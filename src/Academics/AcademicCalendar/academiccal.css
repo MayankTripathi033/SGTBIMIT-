@@ -1,3 +1,8 @@
+.acad-cal{
+    background: url("../../images/bg-2.png");
+    background-size:contain;
+    margin-bottom: min(2rem,2vw);
+}
 .cal-grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -21,8 +26,8 @@
     text-align: center;
     color:var(--secondary-clr) ;
 }
-.acad-cal{
-    background: url("../../images/bg-2.png");
-    background-size:contain;
-    margin-bottom: min(2rem,2vw);
+@media(max-width: 1000px){
+    .acad-cal{
+        background-image: none;
+    }
 }

@@ -55,3 +55,8 @@
 .position{
     color: var(--primary-clr) !important;
 }
+@media(max-width: 1000px){
+    .adminis-section {
+        background-image: none;
+    }
+}

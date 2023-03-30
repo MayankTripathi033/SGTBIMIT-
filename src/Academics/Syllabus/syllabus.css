@@ -61,3 +61,10 @@ td {
 td>a {
     text-decoration: none;
 }
+
+
+@media(max-width: 1000px){
+    .syllabus{
+        background-image: none;
+    }
+}
