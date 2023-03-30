@@ -53,7 +53,7 @@
 
 }
 
-@media(max-width: 1000px) {
+@media(max-width: 1400px) {
     .about{
         background-image: none;
     }
