@@ -1,0 +1,17 @@
+.FacultyCardContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+}
+
+.FacultyCardtitle{
+    text-align: center;
+}
+
+.FacultyCardController{
+    display: flex;
+    margin-top: 15px;
+    gap: 20px;
+    justify-content: center;
+
+}

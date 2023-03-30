@@ -175,6 +175,7 @@
 }
 .card h1{
     color: var(--primary-clr);
+    line-height: 36px;
 }
 
 @media(max-width: 1000px) {

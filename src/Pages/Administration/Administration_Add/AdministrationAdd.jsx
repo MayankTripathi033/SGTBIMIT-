@@ -1,42 +1,43 @@
 import React, { useState } from "react";
-import AdminHeader from "../../../Components/AdminHeader/AdminHeader";
-import AdminMenu from "../../../Components/AdminMenu/AdminMenu";
-import "./Society_Add.css";
-import "../../Testimonials/Testimonials_ADD/Testimonials_ADD";
 import axios from "axios";
-import imageCompression from 'browser-image-compression';
+import "../../Society/Society_Add/Society_Add.css";
+import "../../Testimonials/Testimonials_ADD/Testimonials_ADD.css";
+import AdminMenu from "../../../Components/AdminMenu/AdminMenu";
+import AdminHeader from "../../../Components/AdminHeader/AdminHeader";
+import imageCompression from "browser-image-compression";
 
-
-const Society_Add = () => {
-  const [societUpdate, setSocieUpdate] = useState({
-    title: "",
-    detail: "",
-    subdetail: "",
+const AdministrationAdd = () => {
+  const [AdminiUpdate, setAdminiUpdate] = useState({
+    name: "",
+    position: "",
+    shortNote: "",
+    longNote: "",
   });
   const [filedata, setFileData] = useState();
 
   const Onchagetesdetail = (e) => {
-    setSocieUpdate({ ...societUpdate, [e.target.name]: e.target.value });
+    setAdminiUpdate({ ...AdminiUpdate, [e.target.name]: e.target.value });
   };
 
   const options = {
     maxSizeMB: 1,
     maxWidthOrHeight: 1920,
     useWebWorker: true,
-  }
+  };
 
-  const SocietyAdd = async () => {
+  const AdminiAdd = async () => {
     try {
       let formData = new FormData();
       const compressedFile = await imageCompression(filedata, options);
       console.log(compressedFile);
       formData.append("image", compressedFile);
-      formData.append("title", societUpdate.title);
-      formData.append("detail", societUpdate.detail);
-      formData.append("subdetail", societUpdate.subdetail);
+      formData.append("name", AdminiUpdate.name);
+      formData.append("position", AdminiUpdate.position);
+      formData.append("shortNote", AdminiUpdate.shortNote);
+      formData.append("longNote", AdminiUpdate.longNote);
       const data1 = (
         await axios.post(
-          "http://localhost:5000/Society/Society_Add",
+          "http://localhost:5000/Administration/Administration_Add",
           formData,
           {
             headers: {
@@ -60,30 +61,37 @@ const Society_Add = () => {
           <AdminHeader />
           <div className="SocietyFormContainer">
             <div className="Society_Heading">
-              <h1>Create a new Society</h1>
+              <h1>Create a new Administration</h1>
             </div>
             <div className="SocietyForm">
               <input
                 type="text"
-                name="title"
+                name="name"
                 id=""
                 placeholder="Name"
                 onChange={Onchagetesdetail}
               />
               <input
                 type="text"
-                name="subdetail"
+                name="position"
                 id=""
-                placeholder="Sub Detail"
+                placeholder="Position"
+                onChange={Onchagetesdetail}
+              />
+              <input
+                type="text"
+                name="shortNote"
+                id=""
+                placeholder="Short Note"
                 onChange={Onchagetesdetail}
               />
               <div className="Message_image">
                 <textarea
-                  name="detail"
+                  name="longNote"
                   id=""
                   cols="15"
                   rows="5"
-                  placeholder="Message"
+                  placeholder="Detail"
                   onChange={Onchagetesdetail}
                 ></textarea>
                 <input
@@ -93,14 +101,14 @@ const Society_Add = () => {
                   onChange={(e) => {
                     setFileData(e.target.files[0]);
                   }}
-                  style={{width: "200px",height:"150px"}}
+                  style={{ width: "200px", height: "150px" }}
                 />
               </div>
 
               <button
                 className="button-19"
                 onClick={() => {
-                    SocietyAdd();
+                  AdminiAdd();
                 }}
               >
                 Submit
@@ -113,4 +121,4 @@ const Society_Add = () => {
   );
 };
 
-export default Society_Add;
+export default AdministrationAdd;
