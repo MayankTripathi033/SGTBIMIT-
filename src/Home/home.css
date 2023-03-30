@@ -145,7 +145,6 @@
 
 
 .test h1 {
-
     text-align: center;
     font-size: min(2.3rem, 5vw);
     color: #478ac9;
@@ -175,6 +174,7 @@
 }
 .card h1{
     color: var(--primary-clr);
+    line-height: 2.2rem;
 }
 
 @media(max-width: 1000px) {
