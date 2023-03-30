@@ -8,6 +8,8 @@ const AdminMenu = () => {
   const [isHomeActive, setIsHomeActive] = useState(false);
   const [isSUBTestimonialActive, setIsSUBTestimonialActive] = useState(false);
   const [isSUBSocietyActive, setIsSUBSocietyActive] = useState(false);
+  const [isSUBFacultyActive, setIsSUBFacultyActive] = useState(false);
+  const [isSUBAdministrationActive, setIsSUBAdministrationActive] = useState(false);
   const [isServiceActive, setIsServiceActive] = useState(false);
   const navigate = useNavigate();
 
@@ -99,6 +101,66 @@ const AdminMenu = () => {
                         }}
                       >
                         SOCIETY DISPLAY
+                      </p>
+                    </span>
+                  </div>
+                )}
+                <p
+                  onClick={() => {
+                    setIsSUBFacultyActive(!isSUBFacultyActive);
+                  }}
+                  style={{
+                    backgroundColor: "#e0e1dd",
+                  }}
+                >
+                  FACULTY <IoIosArrowDown className="CatHeadIcons" />
+                </p>
+                {isSUBFacultyActive && (
+                  <div className="Categoriesdropdown">
+                    <span>
+                      <p
+                        onClick={() => {
+                          navigate("/admin/Faculty_Add");
+                        }}
+                      >
+                        FACULTY ADD
+                      </p>
+                      <p
+                        onClick={() => {
+                          navigate("/admin/Faculty_Display");
+                        }}
+                      >
+                        FACULTY DISPLAY
+                      </p>
+                    </span>
+                  </div>
+                )}
+                <p
+                  onClick={() => {
+                    setIsSUBAdministrationActive(!isSUBAdministrationActive);
+                  }}
+                  style={{
+                    backgroundColor: "#e0e1dd",
+                  }}
+                >
+                  ADMINISTRATION <IoIosArrowDown className="CatHeadIcons" />
+                </p>
+                {isSUBAdministrationActive && (
+                  <div className="Categoriesdropdown">
+                    <span>
+                      <p
+                        onClick={() => {
+                          navigate("/admin/Administration_Add");
+                        }}
+                      >
+                        ADMINISTRATION ADD
+                      </p>
+                      <p
+                        onClick={() => {
+                          navigate("/admin/Administration_Display");
+                        }}
+                      >
+                        ADMINISTRATION DISPLAY
                       </p>
                     </span>
                   </div>

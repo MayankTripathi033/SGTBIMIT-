@@ -39,6 +39,11 @@ import Questionpaper from './Academics/Questionpaper/Questionpaper'
 import AcademicCal from './Academics/AcademicCalendar/AcademicCal.jsx'
 import AlumniMeet from './Alumni/AlumniMeet/AlumniMeet.jsx'
 import TestimonialsAL from './Alumni/Testimonials/TestimonialsAL.jsx'
+import FacultyAdd from './Pages/Faculty/Faculty_Add/FacultyAdd.jsx'
+import FacultyDisplay from './Pages/Faculty/Faculty_Display/FacultyDisplay.jsx'
+import FacultyUpdate from './Pages/Faculty/Faculty_Update/FacultyUpdate.jsx'
+import AdministrationAdd from './Pages/Administration/Administration_Add/AdministrationAdd.jsx'
+import AdministrationDisplay from './Pages/Administration/Administration_Display/AdministrationDisplay.jsx'
 function App() {
   AOS.init({
     startEvent: 'load'
@@ -75,6 +80,11 @@ function App() {
         <Route path='/admin/Society_Add' element = {<Society_Add/>}/>
         <Route path='/admin/Society_Display' element = {<Society_Display/>}/>
         <Route path='/admin/Society_Update/:_id' element = {<Society_Update/>}/>
+        <Route path='/admin/Faculty_Add' element = {<FacultyAdd/>}/>
+        <Route path='/admin/Faculty_Display' element = {<FacultyDisplay/>}/>
+        <Route path='/admin/Faculty_Update/:_id' element = {<FacultyUpdate/>}/>
+        <Route path='/admin/Administration_Add' element = {<AdministrationAdd/>}/>
+        <Route path='/admin/Administration_Display' element = {<AdministrationDisplay/>}/>
         <Route path='/academics/courses/bba' element={<Bba />}/>
         <Route path='/academics/courses/bbab&i' element={<BbaBI />}/>
         <Route path='/academics/courses/bca' element={<Bca />}/>

@@ -1,24 +1,24 @@
 import React, { useState, useEffect } from "react";
-import AdminHeader from "../../../Components/AdminHeader/AdminHeader";
-import AdminMenu from "../../../Components/AdminMenu/AdminMenu";
-import "../Society_Add/Society_Add.css";
-import "../../Testimonials/Testimonials_ADD/Testimonials_ADD";
-import axios from "axios";
 import { useParams } from "react-router-dom";
 import imageCompression from "browser-image-compression";
+import axios from "axios";
+import "../../Society/Society_Add/Society_Add.css";
+import "../../Testimonials/Testimonials_ADD/Testimonials_ADD";
+import AdminHeader from "../../../Components/AdminHeader/AdminHeader";
+import AdminMenu from "../../../Components/AdminMenu/AdminMenu";
 
-const Society_Update = () => {
-  const [societUpdate, setSocieUpdate] = useState({
-    title: "",
+const FacultyUpdate = () => {
+  const [facultyUpdate, setFacultyUpdate] = useState({
+    name: "",
+    post: "",
     detail: "",
-    subdetail: "",
   });
   const { _id } = useParams();
 
   const [filedata, setFileData] = useState();
 
   const Onchagetesdetail = (e) => {
-    setSocieUpdate({ ...societUpdate, [e.target.name]: e.target.value });
+    setFacultyUpdate({ ...facultyUpdate, [e.target.name]: e.target.value });
   };
 
   const options = {
@@ -32,13 +32,13 @@ const Society_Update = () => {
       try {
         const data = (
           await axios.get(
-            `http://localhost:5000/Society/Single_Society_Display/${_id}`
+            `http://localhost:5000/Faculty/FacultySingle/${_id}`
           )
         ).data;
-        setSocieUpdate({
-          title: data?.title,
+        setFacultyUpdate({
+          name: data?.name,
+          post: data?.post,
           detail: data?.detail,
-          subdetail: data?.subdetail,
         });
       } catch (error) {
         console.log(error);
@@ -54,12 +54,12 @@ const Society_Update = () => {
       let formData = new FormData();
       const compressedFile = await imageCompression(filedata, options);
       formData.append("image", compressedFile);
-      formData.append("title", societUpdate.title);
-      formData.append("detail", societUpdate.detail);
-      formData.append("subdetail", societUpdate.subdetail);
+      formData.append("name", facultyUpdate.name);
+      formData.append("post", facultyUpdate.post);
+      formData.append("detail", facultyUpdate.detail);
       const data1 = (
         await axios.post(
-          `http://localhost:5000/Society/Society_Update/${_id}`,
+          `http://localhost:5000/Faculty/Faculty_Update/${_id}`,
           formData,
           {
             headers: {
@@ -84,23 +84,23 @@ const Society_Update = () => {
           <AdminHeader />
           <div className="SocietyFormContainer">
             <div className="Society_Heading">
-              <h1>Update Society</h1>
+              <h1>Update Favulty</h1>
             </div>
             <div className="SocietyForm">
               <input
                 type="text"
-                name="title"
+                name="name"
                 id=""
-                placeholder="Society"
-                value={societUpdate.title}
+                placeholder="Name"
+                value={facultyUpdate.name}
                 onChange={Onchagetesdetail}
               />
               <input
                 type="text"
-                name="subdetail"
+                name="post"
                 id=""
-                placeholder="Sub Detail"
-                value={societUpdate.subdetail}
+                placeholder="Post"
+                value={facultyUpdate.post}
                 onChange={Onchagetesdetail}
               />
               <textarea
@@ -108,8 +108,8 @@ const Society_Update = () => {
                 id=""
                 cols="15"
                 rows="5"
-                placeholder="Message"
-                value={societUpdate.detail}
+                placeholder="Detail"
+                value={facultyUpdate.detail}
                 onChange={Onchagetesdetail}
               ></textarea>
               <div className="Message_image">
@@ -135,7 +135,7 @@ const Society_Update = () => {
                   />
                 ) : (
                   <img
-                    src={`http://localhost:5000/Society/Society_Image_Display/${_id}`}
+                    src={`http://localhost:5000/Faculty/Faculty_Image_Display/${_id}`}
                     alt=""
                     style={{
                       width: "400px",
@@ -161,4 +161,4 @@ const Society_Update = () => {
   );
 };
 
-export default Society_Update;
+export default FacultyUpdate;
