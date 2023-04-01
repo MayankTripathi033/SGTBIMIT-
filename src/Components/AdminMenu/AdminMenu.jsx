@@ -9,8 +9,9 @@ const AdminMenu = () => {
   const [isSUBTestimonialActive, setIsSUBTestimonialActive] = useState(false);
   const [isSUBSocietyActive, setIsSUBSocietyActive] = useState(false);
   const [isSUBFacultyActive, setIsSUBFacultyActive] = useState(false);
-  const [isSUBAdministrationActive, setIsSUBAdministrationActive] = useState(false);
-  const [isServiceActive, setIsServiceActive] = useState(false);
+  const [isSUBAdministrationActive, setIsSUBAdministrationActive] =
+    useState(false);
+  const [isAboutActive, setIsAboutActive] = useState(false);
   const navigate = useNavigate();
 
   return (
@@ -75,36 +76,7 @@ const AdminMenu = () => {
                     </span>
                   </div>
                 )}
-                <p
-                  onClick={() => {
-                    setIsSUBSocietyActive(!isSUBSocietyActive);
-                  }}
-                  style={{
-                    backgroundColor: "#e0e1dd",
-                  }}
-                >
-                  SOCIETY <IoIosArrowDown className="CatHeadIcons" />
-                </p>
-                {isSUBSocietyActive && (
-                  <div className="Categoriesdropdown">
-                    <span>
-                      <p
-                        onClick={() => {
-                          navigate("/admin/Society_Add");
-                        }}
-                      >
-                        SOCIETY ADD
-                      </p>
-                      <p
-                        onClick={() => {
-                          navigate("/admin/Society_Display");
-                        }}
-                      >
-                        SOCIETY DISPLAY
-                      </p>
-                    </span>
-                  </div>
-                )}
+                
                 <p
                   onClick={() => {
                     setIsSUBFacultyActive(!isSUBFacultyActive);
@@ -135,6 +107,26 @@ const AdminMenu = () => {
                     </span>
                   </div>
                 )}
+              </span>
+            </div>
+          )}
+        </div>
+        <div className="Categories">
+          <span
+            className="categories_Header"
+            onClick={() => {
+              setIsAboutActive(!isAboutActive);
+            }}
+          >
+            <span>
+              <ImBoxAdd className="CatHeadIcons" />
+              <h3>ABOUT US</h3>
+            </span>
+            <IoIosArrowDown className="CatHeadIcons" />
+          </span>
+          {isAboutActive && (
+            <div className="Categoriesdropdown">
+              <span>
                 <p
                   onClick={() => {
                     setIsSUBAdministrationActive(!isSUBAdministrationActive);
@@ -143,7 +135,7 @@ const AdminMenu = () => {
                     backgroundColor: "#e0e1dd",
                   }}
                 >
-                  ADMINISTRATION <IoIosArrowDown className="CatHeadIcons" />
+                  GOVERNING BODY <IoIosArrowDown className="CatHeadIcons" />
                 </p>
                 {isSUBAdministrationActive && (
                   <div className="Categoriesdropdown">
@@ -153,14 +145,14 @@ const AdminMenu = () => {
                           navigate("/admin/Administration_Add");
                         }}
                       >
-                        ADMINISTRATION ADD
+                        GOVERNING BODY ADD
                       </p>
                       <p
                         onClick={() => {
                           navigate("/admin/Administration_Display");
                         }}
                       >
-                        ADMINISTRATION DISPLAY
+                        GOVERNING BODY DISPLAY
                       </p>
                     </span>
                   </div>
@@ -173,31 +165,31 @@ const AdminMenu = () => {
           <span
             className="categories_Header"
             onClick={() => {
-              setIsServiceActive(!isServiceActive);
+              setIsSUBSocietyActive(!isSUBSocietyActive);
             }}
           >
             <span>
               <ImBoxAdd className="CatHeadIcons" />
-              <h3>Services</h3>
+              <h3>SOCIETY</h3>
             </span>
             <IoIosArrowDown className="CatHeadIcons" />
           </span>
-          {isServiceActive && (
+          {isSUBSocietyActive && (
             <div className="Categoriesdropdown">
               <span>
                 <p
                   onClick={() => {
-                    navigate("/admin/ServicesAdd");
+                    navigate("/admin/Society_Add");
                   }}
                 >
-                  Services Add
+                  SOCIETY ADD
                 </p>
                 <p
                   onClick={() => {
-                    navigate("/admin/Services");
+                    navigate("/admin/Society_Display");
                   }}
                 >
-                  Services List
+                  SOCIETY DISPLAY
                 </p>
               </span>
             </div>

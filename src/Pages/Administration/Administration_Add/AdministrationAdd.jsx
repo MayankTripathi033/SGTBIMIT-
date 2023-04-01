@@ -61,7 +61,7 @@ const AdministrationAdd = () => {
           <AdminHeader />
           <div className="SocietyFormContainer">
             <div className="Society_Heading">
-              <h1>Create a new Administration</h1>
+              <h1>Create a new Governing Body </h1>
             </div>
             <div className="SocietyForm">
               <input

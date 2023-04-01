@@ -44,6 +44,7 @@ import FacultyDisplay from './Pages/Faculty/Faculty_Display/FacultyDisplay.jsx'
 import FacultyUpdate from './Pages/Faculty/Faculty_Update/FacultyUpdate.jsx'
 import AdministrationAdd from './Pages/Administration/Administration_Add/AdministrationAdd.jsx'
 import AdministrationDisplay from './Pages/Administration/Administration_Display/AdministrationDisplay.jsx'
+import AdministrationUpdate from "./Pages/Administration/Administration_Update/AdministrationUpdate.jsx"
 function App() {
   AOS.init({
     startEvent: 'load'
@@ -85,6 +86,7 @@ function App() {
         <Route path='/admin/Faculty_Update/:_id' element = {<FacultyUpdate/>}/>
         <Route path='/admin/Administration_Add' element = {<AdministrationAdd/>}/>
         <Route path='/admin/Administration_Display' element = {<AdministrationDisplay/>}/>
+        <Route path='/admin/Administration_Update/:_id' element = {<AdministrationUpdate/>}/>
         <Route path='/academics/courses/bba' element={<Bba />}/>
         <Route path='/academics/courses/bbab&i' element={<BbaBI />}/>
         <Route path='/academics/courses/bca' element={<Bca />}/>

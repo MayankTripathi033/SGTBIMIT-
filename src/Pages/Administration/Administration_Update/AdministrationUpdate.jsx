@@ -1,24 +1,25 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import imageCompression from "browser-image-compression";
-import axios from "axios";
-import "../../Society/Society_Add/Society_Add.css";
-import "../../Testimonials/Testimonials_ADD/Testimonials_ADD";
 import AdminHeader from "../../../Components/AdminHeader/AdminHeader";
 import AdminMenu from "../../../Components/AdminMenu/AdminMenu";
+import "../../Society/Society_Add/Society_Add.css";
+import "../../Testimonials/Testimonials_ADD/Testimonials_ADD";
+import axios from "axios";
+import { useParams } from "react-router-dom";
+import imageCompression from "browser-image-compression";
 
-const FacultyUpdate = () => {
-  const [facultyUpdate, setFacultyUpdate] = useState({
+const Society_Update = () => {
+  const [GovernUpdate, setGovernUpdate] = useState({
     name: "",
-    post: "",
-    detail: "",
+    position: "",
+    shortNote: "",
+    longNote: "",
   });
   const { _id } = useParams();
 
   const [filedata, setFileData] = useState();
 
   const Onchagetesdetail = (e) => {
-    setFacultyUpdate({ ...facultyUpdate, [e.target.name]: e.target.value });
+    setGovernUpdate({ ...GovernUpdate, [e.target.name]: e.target.value });
   };
 
   const options = {
@@ -32,13 +33,14 @@ const FacultyUpdate = () => {
       try {
         const data = (
           await axios.get(
-            `http://localhost:5000/Faculty/FacultySingle/${_id}`
+            `http://localhost:5000/Administration/Single_Administration_Display/${_id}`
           )
         ).data;
-        setFacultyUpdate({
-          name: data?.name,
-          post: data?.post,
-          detail: data?.detail,
+        setGovernUpdate({
+          name : data?.name,
+          position: data?.position,
+          shortNote: data?.shortNote,
+          longNote : data?.longNote
         });
       } catch (error) {
         console.log(error);
@@ -49,17 +51,18 @@ const FacultyUpdate = () => {
 
   // console.log(societUpdate);
 
-  const SocietyUpdate = async () => {
+  const GoverningUpdate = async () => {
     try {
       let formData = new FormData();
       const compressedFile = await imageCompression(filedata, options);
       formData.append("image", compressedFile);
-      formData.append("name", facultyUpdate.name);
-      formData.append("post", facultyUpdate.post);
-      formData.append("detail", facultyUpdate.detail);
+      formData.append("name", GovernUpdate.name);
+      formData.append("position", GovernUpdate.position);
+      formData.append("shortNote", GovernUpdate.shortNote);
+      formData.append("longNote", GovernUpdate.longNote);
       const data1 = (
         await axios.post(
-          `http://localhost:5000/Faculty/Faculty_Update/${_id}`,
+          `http://localhost:5000/Administration/Administration_Update/${_id}`,
           formData,
           {
             headers: {
@@ -84,7 +87,7 @@ const FacultyUpdate = () => {
           <AdminHeader />
           <div className="SocietyFormContainer">
             <div className="Society_Heading">
-              <h1>Update Faculty</h1>
+              <h1>Update Governing Body</h1>
             </div>
             <div className="SocietyForm">
               <input
@@ -92,24 +95,32 @@ const FacultyUpdate = () => {
                 name="name"
                 id=""
                 placeholder="Name"
-                value={facultyUpdate.name}
+                value={GovernUpdate.name}
                 onChange={Onchagetesdetail}
               />
               <input
                 type="text"
-                name="post"
+                name="position"
                 id=""
-                placeholder="Post"
-                value={facultyUpdate.post}
+                placeholder="Position"
+                value={GovernUpdate.position}
+                onChange={Onchagetesdetail}
+              />
+              <input
+                type="text"
+                name="shortNote"
+                id=""
+                placeholder="Short Note"
+                value={GovernUpdate.shortNote}
                 onChange={Onchagetesdetail}
               />
               <textarea
-                name="detail"
+                name="longNote"
                 id=""
                 cols="15"
                 rows="5"
                 placeholder="Detail"
-                value={facultyUpdate.detail}
+                value={GovernUpdate.longNote}
                 onChange={Onchagetesdetail}
               ></textarea>
               <div className="Message_image">
@@ -135,7 +146,7 @@ const FacultyUpdate = () => {
                   />
                 ) : (
                   <img
-                    src={`http://localhost:5000/Faculty/Faculty_Image_Display/${_id}`}
+                    src={`http://localhost:5000/Administration/AdministrationImageDisplay/${_id}`}
                     alt=""
                     style={{
                       width: "400px",
@@ -148,7 +159,7 @@ const FacultyUpdate = () => {
               <button
                 className="button-19"
                 onClick={() => {
-                  SocietyUpdate();
+                    GoverningUpdate();
                 }}
               >
                 Update
@@ -161,4 +172,4 @@ const FacultyUpdate = () => {
   );
 };
 
-export default FacultyUpdate;
+export default Society_Update;
