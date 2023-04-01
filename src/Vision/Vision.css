@@ -28,8 +28,7 @@
     font-size: 30px;
 }
 
-.VisionDetail p,
-ul li {
+.VisionDetail p, ul {
     text-align: justify;
     font-size: 20px;
     line-height: 27px;
