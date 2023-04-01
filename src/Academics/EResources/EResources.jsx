@@ -1,13 +1,17 @@
 import React from 'react'
 import './eresources.css'
 import { Link } from 'react-router-dom'
-import NavBar from '../Components/Navbar'
-import Header from '../Components/Header'
-import Footer from '../Components/Footer'
+import NavBar from '../../Components/Navbar'
+import Header from '../../Components/Header'
+import Footer from '../../Components/Footer'
+import useFetch from '../../useFetch'
+import Loader from '../../Components/Loader'
 
 export default function EResources() {
+
+    const { data: eResources, isPending } = useFetch("http://localhost:5000/E_Resources/EResources_Display")
     return (
-        <>  
+        <>
             <Header></Header>
             <NavBar></NavBar>
             <section className='e-resources'>
@@ -22,14 +26,15 @@ export default function EResources() {
                                 URL
                             </div>
                         </div>
-                        {[...Array(13)].map((x, i) => {
+                        {isPending && <Loader />}
+                        {eResources && eResources.map((x, i) => {
                             return (
                                 <div className="e-resources-item" key={i}>
                                     <div className="publisher-item">
-                                        SGTBIMIT
+                                        {x.name}
                                     </div>
                                     <div className="url-item">
-                                        <Link to={"http://sciencecongress.nic.in/institutional_members.php"}>http://sciencecongress.nic.in/institutional_members.php</Link>
+                                        <Link to={x.url}>{x.url}</Link>
                                     </div>
                                 </div>
                             )

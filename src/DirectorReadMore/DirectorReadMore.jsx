@@ -22,7 +22,6 @@ export default function DirectorReadMore() {
                     {directorData.map(director => (
                         <>
                             <div className='cont'>
-                                <div className='gradient'></div>
                                 <img src={`http://localhost:5000/Administration/AdministrationImageDisplay/${director._id}`} alt="cant load" data-aos="fade-up" />
                                 <div className='title'>{director.name}
                                     <div className="dir-position">{director.position}</div>

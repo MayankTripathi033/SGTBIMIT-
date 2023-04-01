@@ -1,5 +1,5 @@
 .mobile {
-    display: none;
+    display: none !important;
 }
 /* Floating Admissions Button */
 
@@ -41,7 +41,7 @@
 
 /* Header */
 header {
-    background: var(--secondary-clr);
+    background: white;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -62,15 +62,21 @@ header {
     outline: none;
     background-color: var(--primary-clr);
     margin-left: 1.5rem;
-    padding: min(1.5rem, 3vw);
+    padding: min(1rem, 2vw);
     color: white;
     letter-spacing: .125em;
     font-weight: 700;
     border-radius: 1.5rem;
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
-    font-size: min(1.5rem, 3vw);
+    font-size: min(1rem, 2vw);
+  
 }
 
+.header-btns{
+  display: flex;
+  flex-direction: column;
+  gap: min(1.5rem, 2vw)
+}
 .header-btns button:hover {
     outline: 3px solid white;
 }
@@ -79,10 +85,41 @@ header {
     height: min(150px, 20vw);
 }
 
+.clg-heading-container{
+  display: flex;
+  gap: min(2rem,2vw);
+  align-items: center;
+}
+
+.clg-heading-wrapper p{
+  margin: 0.5rem;
+
+}
+
+  .clg-heading{
+    color: red;
+    font-size: min(1.7rem, 3.4vw);
+    font-weight: 800;
+    text-align: center;
+  }
+.clg-sub-heading{
+  color: var(--primary-clr);
+  font-weight: 500;
+  text-align: center;
+  font-size: min(1.6rem, 3.2vw);
+}
+
+.clg-committee{
+  text-align: center;
+  font-size: min(1.2rem, 2.4vw);
+  font-weight: 500;
+  color: red;
+}
+
 
 .header-news {
     width: 100%;
-    color: white;
+    color: black;
 }
 @media(max-width: 1125px){
     .header-btns button{
@@ -405,8 +442,8 @@ footer p {
 /* Loader */
 
 .loader {
-    --background: linear-gradient(135deg, #23C4F8, #275EFE);
-    --shadow: rgba(39, 94, 254, 0.28);
+    --background: linear-gradient(135deg, var(--primary-clr), var(--secondary-clr));
+    --shadow: var(--primary-clr);
     --text: #6C7486;
     --page: rgba(255, 255, 255, 0.36);
     --page-fold: rgba(255, 255, 255, 0.52);
