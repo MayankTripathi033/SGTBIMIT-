@@ -9,9 +9,13 @@ const AdminMenu = () => {
   const [isSUBTestimonialActive, setIsSUBTestimonialActive] = useState(false);
   const [isSUBSocietyActive, setIsSUBSocietyActive] = useState(false);
   const [isSUBFacultyActive, setIsSUBFacultyActive] = useState(false);
+  const [isSUBPlacementActive, setIsSUBPlacementActive] = useState(false);
+  const [isSUBRecruitersActive, setIsSUBRecruitersActive] = useState(false);
   const [isSUBAdministrationActive, setIsSUBAdministrationActive] =
     useState(false);
   const [isAboutActive, setIsAboutActive] = useState(false);
+  const [isAcademicsActive, setIsAcademicsActive] = useState(false);
+  const [isSUBEresourcesActive, setIsSUBEresourcesActive] = useState(false);
   const navigate = useNavigate();
 
   return (
@@ -107,6 +111,68 @@ const AdminMenu = () => {
                     </span>
                   </div>
                 )}
+
+                <p
+                  onClick={() => {
+                    setIsSUBPlacementActive(!isSUBPlacementActive);
+                  }}
+                  style={{
+                    backgroundColor: "#e0e1dd",
+                  }}
+                >
+                  PLACEMENT AND INTERNSHIPS <IoIosArrowDown className="CatHeadIcons" />
+                </p>
+                {isSUBPlacementActive && (
+                  <div className="Categoriesdropdown">
+                    <span>
+                      <p
+                        onClick={() => {
+                          navigate("/admin/Placement_Add");
+                        }}
+                      >
+                        PLACEMENT ADD
+                      </p>
+                      <p
+                        onClick={() => {
+                          navigate("/admin/Placement_Display");
+                        }}
+                      >
+                        PLACEMENT DISPLAY
+                      </p>
+                    </span>
+                  </div>
+                )}
+
+                <p
+                  onClick={() => {
+                    setIsSUBRecruitersActive(!isSUBRecruitersActive);
+                  }}
+                  style={{
+                    backgroundColor: "#e0e1dd",
+                  }}
+                >
+                  RECRUITERS <IoIosArrowDown className="CatHeadIcons" />
+                </p>
+                {isSUBRecruitersActive && (
+                  <div className="Categoriesdropdown">
+                    <span>
+                      <p
+                        onClick={() => {
+                          navigate("/admin/Recruiters_Add");
+                        }}
+                      >
+                        RECRUITERS ADD
+                      </p>
+                      <p
+                        onClick={() => {
+                          navigate("/admin/Recruiters_Display");
+                        }}
+                      >
+                        RECRUITERS DISPLAY
+                      </p>
+                    </span>
+                  </div>
+                )}
               </span>
             </div>
           )}
@@ -191,6 +257,56 @@ const AdminMenu = () => {
                 >
                   SOCIETY DISPLAY
                 </p>
+              </span>
+            </div>
+          )}
+        </div>
+        <div className="Categories">
+          <span
+            className="categories_Header"
+            onClick={() => {
+              setIsAcademicsActive(!isAcademicsActive);
+            }}
+          >
+            <span>
+              <ImBoxAdd className="CatHeadIcons" />
+              <h3>ACADEMICS</h3>
+            </span>
+            <IoIosArrowDown className="CatHeadIcons" />
+          </span>
+          {isAcademicsActive && (
+            <div className="Categoriesdropdown">
+              <span>
+                <p
+                  onClick={() => {
+                    setIsSUBEresourcesActive(!isSUBEresourcesActive);
+                  }}
+                  style={{
+                    backgroundColor: "#e0e1dd",
+                  }}
+                >
+                  E-RESOURCES <IoIosArrowDown className="CatHeadIcons" />
+                </p>
+                {isSUBEresourcesActive && (
+                  <div className="Categoriesdropdown">
+                    <span>
+                      <p
+                        onClick={() => {
+                          navigate("/admin/EResources_Add");
+                        }}
+                      >
+                        E-RESOURCES ADD
+                      </p>
+                      <p
+                        onClick={() => {
+                          navigate("/admin/EResources_Display");
+                        }}
+                      >
+                        E-RESOURCES DISPLAY
+                      </p>
+                    </span>
+                  </div>
+                )}
               </span>
             </div>
           )}
