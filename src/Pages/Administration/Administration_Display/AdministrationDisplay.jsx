@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import AdminMenu from "../../../Components/AdminMenu/AdminMenu";
 import AdminHeader from "../../../Components/AdminHeader/AdminHeader";
 import "../../Society/Society_Display/Society_Display.css";
+import "../../Testimonials/Testimonials_Display/Testimonial_Display.css"
 import axios from "axios";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { BiEditAlt } from "react-icons/bi";
@@ -63,7 +64,7 @@ const AdministrationDisplay = () => {
           <AdminHeader />
           <div className="TesHeaderCard">
             <div className="TesDisplayHeading">
-              <h1>Administration</h1>
+              <h1>Governing Body</h1>
             </div>
             <div className="TesDisplayCardContainer">
               {getAdmini.map((value) => {
@@ -79,7 +80,7 @@ const AdministrationDisplay = () => {
                             color: "#adb5bd",
                           }}
                           onClick={() => {
-                            // navigator(`/admin/Society_Update/${value._id}`);
+                            navigator(`/admin/Administration_Update/${value._id}`);
                           }}
                         />
                         <RiDeleteBin6Line
