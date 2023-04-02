@@ -52,8 +52,8 @@ export default function Navbar() {
         ADMISSION
       </div>
       <nav>
-        <div className='mobile nav-close'><img src={require("../images/cancel.png")} alt="cant load" className='nav-close-btn' /></div>
-        <div className="mobile header-btns mobile-header-btns">
+        <div className='nav-close mobile'><img src={require("../images/cancel.png")} alt="cant load" className='nav-close-btn'/></div>
+        <div className="header-btns mobile-header-btns mobile">
           <button className="admission-btn" type="button" onClick={() => {
             document.querySelector(".admission-dialog").classList.add("show")
           }}>CLICK HERE FOR ADMISSIONS</button>

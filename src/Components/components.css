@@ -341,7 +341,7 @@ nav img {
 
 @media(max-width: 1000px) {
     .mobile {
-        display: block;
+        display: block !important;
     }
 
     .desktop {
