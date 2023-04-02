@@ -27,8 +27,8 @@ const RecruitersAdd = () => {
         try {
           let formData = new FormData();
           const compressedFile = await imageCompression(filedata, options);
-          console.log(compressedFile);
-          formData.append("image", compressedFile);
+          // console.log(compressedFile);
+          formData.append("image", compressedFile,filedata.name);
           formData.append("Name", recruitersUpdate.Name);
           const data1 = (
             await axios.post(

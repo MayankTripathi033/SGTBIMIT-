@@ -29,7 +29,7 @@ const PlacementAdd = () => {
           let formData = new FormData();
           const compressedFile = await imageCompression(filedata, options);
           console.log(compressedFile);
-          formData.append("image", compressedFile);
+          formData.append("image", compressedFile,filedata.name);
           formData.append("name", placementUpdate.name);
           formData.append("companyName", placementUpdate.companyName);
           const data1 = (

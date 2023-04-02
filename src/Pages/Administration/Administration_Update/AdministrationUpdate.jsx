@@ -7,12 +7,14 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import imageCompression from "browser-image-compression";
 
+
 const Society_Update = () => {
   const [GovernUpdate, setGovernUpdate] = useState({
     name: "",
     position: "",
     shortNote: "",
     longNote: "",
+    Index: "",
   });
   const { _id } = useParams();
 
@@ -25,7 +27,7 @@ const Society_Update = () => {
   const options = {
     maxSizeMB: 1,
     maxWidthOrHeight: 1920,
-    useWebWorker: true,
+    // useWebWorker: true,
   };
 
   useEffect(() => {
@@ -37,10 +39,11 @@ const Society_Update = () => {
           )
         ).data;
         setGovernUpdate({
-          name : data?.name,
+          name: data?.name,
           position: data?.position,
           shortNote: data?.shortNote,
-          longNote : data?.longNote
+          longNote: data?.longNote,
+          Index: data?.Index,
         });
       } catch (error) {
         console.log(error);
@@ -49,17 +52,29 @@ const Society_Update = () => {
     TestSingleData();
   }, [_id]);
 
+  const compresFile = async () => {
+    if (filedata) {
+      const compressedFile = await imageCompression(filedata, options);
+      return compressedFile
+    }else{
+      return filedata
+    }
+  };
+
   // console.log(societUpdate);
 
   const GoverningUpdate = async () => {
     try {
       let formData = new FormData();
-      const compressedFile = await imageCompression(filedata, options);
-      formData.append("image", compressedFile);
+      let Imagefile = await compresFile()
+      formData.append("image", Imagefile,filedata.name);
       formData.append("name", GovernUpdate.name);
       formData.append("position", GovernUpdate.position);
       formData.append("shortNote", GovernUpdate.shortNote);
       formData.append("longNote", GovernUpdate.longNote);
+      formData.append("Index", Number(GovernUpdate.Index));
+
+      console.log(formData);
       const data1 = (
         await axios.post(
           `http://localhost:5000/Administration/Administration_Update/${_id}`,
@@ -114,6 +129,14 @@ const Society_Update = () => {
                 value={GovernUpdate.shortNote}
                 onChange={Onchagetesdetail}
               />
+              <input
+                type="text"
+                name="Index"
+                id=""
+                placeholder="Index"
+                value={GovernUpdate.Index}
+                onChange={Onchagetesdetail}
+              />
               <textarea
                 name="longNote"
                 id=""
@@ -159,7 +182,7 @@ const Society_Update = () => {
               <button
                 className="button-19"
                 onClick={() => {
-                    GoverningUpdate();
+                  GoverningUpdate();
                 }}
               >
                 Update

@@ -9,7 +9,7 @@ import AdminMenu from "../../../Components/AdminMenu/AdminMenu";
 
 const RecruitersUpdate = () => {
   const [recruitersUpdate, setRecruitersUpdate] = useState({
-    name: "",
+    Name: "",
     image: "",
   });
   const { _id } = useParams();
@@ -26,37 +26,44 @@ const RecruitersUpdate = () => {
     useWebWorker: true,
   };
 
-//   useEffect(() => {
-//     const TestSingleData = async () => {
-//       try {
-//         const data = (
-//           await axios.get(
-//             `http://localhost:5000/Recruiters/Recruiter_Image_Display/${_id}`
-//           )
-//         ).data;
-//         setRecruitersUpdate({
-//           name: data?.name,
-//           post: data?.post,
-//           detail: data?.detail,
-//         });
-//       } catch (error) {
-//         console.log(error);
-//       }
-//     };
-//     TestSingleData();
-//   }, [_id]);
+  useEffect(() => {
+    const TestSingleData = async () => {
+      try {
+        const data = (
+          await axios.get(
+            `http://localhost:5000/Recruiters/recruiters_Single_Display/${_id}`
+          )
+        ).data;
+        console.log(data);
+        setRecruitersUpdate({
+          Name: data?.Name,
+        });
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    TestSingleData();
+  }, [_id]);
 
+  const compresFile = async () => {
+    if (filedata) {
+      const compressedFile = await imageCompression(filedata, options);
+      return compressedFile
+    }else{
+      return filedata
+    }
+  };
   // console.log(societUpdate);
 
   const SocietyUpdate = async () => {
     try {
       let formData = new FormData();
-      const compressedFile = await imageCompression(filedata, options);
-      formData.append("image", compressedFile);
-      formData.append("name", recruitersUpdate.name);
+      let Imagefile = await compresFile()
+      formData.append("image", Imagefile);
+      formData.append("Name", recruitersUpdate.Name);
       const data1 = (
         await axios.post(
-          `http://localhost:5000/Recruiters/recruiters_Update/${_id}`,
+          `http://localhost:5000/Society/Society_Update/${_id}`,
           formData,
           {
             headers: {
@@ -86,10 +93,10 @@ const RecruitersUpdate = () => {
             <div className="SocietyForm">
               <input
                 type="text"
-                name="name"
+                name="Name"
                 id=""
                 placeholder="Name"
-                value={recruitersUpdate.name}
+                value={recruitersUpdate.Name}
                 onChange={Onchagetesdetail}
               />
               <div className="Message_image">

@@ -37,8 +37,7 @@ const PlacementUpdate = () => {
         ).data;
         setPlacementUpdate({
           name: data?.name,
-          post: data?.post,
-          detail: data?.detail,
+          companyName: data?.companyName,
         });
       } catch (error) {
         console.log(error);
@@ -49,11 +48,21 @@ const PlacementUpdate = () => {
 
   // console.log(societUpdate);
 
+
+  const compresFile = async () => {
+    if (filedata) {
+      const compressedFile = await imageCompression(filedata, options);
+      return compressedFile
+    }else{
+      return filedata
+    }
+  };
+
   const SocietyUpdate = async () => {
     try {
       let formData = new FormData();
-      const compressedFile = await imageCompression(filedata, options);
-      formData.append("image", compressedFile);
+      let Imagefile = await compresFile()
+      formData.append("image", Imagefile,filedata.name);
       formData.append("name", placementUpdate.name);
       formData.append("companyName", placementUpdate.companyName);
       const data1 = (

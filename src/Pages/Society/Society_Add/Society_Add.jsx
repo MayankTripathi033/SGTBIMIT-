@@ -30,7 +30,7 @@ const Society_Add = () => {
       let formData = new FormData();
       const compressedFile = await imageCompression(filedata, options);
       console.log(compressedFile);
-      formData.append("image", compressedFile);
+      formData.append("image", compressedFile,filedata.name);
       formData.append("title", societUpdate.title);
       formData.append("detail", societUpdate.detail);
       formData.append("subdetail", societUpdate.subdetail);

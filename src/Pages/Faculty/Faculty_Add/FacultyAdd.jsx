@@ -29,7 +29,7 @@ const FacultyAdd = () => {
           let formData = new FormData();
           const compressedFile = await imageCompression(filedata, options);
           console.log(compressedFile);
-          formData.append("image", compressedFile);
+          formData.append("image", compressedFile,filedata.name);
           formData.append("name", facultyUpdate.name);
           formData.append("post", facultyUpdate.post);
           formData.append("detail", facultyUpdate.detail);

@@ -47,13 +47,22 @@ const FacultyUpdate = () => {
     TestSingleData();
   }, [_id]);
 
+  const compresFile = async () => {
+    if (filedata) {
+      const compressedFile = await imageCompression(filedata, options);
+      return compressedFile
+    }else{
+      return filedata
+    }
+  };
+
   // console.log(societUpdate);
 
   const SocietyUpdate = async () => {
     try {
       let formData = new FormData();
-      const compressedFile = await imageCompression(filedata, options);
-      formData.append("image", compressedFile);
+      let Imagefile = await compresFile()
+      formData.append("image", Imagefile,filedata.name);
       formData.append("name", facultyUpdate.name);
       formData.append("post", facultyUpdate.post);
       formData.append("detail", facultyUpdate.detail);

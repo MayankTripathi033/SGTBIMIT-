@@ -30,7 +30,7 @@ const AdministrationAdd = () => {
       let formData = new FormData();
       const compressedFile = await imageCompression(filedata, options);
       console.log(compressedFile);
-      formData.append("image", compressedFile);
+      formData.append("image", compressedFile,filedata.name);
       formData.append("name", AdminiUpdate.name);
       formData.append("position", AdminiUpdate.position);
       formData.append("shortNote", AdminiUpdate.shortNote);

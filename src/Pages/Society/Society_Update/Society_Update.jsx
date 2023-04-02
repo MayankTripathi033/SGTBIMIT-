@@ -48,12 +48,19 @@ const Society_Update = () => {
   }, [_id]);
 
   // console.log(societUpdate);
-
+  const compresFile = async () => {
+    if (filedata) {
+      const compressedFile = await imageCompression(filedata, options);
+      return compressedFile
+    }else{
+      return filedata
+    }
+  };
   const SocietyUpdate = async () => {
     try {
       let formData = new FormData();
-      const compressedFile = await imageCompression(filedata, options);
-      formData.append("image", compressedFile);
+      let Imagefile = await compresFile()
+      formData.append("image", Imagefile,filedata.name);
       formData.append("title", societUpdate.title);
       formData.append("detail", societUpdate.detail);
       formData.append("subdetail", societUpdate.subdetail);
