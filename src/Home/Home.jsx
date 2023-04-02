@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 import './home.css'
 import Welcome from './Welcome'
@@ -13,16 +13,20 @@ import Admission from '../Components/Admission'
 import Navbar from '../Components/Navbar'
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'
-
+import Loader2 from '../Components/Loader2'
 export default function Home() {
 
-  useEffect(() => {
-    document.querySelector(".admission-dialog").classList.add("show")
-    document.querySelector(".admission-bg").classList.add("show-bg")
-  }, [])
+  const [isPending, setIsPending] = useState(true)
+  useEffect(()=>{
+    setTimeout(()=>{
+      setIsPending(false)
+  }, 1000)
+  },[])
 
   return (
-    <>
+    
+      <>
+      {isPending && <Loader2/>}
       <Header />
       <Navbar />
       <ImageCarousel />
@@ -36,5 +40,6 @@ export default function Home() {
       <Admission /> 
       <Footer />
     </>
+    
   )
 }
