@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
+import useFetch from '../useFetch'
 export default function Navbar() {
   const arrow = require("../images/down.png")
-
+  const { data: societies } = useFetch("http://localhost:5000/Society/Society_Display")
+  console.log(societies)
 
   useEffect(() => {
     console.log(document.body.offsetWidth)
@@ -45,7 +47,7 @@ export default function Navbar() {
   return (
     <>
       <div className="floating-btn"
-      onClick={(e)=>{handleFloatClick(e)}}
+        onClick={(e) => { handleFloatClick(e) }}
       >
         ADMISSION
       </div>
@@ -155,36 +157,13 @@ export default function Navbar() {
         <div className="nav-item" data-index="5">
           <div>SOCIETY<img src={arrow} alt="" /></div>
           <div className="dropdown" data-index="5">
-            <NavLink to="/society/nss-cell" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
-              <div className="dropdown-item">NSS CELL</div>
-            </NavLink>
-            <NavLink to="/society/literary" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
-              <div className="dropdown-item">LITERARY SOCIETY</div>
-            </NavLink>
-            <NavLink to="/society/fine-art" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
-              <div className="dropdown-item">FINE ART SOCIETY</div>
-            </NavLink>
-            <NavLink to="/society/cultural" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
-              <div className="dropdown-item">CULTURAL SOCIETY</div>
-            </NavLink>
-            <NavLink to="/society/smart-youth" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
-              <div className="dropdown-item">SMART YOUTH SOCIETY</div>
-            </NavLink>
-            <NavLink to="/society/divinity" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
-              <div className="dropdown-item">DIVINITY SOCIETY</div>
-            </NavLink>
-            <NavLink to="/society/soch" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
-              <div className="dropdown-item">SOCH - THE DRAMATIC SOCIETY</div>
-            </NavLink>
-            <NavLink to="/society/saarang" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
-              <div className="dropdown-item">SAARANG MUSIC SOCIETY</div>
-            </NavLink>
-            <NavLink to="/society/eco-club" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
-              <div className="dropdown-item">ECO CLUB</div>
-            </NavLink>
-            <NavLink to="/society/swachh-bharat" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
-              <div className="dropdown-item">SWACHH BHARAT ABHIYAAN</div>
-            </NavLink>
+            {societies && societies.map((society) => {
+              return (
+                <NavLink to={`/society/${society._id}`} className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+                  <div className="dropdown-item">{society.title}</div>
+                </NavLink>
+              )
+            })}
           </div>
 
         </div>

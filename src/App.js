@@ -7,16 +7,7 @@ import AdminisCarousel from './About/GoverningBody/AdminisCarousel.jsx'
 import About from './About/About'
 import Vision from './Vision/Vision'
 import DirectorReadMore from './DirectorReadMore/DirectorReadMore'
-import Divinity from './Society/pages/Divinity'
-import SmartYouth from './Society/pages/SmartYouth'
-import Literary from './Society/pages/Literary'
-import Nss from './Society/pages/Nss'
-import Fineart from './Society/pages/Fineart'
-import Cultural from './Society/pages/Cultural'
-import Soch from './Society/pages/Soch'
-import Saarang from './Society/pages/Saarang'
-import Eco from './Society/pages/Eco'
-import SwachhBharat from './Society/pages/SwachhBharat' 
+import Society from './Society/pages/Society.jsx'
 import Faculty from './Faculty/Faculty'
 import EResources from './Academics/EResources/EResources.jsx'
 import Examination from './Academics/Examination/Examination'
@@ -54,6 +45,7 @@ import RecruitersUpdate from './Pages/Recruiters/Recruiters_Update/Recruiters_Up
 import EResourcesAdd from './Pages/E_Resources/E_Resources_Add/E_Resources_Add.jsx'
 import EResourcesDisplay from './Pages/E_Resources/E_Resources_Display/E_Resources_Display.jsx'
 import EResourcesUpdate from './Pages/E_Resources/E_Resources_Update/E_Resources_Update.jsx'
+
 function App() {
   AOS.init({
     startEvent: 'load'
@@ -62,27 +54,18 @@ function App() {
     <Router>
       <Routes>
         <Route index element={<Home />}></Route>
-        <Route path="about" element={<About />} />
-        <Route path='about/governing-body' element={<AdminisCarousel />} />
-        <Route path="about/vision-and-mission" element={<Vision />} />
-        <Route path="director-readmore" element={<DirectorReadMore />} />
-        <Route path="society/divinity" element={<Divinity />} />
-        <Route path="society/smart-youth" element={<SmartYouth />} />
-        <Route path="society/literary" element={<Literary />} />
-        <Route path="society/nss-cell" element={<Nss />} />
-        <Route path="society/fine-art" element={<Fineart />} />
-        <Route path="society/cultural" element={<Cultural />}/>
-        <Route path="society/soch" element={<Soch />}/>
-        <Route path="society/saarang" element={<Saarang />}/>
-        <Route path="society/eco-club" element={<Eco />}/>
-        <Route path='society/swachh-bharat' element={<SwachhBharat />}/>
-        <Route path='academics/faculty' element={<Faculty />}/>
-        <Route path='academics/e-resources' element={<EResources />}/>
-        <Route path='academics/examinations' element={<Examination />}/>
-        <Route path='admission/fees' element={<Fees />}/>
-        <Route path='academics/syllabus' element={<Syllabus />}/>
-        <Route path='admission/courses-eligibility' element = {<Eligibility />}/>
-        <Route path='admission/notices' element = {<Notice />}/>
+        <Route path="/about" element={<About />} />
+        <Route path='/about/governing-body' element={<AdminisCarousel />} />
+        <Route path="/about/vision-and-mission" element={<Vision />} />
+        <Route path="/director-readmore" element={<DirectorReadMore />} />
+        <Route path='/society/:id' element={<Society />}/>
+        <Route path='/academics/faculty' element={<Faculty />}/>
+        <Route path='/academics/e-resources' element={<EResources />}/>
+        <Route path='/academics/examinations' element={<Examination />}/>
+        <Route path='/admission/fees' element={<Fees />}/>
+        <Route path='/academics/syllabus' element={<Syllabus />}/>
+        <Route path='/admission/courses-eligibility' element = {<Eligibility />}/>
+        <Route path='/admission/notices' element = {<Notice />}/>
         <Route path='/admin' element = {<Admin/>}/>
         <Route path='/admin/Testimonials_Add' element = {<Testimonials_ADD/>}/>
         <Route path='/admin/Testimonials_Display' element = {<Testimonial_Display/>}/>
