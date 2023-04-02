@@ -20,7 +20,7 @@ export default function TestimonialsAL() {
                                 <div className="card-img"></div>
                                 <div className="card-info">
                                     <p className="text-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti repellat, consequuntur doloribus voluptate esse iure?</p>
-                                    <p className="text-title">Autor</p>
+                                    <p className="text-title">Author</p>
                                 </div>
                             </div>
                         )

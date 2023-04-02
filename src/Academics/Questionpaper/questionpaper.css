@@ -31,3 +31,24 @@ color: var(--primary-clr);
     font-size: min(1rem,2vw);
 }
 
+.year-box{
+    position: fixed;
+    visibility: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    gap: min(2rem,2vw);
+    padding: 2rem 5rem;
+    background-color: rgb(1, 11, 49);
+
+}
+.year-btn{
+    padding: min(1rem,1vw);
+    width: min(10rem,10vw);
+    font-size: min(1.5rem,3vw);
+    background-color: white;
+    border-radius: 5px;
+    outline: none;
+}
