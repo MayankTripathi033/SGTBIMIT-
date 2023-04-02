@@ -4,7 +4,7 @@ import "./components.css"
 
 
 export default function Header() {
-  const logo = require('../images/logo.png')
+  const logo = require('../images/sgtbimit.png')
   useEffect(() => {
     document.querySelector(".admission-btn").addEventListener("click", (e) => {
       document.querySelector(".admission-dialog").classList.add("show")

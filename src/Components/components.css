@@ -45,8 +45,8 @@ header {
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding-top: 2rem;
-    padding-inline: 1rem;
+    padding-top: 1rem;
+    padding-inline:0.5rem;
 }
 
 .header-top {
@@ -82,7 +82,7 @@ header {
 }
 
 .logo {
-    height: min(150px, 20vw);
+    height: min(175px, 20vw);
 }
 
 .clg-heading-container{
@@ -98,9 +98,10 @@ header {
 
   .clg-heading{
     color: red;
-    font-size: min(1.7rem, 3.4vw);
+    font-size: min(1.6rem, 3.4vw);
     font-weight: 800;
     text-align: center;
+    transform: scaleY(1.5);
   }
 .clg-sub-heading{
   color: var(--primary-clr);
@@ -114,6 +115,7 @@ header {
   font-size: min(1.2rem, 2.4vw);
   font-weight: 500;
   color: red;
+  transform: scaleY(1.2);
 }
 
 

@@ -11,25 +11,28 @@ export default function AcademicCal() {
         <Navbar />
         <section className='acad-cal'>
             <h1>ACADEMIC CALENDAR</h1>
-            <div className="cal-grid heading">
-                <div className="cal-date">
-                    PROPOSED DATE
-                </div>
-                <div className="cal-event">
-                    EVENT
-                </div>
-            </div>
-            {calInfo.map((cal) => {
-                return (<div className="cal-grid">
+            <div className="cal-container">
+                <div className="cal-grid heading">
                     <div className="cal-date">
-                        {cal.date}
-
+                        PROPOSED DATE
                     </div>
                     <div className="cal-event">
-                        {cal.event}
+                        EVENT
                     </div>
-                </div>)
-            })}
+                </div>
+                {calInfo.map((cal) => {
+                    return (<div className="cal-grid">
+                        <div className="cal-date">
+                            {cal.date}
+
+                        </div>
+                        <div className="cal-event">
+                            {cal.event}
+                        </div>
+                    </div>)
+                })}
+            </div>
+
 
 
 
