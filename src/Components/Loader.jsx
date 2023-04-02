@@ -2,9 +2,9 @@ import './components.css'
 
 import React from 'react'
 
-export default function Loader() {
+const Loader = ()=> {
   return (
-    <div class="loader">
+    <div className="loader">
   <div>
     <ul>
       <li>
@@ -41,3 +41,4 @@ export default function Loader() {
   </div><span>Loading</span></div>
   )
 }
+export default Loader
