@@ -4,25 +4,10 @@ import AdminMenu from "../../../Components/AdminMenu/AdminMenu";
 import "./Society_Add.css";
 import "../../Testimonials/Testimonials_ADD/Testimonials_ADD";
 import axios from "axios";
-import Resizer from "react-image-file-resizer";
+import imageCompression from 'browser-image-compression';
+
 
 const Society_Add = () => {
-
-  const resizeFile = (file) =>
-  new Promise((resolve) => {
-    Resizer.imageFileResizer(
-      file,
-      200,
-      200,
-      "JPEG",
-      100,
-      0,
-      // (uri) => {
-      //   resolve(uri);
-      // },
-    );
-  });
-
   const [societUpdate, setSocieUpdate] = useState({
     title: "",
     detail: "",
@@ -34,12 +19,18 @@ const Society_Add = () => {
     setSocieUpdate({ ...societUpdate, [e.target.name]: e.target.value });
   };
 
+  const options = {
+    maxSizeMB: 1,
+    maxWidthOrHeight: 1920,
+    useWebWorker: true,
+  }
+
   const SocietyAdd = async () => {
     try {
       let formData = new FormData();
-      let image = await resizeFile(filedata)
-      console.log(image);
-      formData.append("image", image);
+      const compressedFile = await imageCompression(filedata, options);
+      console.log(compressedFile);
+      formData.append("image", compressedFile);
       formData.append("title", societUpdate.title);
       formData.append("detail", societUpdate.detail);
       formData.append("subdetail", societUpdate.subdetail);
@@ -54,12 +45,11 @@ const Society_Add = () => {
           }
         )
       ).data;
-      console.log(data1);
+      // console.log(data1);
     } catch (error) {
       console.log(error);
     }
   };
-  console.log(filedata);
   return (
     <>
       <div className="societyAddConatiner">

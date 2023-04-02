@@ -6,7 +6,7 @@
     width: 100%;
     position: relative;
     background: url("../images/bg-2.png");
-    background-size: cover;
+    background-size: 100%;
     
 }
 
@@ -54,4 +54,9 @@
 }
 .position{
     color: var(--primary-clr) !important;
+}
+@media(max-width: 1000px){
+    .adminis-section {
+        background-image: none;
+    }
 }

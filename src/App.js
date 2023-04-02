@@ -18,7 +18,7 @@ import Saarang from './Society/pages/Saarang'
 import Eco from './Society/pages/Eco'
 import SwachhBharat from './Society/pages/SwachhBharat' 
 import Faculty from './Faculty/Faculty'
-import EResources from './EResources/EResources.jsx'
+import EResources from './Academics/EResources/EResources.jsx'
 import Examination from './Academics/Examination/Examination'
 import Syllabus from './Academics/Syllabus/Syllabus.jsx'
 import Fees from './Fees/Fees'
@@ -39,6 +39,21 @@ import Questionpaper from './Academics/Questionpaper/Questionpaper'
 import AcademicCal from './Academics/AcademicCalendar/AcademicCal.jsx'
 import AlumniMeet from './Alumni/AlumniMeet/AlumniMeet.jsx'
 import TestimonialsAL from './Alumni/Testimonials/TestimonialsAL.jsx'
+import FacultyAdd from './Pages/Faculty/Faculty_Add/FacultyAdd.jsx'
+import FacultyDisplay from './Pages/Faculty/Faculty_Display/FacultyDisplay.jsx'
+import FacultyUpdate from './Pages/Faculty/Faculty_Update/FacultyUpdate.jsx'
+import AdministrationAdd from './Pages/Administration/Administration_Add/AdministrationAdd.jsx'
+import AdministrationDisplay from './Pages/Administration/Administration_Display/AdministrationDisplay.jsx'
+import AdministrationUpdate from "./Pages/Administration/Administration_Update/AdministrationUpdate.jsx"
+import PlacementDisplay from './Pages/Placement and Internship/Placement_Display/Placement_Display.jsx'
+import PlacementUpdate from './Pages/Placement and Internship/Placement_Update/Placement_Update.jsx'
+import PlacementAdd from './Pages/Placement and Internship/Placement_Add/Placement_Add.jsx'
+import RecruitersAdd from './Pages/Recruiters/Recruiters_Add/Recruiters_Add.jsx'
+import RecruitersDisplay from './Pages/Recruiters/Recruiters_Display/Recruiters_Display.jsx'
+import RecruitersUpdate from './Pages/Recruiters/Recruiters_Update/Recruiters_Update.jsx'
+import EResourcesAdd from './Pages/E_Resources/E_Resources_Add/E_Resources_Add.jsx'
+import EResourcesDisplay from './Pages/E_Resources/E_Resources_Display/E_Resources_Display.jsx'
+import EResourcesUpdate from './Pages/E_Resources/E_Resources_Update/E_Resources_Update.jsx'
 function App() {
   AOS.init({
     startEvent: 'load'
@@ -75,6 +90,21 @@ function App() {
         <Route path='/admin/Society_Add' element = {<Society_Add/>}/>
         <Route path='/admin/Society_Display' element = {<Society_Display/>}/>
         <Route path='/admin/Society_Update/:_id' element = {<Society_Update/>}/>
+        <Route path='/admin/Faculty_Add' element = {<FacultyAdd/>}/>
+        <Route path='/admin/Faculty_Display' element = {<FacultyDisplay/>}/>
+        <Route path='/admin/Faculty_Update/:_id' element = {<FacultyUpdate/>}/>
+        <Route path='/admin/Administration_Add' element = {<AdministrationAdd/>}/>
+        <Route path='/admin/Administration_Display' element = {<AdministrationDisplay/>}/>
+        <Route path='/admin/Administration_Update/:_id' element = {<AdministrationUpdate/>}/>
+        <Route path='/admin/Placement_Add' element = {<PlacementAdd/>}/>
+        <Route path='/admin/Placement_Display' element = {<PlacementDisplay/>}/>
+        <Route path='/admin/Placement_Update/:_id' element = {<PlacementUpdate/>}/>
+        <Route path='/admin/Recruiters_Add' element = {<RecruitersAdd/>}/>
+        <Route path='/admin/Recruiters_Display' element = {<RecruitersDisplay/>}/>
+        <Route path='/admin/Recruiters_Update/:_id' element = {<RecruitersUpdate/>}/>
+        <Route path='/admin/EResources_Add' element = {<EResourcesAdd/>}/>
+        <Route path='/admin/EResources_Display' element = {<EResourcesDisplay/>}/>
+        <Route path='/admin/EResources_Update/:_id' element = {<EResourcesUpdate/>}/>
         <Route path='/academics/courses/bba' element={<Bba />}/>
         <Route path='/academics/courses/bbab&i' element={<BbaBI />}/>
         <Route path='/academics/courses/bca' element={<Bca />}/>

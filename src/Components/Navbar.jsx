@@ -223,7 +223,7 @@ export default function Navbar() {
         </div>
         <div className="nav-item" data-index="8">
           <div>NAAC<img src={arrow} alt="" /></div>
-          <div className="dropdown" data-index="8">
+          <div className="dropdown left-dropdown" data-index="8">
             <NavLink to="/naac/r&d" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">R&D</div>
             </NavLink>

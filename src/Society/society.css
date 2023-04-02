@@ -34,3 +34,9 @@
 .nsslink {
     font-size: min(2rem,4vw);
 }
+
+@media(max-width: 1000px){
+    .society {
+        background-image: none;
+    }
+}

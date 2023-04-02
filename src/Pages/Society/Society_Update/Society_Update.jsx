@@ -5,6 +5,7 @@ import "../Society_Add/Society_Add.css";
 import "../../Testimonials/Testimonials_ADD/Testimonials_ADD";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import imageCompression from "browser-image-compression";
 
 const Society_Update = () => {
   const [societUpdate, setSocieUpdate] = useState({
@@ -20,12 +21,18 @@ const Society_Update = () => {
     setSocieUpdate({ ...societUpdate, [e.target.name]: e.target.value });
   };
 
+  const options = {
+    maxSizeMB: 1,
+    maxWidthOrHeight: 1920,
+    useWebWorker: true,
+  };
+
   useEffect(() => {
     const TestSingleData = async () => {
       try {
         const data = (
           await axios.get(
-           `http://localhost:5000/Society/Single_Society_Display/${_id}`
+            `http://localhost:5000/Society/Single_Society_Display/${_id}`
           )
         ).data;
         setSocieUpdate({
@@ -40,12 +47,13 @@ const Society_Update = () => {
     TestSingleData();
   }, [_id]);
 
-  console.log(societUpdate);
+  // console.log(societUpdate);
 
   const SocietyUpdate = async () => {
     try {
       let formData = new FormData();
-      formData.append("image", filedata);
+      const compressedFile = await imageCompression(filedata, options);
+      formData.append("image", compressedFile);
       formData.append("title", societUpdate.title);
       formData.append("detail", societUpdate.detail);
       formData.append("subdetail", societUpdate.subdetail);
@@ -95,7 +103,6 @@ const Society_Update = () => {
                 value={societUpdate.subdetail}
                 onChange={Onchagetesdetail}
               />
-
               <textarea
                 name="detail"
                 id=""

@@ -174,7 +174,7 @@
 }
 .card h1{
     color: var(--primary-clr);
-    line-height: 2.2rem;
+    line-height: 36px;
 }
 
 @media(max-width: 1000px) {
@@ -404,18 +404,26 @@
 }
 
 .recruiters-imgs {
-    display: flex;
+    display: grid;
     justify-content: space-between;
     padding: min(2rem, 2vw);
-
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    place-items: center;
 }
 
 .recruiters-imgs img {
-    width: min(20vw, 400px);
-    border: 2px solid black;
-    aspect-ratio: 1;
+    width: min(25vw, 400px);
 }
 
+
+
+@media(max-width: 1000px){
+    .recruiters-imgs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 /* map */
 .map-btns {
     display: flex;

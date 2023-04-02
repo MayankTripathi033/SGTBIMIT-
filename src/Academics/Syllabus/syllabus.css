@@ -1,6 +1,6 @@
 .syllabus {
     background: url("../../images/bg-2.png");
-    background-size:110%;
+    background-size:100%;
     margin-bottom: min(2rem,2vw);
 }
 
@@ -60,4 +60,11 @@ td {
 
 td>a {
     text-decoration: none;
+}
+
+
+@media(max-width: 1000px){
+    .syllabus{
+        background-image: none;
+    }
 }
