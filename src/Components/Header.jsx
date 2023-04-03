@@ -17,18 +17,18 @@ export default function Header() {
     <header>
       <Admission />
       <div className="header-top">
-        <div className="clg-heading-container">
-          <img src={logo} alt="" className='logo' />
-          <div className="clg-heading-wrapper">
-            <p className="clg-heading">SRI GURU TEGH BAHADUR INSTITUTE OF MANAGEMENT AND INFORMATION TECHNOLOGY</p>
-            <p className="clg-sub-heading">
-              (AFFILIATED TO GURU GOBIND SINGH INDRAPRASTHA UNIVERSITY)
-            </p>
-            <p className="clg-committee">
-              (UNDER THE MANAGEMENT OF DELHI SIKH GURUDWARA MANAGEMENT COMMITTEE)
-            </p>
-          </div>
-
+        <div className="logo">
+        <img src={logo} alt="" />
+        </div>
+        
+        <div className="clg-heading-wrapper">
+          <p className="clg-heading">SRI GURU TEGH BAHADUR INSTITUTE OF MANAGEMENT AND INFORMATION TECHNOLOGY</p>
+          <p className="clg-sub-heading">
+            (AFFILIATED TO GURU GOBIND SINGH INDRAPRASTHA UNIVERSITY)
+          </p>
+          <p className="clg-committee">
+            (UNDER THE MANAGEMENT OF DELHI SIKH GURUDWARA MANAGEMENT COMMITTEE)
+          </p>
         </div>
         <div className="desktop header-btns">
           <button className="admission-btn" type="button">CLICK HERE FOR ADMISSIONS</button>

@@ -4,8 +4,6 @@ import useFetch from '../useFetch'
 export default function Navbar() {
   const arrow = require("../images/down.png")
   const { data: societies } = useFetch("http://localhost:5000/Society/Society_Display")
-  console.log(societies)
-
   useEffect(() => {
     console.log(document.body.offsetWidth)
     document.querySelector(".menu").addEventListener("click", e => {
@@ -159,7 +157,7 @@ export default function Navbar() {
           <div className="dropdown" data-index="5">
             {societies && societies.map((society) => {
               return (
-                <NavLink to={`/society/${society._id}`} className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+                <NavLink to={`/society/${society._id}`} className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'} key={society._id}>
                   <div className="dropdown-item">{society.title}</div>
                 </NavLink>
               )

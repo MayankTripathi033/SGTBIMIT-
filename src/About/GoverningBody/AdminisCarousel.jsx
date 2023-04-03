@@ -7,7 +7,7 @@ import Header from '../../Components/Header'
 import Footer from '../../Components/Footer'
 import Loader from '../../Components/Loader'
 export default function AdminisCarousel() {
-  const { data: adminisArray, isPending } = useFetch("http://localhost:5000/Administration/Administration_Display")
+  const { data: adminisArray, isPending, error } = useFetch("http://localhost:5000/Administration/Administration_Display")
 
   useEffect(() => {
     document.querySelector(".about-nav-link").classList.remove("dropdown-active-item")
@@ -21,11 +21,12 @@ export default function AdminisCarousel() {
 
 
         {isPending && <Loader />}
+        {error && <div className="error">{error}</div> }
         <Carousel
-          infiniteLoop={true}
           interval={4000}
           className='adminis-carousel'
           autoPlay={true}
+          selectedItem={0}
         >
           {adminisArray && adminisArray.map((adminis) => (
             <div className="adminis" key={adminis._id}>
