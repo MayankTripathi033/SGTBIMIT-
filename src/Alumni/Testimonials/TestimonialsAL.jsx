@@ -1,8 +1,6 @@
 import React from 'react'
 import './testAl.css'
-import Navbar from '../../Components/Navbar'
-import Header from '../../Components/Header.jsx'
-import Footer from '../../Components/Footer.jsx'
+import { Header, Navbar, Footer } from '../../Components'
 
 
 export default function TestimonialsAL() {
@@ -17,9 +15,9 @@ export default function TestimonialsAL() {
                     {[...Array(12)].map((x, i) => {
                         return (
                             <div className="t-card">
-                                <div className="card-img"></div>
+                                <img src={""}className="card-img" alt='placeholder for images' />
                                 <div className="card-info">
-                                    <p className="text-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti repellat, consequuntur doloribus voluptate esse iure?</p>
+                                    <p className="text-body">I put some random interesting text here of more than 2 lines.</p>
                                     <p className="text-title">Author</p>
                                 </div>
                             </div>

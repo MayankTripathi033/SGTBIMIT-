@@ -7,11 +7,8 @@ import Navbar from '../../Components/Navbar'
 import useFetch from '../../useFetch'
 import '../society.css'
 export default function Society() {
-    const { data } = useFetch("http://localhost:5000/Society/Society_Display")
     const { id } = useParams()
-    const society = (data && data.filter((society) => {
-        return society._id == id
-    })[0])
+    const { data: society } = useFetch(`http://localhost:5000/Society/Single_Society_Display/${id}`)
     return (
         <>
             <Header />

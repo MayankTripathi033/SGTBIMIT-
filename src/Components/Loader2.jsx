@@ -2,7 +2,8 @@ import React from 'react'
 import './components.css'
 export default function Loader2() {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" height="200px" width="200px" viewBox="0 0 200 200" class="pencil">
+    <div className="loader-2">
+		<svg xmlns="http://www.w3.org/2000/svg" height="200px" width="200px" viewBox="0 0 200 200" class="pencil">
 	<defs>
 		<clipPath id="pencil-eraser">
 			<rect height="30" width="30" ry="5" rx="5"></rect>
@@ -33,5 +34,6 @@ export default function Loader2() {
 		</g>
 	</g>
 </svg>
+	</div>
   )
 }

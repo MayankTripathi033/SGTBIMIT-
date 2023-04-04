@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 import './home.css'
 import Welcome from './Welcome'
@@ -14,7 +16,12 @@ import Navbar from '../Components/Navbar'
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'
 import Loader2 from '../Components/Loader2'
+
+
 export default function Home() {
+  AOS.init({
+    startEvent: 'load'
+  })
 
   const [isPending, setIsPending] = useState(true)
   useEffect(()=>{
