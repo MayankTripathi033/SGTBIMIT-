@@ -4,11 +4,7 @@ import useFetch from '../useFetch'
 export default function Navbar() {
   const arrow = require("../images/down.png")
   const { data: societies } = useFetch("http://localhost:5000/Society/Society_Display")
-<<<<<<< HEAD
-  // console.log(societies)
 
-=======
->>>>>>> 91932f9e0d62be30566961718ffc6c506a1efecc
   useEffect(() => {
     console.log(document.body.offsetWidth)
     document.querySelector(".menu").addEventListener("click", e => {
