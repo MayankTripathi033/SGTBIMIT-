@@ -56,6 +56,7 @@ const Society_Update = () => {
       return filedata
     }
   };
+
   const SocietyUpdate = async () => {
     try {
       let formData = new FormData();
@@ -99,7 +100,7 @@ const Society_Update = () => {
                 name="title"
                 id=""
                 placeholder="Society"
-                value={societUpdate.title}
+                value={societUpdate?.title}
                 onChange={Onchagetesdetail}
               />
               <input
@@ -107,7 +108,7 @@ const Society_Update = () => {
                 name="subdetail"
                 id=""
                 placeholder="Sub Detail"
-                value={societUpdate.subdetail}
+                value={societUpdate?.subdetail}
                 onChange={Onchagetesdetail}
               />
               <textarea
@@ -116,7 +117,7 @@ const Society_Update = () => {
                 cols="15"
                 rows="5"
                 placeholder="Message"
-                value={societUpdate.detail}
+                value={societUpdate?.detail}
                 onChange={Onchagetesdetail}
               ></textarea>
               <div className="Message_image">

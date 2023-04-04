@@ -63,7 +63,7 @@ const RecruitersUpdate = () => {
       formData.append("Name", recruitersUpdate.Name);
       const data1 = (
         await axios.post(
-          `http://localhost:5000/Society/Society_Update/${_id}`,
+          `http://localhost:5000/Recruiters/recruiters_Update/${_id}`,
           formData,
           {
             headers: {

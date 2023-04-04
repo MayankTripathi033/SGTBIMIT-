@@ -4,7 +4,7 @@ import useFetch from '../useFetch'
 export default function Navbar() {
   const arrow = require("../images/down.png")
   const { data: societies } = useFetch("http://localhost:5000/Society/Society_Display")
-  console.log(societies)
+  // console.log(societies)
 
   useEffect(() => {
     console.log(document.body.offsetWidth)

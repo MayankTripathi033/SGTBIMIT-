@@ -16,6 +16,8 @@ const AdminMenu = () => {
   const [isAboutActive, setIsAboutActive] = useState(false);
   const [isAcademicsActive, setIsAcademicsActive] = useState(false);
   const [isSUBEresourcesActive, setIsSUBEresourcesActive] = useState(false);
+  const [isQuestionPaperActive, setIsQuestionPaperActive] = useState(false);
+
   const navigate = useNavigate();
 
   return (
@@ -303,6 +305,36 @@ const AdminMenu = () => {
                         }}
                       >
                         E-RESOURCES DISPLAY
+                      </p>
+                    </span>
+                  </div>
+                )}
+                <p
+                  onClick={() => {
+                    setIsQuestionPaperActive(!isQuestionPaperActive);
+                  }}
+                  style={{
+                    backgroundColor: "#e0e1dd",
+                  }}
+                >
+                  PREV YEAR PAPERS <IoIosArrowDown className="CatHeadIcons" />
+                </p>
+                {isQuestionPaperActive && (
+                  <div className="Categoriesdropdown">
+                    <span>
+                      <p
+                        onClick={() => {
+                          navigate("/admin/Prev_Year_Paper_Add");
+                        }}
+                      >
+                        PREV YEAR PAPERS ADD
+                      </p>
+                      <p
+                        onClick={() => {
+                          navigate("/admin/Prev_Year_Paper_Dislay");
+                        }}
+                      >
+                        PREV YEAR PAPERS DISPLAY
                       </p>
                     </span>
                   </div>

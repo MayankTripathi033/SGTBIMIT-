@@ -45,6 +45,8 @@ import RecruitersUpdate from './Pages/Recruiters/Recruiters_Update/Recruiters_Up
 import EResourcesAdd from './Pages/E_Resources/E_Resources_Add/E_Resources_Add.jsx'
 import EResourcesDisplay from './Pages/E_Resources/E_Resources_Display/E_Resources_Display.jsx'
 import EResourcesUpdate from './Pages/E_Resources/E_Resources_Update/E_Resources_Update.jsx'
+import QuestionPaperDisplay from './Pages/QuestionPaper/QuestionPaperDisplay/QuestionPaperDisplay.jsx'
+import QuestionPaperAdd from './Pages/QuestionPaper/QuestionPaperAdd/QuestionPaperAdd.jsx'
 
 function App() {
   AOS.init({
@@ -88,6 +90,8 @@ function App() {
         <Route path='/admin/EResources_Add' element = {<EResourcesAdd/>}/>
         <Route path='/admin/EResources_Display' element = {<EResourcesDisplay/>}/>
         <Route path='/admin/EResources_Update/:_id' element = {<EResourcesUpdate/>}/>
+        <Route path='/admin/Prev_Year_Paper_Dislay' element = {<QuestionPaperDisplay/>}/>
+        <Route path='/admin/Prev_Year_Paper_Add' element = {<QuestionPaperAdd/>}/>
         <Route path='/academics/courses/bba' element={<Bba />}/>
         <Route path='/academics/courses/bbab&i' element={<BbaBI />}/>
         <Route path='/academics/courses/bca' element={<Bca />}/>

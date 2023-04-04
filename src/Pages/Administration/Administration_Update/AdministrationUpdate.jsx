@@ -143,6 +143,7 @@ const Society_Update = () => {
                 cols="15"
                 rows="5"
                 placeholder="Detail"
+                wrap="off"
                 value={GovernUpdate.longNote}
                 onChange={Onchagetesdetail}
               ></textarea>
