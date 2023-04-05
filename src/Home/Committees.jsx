@@ -3,14 +3,14 @@ import React from 'react'
 export default function Committees() {
   return (
     <section className = "committees">
-      <div className="committees-container">
-        <div className="committee-item">
+      <div className="committees-container" >
+        <a className="committee-item" href={"../Assets/anti_ragging_poster.pdf"} download>
             <img src={require("../images/anti-ragging.png")} alt="cant load" />
             <div className="committee-content">
                 <h1>ANTI-RAGGING</h1>
                 <p>Ragging is a punishable offence as per Hon'ble Supreme Court order.</p>
             </div>
-        </div>
+        </a>
         <div className="committee-item">
             <img src={require("../images/quality-policy.png")} alt="cant load" />
             <div className="committee-content">
