@@ -27,6 +27,7 @@ import AcademicCal from './Academics/AcademicCalendar/AcademicCal.jsx'
 import AlumniMeet from './Alumni/AlumniMeet/AlumniMeet.jsx'
 import TestimonialsAL from './Alumni/Testimonials/TestimonialsAL.jsx'
 import Events from './Events/Events.jsx'
+import Gallery from  './Alumni/Gallery/Gallery.jsx'
 
 /* Admin imports */
 
@@ -69,6 +70,13 @@ function App() {
         <Route path='/academics/syllabus' element={<Syllabus />}/>
         <Route path='/admission/courses-eligibility' element = {<Eligibility />}/>
         <Route path='/admission/notices' element = {<Notice />}/>
+        <Route path='/alumini/gallery' element = {<Gallery />} />
+
+
+
+        {/* Admin Routes */}
+
+
         <Route path='/admin' element = {<Admin/>}/>
         <Route path='/admin/Testimonials_Add' element = {<Testimonials_ADD/>}/>
         <Route path='/admin/Testimonials_Display' element = {<Testimonial_Display/>}/>

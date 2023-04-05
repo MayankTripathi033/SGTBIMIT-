@@ -2,40 +2,42 @@
 .society {
     text-align: center;
     margin-inline: auto;
-    padding-top: min(2rem,2vh);
+    padding-top: min(2rem, 2vh);
     background: url("../images/bg-2.png");
-    background-size:100%;
+    background-size: 100%;
 }
 
 .society h1 {
-    font-size: min(3rem,6vw);
-    color:var(--secondary-clr);;
+    font-size: min(3rem, 6vw);
+    color: var(--secondary-clr);
 }
 
-.society h2 {
-    font-size: min(1.7rem,3.5vw);
+.society-sub-heading {
+    font-size: min(1.7rem, 3.5vw);
     text-align: center;
+    font-weight: bolder;
 }
 
-.society p {
-    font-size: min(1.7rem,3.5vw);
+.society-p {
+    font-size: min(1.7rem, 3.5vw);
     color: rgba(0, 0, 0, 0.8);
-    padding-left: 23%;
-    width: 80%;
+    width: min(1000px, 90%);
     text-align: justify;
+    margin-inline: auto;
+    white-space: break-spaces;
 }
 
 .society img {
-    width: min(700px,80vw);
+    width: min(700px, 80vw);
     aspect-ratio: 7/5;
     border: 2px solid black;
 }
 
 .nsslink {
-    font-size: min(2rem,4vw);
+    font-size: min(2rem, 4vw);
 }
 
-@media(max-width: 1000px){
+@media(max-width: 1000px) {
     .society {
         background-image: none;
     }

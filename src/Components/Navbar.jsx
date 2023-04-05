@@ -175,7 +175,7 @@ export default function Navbar() {
             <NavLink to="/events/upcoming" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">UPCOMING EVENTS</div>
             </NavLink>
-            <NavLink to="/events/past" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/events/gallery" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">GALLERY</div>
             </NavLink>
           </div>
@@ -199,7 +199,7 @@ export default function Navbar() {
           </div>
 
         </div>
-        <div className="nav-item" data-index="8">
+        {/* <div className="nav-item" data-index="8">
           <div>NAAC<img src={arrow} alt="" /></div>
           <div className="dropdown left-dropdown" data-index="8">
             <NavLink to="/naac/r&d" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
@@ -218,7 +218,7 @@ export default function Navbar() {
               <div className="dropdown-item">CO-PO MAPPING</div>
             </NavLink>
           </div>
-        </div>
+        </div> */}
       </nav>
     </>
   )

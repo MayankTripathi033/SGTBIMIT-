@@ -20,35 +20,40 @@ import Committees from './Committees'
 
 
 export default function Home() {
-/*   AOS.init({
-    startEvent: 'load'
-  }) */
+  /*   AOS.init({
+      startEvent: 'load'
+    }) */
 
   const [isPending, setIsPending] = useState(true)
-  useEffect(()=>{
-    setTimeout(()=>{
+  useEffect(() => {
+    setTimeout(() => {
       setIsPending(false)
-  }, 1000)
-  },[])
+    }, 1000)
+  }, [])
 
   return (
-    
-      <>
-      {isPending && <Loader2/>}
-      <Header />
-      <Navbar />
-      <ImageCarousel />
-      <Welcome />
-      <Testimonials />
-      <DirectorMsg />
-      <Committees />
-      <Placements />
-      <Collaboration />
-      <Recruiters />
-      <Map />
-      <Admission /> 
-      <Footer />
+
+    <>
+      {isPending && <Loader2 />}
+      {!isPending && (
+        <>
+          <Header />
+          <Navbar />
+          <ImageCarousel />
+          <Welcome />
+          <Testimonials />
+          <DirectorMsg />
+          <Committees />
+          <Placements />
+          <Collaboration />
+          <Recruiters />
+          <Map />
+          <Admission />
+          <Footer />
+        </>
+      )
+      }
     </>
-    
+
   )
 }

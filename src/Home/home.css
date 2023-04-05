@@ -297,7 +297,7 @@
 .committees{
     display: flex;
     flex-direction: column;
-    padding: 2rem;
+    padding-inline: 2rem;
 }
 .committees-container{
     display: grid;
@@ -305,6 +305,8 @@
     grid-template-columns: repeat(4,1fr);
     margin-inline: auto;
     gap: 2rem;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.1);
+    padding-block: 2rem;
 }
 .committee-item{
     display: flex;
@@ -405,6 +407,7 @@
     grid-template-columns: repeat(3, 1fr);
     gap: min(2rem, 5vw);
     place-items: center;
+    width: min(1200px, 100%);
 }
 
 .collab-grid>* {
@@ -460,7 +463,7 @@
 
 
 @media(max-width: 1000px) {
-    .recruiters-imgs {
+    .recruiters-item {
         grid-template-columns: repeat(2, 1fr);
     }
 }

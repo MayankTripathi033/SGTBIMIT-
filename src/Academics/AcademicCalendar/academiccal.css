@@ -6,7 +6,7 @@
 
 
 .cal-container{
-    box-shadow: 0 0 30px 10px rgba(0,0,0,0.4);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     width: min(1000px, 100%);
     background: white;
     margin-inline: auto;

@@ -19,12 +19,12 @@ export default function Society() {
                     {society.title}
                 </h1>
                 <img src={`http://localhost:5000/Society/Society_Image_Display/${society._id}`} alt="cant load" society-aos="fade-up" />
-                <h2>
+                <pre className='society-sub-heading'>
                     {society.subdetail}
-                </h2>
-                <p>
+                </pre>
+                <pre className='society-p'>
                     {society.detail}
-                </p>
+                </pre>
             </div>
             }
             <Footer />

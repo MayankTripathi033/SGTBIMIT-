@@ -2,10 +2,7 @@ import React, { useEffect } from "react";
 import useFetch from "../../useFetch";
 import { Carousel } from "react-responsive-carousel";
 import "./adminis.css";
-import Navbar from "../../Components/Navbar";
-import Header from "../../Components/Header";
-import Footer from "../../Components/Footer";
-import Loader from "../../Components/Loader";
+import { Header, Navbar, Footer, Loader } from '../../Components'
 export default function AdminisCarousel() {
 
   const { data: adminisArray, isPending, error } = useFetch("http://localhost:5000/Administration/Administration_Display")
