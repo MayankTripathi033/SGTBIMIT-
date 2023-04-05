@@ -292,6 +292,38 @@
     z-index: 13;
 }
 
+
+/* Committees */
+.committees{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+.committees-container{
+    display: flex;
+    width: min(1200px, 100);
+    margin-inline: auto;
+    gap: 2rem;
+}
+.committee-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    color: white;
+    background-color: rgb(20,20,20);
+    border-radius: 10px;
+}
+.committee-item *{
+    text-align: center;
+}
+
+@media(max-width: 1000px){
+    .committees-container{
+        flex-direction: column;
+    }
+}
+
 /* Placements */
 .placements {
     width: 100%;

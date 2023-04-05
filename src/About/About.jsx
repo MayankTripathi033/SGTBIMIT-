@@ -5,9 +5,9 @@ import Navbar from '../Components/Navbar'
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'
 export default function About() {
-    AOS.init(
+/*     AOS.init(
         { startEvent: 'load' }
-    )
+    ) */
     return (
         <>
             <Header />
