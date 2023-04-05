@@ -72,7 +72,7 @@ export default function Fees() {
 
                     <div className="box">
                         <div className="icon">
-                            <h1>B.Com(H)</h1>
+                            <h1>B.COM(H)</h1>
                         </div>
                         <div className="info">
                             <h3>Bachelor of Commerce (Honours)</h3>

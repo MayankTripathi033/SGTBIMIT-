@@ -82,7 +82,7 @@ export default function Syllabus() {
                             {sub1.map((v,k)=>{
                                 return(
                                     <tr key={k}>
-                                        <td>{v.course}</td>
+                                        <th>{v.course}</th>
                                         <td>
                                             <p>Subjects you would be learning majorly:
                                                 <ul>
@@ -106,7 +106,7 @@ export default function Syllabus() {
                             {sub2.map((v,k)=>{
                                 return(
                                     <tr key={k}>
-                                        <td>{v.course}</td>
+                                        <th>{v.course}</th>
                                         <td>
                                             <p>Subjects you would be learning majorly:
                                                 <ul>

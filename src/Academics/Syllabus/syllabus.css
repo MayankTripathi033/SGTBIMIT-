@@ -7,9 +7,10 @@
 .syllabus h1 {
     font-size: min(3rem, 8vw);
     background-color: var(--secondary-clr);
-    width: 100%;
+    width: 90%;
     text-align: center;
     color: white;
+    margin: 40px 5%;
 }
 
 .imptop {
@@ -20,9 +21,10 @@
     margin-bottom: 20px;
 }
 
-.imptop td {
+.imptop td, th {
     border-bottom: 1px solid var(--secondary-clr);
     border-right: 1px solid var(--secondary-clr);
+    padding: 8px;
 }
 
 .imptop li {
@@ -67,4 +69,18 @@ td>a {
     .syllabus{
         background-image: none;
     }
+
+    .imptop{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+@media(max-width: 600px){
+    .syllabus{
+        width: 80%;
+        margin: 20px 10%;
+    }
+
+    
 }
