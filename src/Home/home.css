@@ -301,7 +301,7 @@
 }
 .committees-container{
     display: grid;
-    width: min(1200px, 100);
+    width: min(1500px, 100%);
     grid-template-columns: repeat(4,1fr);
     margin-inline: auto;
     gap: 2rem;
