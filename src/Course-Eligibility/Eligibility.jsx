@@ -33,7 +33,7 @@ export default function Eligibility() {
                     <h3>BCA Admission Criteria:</h3>
                     <p>
                        <li> Admission shall be on the basis of the merit of the 
-                        written test /CUET.</li>
+                        written test CET/CUET.</li>
                     </p>
                     </div>
 
@@ -48,7 +48,7 @@ export default function Eligibility() {
                     <h3>BBA(G) Admission Criteria:</h3>
                     <p>
                         <li>Admission shall be on the basis of the merit of the 
-                        written test /CUET.</li>
+                        written test CET/CUET.</li>
                     </p>
                     </div>
 
@@ -63,7 +63,7 @@ export default function Eligibility() {
                     <h3>BBA(B&I) Admission Criteria:</h3>
                     <p>
                         <li>Admission shall be on the basis of the merit of the 
-                        written test /CUET.</li>
+                        written test CET/CUET.</li>
                     </p>
                     </div>
 
@@ -90,7 +90,7 @@ export default function Eligibility() {
                     <h3>B.Comm Admission Criteria:</h3>
                     <p>
                         <li>Admission shall be on the basis of the merit of the 
-                        written test /CUET.</li>
+                        written test CET/CUET.</li>
                     </p>
                     </div>
                     </div>
