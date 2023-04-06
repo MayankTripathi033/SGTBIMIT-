@@ -13,26 +13,28 @@ export default function Gallery() {
                 <div className="head1">GALLERY</div>
                 <div className="gallery-box">
                     {[...Array(9)].map((x, i) => (
-                        <div className="gallery-box1" onClick={()=>{setIsCarouselActive(true)}}>
-                            <img src={require("../../images/p1.jpg")} alt="infra" className="pic" />
-                            <p className="text">Infra</p>
-                        </div>
+                        <>
+                            <div className="gallery-box1" onClick={() => { setIsCarouselActive(true) }}>
+                                <img src={require("../../images/p1.jpg")} alt="infra" className="pic" />
+                                <p className="text">Infra</p>
+                            </div>
+                            {isCarouselActive && (
+                                <section className="gallery-carousel-section">
+                                    <div className="gallery-carousel-container">
+                                        <img src={require("../../images/cancel.png")} className="carousel-close-btn" onClick={() => setIsCarouselActive(false)} />
+                                        <Carousel>
+                                            {[...Array(6)].map((x, i) => (
+                                                <div className="gallery-carousel-item">
+                                                    <img src={require("../../images/p1.jpg")} alt="infra" />
+                                                </div>
+                                            ))}
+                                        </Carousel>
+                                    </div>
+                                </section>
+                            )}
+                        </>
                     ))}
                 </div>
-                {isCarouselActive && (
-                    <section className="gallery-carousel-section">
-                        <div className="gallery-carousel-container">
-                            <img src={require("../../images/cancel.png")} className="carousel-close-btn" onClick={()=>setIsCarouselActive(false)}/>
-                            <Carousel>
-                                {[...Array(6)].map((x,i)=>(
-                                    <div className="gallery-carousel-item">
-                                        <img src={require("../../images/p1.jpg")} alt="infra"/>
-                                    </div>
-                                ))}
-                            </Carousel>
-                        </div>
-                    </section>
-                )}
             </section>
             <Footer />
         </>

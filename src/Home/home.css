@@ -436,6 +436,14 @@
 }
 
 /* Recruiters */
+.recruiters-container{
+    width: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    padding: 2rem;
+    overflow-x: scroll;
+    gap: 1rem;
+}
 
 .recruiters h1 {
     text-align: center;
@@ -459,7 +467,9 @@
     justify-content: center;
     align-items: center;
 }
-
+.recruiter-img img{
+    width: 300px;
+}
 
 
 @media(max-width: 1000px) {
