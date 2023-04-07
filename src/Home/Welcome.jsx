@@ -7,7 +7,7 @@ export default function Welcome() {
       <div className="block left-block"></div>
       <div className="block right-block"></div>
       <div className="welcome-wrapper">
-        <img src="https://assets.nicepagecdn.com/c86f032b/4353070/images/guruteghbahadur.jpg" alt="" className='welcome-img' data-aos="flip-right" data-aos-offset="300" />
+        <img src={require("../images/gtbji3.jpg")} alt="" className='welcome-img' data-aos="flip-right" data-aos-offset="300" />
         <div className='welcome-text' data-aos="flip-left" data-aos-offset="300">
           <h1>
             Welcome to SGTBIMIT
