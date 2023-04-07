@@ -73,8 +73,8 @@ header {
 }
 
 .header-btns {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
   gap: min(1.5rem, 1.5vw);
   width: min(300px, 20%);
 }
@@ -123,11 +123,7 @@ header {
   color: black;
 }
 
-@media(max-width: 1125px) {
-  .header-btns button {
-    width: 280px;
-  }
-}
+
 
 @media(max-width: 1000px) {
   .menu {
