@@ -152,7 +152,7 @@ header {
   box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.7);
   color: white;
   align-items: center;
-  z-index: 50;
+  z-index: 500;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -168,7 +168,7 @@ header {
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.4);
-  z-index: 49 !important;
+  z-index: 499 !important;
 }
 
 .admission-dialog h1 {

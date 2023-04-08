@@ -294,35 +294,38 @@
 
 
 /* Committees */
-.committees{
+.committees {
     display: flex;
     flex-direction: column;
     padding-inline: 2rem;
 }
-.committees-container{
+
+.committees-container {
     display: grid;
     width: min(1500px, 100%);
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     margin-inline: auto;
     gap: 2rem;
     border-bottom: 3px solid rgba(0, 0, 0, 0.1);
     padding-block: 2rem;
 }
-.committee-item{
+
+.committee-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1rem;
     color: white;
-    background-color: rgb(20,20,20);
+    background-color: rgb(20, 20, 20);
     border-radius: 10px;
 }
-.committee-item *{
+
+.committee-item * {
     text-align: center;
 }
 
-@media(max-width: 1000px){
-    .committees-container{
+@media(max-width: 1000px) {
+    .committees-container {
         grid-template-columns: auto;
         grid-template-rows: repeat(4, 1fr);
     }
@@ -436,20 +439,22 @@
 }
 
 /* Recruiters */
-.recruiters-container{
-    width: 100%;
-    display: grid;
-    grid-auto-flow: column;
-    padding: 2rem;
-    overflow-x: scroll;
-    gap: 1rem;
+.recruiters-container {
+    padding: min(2rem, 2vw);
+
 }
+.animate {
+    transition: transform 1s ease;
+    transform: translateX(-100%);
+  }
+
 
 .recruiters h1 {
     text-align: center;
     color: var(--secondary-clr);
     font-size: min(3rem, 6vw);
 }
+
 .recruiters-item {
     display: grid;
     justify-content: space-between;
@@ -459,7 +464,7 @@
     gap: min(2rem, 2vw);    
     padding-inline: min(5rem, 5vw);
 }
-.recruiter-img  {
+.recruiter-img {
     outline: 3px solid rgba(0, 0, 0, 0.05);
     padding: min(2rem, 2vw);
     border-radius: 10px;
@@ -467,16 +472,17 @@
     justify-content: center;
     align-items: center;
 }
-.recruiter-img img{
+
+.recruiter-img img {
     width: 300px;
 }
 
 
-@media(max-width: 1000px) {
+/* @media(max-width: 1000px) {
     .recruiters-item {
         grid-template-columns: repeat(2, 1fr);
     }
-}
+} */
 
 /* map */
 .map-btns {
