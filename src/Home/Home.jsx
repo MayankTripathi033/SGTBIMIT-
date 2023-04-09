@@ -12,10 +12,7 @@ import Collaboration from './Collaboration'
 import Recruiters from './Recruiters'
 import Map from './Map'
 import Admission from '../Components/Admission'
-import Navbar from '../Components/Navbar'
-import Header from '../Components/Header'
-import Footer from '../Components/Footer'
-import Loader2 from '../Components/Loader2'
+import {Header, Navbar, Footer, Loader2} from '../Components'
 import Committees from './Committees'
 
 

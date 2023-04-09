@@ -8,8 +8,8 @@ export default function ImageCarousel() {
         autoPlay={true}
         emulateTouch={true}
         interval={2000}
+        showThumbs = {false}
         className="home-carousel"
-        width = "100%"
         >
 
         <div className="carousel-item">
