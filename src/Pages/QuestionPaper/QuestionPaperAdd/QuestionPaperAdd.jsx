@@ -1,11 +1,12 @@
 import React, { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import AdminHeader from "../../../Components/AdminHeader/AdminHeader";
 import AdminMenu from "../../../Components/AdminMenu/AdminMenu";
 import "../../Society/Society_Add/Society_Add.css";
-import "./QuestionPaperAdd.css"
+import "./QuestionPaperAdd.css";
 import "../../Testimonials/Testimonials_ADD/Testimonials_ADD";
 import axios from "axios";
-import imageCompression from 'browser-image-compression';
 
 const QuestionPaperAdd = () => {
   const [societUpdate, setSocieUpdate] = useState({
@@ -13,43 +14,85 @@ const QuestionPaperAdd = () => {
     Year: "",
     Semester: "",
   });
-  const [filedata, setFileData] = useState();
+
+  const [filedata, setFileData] = useState([]);
+
+  // const handleFile = (e) => {
+  //   const newFiles = [];
+  //   for (let i = 0; i < e.target.files.length; i++) {
+  //     newFiles.push(e.target.files[i]);
+  //   }
+  //   setFileData(newFiles);
+  // };
+
+  // const [images, setImages] = useState([]);
+
+  function handleFileInputChange(event) {
+    const files = event.target.files;
+    const newImages = [];
+
+    if(files.length){
+      for (let i = 0; i < files.length; i++) {
+        newImages.push(files[i]);
+      }
+  
+      setFileData(newImages);
+    }else{
+      setFileData(files);
+    }
+  }
 
   const Onchagetesdetail = (e) => {
     setSocieUpdate({ ...societUpdate, [e.target.name]: e.target.value });
   };
 
-  const options = {
-    maxSizeMB: 1,
-    maxWidthOrHeight: 1920,
-    useWebWorker: true,
-  }
-
   const SocietyAdd = async () => {
     try {
       let formData = new FormData();
-      const compressedFile = await imageCompression(filedata, options);
-      console.log(compressedFile);
-      formData.append("file", compressedFile,filedata.name);
+      if(filedata.length){
+        for (let i = 0; i < filedata.length; i++) {
+          formData.append("file", filedata[i]);
+        }
+      }else{
+        formData.append("file", filedata);
+      }
+      
       formData.append("course", societUpdate.course);
       formData.append("Year", societUpdate.Year);
       formData.append("Semester", societUpdate.Semester);
       const data1 = (
-        await axios.post(
-          "http://localhost:5000/QuestionPaper/Add",
-          formData,
-          {
-            headers: {
-              "Content-Type": "multipart/form-data",
-            },
-          }
-        )
+        await axios.post("http://localhost:5000/QuestionPaper/Add", formData, {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        })
       ).data;
+      toast(`${data1.message}`, {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       // console.log(data1);
     } catch (error) {
       console.log(error);
+      toast.error(`${error.message}`, {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
     }
   };
+  console.log(filedata);
   return (
     <>
       <div className="societyAddConatiner">
@@ -63,7 +106,8 @@ const QuestionPaperAdd = () => {
               <h1>Add the Paper</h1>
             </div>
             <div className="SocietyForm">
-              <select name="course" id="">
+              <select name="course" id="" onChange={Onchagetesdetail}>
+                <option value=" ">Select Course</option>
                 <option value="BCA">BCA</option>
                 <option value="BBA">BBA</option>
                 <option value="BBA B&I">BBA B&I</option>
@@ -76,7 +120,8 @@ const QuestionPaperAdd = () => {
                 placeholder="Year"
                 onChange={Onchagetesdetail}
               />
-              <select name="Semester" id="">
+              <select name="Semester" id="" onChange={Onchagetesdetail}>
+                <option value=" ">Select Semester</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -90,26 +135,25 @@ const QuestionPaperAdd = () => {
                   name="file"
                   id="ImageUpload"
                   multiple
-                  onChange={(e) => {
-                    setFileData(e.target.files[0]);
-                  }}
-                  style={{width: "200px",height:"150px"}}
+                  onChange={handleFileInputChange}
+                  style={{ width: "200px", height: "150px" }}
                 />
               </div>
               <button
                 className="button-19"
-                onClick={() => {
-                    SocietyAdd();
+                onClick={async () => {
+                  SocietyAdd();
                 }}
               >
                 Submit
               </button>
+              <ToastContainer />
             </div>
           </div>
         </div>
       </div>
     </>
   );
-}
+};
 
-export default QuestionPaperAdd
+export default QuestionPaperAdd;

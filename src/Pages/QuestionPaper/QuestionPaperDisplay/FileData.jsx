@@ -6,6 +6,7 @@ const FileData = (props) => {
   const [getPaperName, setPaperName] = useState([]);
   const [render, setRender] = useState(0);
 
+  console.log(props);
   useEffect(() => {
     const paperDataRecover = async () => {
       try {
@@ -13,6 +14,7 @@ const FileData = (props) => {
           `http://localhost:5000/QuestionPaper/Display/${props.course}/${props.Year}/${props.Semester}`
         );
         setPaperName(data.data.FileNames);
+        console.log(data.data);
         setRender(0);
       } catch (error) {
         console.log(error);
