@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
 
 :root {
     --primary-clr: #243f56;
@@ -12,7 +12,7 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: "SF Pro Display", sans-serif;
 }
 
 html {
@@ -74,10 +74,6 @@ button {
 
 /* Carousel */
 
-.thumbs-wrapper,
-.control-dots {
-    display: none;
-}
 
 .control-arrow {
     position: absolute !important;
@@ -88,15 +84,10 @@ button {
     background-color: #ec640c !important;
     border-radius: 50% !important;
     background-color: var(--secondary-clr) !important;
+    background: rgba(0, 0, 0, 0.3) !important;
+    backdrop-filter: blur(12px) !important;
 }
 
-.control-next {
-    right: 0 !important;
-}
-
-.control-prev {
-    left: 0 !important;
-}
 
 
 
