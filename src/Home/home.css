@@ -139,6 +139,7 @@
     padding-bottom: min(3rem, 3vh);
     background: linear-gradient(180deg, #E7F3FF 0%, #F1F1F1 100%);
     padding: min(7rem, 7vw);
+    --padding: 25px;
 }
 
 .test-section .control-arrow{
@@ -146,7 +147,6 @@
 }
 
 .test-container{
-    --padding: 25px;
     padding-inline: var(--padding);
 }
 .test {
