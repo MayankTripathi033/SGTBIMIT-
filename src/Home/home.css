@@ -512,9 +512,10 @@
     display: grid;
     width: 100%;
     grid-template-columns: repeat(4, 1fr);
-    gap: min(2rem, 2vw);    
-    height: 400px;
-    place-items: center;
+    gap: min(2rem, 2vw);   
+    padding-bottom: min(3rem, 3vw);
+    border-bottom: 1px solid rgba(20, 20, 20, 1);
+
 }
 .recruiter-img {
     background-color: white;
