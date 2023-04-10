@@ -144,12 +144,18 @@
 .test-section .control-arrow{
     background-color: #005e93 !important;
 }
+
+.test-container{
+    --padding: 25px;
+    padding-inline: var(--padding);
+}
 .test {
     margin-inline: auto;
     width: 100%;
 }
 .t-heading {    
     font-size: min(3rem, 6vw);
+    padding-inline: var(--padding);
 }
 
 .card {
@@ -159,6 +165,7 @@
     display: grid;
     grid-template-columns: 60% 40%;
     overflow: hidden;
+    position: relative;
 }
 .card::before{
     content: open-quote;
@@ -169,14 +176,15 @@
     color: #F5F5F5;
     z-index: 1;
 }
+.card::after{
+    content: no-close-quote;
+    position: absolute;
+}
 .card-content{
     z-index: 2;
     display: flex;
     flex-direction: column;
     padding: min(3rem, 3vw) min(6rem, 6vw);
-}
-.card::after{
-    content: no-close-quote;
 }
 .card p {
     font-size: min(2.5rem, 5vw);
@@ -199,11 +207,12 @@
 }
 .testimonial-img{
     background: linear-gradient(123.5deg, #FFFFFF 23.2%, #EAF4FF 74.08%);
-    aspect-ratio: 1;
+    height: 100%;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    padding-top: 2rem;
 }
 .testimonial-img img{
     width: 100%;

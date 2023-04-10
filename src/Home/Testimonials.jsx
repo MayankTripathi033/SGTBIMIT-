@@ -29,21 +29,23 @@ export default function Testimonials() {
                 >
 
                     {testimonials.map((testimonial, i) => (
-                        <div className="test">
-                            {/*                             {testimonials.map((testimonial, i) => {
+                        <div className="test-container">
+                            <div className="test">
+                                {/*                             {testimonials.map((testimonial, i) => {
                                 return ( */}
-                            <div className="card" data-aos="zoom-in-up" data-aos-delay={`${i}00`} key={testimonial._id}>
-                                <div className="card-content">
-                                    <p>{testimonial.detail}</p>
-                                    <div className="testi-name">
-                                        <h1>{testimonial.name}</h1>
-                                        <div className="batch">BCA Batch 2014</div>
+                                <div className="card" data-aos="zoom-in-up" data-aos-delay={`${i}00`} key={testimonial._id}>
+                                    <div className="card-content">
+                                        <p>{testimonial.detail}</p>
+                                        <div className="testi-name">
+                                            <h1>{testimonial.name}</h1>
+                                            <div className="batch">BCA Batch 2014</div>
+                                        </div>
+                                    </div>
+                                    <div className="testimonial-img">
+                                        <img src={require("../images/diljit.png")} alt="" />
                                     </div>
                                 </div>
-                                <div className="testimonial-img">
-                                    <img src={require("../images/diljit.png")} alt="" />
-                                </div>
-                            </div>{ }
+                            </div>
                             {/*                                 )
                             })} */}
                         </div>
