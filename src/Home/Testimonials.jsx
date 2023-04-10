@@ -23,8 +23,9 @@ export default function Testimonials() {
             <h1 className='t-heading' data-aos="zoom-in-up" data-aos-offset="300">What students say about us.</h1>
             {isPending && <Loader />}
             {testimonials &&
-                <Carousel className='test-carousel'
+                <Carousel
                     swipeable={false}
+                    showStatus={false}
                 >
 
                     {testimonials.map((testimonial, i) => (
@@ -32,9 +33,17 @@ export default function Testimonials() {
                             {/*                             {testimonials.map((testimonial, i) => {
                                 return ( */}
                             <div className="card" data-aos="zoom-in-up" data-aos-delay={`${i}00`} key={testimonial._id}>
-                                <h1>{testimonial.name}</h1>
-                                <p>{testimonial.detail}</p>
-                            </div>
+                                <div className="card-content">
+                                    <p>{testimonial.detail}</p>
+                                    <div className="testi-name">
+                                        <h1>{testimonial.name}</h1>
+                                        <div className="batch">BCA Batch 2014</div>
+                                    </div>
+                                </div>
+                                <div className="testimonial-img">
+                                    <img src={require("../images/diljit.png")} alt="" />
+                                </div>
+                            </div>{ }
                             {/*                                 )
                             })} */}
                         </div>

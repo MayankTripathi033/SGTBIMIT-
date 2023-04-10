@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import useFetch from '../useFetch'
 import Loader from '../Components/Loader'
 import { Carousel } from 'react-responsive-carousel'
-import Slider from 'react-slick'
 export default function Recruiters() {
   const { data: recruiters, isPending } = useFetch("http://localhost:5000/Recruiters/recruiters_Display")
 

@@ -20,13 +20,22 @@
 /* Welcome */
 
 .welcome {
-    background: radial-gradient(44.58% 50.64% at 90.05% 14.94%, rgba(255, 255, 255, 0.72) 0%, #E8F4FF 65.88%, #E8F4FF 65.89%);
+    background: radial-gradient(44.58% 50.64% at 90.05% 14.94%, rgba(255, 255, 255, 0.72) 0%, #E8F4FF 65.88%, #E8F4FF 65.89%), #F5F5F5 ;
     display: grid;
     padding-block: min(7rem, 7vh);
     padding-inline: min(1rem, 4vw);
     position: relative;
     grid-template-columns: 40% 60%;
     width: 100%;
+}
+
+.welcome-bg{
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 40%;
+    opacity: 0.1;
+    top: 0;
+    right: 0;
 }
 
 
@@ -45,6 +54,7 @@
 .welcome-text{
     display: flex;
     flex-direction: column;
+    z-index: 2;
 }
 .welcome-text h1 {
     font-size: min(4rem, 8vw);
@@ -128,67 +138,76 @@
 .test-section {
     padding-bottom: min(3rem, 3vh);
     background: linear-gradient(180deg, #E7F3FF 0%, #F1F1F1 100%);
-    padding: min(4rem, 4vw);
+    padding: min(7rem, 7vw);
 }
 
-.test-carousel {
-    width: min(1200px, 75%) !important;
-    margin-inline: auto !important;
+.test-section .control-arrow{
+    background-color: #005e93 !important;
 }
 .test {
     margin-inline: auto;
     width: 100%;
-
 }
-
-
-
-
-.test p {
-    font-style: italic;
-    text-align: center;
-    font-size: min(1.2rem, 2.5vw);
-    color: rgba(0, 0, 0, 0.9);
-    line-height: 1.6;
-}
-
 .t-heading {    
     font-size: min(3rem, 6vw);
 }
 
-
-.test h1 {
-    text-align: center;
-    font-size: min(2.3rem, 5vw);
-    color: #478ac9;
-}
-
-
-
 .card {
-    padding: min(1rem, 1vh) min(3rem, 3vw);
     border-radius: 2rem;
     background: #FDFEFF;
+    position: relative;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    overflow: hidden;
 }
 .card::before{
     content: open-quote;
-    font-size: 10rem;
+    font-size: min(40rem, 40vw);
     position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 20000;
-
+    top: min(16rem, 32vw);
+    left: 5px;
+    color: #F5F5F5;
+    z-index: 1;
 }
-
+.card-content{
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    padding: min(3rem, 3vw) min(6rem, 6vw);
+}
+.card::after{
+    content: no-close-quote;
+}
 .card p {
-    font-size: min(1rem, 2vw);
+    font-size: min(2.5rem, 5vw);
+    line-height: 50px;
+    color: #606060;
+    text-align: start;
+    z-index: 2;
 }
-
+.testi-name{
+    margin-top: auto;
+}
+.batch{
+    text-align: start;
+    color: #9A9A9A;
+}
 .card h1 {
-    color: var(--primary-clr);
+    color: #005E93;
     line-height: 36px;
+    text-align: start;
 }
-
+.testimonial-img{
+    background: linear-gradient(123.5deg, #FFFFFF 23.2%, #EAF4FF 74.08%);
+    aspect-ratio: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.testimonial-img img{
+    width: 100%;
+}
 @media(max-width: 1000px) {
     .test-carousel {
         width: 400px !important;
