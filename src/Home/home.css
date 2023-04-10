@@ -249,7 +249,7 @@
     position: relative;
     z-index: 9;
     background: linear-gradient(180deg, #F1F1F1 0%, #E7F3FF 100%);
-    padding: min(5.5rem, 5.5vw) min(8rem, 8vw);
+    padding: min(5.5rem, 5.5vw) min(4rem, 4vw);
 }
 
 .director-heading {
@@ -261,7 +261,7 @@
 
 .director-container {
     background-color: #005E93;
-    padding: min(3rem, 3vw);
+    padding: min(3rem, 3vw) 0 0 min(3rem, 3vw);
     z-index: 11;
     border-radius: 2rem;
     display: flex;
@@ -280,18 +280,36 @@
 .director-container p{
     color: white;
     font-size: min(2.5rem, 5vw);
-    width: 70%;
+    width: 85%;
     line-height: 50px;
 }
 .director-img{
     position: absolute;
     height: min(750px, 100%);
     left: 93%;
-    bottom: 10%;
+    top: -10%;
 }
 .director-img img{
     border-radius: 2rem 6rem 2rem 2rem;
     height: 100%;
+}
+
+.director-position{
+    position: absolute;
+    left: 92%;
+    top: 50%;
+    color: white;
+    white-space: nowrap;
+    transform: rotate(-90deg) translate(-50%, -50%);
+    transform-origin: left;
+}
+.director-position::before{
+    content: '';
+    width: 50px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    transform: translate(-130%, 6px);
 }
 
 /* .wmk {
