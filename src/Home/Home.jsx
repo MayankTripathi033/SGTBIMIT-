@@ -40,10 +40,10 @@ export default function Home() {
           <Welcome />
           <Testimonials />
           <DirectorMsg />
+          <Recruiters />
           <Committees />
           <Placements />
           <Collaboration />
-          <Recruiters />
           <Map />
           <Admission />
           <Footer />
