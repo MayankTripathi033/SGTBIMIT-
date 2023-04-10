@@ -4,6 +4,7 @@ export default function Welcome() {
 
   return (
     <section className="welcome">
+{      <img src={require("../images/gurudwara.png")} className="welcome-bg"></img>}
       <div className="welcome-img">
         <img src={require("../images/gtb.png")} alt="" data-aos="flip-right" data-aos-offset="300" />
       </div>
