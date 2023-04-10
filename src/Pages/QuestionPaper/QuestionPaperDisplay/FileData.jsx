@@ -7,22 +7,22 @@ const FileData = (props) => {
   const [render, setRender] = useState(0);
 
   console.log(props);
+  const paperDataRecover = async () => {
+    try {
+      const data = await axios.get(
+        `http://localhost:5000/QuestionPaper/Display/${props.course}/${props.Year}/${props.Semester}`
+      );
+      console.log(data.data);
+      setPaperName(data.data.FileNames);
+      setRender(0);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   useEffect(() => {
-    const paperDataRecover = async () => {
-      try {
-        const data = await axios.get(
-          `http://localhost:5000/QuestionPaper/Display/${props.course}/${props.Year}/${props.Semester}`
-        );
-        setPaperName(data.data.FileNames);
-        console.log(data.data);
-        setRender(0);
-      } catch (error) {
-        console.log(error);
-      }
-    };
     paperDataRecover();
-  }, [render]);
-
+  }, [render,props]);
+console.log(getPaperName);
   const SocietyDelete = async (value,Index) => {
     try {
       const _id = value;
@@ -35,7 +35,7 @@ const FileData = (props) => {
   };
   return (
     <div className="FileNames">
-      {getPaperName.map((value,Index) => {
+      {getPaperName?.map((value,Index) => {
         return (
           <div className="FileName">
             <span

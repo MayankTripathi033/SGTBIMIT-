@@ -18,11 +18,22 @@ const QuestionPaperDisplay = () => {
     Semester: "",
   });
 
+  const [getPaperFilterData, setPaperFilterData] = useState({
+    course: "",
+    Year: "",
+    Semester: "",
+    _id: "",
+  });
+
+  const [filter, setfilter] = useState({});
+
   const Onchagetesdetail = (e) => {
     setPaperfilter({ ...getPaperFilter, [e.target.name]: e.target.value });
   };
+
   const navigator = useNavigate("");
 
+  //------------------------- All object Display -------------------------//
   const QuestionPaperDataGet = async () => {
     try {
       const data = (
@@ -42,22 +53,31 @@ const QuestionPaperDisplay = () => {
     QuestionPaperDataGet();
   }, [render]);
 
-  const paperDataRecover = async () => {
+  //-------------------- Single Document Data get ----------------------//
+  const SinglePaperDisplay = async () => {
     try {
-      const data = await axios.get(
-        `http://localhost:5000/QuestionPaper/Display/${getPaperFilter.course}/${getPaperFilter.Year}/${getPaperFilter.Semester}`
-      );
-      setPaperfilter({
-        course: data.data.Data.course,
-        Year: data.data.Data.Year,
-        Semester: data.data.Data.Semester,
+      // console.log(getPaperFilter);
+      const Detail = (
+        await axios.get(
+          `http://localhost:5000/QuestionPaper/Display/${getPaperFilter.course}/${getPaperFilter.Year}/${getPaperFilter.Semester}`
+        )
+      ).data;
+      // console.log(Detail);
+
+      setPaperFilterData({
+        course: Detail?.Data[0]?.course,
+        Year: Detail?.Data[0]?.Year,
+        Semester: Detail?.Data[0]?.Semester,
+        _id: Detail?.Data[0]?._id,
       });
+      // console.log();
       setDataReset(false);
     } catch (error) {
       console.log(error);
     }
   };
 
+  //--------------- Question Paper Delete ----------------//
   const PaperDelete = async (value) => {
     try {
       const _id = value;
@@ -69,15 +89,30 @@ const QuestionPaperDisplay = () => {
     }
   };
 
+  //----------- Reset the Data --------------//
   const ResetPaperData = async () => {
-    if (dataReset) {
+    if (!dataReset) {
       setDataReset(true);
-      QuestionPaperDataGet();
+      setRender(1);
       setPaperfilter({
         course: " ",
         Year: " ",
         Semester: " ",
       });
+    }
+  };
+
+  //--------------- Get the Filter Data ----------------------//
+  const filterData = async (course) => {
+    try {
+      const data = (
+        await axios.get(
+          `http://localhost:5000/QuestionPaper/Filter_Data/${course}`
+        )
+      ).data;
+      setfilter(data[0]);
+    } catch (error) {
+      console.log(error);
     }
   };
 
@@ -94,46 +129,71 @@ const QuestionPaperDisplay = () => {
               <h1>Prev Year Papers</h1>
             </div>
             <div className="filterContainer">
-              <select
-                name="course"
-                id=""
-                placeholder="course"
-                onChange={Onchagetesdetail}
-              >
-                <option value=" ">Select Course</option>
-                {getSociety.map((value) => {
-                  return <option value={value.course}>{value.course}</option>;
-                })}
-              </select>
-              <select
-                name="year"
-                id=""
-                placeholder="year"
-                onChange={Onchagetesdetail}
-              >
-                <option value=" ">Select Year</option>
-                {getSociety.map((value) => {
-                  return <option value={value.Year}>{value.Year}</option>;
-                })}
-              </select>
-              <select
-                name="Semester"
-                id=""
-                placeholder="Semester"
-                onChange={Onchagetesdetail}
-              >
-                <option value=" ">Select Semester</option>
-                {getSociety.map((value) => {
-                  return (
-                    <option value={value.Semester}>{value.Semester}</option>
-                  );
-                })}
-              </select>
-              <button onClick={paperDataRecover}>Search</button>
+              <span className="NameAndSelect">
+                <h4>Course</h4>
+                <select
+                  name="course"
+                  id=""
+                  placeholder="course"
+                  value={getPaperFilter.course}
+                  onChange={(e) => {
+                    filterData(e.target.value);
+                    Onchagetesdetail(e);
+                  }}
+                >
+                  <option value=" ">Select Course</option>
+                  <option value="BCA">BCA</option>;
+                  <option value="BBA">BBA</option>;
+                  <option value="BBA B&I">BBA B&I</option>;
+                  <option value="BCOM">BCOM</option>;
+                </select>
+              </span>
+              <span className="NameAndSelect">
+                <h4>Year</h4>
+                <select
+                  name="Year"
+                  id=""
+                  placeholder="Year"
+                  value={getPaperFilter.Year}
+                  onChange={Onchagetesdetail}
+                >
+                  <option value=" ">Select Year</option>
+                  {filter?.Years?.map((value) => {
+                    // console.log(value);
+                    return <option value={value.year}>{value.year}</option>;
+                  })}
+                </select>
+              </span>
+              <span className="NameAndSelect">
+                <h4>Semester</h4>
+                <select
+                  name="Semester"
+                  id=""
+                  placeholder="Semester"
+                  onChange={Onchagetesdetail}
+                  value={getPaperFilter.Semester}
+                >
+                  <option value=" ">Select Semester</option>
+                  {filter?.Years?.map((value) => {
+                    if (value.year == getPaperFilter.Year) {
+                      return value.Semesters.map((value1) => {
+                        return (
+                          <option value={value1.Semester}>
+                            {value1.Semester}
+                          </option>
+                        );
+                      });
+                    }
+                  })}
+                </select>
+              </span>
+
+              <button onClick={SinglePaperDisplay}>Search</button>
               <button onClick={ResetPaperData}>Reset</button>
             </div>
             {dataReset ? (
               <div className="TesDisplayCardContainer">
+                {console.log(dataReset)}
                 {getSociety.map((value) => {
                   return (
                     <div className="Society_Card">
@@ -177,9 +237,10 @@ const QuestionPaperDisplay = () => {
               </div>
             ) : (
               <div className="TesDisplayCardContainer">
+                {/* {console.log(getPaperFilterData)} */}
                 <div className="Society_Card">
                   <h3>
-                    {getPaperFilter.course}
+                    {getPaperFilterData?.course}
                     <span>
                       <BiEditAlt
                         style={{
@@ -189,33 +250,33 @@ const QuestionPaperDisplay = () => {
                         }}
                         onClick={() => {
                           navigator(
-                            `/admin/Society_Update/${getPaperFilter._id}`
+                            `/admin/Society_Update/${getPaperFilterData?._id}`
                           );
                         }}
                       />
                       <RiDeleteBin6Line
                         className="TestBin"
                         onClick={() => {
-                          PaperDelete(getPaperFilter._id);
+                          PaperDelete(getPaperFilterData?._id);
                         }}
                         style={{ color: "#d00000" }}
                       />
                     </span>
                   </h3>
                   <div className="Society_Card_ImageDescription">
-                    {getPaperFilter ? (
+                    {getPaperFilterData ? (
                       <FileData
-                        course={getPaperFilter?.course}
-                        Year={getPaperFilter?.Year}
-                        Semester={getPaperFilter?.Semester}
-                        _id={getPaperFilter?._id}
+                        course={getPaperFilterData?.course}
+                        Year={getPaperFilterData?.Year}
+                        Semester={getPaperFilterData?.Semester}
+                        _id={getPaperFilterData?._id}
                       />
                     ) : (
                       "  "
                     )}
                     <div className="Society_Describe">
-                      <h4>{getPaperFilter.Year}</h4>
-                      <h4> Semester : {getPaperFilter.Semester}</h4>
+                      <h4>{getPaperFilterData.Year}</h4>
+                      <h4> Semester : {getPaperFilterData?.Semester}</h4>
                     </div>
                   </div>
                 </div>

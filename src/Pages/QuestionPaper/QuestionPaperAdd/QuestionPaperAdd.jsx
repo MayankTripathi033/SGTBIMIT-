@@ -17,16 +17,6 @@ const QuestionPaperAdd = () => {
 
   const [filedata, setFileData] = useState([]);
 
-  // const handleFile = (e) => {
-  //   const newFiles = [];
-  //   for (let i = 0; i < e.target.files.length; i++) {
-  //     newFiles.push(e.target.files[i]);
-  //   }
-  //   setFileData(newFiles);
-  // };
-
-  // const [images, setImages] = useState([]);
-
   function handleFileInputChange(event) {
     const files = event.target.files;
     const newImages = [];
