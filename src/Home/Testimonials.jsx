@@ -26,6 +26,7 @@ export default function Testimonials() {
                 <Carousel
                     swipeable={false}
                     showStatus={false}
+                    showThumbs={false}
                 >
 
                     {testimonials.map((testimonial, i) => (

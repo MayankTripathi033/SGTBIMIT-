@@ -42,14 +42,14 @@
 .welcome-img{
     position: relative;
     display: flex;
-    align-items: center;
     justify-content: center;
+    height: 100%;
 }
 
 
 .welcome-img img{
     border-radius: 16px;
-    width: 70%;
+    height: min(700px, 100%);
 }
 .welcome-text{
     display: flex;
@@ -58,18 +58,19 @@
 }
 .welcome-text h1 {
     font-size: min(4rem, 8vw);
+    color: #2D2D2D;
 }
 
 .welcome-text p {
     font-size: min(1.5rem, 3vw);
-    line-height: 40px;
+    line-height: min(2.5rem, 5vh);
     width: 95%;
     color: #2D2D2D;
     font-weight: 400;
 }
 
 /* welcome buttons */
-.learn-more-btn {
+/* .learn-more-btn {
     margin: min(2rem, 2vw) min(4rem, 4vw) min(2rem, 4vw) auto;
     border: none;
     outline: none;
@@ -87,11 +88,11 @@
 .learn-more-btn a {
     text-decoration: none;
     color: white;
-}
+} */
 
 .develop-skills-btn {
     padding: min(1rem, 2vw) min(2rem, 4vw);
-    margin-bottom: min(3rem, 3vw);
+    margin-bottom: min(2rem, 2vw);
     background-color: #005E93;
     padding-inline: 2.5rem;
     color: white;
@@ -246,58 +247,54 @@
 /* director msg */
 .director-msg {
     position: relative;
-    padding: min(4rem, 4vw);
-    color: white;
-    display: flex;
-    justify-content: center;
-    position: relative;
     z-index: 9;
-    background: url("https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/2cc1a632c8c5511c86638369/jhhhhhh.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: linear-gradient(180deg, #F1F1F1 0%, #E7F3FF 100%);
+    padding: min(5.5rem, 5.5vw) min(8rem, 8vw);
 }
 
-.director-msg img {
-    z-index: 10;
-    border-radius: min(5rem, 8rem);
-}
-
-.bg-img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: var(--primary-clr);
-    opacity: 0.7;
-    z-index: 8;
+.director-heading {
+    font-size: min(3.75rem, 7.5vw);
+    margin: 0;
+    color: #2D2D2D;
 }
 
 
 .director-container {
+    background-color: #005E93;
+    padding: min(3rem, 3vw);
+    z-index: 11;
+    border-radius: 2rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    width: 70%;
+    position: relative;
+}
+.director-container::before{
+    content: open-quote;
+    color: white;
+    font-size: min(15rem, 30vw);
+    line-height: 1rem;
+    margin-top: min(6rem, 12vw);
+}
+
+.director-container p{
+    color: white;
+    font-size: min(2.5rem, 5vw);
+    width: 70%;
+    line-height: 50px;
+}
+.director-img{
+    position: absolute;
+    height: min(750px, 100%);
+    left: 93%;
+    bottom: 10%;
+}
+.director-img img{
+    border-radius: 2rem 6rem 2rem 2rem;
     height: 100%;
-    width: min(900px, 100%);
-    background-color: var(--primary-clr);
-    padding: min(2rem, 2vw);
-    z-index: 11;
 }
 
-.director-container img {
-    height: min(500px, 50vw);
-    aspect-ratio: 1;
-    margin-inline: auto;
-}
-
-.director-heading {
-    font-size: min(3.8rem, 8vw);
-    text-align: center;
-
-}
-
-.wmk {
+/* .wmk {
     font-size: min(2rem, 4vw);
     text-align: center;
 }
@@ -328,7 +325,7 @@
     align-items: center;
     justify-content: center;
     z-index: 13;
-}
+} */
 
 
 /* Committees */
