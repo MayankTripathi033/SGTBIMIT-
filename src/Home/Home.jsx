@@ -42,9 +42,9 @@ export default function Home() {
           <DirectorMsg />
           <Recruiters />
           <Committees />
-          <Placements />
-          <Collaboration />
-          <Map />
+{/*           <Placements /> */}
+{/*           <Collaboration />
+          <Map /> */}
           <Admission />
           <Footer />
         </>

@@ -4,7 +4,7 @@ export default function Welcome() {
 
   return (
     <section className="welcome">
-{      <img src={require("../images/gurudwara.png")} className="welcome-bg"></img>}
+      {/* <img src={require("../images/gurudwara.png")} className="welcome-bg"></img> */}
       <div className="welcome-img">
         <img src={require("../images/gtb.png")} alt="" data-aos="flip-right" data-aos-offset="300" />
       </div>
@@ -17,12 +17,12 @@ export default function Welcome() {
 
         </p>
         <button className="develop-skills-btn" type="button" data-aos="zoom-in" data-aos-offset="300">
-          
+
           <div className="skills-text">
-          Develop your skills with SGTBIMIT
+            Develop your skills with SGTBIMIT
           </div>
           <img src={require("../images/VectorskillsArrow.png")} alt="" className="skill-arrow" />
-      
+
         </button>
         {/* <button className="learn-more-btn" type="button">
           <Link to="/about/governing-body">Learn More</Link>

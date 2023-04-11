@@ -3,7 +3,7 @@
 .home-carousel-container {
     position: relative;
     width: 100%;
-    padding: min(2rem, 1vw);
+    padding: min(2rem, 2vw) min(4rem, 4vw);
     background: linear-gradient(252.16deg, #FFFFFF 12.88%, #E7F3FF 60.19%);
 }
 .home-carousel-container img{
@@ -20,29 +20,33 @@
 /* Welcome */
 
 .welcome {
-    background: radial-gradient(44.58% 50.64% at 90.05% 14.94%, rgba(255, 255, 255, 0.72) 0%, #E8F4FF 65.88%, #E8F4FF 65.89%), #F5F5F5 ;
+    background: radial-gradient(44.58% 50.64% at 90.05% 14.94%, rgba(255, 255, 255, 0.72) 0%, #E8F4FF 65.88%, #E8F4FF 65.89%), url("../images/gurudwara.png"), #F5F5F5 ;
     display: grid;
     padding-block: min(7rem, 7vh);
-    padding-inline: min(1rem, 4vw);
+    padding-inline: min(4rem, 4vw);
     position: relative;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 35% 65%;
     width: 100%;
 }
 
-.welcome-bg{
+/* .welcome-bg{
     position: absolute;
     background-repeat: no-repeat;
-    width: 40%;
+    width: 100%;
     opacity: 0.1;
     top: 0;
-    right: 0;
+    left: 0;
 }
+
+.weclome-bg img{
+    object-fit: cover;
+} */
 
 
 .welcome-img{
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     height: 100%;
 }
 
@@ -139,8 +143,8 @@
 .test-section {
     padding-bottom: min(3rem, 3vh);
     background: linear-gradient(180deg, #E7F3FF 0%, #F1F1F1 100%);
-    padding: min(7rem, 7vw);
-    --padding: 25px;
+    padding: min(39px, 2vw);
+    --padding: min(25px, 2vw);
 }
 
 .test-section .control-arrow{
@@ -155,7 +159,7 @@
     width: 100%;
 }
 .t-heading {    
-    font-size: min(3rem, 6vw);
+    font-size: min(3.75rem, 7.5vw);
     padding-inline: var(--padding);
 }
 
@@ -249,7 +253,7 @@
     position: relative;
     z-index: 9;
     background: linear-gradient(180deg, #F1F1F1 0%, #E7F3FF 100%);
-    padding: min(5.5rem, 5.5vw) min(4rem, 4vw);
+    padding: min(4rem, 4vw);
 }
 
 .director-heading {
@@ -505,7 +509,7 @@
 
 
 .recruiters h1 {
-    font-size: min(3rem, 6vw);
+    font-size: min(3.75rem, 7.5vw);
 }
 
 .recruiters-item {
