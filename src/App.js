@@ -114,6 +114,8 @@ function App() {
         <Route path='/alumini/alumini-meet' element={<AlumniMeet />} />
         <Route path='/alumini/testimonials' element={<TestimonialsAL />} />
         <Route path="/events/past" element={<Events />}/>
+        <Route path="/Prev_Year_Paper_PDF_Display/:name/:_id/:index" element={<QuestionPaperPDFDisplay />}/>
+
       </Routes>
     </Router>
   );

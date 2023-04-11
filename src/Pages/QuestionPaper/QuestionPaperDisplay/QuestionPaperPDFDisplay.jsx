@@ -20,10 +20,14 @@ const QuestionPaperPDFDisplay = () => {
         src={`http://localhost:5000/QuestionPaper/Display/${_id}/${index}`}
         type="application/pdf"
         width="100%"
-        download ={name}
+        // download ={name}
         height={embedHeight}
       />
     </div>
   );
   }
 export default QuestionPaperPDFDisplay;
+
+
+// ${_id}
+// ${index}
