@@ -27,8 +27,9 @@ import AcademicCal from './Academics/AcademicCalendar/AcademicCal.jsx'
 import AlumniMeet from './Alumni/AlumniMeet/AlumniMeet.jsx'
 import TestimonialsAL from './Alumni/Testimonials/TestimonialsAL.jsx'
 import Events from './Events/Events.jsx'
-import Gallery from  './Alumni/Gallery/Gallery.jsx'
+import Gallery from './Alumni/Gallery/Gallery.jsx'
 import Registration from './Alumni/Registration/Registration.jsx'
+import Placements from './Industry Interface/Placements/Placements.jsx'
 
 /* Admin imports */
 
@@ -74,15 +75,7 @@ function App() {
         <Route path='/admission/notices' element = {<Notice />}/>
         <Route path='/alumini/gallery' element = {<Gallery />} />
         <Route path='/alumini/registration' element ={<Registration />}/>
-        <Route path='/academics/courses/bba' element={<Bba />}/>
-        <Route path='/academics/courses/bbab&i' element={<BbaBI />}/>
-        <Route path='/academics/courses/bca' element={<Bca />}/>
-        <Route path='/academics/courses/bcom' element={<Bcom />}/>
-        <Route path='/academics/prev-year-papers' element={<Questionpaper />}/>
-        <Route path='/academics/academic-calender' element={<AcademicCal />}/>
-        <Route path='/alumini/alumini-meet' element={<AlumniMeet />} />
-        <Route path='/alumini/testimonials' element={<TestimonialsAL />} />
-        <Route path="/events/past" element={<Events />}/>
+
 
 
         {/* Admin Routes */}
@@ -112,7 +105,15 @@ function App() {
         <Route path='/admin/EResources_Update/:_id' element = {<EResourcesUpdate/>}/>
         <Route path='/admin/Prev_Year_Paper_Dislay' element = {<QuestionPaperDisplay/>}/>
         <Route path='/admin/Prev_Year_Paper_Add' element = {<QuestionPaperAdd/>}/>
-        <Route path='/Prev_Year_Paper_PDF_Display/:name/:_id/:index' element = {<QuestionPaperPDFDisplay/>}/>
+        <Route path='/academics/courses/bba' element={<Bba />}/>
+        <Route path='/academics/courses/bbab&i' element={<BbaBI />}/>
+        <Route path='/academics/courses/bca' element={<Bca />}/>
+        <Route path='/academics/courses/bcom' element={<Bcom />}/>
+        <Route path='/academics/prev-year-papers' element={<Questionpaper />}/>
+        <Route path='/academics/academic-calender' element={<AcademicCal />}/>
+        <Route path='/alumini/alumini-meet' element={<AlumniMeet />} />
+        <Route path='/alumini/testimonials' element={<TestimonialsAL />} />
+        <Route path="/events/past" element={<Events />}/>
       </Routes>
     </Router>
   );
