@@ -8,7 +8,7 @@ export default function Recruiters() {
 
   let recruitersChunks = []
   let i = 0
-  const count = 3
+  const count = 4
   recruiters && (
 
     recruiters.forEach(() => {
@@ -22,16 +22,17 @@ export default function Recruiters() {
 
   return (
     <section className='recruiters'>
-      <h1 data-aos="fade-right"> OUR RECRUITERS</h1>
+      <h1 data-aos="fade-right">Our Recruiters.</h1>
       <div className="recruiters-container" id='rec-container'>
 
         {isPending && <Loader />}
 
         {recruitersChunks &&
           <Carousel 
-          autoPlay = {true}
           interval={4000}
           transitionTime={1000}
+          showThumbs={false}
+          showStatus={false}
           >
             {recruitersChunks.map((recruiters) => {
               return (
