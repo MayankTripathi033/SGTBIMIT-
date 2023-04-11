@@ -52,6 +52,7 @@ import EResourcesDisplay from './Pages/E_Resources/E_Resources_Display/E_Resourc
 import EResourcesUpdate from './Pages/E_Resources/E_Resources_Update/E_Resources_Update.jsx'
 import QuestionPaperDisplay from './Pages/QuestionPaper/QuestionPaperDisplay/QuestionPaperDisplay.jsx'
 import QuestionPaperAdd from './Pages/QuestionPaper/QuestionPaperAdd/QuestionPaperAdd.jsx'
+import QuestionPaperPDFDisplay from './Pages/QuestionPaper/QuestionPaperDisplay/QuestionPaperPDFDisplay.jsx'
 
 function App() {
 
@@ -73,7 +74,15 @@ function App() {
         <Route path='/admission/notices' element = {<Notice />}/>
         <Route path='/alumini/gallery' element = {<Gallery />} />
         <Route path='/alumini/registration' element ={<Registration />}/>
-
+        <Route path='/academics/courses/bba' element={<Bba />}/>
+        <Route path='/academics/courses/bbab&i' element={<BbaBI />}/>
+        <Route path='/academics/courses/bca' element={<Bca />}/>
+        <Route path='/academics/courses/bcom' element={<Bcom />}/>
+        <Route path='/academics/prev-year-papers' element={<Questionpaper />}/>
+        <Route path='/academics/academic-calender' element={<AcademicCal />}/>
+        <Route path='/alumini/alumini-meet' element={<AlumniMeet />} />
+        <Route path='/alumini/testimonials' element={<TestimonialsAL />} />
+        <Route path="/events/past" element={<Events />}/>
 
 
         {/* Admin Routes */}
@@ -103,15 +112,7 @@ function App() {
         <Route path='/admin/EResources_Update/:_id' element = {<EResourcesUpdate/>}/>
         <Route path='/admin/Prev_Year_Paper_Dislay' element = {<QuestionPaperDisplay/>}/>
         <Route path='/admin/Prev_Year_Paper_Add' element = {<QuestionPaperAdd/>}/>
-        <Route path='/academics/courses/bba' element={<Bba />}/>
-        <Route path='/academics/courses/bbab&i' element={<BbaBI />}/>
-        <Route path='/academics/courses/bca' element={<Bca />}/>
-        <Route path='/academics/courses/bcom' element={<Bcom />}/>
-        <Route path='/academics/prev-year-papers' element={<Questionpaper />}/>
-        <Route path='/academics/academic-calender' element={<AcademicCal />}/>
-        <Route path='/alumini/alumini-meet' element={<AlumniMeet />} />
-        <Route path='/alumini/testimonials' element={<TestimonialsAL />} />
-        <Route path="/events/past" element={<Events />}/>
+        <Route path='/Prev_Year_Paper_PDF_Display/:name/:_id/:index' element = {<QuestionPaperPDFDisplay/>}/>
       </Routes>
     </Router>
   );

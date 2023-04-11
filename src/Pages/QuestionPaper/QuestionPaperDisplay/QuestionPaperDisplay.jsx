@@ -7,6 +7,7 @@ import { RiDeleteBin6Line } from "react-icons/ri";
 import { BiEditAlt } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
 import FileData from "./FileData";
+import "./QuestionPaperDisplay.css"
 
 const QuestionPaperDisplay = () => {
   const [render, setRender] = useState(0);
@@ -70,7 +71,6 @@ const QuestionPaperDisplay = () => {
         Semester: Detail?.Data[0]?.Semester,
         _id: Detail?.Data[0]?._id,
       });
-      // console.log();
       setDataReset(false);
     } catch (error) {
       console.log(error);
@@ -115,7 +115,6 @@ const QuestionPaperDisplay = () => {
       console.log(error);
     }
   };
-
   return (
     <>
       <div className="SocietyDisplayContainer">
@@ -187,9 +186,8 @@ const QuestionPaperDisplay = () => {
                   })}
                 </select>
               </span>
-
-              <button onClick={SinglePaperDisplay}>Search</button>
-              <button onClick={ResetPaperData}>Reset</button>
+              <button onClick={SinglePaperDisplay} className="button-30">Search</button>
+              <button onClick={ResetPaperData} className="button-30">Clear</button>
             </div>
             {dataReset ? (
               <div className="TesDisplayCardContainer">

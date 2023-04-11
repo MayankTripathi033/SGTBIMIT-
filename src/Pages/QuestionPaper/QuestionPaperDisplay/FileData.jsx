@@ -7,6 +7,7 @@ const FileData = (props) => {
   const [render, setRender] = useState(0);
 
   console.log(props);
+
   const paperDataRecover = async () => {
     try {
       const data = await axios.get(
@@ -19,23 +20,29 @@ const FileData = (props) => {
       console.log(error);
     }
   };
+
   useEffect(() => {
     paperDataRecover();
-  }, [render,props]);
-console.log(getPaperName);
-  const SocietyDelete = async (value,Index) => {
+  }, [render, props]);
+
+  const SocietyDelete = async (value, Index) => {
     try {
       const _id = value;
       console.log(_id);
-      await axios.get(`http://localhost:5000/QuestionPaper/Paper_Delete/${_id}/${Number(Index)}`);
+      await axios.get(
+        `http://localhost:5000/QuestionPaper/Paper_Delete/${_id}/${Number(
+          Index
+        )}`
+      );
       setRender(1);
     } catch (error) {
       console.log(error);
     }
   };
+
   return (
     <div className="FileNames">
-      {getPaperName?.map((value,Index) => {
+      {getPaperName?.map((value, Index) => {
         return (
           <div className="FileName">
             <span
@@ -46,13 +53,24 @@ console.log(getPaperName);
                 gap: "30px",
               }}
             >
-              <h4 style={{ fontFamily: "'Edu NSW ACT Foundation', cursive" }}>
+              <h4
+                style={{
+                  fontFamily: "'Edu NSW ACT Foundation', cursive",
+                  cursor: "pointer",
+                }}
+                onClick={() => {
+                  window.open(
+                    `/Prev_Year_Paper_PDF_Display/${value}/${props._id}/${Index}`,
+                    "_blank"
+                  );
+                }}
+              >
                 {value}
               </h4>
               <RiDeleteBin6Line
                 className="TestBin"
                 onClick={() => {
-                  SocietyDelete(props._id,Index);
+                  SocietyDelete(props._id, Index);
                 }}
                 style={{ color: "#d00000" }}
               />
