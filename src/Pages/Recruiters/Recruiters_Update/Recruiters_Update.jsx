@@ -59,7 +59,7 @@ const RecruitersUpdate = () => {
     try {
       let formData = new FormData();
       let Imagefile = await compresFile()
-      formData.append("image", Imagefile);
+      Imagefile && formData.append("image", Imagefile, filedata.name);
       formData.append("Name", recruitersUpdate.Name);
       const data1 = (
         await axios.post(
