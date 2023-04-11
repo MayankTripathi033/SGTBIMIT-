@@ -36,7 +36,7 @@ const FacultyDisplay = () => {
       <img
         src={`http://localhost:5000/Faculty/Faculty_Image_Display/${value}`}
         alt=""
-        style={{height : "300px", borderBottom : "1px solid #f0f0f0" , paddingBottom : "5px"}}
+        style={{ height: "300px", borderBottom: "1px solid #f0f0f0", paddingBottom: "5px" }}
       />
     );
   };
@@ -65,9 +65,9 @@ const FacultyDisplay = () => {
               <h1>Faculty</h1>
             </div>
             <div className="FacultyCardContainer">
-             {getFaculty.map((value) =>{
-                return(
-                    <div className="FacultyCard">
+              {getFaculty.map((value) => {
+                return (
+                  <div className="FacultyCard">
                     <Card
                       hoverable
                       style={{
@@ -78,7 +78,7 @@ const FacultyDisplay = () => {
                       }
                     >
                       <div className="FacultyCardtitle">
-                        <Meta title={value?.name} bordered={false} style = {{padding : "10px"}}/>
+                        <Meta title={value?.name} bordered={false} style={{ padding: "10px" }} />
                         <Meta
                           title={value?.post}
                           description={value?.detail}
@@ -88,13 +88,13 @@ const FacultyDisplay = () => {
                         <BiEditAlt
                           style={{
                             paddingRight: "10px",
-                            borderRight : "1px solid #f0f0f0",
+                            borderRight: "1px solid #f0f0f0",
                             width: "35px",
-                            fontSize : "20px",
+                            fontSize: "20px",
                             color: "#adb5bd",
                           }}
                           onClick={() => {
-                              navigator(`/admin/Faculty_Update/${value._id}`);
+                            navigator(`/admin/Faculty_Update/${value._id}`);
                           }}
                         />
                         <RiDeleteBin6Line
@@ -108,7 +108,7 @@ const FacultyDisplay = () => {
                     </Card>
                   </div>
                 )
-             })}
+              })}
             </div>
           </div>
         </div>
