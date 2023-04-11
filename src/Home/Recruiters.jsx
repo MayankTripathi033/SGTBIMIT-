@@ -29,7 +29,6 @@ export default function Recruiters() {
 
         {recruitersChunks &&
           <Carousel 
-          interval={4000}
           transitionTime={1000}
           showThumbs={false}
           showStatus={false}

@@ -184,16 +184,16 @@ export default function Navbar() {
         <div className="nav-item" data-index="7">
           <div>INDUSTRY INTERFACE<img src={arrow} alt="" /></div>
           <div className="dropdown" data-index="7">
-            <NavLink to="/industry-interface/industrial-visit" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/industry/industrial-visit" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">INDUSTRIAL VISIT</div>
             </NavLink>
-            <NavLink to="/industry-interface/placements" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/industry/placements" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">PLACEMENTS</div>
             </NavLink>
-            <NavLink to="/industry-interface/summer-internship" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/industry/summer-internship" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">SUMMER INTERNSHIP</div>
             </NavLink>
-            <NavLink to="/industry-interface/corporate-speak" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/industry/corporate-speak" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">CORPORATE SPEAK</div>
             </NavLink>
           </div>
