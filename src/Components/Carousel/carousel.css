@@ -1,0 +1,33 @@
+.custom-arrow {
+    --width: 30px;
+    position: absolute;
+    top: 100%;
+    cursor: pointer;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+}
+.custom-arrow img{
+    width: var(--width);
+}
+
+.custom-arrow-right {
+    transform: translateY(-50%);
+    right: 0;
+}
+.custom-arrow-left{
+    right: calc(var(--width) + 20px);
+    transform: rotate(180deg) translateY(50%);
+}
+.inactive-arrow{
+    cursor: not-allowed;
+}
+.inactive-arrow img{
+    transform: rotate(180deg);
+}
+.custom-status{
+    position: absolute;
+    transform: translateY(-50%);
+    color: #6B6B6B;
+    font-size: min(1.6rem, 3.2vw);
+}

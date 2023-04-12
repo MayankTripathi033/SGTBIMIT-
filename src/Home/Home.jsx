@@ -12,7 +12,7 @@ import Collaboration from './Collaboration'
 import Recruiters from './Recruiters'
 import Map from './Map'
 import Admission from '../Components/Admission'
-import {Header, Navbar, Footer, Loader2} from '../Components'
+import { Header, Navbar, Footer, Loader2 } from '../Components'
 import Committees from './Committees'
 
 
@@ -40,11 +40,11 @@ export default function Home() {
           <Welcome />
           <Testimonials />
           <DirectorMsg />
-          <Recruiters />
           <Committees />
-{/*           <Placements /> */}
-{/*           <Collaboration />
-          <Map /> */}
+          {/* <Placements /> */}
+          <Collaboration />
+          <Recruiters />
+          <Map />
           <Admission />
           <Footer />
         </>

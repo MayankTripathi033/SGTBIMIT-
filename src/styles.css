@@ -102,7 +102,10 @@ button {
     background: rgba(0, 0, 0, 0.3) !important;
     backdrop-filter: blur(12px) !important;
 }
-
+.carousel-slider{
+    position: relative;
+    overflow: visible !important;
+}
 
 
 
