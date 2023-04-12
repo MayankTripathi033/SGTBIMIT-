@@ -20,13 +20,15 @@
 /* Welcome */
 
 .welcome {
-    background: radial-gradient(44.58% 50.64% at 90.05% 14.94%, rgba(255, 255, 255, 0.72) 0%, #E8F4FF 65.88%, #E8F4FF 65.89%), url("../images/gurudwara.png"), #F5F5F5 ;
+    background-image: url("../images/bg-welcome.png");
+    background-size: 100%;
     display: grid;
     padding-block: min(7rem, 7vh);
     padding-inline: min(4rem, 4vw);
     position: relative;
     grid-template-columns: 35% 65%;
     width: 100%;
+
 }
 
 /* .welcome-bg{
@@ -63,6 +65,7 @@
 .welcome-text h1 {
     font-size: min(4rem, 8vw);
     color: #2D2D2D;
+    font-family: "SF Pro Display-Bold";
 }
 
 .welcome-text p {
@@ -161,6 +164,7 @@
 .t-heading {    
     font-size: min(3.75rem, 7.5vw);
     padding-inline: var(--padding);
+    font-family: "SF Pro Display-Bold";
 }
 
 .card {
@@ -172,19 +176,17 @@
     overflow: hidden;
     position: relative;
 }
-.card::before{
-    content: open-quote;
-    font-size: min(40rem, 40vw);
+.test-quote{
     position: absolute;
-    top: min(16rem, 32vw);
-    left: 5px;
-    color: #F5F5F5;
-    z-index: 1;
+    height: 200px;
+    top: 0;
+    left: 0;
+    margin: min(1.5rem, 1.5vw);
+    object-fit: contain;
+    object-position: 0;
 }
-.card::after{
-    content: no-close-quote;
-    position: absolute;
-}
+
+
 .card-content{
     z-index: 2;
     display: flex;
@@ -209,6 +211,7 @@
     color: #005E93;
     line-height: 36px;
     text-align: start;
+    font-family: "SF Pro Display-Bold";
 }
 .testimonial-img{
     background: linear-gradient(123.5deg, #FFFFFF 23.2%, #EAF4FF 74.08%);
@@ -260,6 +263,7 @@
     font-size: min(3.75rem, 7.5vw);
     margin: 0;
     color: #2D2D2D;
+    font-family: "SF Pro Display-Bold";
 }
 
 
@@ -273,20 +277,22 @@
     width: 70%;
     position: relative;
 }
-.director-container::before{
-    content: open-quote;
-    color: white;
-    font-size: min(15rem, 30vw);
-    position: absolute;
-    transform: translateY(max(-5rem, -5vw));
+
+.dir-quote{
+    width: 100px;
+    object-fit: contain;
 }
 
 .director-container p{
     color: white;
     font-size: min(2.5rem, 5vw);
-    width: 75%;
+    width: min(820px, 85%);
     line-height: 50px;
-    padding-top: min(2rem, 2vw);
+    -webkit-text-stroke: #005E93 0.5px;
+}
+
+.dir-bold{
+    -webkit-text-stroke: #005E93 0px;
 }
 .director-img{
     position: absolute;
@@ -307,11 +313,12 @@
     white-space: nowrap;
     transform: rotate(-90deg) translate(-40%, -50%);
     transform-origin: left;
+    letter-spacing: 0.8px;
 }
 .director-position::before{
     content: '';
     width: 50px;
-    height: 2px;
+    height: 1px;
     background-color: white;
     position: absolute;
     transform: translate(-130%, 6px);
@@ -404,6 +411,7 @@
 
 .placements h1 {
     font-size: min(2rem, 4vw);
+    font-family: "SF Pro Display-Bold";
 }
 
 .placements-container>h1 {
@@ -510,6 +518,7 @@
 
 .recruiters h1 {
     font-size: min(3.75rem, 7.5vw);
+    font-family: "SF Pro Display-Bold";
 }
 
 .recruiters-item {

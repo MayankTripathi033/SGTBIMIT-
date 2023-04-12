@@ -1,10 +1,25 @@
-@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
-
 :root {
     --primary-clr: #243f56;
     --secondary-clr: #4fb291;
 }
 
+@font-face {
+    font-family: "SF Pro Display";
+    src: url("../public/fonts/SFPRODISPLAYREGULAR.OTF");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SF Pro Display-Bold";
+    src: url("../public/fonts/SFPRODISPLAYBOLD.OTF");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SF Pro Display-Medium";
+    src: url("../public/fonts/SFPRODISPLAYMEDIUM.OTF");
+    font-style: normal;
+}
 
 *,
 *::before,
@@ -92,6 +107,6 @@ button {
 
 
 
-a{
+a {
     text-decoration: none;
 }
