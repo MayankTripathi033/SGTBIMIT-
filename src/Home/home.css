@@ -68,27 +68,6 @@
     font-weight: 400;
 }
 
-/* welcome buttons */
-/* .learn-more-btn {
-    margin: min(2rem, 2vw) min(4rem, 4vw) min(2rem, 4vw) auto;
-    border: none;
-    outline: none;
-    padding: min(1rem, 2vh) min(2rem, 2vw);
-    text-transform: uppercase;
-    background-color: transparent;
-    color: white;
-    letter-spacing: .1rem;
-    font-size: min(1.125rem, 2.5vw);
-    border-radius: 5rem;
-    border: 3px solid white;
-    transition: 250ms;
-}
-
-.learn-more-btn a {
-    text-decoration: none;
-    color: white;
-} */
-
 .develop-skills-btn {
     padding: min(1rem, 2vw) min(2rem, 4vw);
     margin-bottom: min(2rem, 2vw);
@@ -104,7 +83,8 @@
     margin-top: auto;
     width: max-content;
 }
-.skills-text{
+
+.skills-text {
     color: white;
 }
 
@@ -696,9 +676,9 @@
     font-size: min(1.4rem, 2.8rem);
 }
 
-.map-frame{
+.map-frame {
     height: 100%;
-    width: 45%; 
+    width: 45%;
     margin-left: -5%;
     border: none;
     outline: none;

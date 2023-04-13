@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { motion } from 'framer-motion'
 export default function Map() {
   const data = [
     {
@@ -22,7 +22,19 @@ export default function Map() {
   return (
     <section className="map-section">
       <div className="map-container">
-        <div className="address-container">
+        <motion.div
+          className="address-container"
+          initial={{
+            scale: 2
+          }}
+          whileInView={{
+            scale: 1
+          }}
+          transition={{
+            duration: 0.5,
+            type: 'tween'
+          }}
+        >
           <h1>
             Get in Touch
           </h1>
@@ -49,16 +61,30 @@ export default function Map() {
               <span>Download Brochure</span>
             </button>
             <button className="chip">
-            <img src={require("../images/campus-icon.png")} alt="" />
+              <img src={require("../images/campus-icon.png")} alt="" />
               <span>Campus Tour</span>
             </button>
             <button className="chip">
-            <img src={require("../images/research-icon.png")} alt="" />
+              <img src={require("../images/research-icon.png")} alt="" />
               <span>Researches</span>
             </button>
           </div>
-        </div>
-        <iframe className='map-frame' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.913782445779!2d77.18919345053924!3d28.69222558230785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d020b038fd133%3A0xf8adb1d0f49de35b!2sShri%20Guru%20Tegh%20Bahadur%20Institute%20of%20Management%20and%20Information%20Technology!5e0!3m2!1sen!2sin!4v1679125833960!5m2!1sen!2sin" title='map-frame' />
+        </motion.div>
+        <motion.iframe 
+        className='map-frame' 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.913782445779!2d77.18919345053924!3d28.69222558230785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d020b038fd133%3A0xf8adb1d0f49de35b!2sShri%20Guru%20Tegh%20Bahadur%20Institute%20of%20Management%20and%20Information%20Technology!5e0!3m2!1sen!2sin!4v1679125833960!5m2!1sen!2sin" 
+        title='map-frame' 
+        initial={{
+          scale: 0
+        }}
+        whileInView={{
+          scale: 1
+        }}
+        transition={{
+          duration: 0.5,
+          type: 'tween'
+        }}
+        />
       </div>
     </section>
   )
