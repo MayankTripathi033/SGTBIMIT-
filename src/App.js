@@ -54,6 +54,9 @@ import EResourcesUpdate from './Pages/E_Resources/E_Resources_Update/E_Resources
 import QuestionPaperDisplay from './Pages/QuestionPaper/QuestionPaperDisplay/QuestionPaperDisplay.jsx'
 import QuestionPaperAdd from './Pages/QuestionPaper/QuestionPaperAdd/QuestionPaperAdd.jsx'
 import QuestionPaperPDFDisplay from './Pages/QuestionPaper/QuestionPaperDisplay/QuestionPaperPDFDisplay.jsx'
+import CalenderAdd from './Pages/Academic Calender/Calender_Add/Calender_Add.jsx'
+import CalenderDisplay from './Pages/Academic Calender/Calender_Display/Calender_Display.jsx'
+import CalenderUpdate from './Pages/Academic Calender/Calender_Update/Calender_Update.jsx'
 
 function App() {
 
@@ -103,6 +106,9 @@ function App() {
         <Route path='/admin/EResources_Add' element = {<EResourcesAdd/>}/>
         <Route path='/admin/EResources_Display' element = {<EResourcesDisplay/>}/>
         <Route path='/admin/EResources_Update/:_id' element = {<EResourcesUpdate/>}/>
+        <Route path='/admin/Calender_Add' element = {<CalenderAdd/>}/>
+        <Route path='/admin/Calender_Display' element = {<CalenderDisplay/>}/>
+        <Route path='/admin/Calender_Update' element = {<CalenderUpdate/>}/>
         <Route path='/admin/Prev_Year_Paper_Dislay' element = {<QuestionPaperDisplay/>}/>
         <Route path='/admin/Prev_Year_Paper_Add' element = {<QuestionPaperAdd/>}/>
         <Route path='/academics/courses/bba' element={<Bba />}/>

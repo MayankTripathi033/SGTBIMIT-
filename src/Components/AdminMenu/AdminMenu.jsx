@@ -17,6 +17,7 @@ const AdminMenu = () => {
   const [isAcademicsActive, setIsAcademicsActive] = useState(false);
   const [isSUBEresourcesActive, setIsSUBEresourcesActive] = useState(false);
   const [isQuestionPaperActive, setIsQuestionPaperActive] = useState(false);
+  const [isCalenderActive, setIsCalenderActive] = useState(false);
 
   const navigate = useNavigate();
 
@@ -335,6 +336,36 @@ const AdminMenu = () => {
                         }}
                       >
                         PREV YEAR PAPERS DISPLAY
+                      </p>
+                    </span>
+                  </div>
+                )}
+                <p
+                  onClick={() => {
+                    setIsCalenderActive(!isCalenderActive);
+                  }}
+                  style={{
+                    backgroundColor: "#e0e1dd",
+                  }}
+                >
+                  ACADEMIC CALENDER <IoIosArrowDown className="CatHeadIcons" />
+                </p>
+                {isCalenderActive && (
+                  <div className="Categoriesdropdown">
+                    <span>
+                      <p
+                        onClick={() => {
+                          navigate("/admin/Calender_Add");
+                        }}
+                      >
+                        CALENDER ADD
+                      </p>
+                      <p
+                        onClick={() => {
+                          navigate("/admin/Calender_Display");
+                        }}
+                      >
+                        CALENDER DISPLAY
                       </p>
                     </span>
                   </div>
