@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Carousel } from 'react-responsive-carousel'
 import { CustomArrow, CustomArrowNotActive } from '../Components/Carousel'
 export default function Collaboration() {
@@ -35,9 +35,12 @@ export default function Collaboration() {
       collabsChunks.push(res)
       i = i + count
     })
-
-  )
-
+    )
+    const [currentS, setCurrentS] = useState(0)
+    const handleSlideChange = (index)=>{
+      setCurrentS(index)
+    }
+    const total = collabs ? collabsChunks.length : 0
   return (
     <section className='collab'>
       <div className="collab-container">
@@ -48,6 +51,7 @@ export default function Collaboration() {
             showThumbs={false}
             showIndicators={false}
             showStatus={false}
+            onChange={handleSlideChange}
             renderArrowNext={(onClickHandler, hasNext, label) => (
               <>
                 {hasNext && (
@@ -79,6 +83,9 @@ export default function Collaboration() {
               </div>
             ))}
           </Carousel>
+          <div className="custom-status">
+          {currentS + 1} / {total}
+        </div>
           <div className="bottom-border"></div>
         </div>
 

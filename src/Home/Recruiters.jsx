@@ -22,10 +22,11 @@ export default function Recruiters() {
 
   )
   const [currentS, setCurrentS] = useState(0)
-  const [total, setTotal] = useState(0)
+/*   const [total, setTotal] = useState(0) */
   const handleSlideChange = (index) => {
     setCurrentS(index)
   }
+  const total = recruiters ? recruitersChunks.length : 0
   return (
     <section className='recruiters'>
       <h1 data-aos="fade-right">Our Recruiters.</h1>
@@ -33,13 +34,15 @@ export default function Recruiters() {
 
         {isPending && <Loader />}
 
-        {recruitersChunks &&
+        {recruiters &&
           <Carousel
             onChange={handleSlideChange}
             transitionTime={1000}
             showThumbs={false}
             showIndicators={false}
             showStatus={false}
+            autoPlay={true}
+            infiniteLoop={true}
             renderArrowNext={(onClickHandler, hasNext, label) => (
               <>
                 {hasNext && (
@@ -78,7 +81,7 @@ export default function Recruiters() {
           </Carousel>
         }
         <div className="custom-status">
-          {currentS + 1} / 3
+          {currentS + 1} / {total}
         </div>
         <div className="bottom-border"></div>
 

@@ -511,7 +511,8 @@
 }
 
 .collab-container h1 {
-    font-size: min(4rem, 7vw);
+    font-size: min(4rem, 8vw);
+    font-family: "SF Pro Display-Bold";
 }
 
 .collab-grid {
@@ -570,7 +571,7 @@
 
 .bottom-border {
     position: absolute;
-    left: 130px;
+    left: 85px;
     right: 130px;
     border-bottom: 2.6px solid #686868;
 }
