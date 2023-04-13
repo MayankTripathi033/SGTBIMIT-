@@ -146,6 +146,7 @@
     font-size: min(3.75rem, 7.5vw);
     padding-inline: var(--padding);
     font-family: "SF Pro Display-Bold";
+    margin-block: 12px;
 }
 
 .card {
@@ -250,7 +251,7 @@
 
 .director-heading {
     font-size: min(3.75rem, 7.5vw);
-    margin: 0;
+    margin-block: 12px;
     color: #2D2D2D;
     font-family: "SF Pro Display-Bold";
 }
