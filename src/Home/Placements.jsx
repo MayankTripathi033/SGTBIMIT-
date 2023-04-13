@@ -17,7 +17,7 @@ export default function Placements() {
         {placementArray && <div className="placement-grid">
           {placementArray.map((placement, i) => {
             return (
-            <div className="place-card" key={placement._id} data-aos="zoom-out" data-aos-delay={`${i}00`}>
+            <div className="place-card" key={placement._id}>
               <img src="" alt="cant load" className='placement-img' />
               <h1> {placement.name} </h1>
               <p> {placement.companyName} </p>

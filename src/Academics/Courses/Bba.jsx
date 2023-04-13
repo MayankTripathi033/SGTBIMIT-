@@ -12,7 +12,7 @@ export default function Bba() {
     <Navbar />
     <div className='courses'>
 
-        <img src={require("../../images/bba.jpg")} alt="cant load" data-aos="fade-up" />
+        <img src={require("../../images/bba.jpg")} alt="cant load" />
         <h1>BACHELORS OF BUSINESS ADMINISTRATION</h1>
         <p>
         The Guru Gobind Singh Indraprastha University-affiliated Sri Guru Teg Bahadur 

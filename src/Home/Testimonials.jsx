@@ -20,7 +20,7 @@ export default function Testimonials() {
     return (
 
         <section className="test-section">
-            <h1 className='t-heading' data-aos="zoom-in-up" data-aos-offset="300">What students say about us.</h1>
+            <h1 className='t-heading'>What students say about us.</h1>
             {isPending && <Loader />}
             {testimonials &&
                 <Carousel
@@ -34,7 +34,7 @@ export default function Testimonials() {
                             <div className="test">
                                 {/*                             {testimonials.map((testimonial, i) => {
                                 return ( */}
-                                <div className="card" data-aos="zoom-in-up" data-aos-delay={`${i}00`} key={testimonial._id}>
+                                <div className="card" key={testimonial._id}>
                                     <img src={require("../images/quote.png")} alt="" className="test-quote" />
                                     <div className="card-content">
                                         <p>{testimonial.detail}</p>

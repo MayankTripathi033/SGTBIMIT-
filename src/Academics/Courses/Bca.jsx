@@ -12,7 +12,7 @@ export default function Bca() {
     <Header />
     <Navbar />
       <div className='courses'>
-        <img src={require("../../images/bca.jpg")} alt="cant load" data-aos="fade-up" />
+        <img src={require("../../images/bca.jpg")} alt="cant load" />
         <h1>BACHELORS OF COMPUTER APPLICATION</h1>
         <p>
         The three-year full-time Bachelor of Computer Applications (BCA) programme at 

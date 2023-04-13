@@ -11,7 +11,7 @@ export default function Bcom() {
         <Header></Header>
         <Navbar></Navbar>
             <div className='courses'>
-                <img src={require("../../images/bcom.png")} alt="cant load" data-aos="fade-up" />
+                <img src={require("../../images/bcom.png")} alt="cant load" />
                 <h1>BACHELORS OF COMMERCE</h1>
                 <p>
                 The three-year, full-time Bachelor of Commerce (B.Com) programme at Sri 

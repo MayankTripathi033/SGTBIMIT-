@@ -29,7 +29,7 @@ export default function Recruiters() {
   const total = recruiters ? recruitersChunks.length : 0
   return (
     <section className='recruiters'>
-      <h1 data-aos="fade-right">Our Recruiters.</h1>
+      <h1>Our Recruiters.</h1>
       <div className="recruiters-container">
 
         {isPending && <Loader />}
@@ -70,7 +70,7 @@ export default function Recruiters() {
                   {recruiters.map((recruiter) => {
                     return (
                       <div className="recruiter-img">
-                        <img src={`http://localhost:5000/Recruiters/Recruiter_Image_Display/${recruiter._id}`} key={recruiter._id} alt="cant load" data-aos="fade-right" />
+                        <img src={`http://localhost:5000/Recruiters/Recruiter_Image_Display/${recruiter._id}`} key={recruiter._id} alt="cant load" />
 
                       </div>
                     )

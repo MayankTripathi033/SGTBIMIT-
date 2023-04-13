@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import AOS from 'aos'
-/* import 'aos/dist/aos.css' */
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 import './home.css'
 import Welcome from './Welcome'
@@ -17,9 +15,6 @@ import Committees from './Committees'
 
 
 export default function Home() {
-  /*   AOS.init({
-      startEvent: 'load'
-    }) */
 
   const [isPending, setIsPending] = useState(true)
   useEffect(() => {
