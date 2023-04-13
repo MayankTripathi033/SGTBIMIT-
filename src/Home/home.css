@@ -104,6 +104,9 @@
     margin-top: auto;
     width: max-content;
 }
+.skills-text{
+    color: white;
+}
 
 .develop-skills-btn:hover {
     background-color: var(--primary-clr);

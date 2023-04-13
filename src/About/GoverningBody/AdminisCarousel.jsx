@@ -22,7 +22,7 @@ export default function AdminisCarousel() {
         {isPending && <Loader />}
         {error && <div className="error">{error}</div> }
         <Carousel
-
+          showThumbs={false}
           interval={4000}
           className="adminis-carousel"
           autoPlay={true}
@@ -31,11 +31,12 @@ export default function AdminisCarousel() {
           {
             numAscending?.map((adminis) => (
               <div className="adminis" key={adminis?.Index}>
+                <div className="adminis-img">
                 <img
                   src={`http://localhost:5000/Administration/AdministrationImageDisplay/${adminis._id}`}
                   alt="cant load"
-                  className="adminis-img"
                 />
+                </div>
                 <h2 className="adminis-heading">
                   {adminis?.name}
                   <strong className="position"> {adminis?.position}</strong>

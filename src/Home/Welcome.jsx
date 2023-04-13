@@ -1,13 +1,32 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
+
 export default function Welcome() {
 
   return (
-    <section className="welcome">
-      {/* <img src={require("../images/gurudwara.png")} className="welcome-bg"></img> */}
-      <div className="welcome-img">
-        <img src={require("../images/gtbji.png")} alt=""/>
-      </div>
+    <section className="welcome"
+    >
+      <motion.div className="welcome-img"
+        initial="hidden"
+        animate="visible"
+        viewport={{
+          once: true
+        }}
+        transition={{
+          type: "spring"
+        }}
+        variants={{
+          visible: {
+            scale: 1
+          },
+          hidden: {
+            scale: 0
+          },
+        }}
+      >
+        <img src={require("../images/gtbji.png")} alt="" />
+      </motion.div>
       <div className='welcome-text'>
         <h1>
           Welcome to SGTBIMIT
@@ -18,15 +37,12 @@ export default function Welcome() {
         </p>
         <button className="develop-skills-btn" type="button">
 
-          <div className="skills-text">
+          <Link to="/skills" className="skills-text">
             Develop your skills with SGTBIMIT
-          </div>
+          </Link>
           <img src={require("../images/VectorskillsArrow.png")} alt="cant load" className="skill-arrow" />
 
         </button>
-        {/* <button className="learn-more-btn" type="button">
-          <Link to="/about/governing-body">Learn More</Link>
-        </button> */}
       </div>
     </section>
 
