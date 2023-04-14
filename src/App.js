@@ -92,42 +92,6 @@ function App() {
         {/* Admin Routes */}
 
 
-<<<<<<< HEAD
-        <Route path='/admin' element = {<Admin/>}/>
-        <Route path='/admin/Testimonials_Add' element = {<Testimonials_ADD/>}/>
-        <Route path='/admin/Testimonials_Display' element = {<Testimonial_Display/>}/>
-        <Route path='/admin/Testimonials_Update/:id' element = {<Testimonial_Update/>}/>
-        <Route path='/admin/Society_Add' element = {<Society_Add/>}/>
-        <Route path='/admin/Society_Display' element = {<Society_Display/>}/>
-        <Route path='/admin/Society_Update/:_id' element = {<Society_Update/>}/>
-        <Route path='/admin/Faculty_Add' element = {<FacultyAdd/>}/>
-        <Route path='/admin/Faculty_Display' element = {<FacultyDisplay/>}/>
-        <Route path='/admin/Faculty_Update/:_id' element = {<FacultyUpdate/>}/>
-        <Route path='/admin/Administration_Add' element = {<AdministrationAdd/>}/>
-        <Route path='/admin/Administration_Display' element = {<AdministrationDisplay/>}/>
-        <Route path='/admin/Administration_Update/:_id' element = {<AdministrationUpdate/>}/>
-        <Route path='/admin/Placement_Add' element = {<PlacementAdd/>}/>
-        <Route path='/admin/Placement_Display' element = {<PlacementDisplay/>}/>
-        <Route path='/admin/Placement_Update/:_id' element = {<PlacementUpdate/>}/>
-        <Route path='/admin/Recruiters_Add' element = {<RecruitersAdd/>}/>
-        <Route path='/admin/Recruiters_Display' element = {<RecruitersDisplay/>}/>
-        <Route path='/admin/Recruiters_Update/:_id' element = {<RecruitersUpdate/>}/>
-        <Route path='/admin/EResources_Add' element = {<EResourcesAdd/>}/>
-        <Route path='/admin/EResources_Display' element = {<EResourcesDisplay/>}/>
-        <Route path='/admin/EResources_Update/:_id' element = {<EResourcesUpdate/>}/>
-        <Route path='/admin/Prev_Year_Paper_Dislay' element = {<QuestionPaperDisplay/>}/>
-        <Route path='/admin/Prev_Year_Paper_Add' element = {<QuestionPaperAdd/>}/>
-        <Route path='/academics/courses/bba' element={<Bba />}/>
-        <Route path='/academics/courses/bbab&i' element={<BbaBI />}/>
-        <Route path='/academics/courses/bca' element={<Bca />}/>
-        <Route path='/academics/courses/bcom' element={<Bcom />}/>
-        <Route path='/academics/prev-year-papers' element={<Questionpaper />}/>
-        <Route path='/academics/academic-calender' element={<AcademicCal />}/>
-        <Route path='/alumini/alumini-meet' element={<AlumniMeet />} />
-        <Route path='/alumini/testimonials' element={<TestimonialsAL />} />
-        <Route path="/events/past" element={<Events />}/>
-        <Route path="/Prev_Year_Paper_PDF_Display/:_id/:index/:name" element={<QuestionPaperPDFDisplay />}/>
-=======
         <Route path='/admin' element={<Admin />} />
         <Route path='/admin/Testimonials_Add' element={<Testimonials_ADD />} />
         <Route path='/admin/Testimonials_Display' element={<Testimonial_Display />} />
@@ -156,8 +120,8 @@ function App() {
         <Route path='/admin/Prev_Year_Paper_Dislay' element={<QuestionPaperDisplay />} />
         <Route path='/admin/Prev_Year_Paper_Add' element={<QuestionPaperAdd />} />
         <Route path='/admin-login' element={<Login />} />
-        <Route path="/Prev_Year_Paper_PDF_Display/:name/:_id/:index" element={<QuestionPaperPDFDisplay />} />
->>>>>>> 86ff6715d61aebbbeaccaa0166c1714b9c58a376
+        <Route path="/Prev_Year_Paper_PDF_Display/:_id/:index/:name" element={<QuestionPaperPDFDisplay />} />
+
 
       </Routes>
     </Router>
