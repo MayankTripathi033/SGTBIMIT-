@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 const QuestionPaperPDFDisplay = () => {
-    const { _id,name,index } = useParams();
+  const { _id, name, index } = useParams();
 
   const [embedHeight, setEmbedHeight] = useState(600); // default height
   useEffect(() => {
     function updateEmbedHeight() {
-      setEmbedHeight(window.innerHeight - 100); // adjust as needed
+      setEmbedHeight(window.innerHeight - 0); // adjust as needed
     }
     window.addEventListener("resize", updateEmbedHeight);
     updateEmbedHeight(); // initialize height on first render
@@ -16,18 +16,14 @@ const QuestionPaperPDFDisplay = () => {
 
   return (
     <div>
-      <embed
+      <iframe
         src={`http://localhost:5000/QuestionPaper/Display/${_id}/${index}`}
-        type="application/pdf"
+        frameborder="0"
         width="100%"
-        // download ={name}
         height={embedHeight}
-      />
+        name="Question"
+      ></iframe>
     </div>
   );
-  }
+};
 export default QuestionPaperPDFDisplay;
-
-
-// ${_id}
-// ${index}

@@ -35,7 +35,14 @@
   font-family: "Edu NSW ACT Foundation", cursive;
   border: none;
 }
-
+.Paper_Card{
+  width: 500px;
+  height: auto;
+  
+}
+.Paper_detail{
+  overflow: hidden;
+}
 .button-30 {
   align-items: center;
   appearance: none;

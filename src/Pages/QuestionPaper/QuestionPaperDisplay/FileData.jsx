@@ -42,7 +42,7 @@ const FileData = (props) => {
   };
 
   return (
-    <div className="FileNames">
+    <div className="FileNames Paper_detail">
       {getPaperName?.map((value, Index) => {
         return (
           <div className="FileName">
@@ -61,7 +61,7 @@ const FileData = (props) => {
                 }}
                 onClick={() => {
                   window.open(
-                    `/Prev_Year_Paper_PDF_Display/${value}/${props._id}/${Index}`,
+                    `/Prev_Year_Paper_PDF_Display/${props._id}/${Index}/${value}`,
                     "_blank"
                   );
                 }}
