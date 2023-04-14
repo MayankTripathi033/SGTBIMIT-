@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Carousel } from 'react-responsive-carousel'
 import { CustomArrow, CustomArrowNotActive } from '../Components/Carousel'
+import { motion } from 'framer-motion'
 export default function Collaboration() {
   const img = require("../images/Sharekhan.jpg")
   const collabs = [
@@ -35,18 +36,43 @@ export default function Collaboration() {
       collabsChunks.push(res)
       i = i + count
     })
-    )
-    const [currentS, setCurrentS] = useState(0)
-    const handleSlideChange = (index)=>{
-      setCurrentS(index)
-    }
-    const total = collabs ? collabsChunks.length : 0
+  )
+  const [currentS, setCurrentS] = useState(0)
+  const handleSlideChange = (index) => {
+    setCurrentS(index)
+  }
+  const total = collabs ? collabsChunks.length : 0
   return (
     <section className='collab'>
       <div className="collab-container">
-        <h1>Collaborations.</h1>
+        <motion.h1
+        initial={{
+          x: 400
+        }}
+        whileInView={{
+          x: 0
+        }}
+        transition={{
+          duration: 0.5,
+          type: 'spring'
+        }}
+        >
+          Collaborations.
+        </motion.h1>
 
-        <div className="collab-grid-container">
+        <motion.div 
+        className="collab-grid-container"
+        initial={{
+          x: -400
+        }}
+        whileInView={{
+          x: 0
+        }}
+        transition={{
+          duration: 0.5,
+          type: 'spring'
+        }}
+        >
           <Carousel
             showThumbs={false}
             showIndicators={false}
@@ -84,10 +110,10 @@ export default function Collaboration() {
             ))}
           </Carousel>
           <div className="custom-status">
-          {currentS + 1} / {total}
-        </div>
+            {currentS + 1} / {total}
+          </div>
           <div className="bottom-border"></div>
-        </div>
+        </motion.div>
 
       </div>
     </section>

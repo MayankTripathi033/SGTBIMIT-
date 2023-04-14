@@ -3,6 +3,8 @@ import useFetch from '../useFetch'
 import Loader from '../Components/Loader'
 import { Carousel } from 'react-responsive-carousel'
 import { CustomArrow, CustomArrowNotActive } from '../Components/Carousel'
+import { motion } from 'framer-motion'
+
 export default function Recruiters() {
 
   const { data: recruiters, isPending } = useFetch("http://localhost:5000/Recruiters/recruiters_Display")
@@ -22,15 +24,39 @@ export default function Recruiters() {
 
   )
   const [currentS, setCurrentS] = useState(0)
-/*   const [total, setTotal] = useState(0) */
+  const total = recruiters ? recruitersChunks.length : 0
   const handleSlideChange = (index) => {
     setCurrentS(index)
   }
-  const total = recruiters ? recruitersChunks.length : 0
   return (
     <section className='recruiters'>
-      <h1>Our Recruiters.</h1>
-      <div className="recruiters-container">
+      <motion.h1
+        initial={{
+          x: 400
+        }}
+        whileInView={{
+          x: 0
+        }}
+        transition={{
+          duration: 0.5,
+          type: 'spring'
+        }}
+      >
+        Our Recruiters.
+      </motion.h1>
+      <motion.div 
+      className="recruiters-container"
+      initial={{
+        x: -400
+      }}
+      whileInView={{
+        x: 0
+      }}
+      transition={{
+        duration: 0.5,
+        type: 'spring'
+      }}
+      >
 
         {isPending && <Loader />}
 
@@ -85,7 +111,7 @@ export default function Recruiters() {
         </div>
         <div className="bottom-border"></div>
 
-      </div>
+      </motion.div>
     </section>
   )
 }

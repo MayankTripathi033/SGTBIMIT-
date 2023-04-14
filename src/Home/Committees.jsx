@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { motion } from 'framer-motion'
 export default function Committees() {
   const committees = [
     {
@@ -31,24 +31,80 @@ export default function Committees() {
   return (
     <section className="committees">
       <div className="committees-container" >
-        {committees.map(committee => (
-          <div className="committee-item" >
-            <div className="committee-img">
-              <img src={committee.image} alt="cant load" />
+        {committees.map((committee, i) => (
+          <motion.div
+            className="committee-item"
+            initial={{
+              x: -100,
+              opacity: 0,
+            }}
+            whileInView={{
+              x: 0,
+              opacity: 1,
+            }}
+            transition={{
+              duration: 0.2,
+              delay: i * 0.1,
+            }}
+          >
+            <div
+              className="committee-img"
+            >
+              <motion.img
+                src={committee.image}
+                alt="cant load"
+                initial={{
+                  scale: 0,
+                  opacity: 0,
+                }}
+                whileInView={{
+                  scale: 1,
+                  opacity: 1,
+                }}
+                transition={{
+                  duration: 0.2,
+                  delay: i * 0.15,
+                }}
+              />
             </div>
-            <a href={committee.pdf} download>
+            <motion.a
+              href={committee.pdf}
+              download
+              initial={{
+                scale: 0,
+              }}
+              whileInView={{
+                scale: 1,
+              }}
+              transition={{
+                duration: 0.2,
+                delay: i * 0.15,
+              }}
+            >
               <img src={require("../images/pdf-icon.png")} alt="" />
               <span>Download PDF</span>
-            </a>
-            <div className="committee-content">
+            </motion.a>
+            <motion.div 
+            className="committee-content"
+            initial={{
+              opacity: 0,
+            }}
+            whileInView={{
+              opacity: 1,
+            }}
+            transition={{
+              duration: 0.2,
+              delay: i * 0.15,
+            }}
+            >
               <h1>
                 {committee.name}
               </h1>
               <p>
                 {committee.detail}
               </p>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         ))}
       </div>
     </section>

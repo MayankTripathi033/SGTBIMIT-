@@ -48,7 +48,7 @@ export default function Vision() {
             </ul>
           </div>
           <div className="VisionImage">
-            <img src={visionimage} alt="Vision" />
+          <img src={require("../images/vm.jpg")} alt="" />
           </div>
         </div>
       </div>

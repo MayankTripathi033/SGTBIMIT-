@@ -20,7 +20,7 @@ export default function Fees() {
                         <div className="info">
                             <h3>Bachelor of Computer Applications</h3>
                             <p>
-                                Fees :<b> Rs. 2,50,000/- </b><br />
+                                Fees :<b> Rs. 1,24,600/- </b><br />
                                 Duration : 3 Years And 120 seats in both shifts<br/>
                                 Fee Noted : The mentioned fee structure is subject to change.
                             </p>
@@ -39,7 +39,7 @@ export default function Fees() {
                         <div className="info">
                             <h3>Bachelor of Business Administration</h3>
                             <p>
-                                Fees :<b> Rs. 2,58,000/-</b><br />
+                                Fees :<b> Rs. 1,26,300/-</b><br />
                                 Duration : 3 Years And 60 seats in both shifts<br/>
                                 Fee Noted : The mentioned fee structure is subject to change.
                             </p>
@@ -58,7 +58,7 @@ export default function Fees() {
                         <div className="info">
                             <h3>Bachelor of Business Administration(Banking & Insurance)</h3>
                             <p>
-                                Fees :<b> Rs. 2,58,000/-</b><br />
+                                Fees :<b> Rs. 1,26,300/-</b><br />
                                 Duration : 3 Years And 120 seats in both shifts<br/>
                                 Fee Noted : The mentioned fee structure is subject to change.
                             </p>
@@ -77,7 +77,7 @@ export default function Fees() {
                         <div className="info">
                             <h3>Bachelor of Commerce (Honours)</h3>
                             <p>
-                                Fees :<b> Rs. 2,45,000/-</b><br />
+                                Fees :<b> Rs. 1,21,800/-</b><br />
                                 Duration : 3 Years And 60 seats in 1st Shift<br/>
                                 Fee Noted : The mentioned fee structure is subject to change.
                             </p>
