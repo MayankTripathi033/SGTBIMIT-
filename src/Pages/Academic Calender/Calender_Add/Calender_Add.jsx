@@ -14,9 +14,9 @@ const CalenderAdd = () => {
     setCalenderUpdate({ ...calenderUpdate, [e.target.name]: e.target.value });
   };
 
-  const EResourcesAdd = async () => {
+  const CalenderAdd = async () => {
     try {
-      await axios.post("http://localhost:5000/E_Resources/EResources_Add", {
+      await axios.post("http://localhost:5000/Calendar/CalendarAdd", {
         calenderUpdate,
       });
     } catch (error) {
@@ -54,7 +54,7 @@ const CalenderAdd = () => {
               <button
                 className="button-19"
                 onClick={() => {
-                  EResourcesAdd();
+                  CalenderAdd();
                 }}
               >
                 Submit

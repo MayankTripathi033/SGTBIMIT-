@@ -6,7 +6,7 @@ import axios from "axios";
 
 const CalenderUpdate = () => {
   const [SingleData, setSingleData] = useState({
-    Name: "",
+    Date: "",
     Event: "",
   });
 
@@ -17,12 +17,12 @@ const CalenderUpdate = () => {
       try {
         const data = (
           await axios.post(
-            "http://localhost:5000/E_Resources/EResources_Single_Display",
+            "http://localhost:5000/Calendar/CalendarSingle",
             { id }
           )
         ).data;
         setSingleData({
-          Name: data?.source?.Name,
+          Date: data?.source?.Date,
           Event: data?.source?.Event,
         });
       } catch (error) {
@@ -32,12 +32,12 @@ const CalenderUpdate = () => {
     TestSingleData();
   }, [id]);
 
-  const EResoucesUpdate = async (e) => {
+  const CalenderUpdate = async (e) => {
     e.preventDefault();
     try {
       const data = (
         await axios.post(
-          `http://localhost:5000/E_Resources/EResources_Update/${id}`,
+          `http://localhost:5000/Calendar/CalendarUpdate/${id}`,
           { SingleData }
         )
       ).data;
@@ -68,10 +68,10 @@ const CalenderUpdate = () => {
             <div className="TestimonialForm">
               <input
                 type="text"
-                name="Name"
+                name="Date"
                 id="name"
-                placeholder="Name"
-                value={SingleData.Name}
+                placeholder="Date"
+                value={SingleData.Date}
                 onChange={Onchagetesdetail}
               />
               <input
@@ -82,7 +82,7 @@ const CalenderUpdate = () => {
                 value={SingleData.Event}
                 onChange={Onchagetesdetail}
               />
-              <button className="button-19" onClick={EResoucesUpdate}>
+              <button className="button-19" onClick={CalenderUpdate}>
                 Submit
               </button>
             </div>

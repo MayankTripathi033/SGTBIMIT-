@@ -19,7 +19,7 @@ const CalenderDisplay = () => {
       try {
         const data = (
           await axios.get(
-            "http://localhost:5000/E_Resources/EResources_Display"
+            "http://localhost:5000/Calendar/CalendarDisplay"
           )
         ).data;
         console.log(data);
@@ -32,10 +32,10 @@ const CalenderDisplay = () => {
     TestimonialsDataGet();
   }, [render]);
 
-  const EresourcesDelete = async (value) => {
+  const CalenderDelete = async (value) => {
     try {
       const _id = value;
-      await axios.post("http://localhost:5000/E_Resources/EResources_Delete", {
+      await axios.post("http://localhost:5000/Calendar/CalendarDelete", {
         _id,
       });
       setRender(1)
@@ -67,13 +67,13 @@ const CalenderDisplay = () => {
                     <Col span={8}>
                       <div className="TesDisplayCard">
                         <Card
-                          title={value.Name}
+                          title={value.Date}
                           bordered={false}
                           extra={
                             <RiDeleteBin6Line
                               className="TestBin"
                               onClick={() => {
-                                EresourcesDelete(value._id);
+                                CalenderDelete(value._id);
                               }}
                               style={{ color: "#d00000" }}
                             />
@@ -84,7 +84,7 @@ const CalenderDisplay = () => {
                               key="edit"
                               onClick={() => {
                                 navigator(
-                                  `/admin/EResources_Update/${value._id}`
+                                  `/admin/CalendarUpdate/${value._id}`
                                 );
                               }}
                             />,
