@@ -1,12 +1,13 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { NavLink } from 'react-router-dom'
 import useFetch from '../useFetch'
 export default function Navbar() {
+
   const arrow = require("../images/down.png")
   const { data: societies } = useFetch("http://localhost:5000/Society/Society_Display")
 
+  const myRef = useRef(null)
   useEffect(() => {
-    console.log(document.body.offsetWidth)
     document.querySelector(".menu").addEventListener("click", e => {
       document.querySelector("nav").style.transform = "translateX(0%)"
       document.querySelector("nav").style.visibility = "visible"
@@ -39,6 +40,7 @@ export default function Navbar() {
   }, [])
 
   const handleFloatClick = (e) => {
+    console.log(myRef)
     document.querySelector(".admission-dialog").classList.add("show")
     document.querySelector(".admission-bg").classList.add("show-bg")
   }
@@ -51,7 +53,7 @@ export default function Navbar() {
         ADMISSION
       </div>
       <nav>
-        <div className='nav-close mobile'><img src={require("../images/cancel.png")} alt="cant load" className='nav-close-btn'/></div>
+        <div className='nav-close mobile'><img src={require("../images/cancel.png")} alt="cant load" className='nav-close-btn' /></div>
         <div className="header-btns mobile-header-btns mobile">
           <button className="admission-btn" type="button" onClick={() => {
             document.querySelector(".admission-dialog").classList.add("show")
