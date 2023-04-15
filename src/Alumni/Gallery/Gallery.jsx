@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './gallery.css'
 import { Header, Navbar, Footer, Loader } from '../../Components'
 import { Carousel } from 'react-responsive-carousel'
+import { motion } from 'framer-motion'
 
 export default function Gallery() {
     const [isCarouselActive, setIsCarouselActive] = useState(false)
@@ -14,12 +15,20 @@ export default function Gallery() {
                 <div className="gallery-box">
                     {[...Array(9)].map((x, i) => (
                         <>
-                            <div className="gallery-box1" onClick={() => { setIsCarouselActive(true) }}>
+                            { !isCarouselActive && <div className="gallery-box1" onClick={() => { setIsCarouselActive(true) }}>
                                 <img src={require("../../images/p1.jpg")} alt="infra" className="pic" />
                                 <p className="text">Infra</p>
-                            </div>
+                            </div>}
                             {isCarouselActive && (
-                                <section className="gallery-carousel-section">
+                                <motion.section 
+                                className="gallery-carousel-section"
+                                initial={{
+                                    scale: 0,
+                                }}
+                                animate={{
+                                    scale: 1,
+                                }}
+                                >
                                     <div className="gallery-carousel-container">
                                         <img src={require("../../images/cancel.png")} className="carousel-close-btn" onClick={() => setIsCarouselActive(false)} />
                                         <Carousel>
@@ -30,7 +39,7 @@ export default function Gallery() {
                                             ))}
                                         </Carousel>
                                     </div>
-                                </section>
+                                </motion.section>
                             )}
                         </>
                     ))}
