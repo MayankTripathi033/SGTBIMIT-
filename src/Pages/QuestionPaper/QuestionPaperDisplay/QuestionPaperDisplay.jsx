@@ -205,7 +205,7 @@ const QuestionPaperDisplay = () => {
                               color: "#adb5bd",
                             }}
                             onClick={() => {
-                              navigator(`/admin/Prev_Year_Paper_Update/${value._id}`);
+                              navigator(`/admin/Prev_Year_Paper_Update/${value?.course}/${value?.Year}/${value?.Semester}/${value?._id}`);
                             }}
                           />
                           <RiDeleteBin6Line

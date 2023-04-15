@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState,useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import AdminHeader from "../../../Components/AdminHeader/AdminHeader";
 import AdminMenu from "../../../Components/AdminMenu/AdminMenu";
@@ -8,7 +8,6 @@ import "react-toastify/dist/ReactToastify.css";
 import "../QuestionPaperAdd/QuestionPaperAdd.css";
 import "../../Society/Society_Add/Society_Add.css";
 import "../../Testimonials/Testimonials_ADD/Testimonials_ADD";
-import imageCompression from "browser-image-compression";
 
 const QuestionPaperUpdate = () => {
   const [societUpdate, setSocieUpdate] = useState({
@@ -16,75 +15,84 @@ const QuestionPaperUpdate = () => {
     Year: "",
     Semester: "",
   });
-  
-  const { Year, Semester, course } = useParams();
+
+  const { Year, Semester, course, _id } = useParams();
 
   const [filedata, setFileData] = useState();
+
+  function handleFileInputChange(event) {
+    const files = event.target.files;
+    const newImages = [];
+
+    if(files.length){
+      for (let i = 0; i < files.length; i++) {
+        newImages.push(files[i]);
+      }
+  
+      setFileData(newImages);
+    }else{
+      setFileData(files);
+    }
+  }
 
   const Onchagetesdetail = (e) => {
     setSocieUpdate({ ...societUpdate, [e.target.name]: e.target.value });
   };
 
-  const options = {
-    maxSizeMB: 1,
-    maxWidthOrHeight: 1920,
-    useWebWorker: true,
-  };
+  useEffect(() => {
+    setSocieUpdate({
+      course: course,
+      Year: Year,
+      Semester: Semester,
+    })
+  }, [])
 
-  //   useEffect(() => {
-  //     const TestSingleData = async () => {
-  //       try {
-  //         const data = (
-  //           await axios.get(
-  //             `http://localhost:5000/Society/Single_Society_Display/${_id}`
-  //           )
-  //         ).data;
-  //         setSocieUpdate({
-  //           title: data?.title,
-  //           detail: data?.detail,
-  //           subdetail: data?.subdetail,
-  //         });
-  //       } catch (error) {
-  //         console.log(error);
-  //       }
-  //     };
-  //     TestSingleData();
-  //   }, [_id]);
 
-  // console.log(societUpdate);
-  const compresFile = async () => {
-    if (filedata) {
-      const compressedFile = await imageCompression(filedata, options);
-      return compressedFile;
-    } else {
-      return filedata;
+  const PaperUpdate = async () => {
+    try {
+      let formData = new FormData();
+      if (filedata.length) {
+        for (let i = 0; i < filedata.length; i++) {
+          formData.append("file", filedata[i]);
+        }
+      } else {
+        formData.append("file", filedata);
+      }
+      formData.append("course", societUpdate.course);
+      formData.append("Year", societUpdate.Year);
+      formData.append("Semester", societUpdate.Semester);
+      const data1 = (
+        await axios.post(`http://localhost:5000/QuestionPaper/Question_Paper_Update/${_id}`, formData, {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        })
+      ).data;
+      toast(`${data1.message}`, {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+      // console.log(data1);
+    } catch (error) {
+      console.log(error);
+      toast.error(`${error.message}`, {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
     }
   };
-//   const SocietyUpdate = async () => {
-//     try {
-//       let formData = new FormData();
-//       let Imagefile = await compresFile();
-//       formData.append("image", Imagefile, filedata.name);
-//       formData.append("title", societUpdate.title);
-//       formData.append("detail", societUpdate.detail);
-//       formData.append("subdetail", societUpdate.subdetail);
-//       const data1 = (
-//         await axios.post(
-//         //   `http://localhost:5000/Society/Society_Update/${_id}`,
-//           formData,
-//           {
-//             headers: {
-//               "Content-Type": "multipart/form-data",
-//             },
-//           }
-//         )
-//       ).data;
-//       console.log(data1);
-//     } catch (error) {
-//       console.log(error);
-//     }
-//   };
-
   return (
     <>
       <div className="societyAddConatiner">
@@ -95,10 +103,11 @@ const QuestionPaperUpdate = () => {
           <AdminHeader />
           <div className="SocietyFormContainer">
             <div className="Society_Heading">
-              <h1>Add the Paper</h1>
+              <h1>Paper Data Update</h1>
             </div>
             <div className="SocietyForm">
-              <select name="course" id="" onChange={Onchagetesdetail}>
+              <select name="course" id="" value={societUpdate?.course} onChange={Onchagetesdetail}
+              >
                 <option value=" ">Select Course</option>
                 <option value="BCA">BCA</option>
                 <option value="BBA">BBA</option>
@@ -110,9 +119,10 @@ const QuestionPaperUpdate = () => {
                 name="Year"
                 id=""
                 placeholder="Year"
+                value={societUpdate?.Year}
                 onChange={Onchagetesdetail}
               />
-              <select name="Semester" id="" onChange={Onchagetesdetail}>
+              <select name="Semester" id="" value={societUpdate?.Semester} onChange={Onchagetesdetail} >
                 <option value=" ">Select Semester</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -127,14 +137,14 @@ const QuestionPaperUpdate = () => {
                   name="file"
                   id="ImageUpload"
                   multiple
-                //   onChange={handleFileInputChange}
+                  onChange={handleFileInputChange}
                   style={{ width: "200px", height: "150px" }}
                 />
               </div>
               <button
                 className="button-19"
                 onClick={async () => {
-                //   SocietyAdd();
+                  PaperUpdate();
                 }}
               >
                 Submit
