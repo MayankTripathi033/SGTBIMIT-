@@ -34,6 +34,7 @@ export default function Committees() {
         {committees.map((committee, i) => (
           <motion.div
             className="committee-item"
+            key={committee.name}
             initial={{
               x: -100,
               opacity: 0,
@@ -84,18 +85,18 @@ export default function Committees() {
               <img src={require("../images/pdf-icon.png")} alt="" />
               <span>Download PDF</span>
             </motion.a>
-            <motion.div 
-            className="committee-content"
-            initial={{
-              opacity: 0,
-            }}
-            whileInView={{
-              opacity: 1,
-            }}
-            transition={{
-              duration: 0.2,
-              delay: i * 0.15,
-            }}
+            <motion.div
+              className="committee-content"
+              initial={{
+                opacity: 0,
+              }}
+              whileInView={{
+                opacity: 1,
+              }}
+              transition={{
+                duration: 0.2,
+                delay: i * 0.15,
+              }}
             >
               <h1>
                 {committee.name}

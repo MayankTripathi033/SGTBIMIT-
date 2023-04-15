@@ -44,18 +44,18 @@ export default function Recruiters() {
       >
         Our Recruiters.
       </motion.h1>
-      <motion.div 
-      className="recruiters-container"
-      initial={{
-        x: -400
-      }}
-      whileInView={{
-        x: 0
-      }}
-      transition={{
-        duration: 0.5,
-        type: 'spring'
-      }}
+      <motion.div
+        className="recruiters-container"
+        initial={{
+          x: -400
+        }}
+        whileInView={{
+          x: 0
+        }}
+        transition={{
+          duration: 0.5,
+          type: 'spring'
+        }}
       >
 
         {isPending && <Loader />}
@@ -90,12 +90,12 @@ export default function Recruiters() {
               </>
             )}
           >
-            {recruitersChunks.map((recruiters) => {
+            {recruitersChunks.map((recruiters, i) => {
               return (
-                <div className="recruiters-item">
-                  {recruiters.map((recruiter) => {
+                <div className="recruiters-item" key={`${i}recitem`}>
+                  {recruiters.map((recruiter, i) => {
                     return (
-                      <div className="recruiter-img">
+                      <div className="recruiter-img" key={`${i}recimg`}>
                         <img src={`http://localhost:5000/Recruiters/Recruiter_Image_Display/${recruiter._id}`} key={recruiter._id} alt="cant load" />
 
                       </div>

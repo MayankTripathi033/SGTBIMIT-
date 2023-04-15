@@ -99,10 +99,10 @@ export default function Collaboration() {
               </>
             )}
           >
-            {collabsChunks && collabsChunks.map(collabs => (
-              <div className="collab-grid">
-                {collabs.map(collab => (
-                  <div className="collab-img">
+            {collabsChunks && collabsChunks.map((collabs, i) => (
+              <div className="collab-grid" key={`${i}collabgrid`}>
+                {collabs.map((collab, i) => (
+                  <div className="collab-img" key={`${i}collabimg`}>
                     <img src={collab.image} alt="" />
                   </div>
                 ))}

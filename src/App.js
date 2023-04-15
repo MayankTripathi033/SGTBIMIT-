@@ -28,7 +28,6 @@ import AlumniMeet from './Alumni/AlumniMeet/AlumniMeet.jsx'
 import TestimonialsAL from './Alumni/Testimonials/TestimonialsAL.jsx'
 import Events from './Events/Events.jsx'
 import Gallery from './Alumni/Gallery/Gallery.jsx'
-import Registration from './Alumni/Registration/Registration.jsx'
 import Placements from './Industry Interface/Placements/Placements.jsx'
 
 /* Admin imports */
@@ -79,7 +78,6 @@ function App() {
         <Route path='/admission/courses-eligibility' element={<Eligibility />} />
         <Route path='/admission/notices' element={<Notice />} />
         <Route path='/alumini/gallery' element={<Gallery />} />
-        <Route path='/alumini/registration' element={<Registration />} />
         <Route path='/academics/courses/bba' element={<Bba />} />
         <Route path='/academics/courses/bbab&i' element={<BbaBI />} />
         <Route path='/academics/courses/bca' element={<Bca />} />

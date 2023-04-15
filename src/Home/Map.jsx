@@ -42,7 +42,7 @@ export default function Map() {
           </h1>
           <div className="address-wrapper">
             {data.map(address => (
-              <div className="address-item">
+              <div className="address-item" key={address.type}>
                 <div className="map-item-img">
                   <img src={address.image} alt="cant load" />
                 </div>
