@@ -58,6 +58,7 @@ import CalenderAdd from './Pages/Academic Calender/Calender_Add/Calender_Add.jsx
 import CalenderDisplay from './Pages/Academic Calender/Calender_Display/Calender_Display.jsx'
 import CalenderUpdate from './Pages/Academic Calender/Calender_Update/Calender_Update.jsx'
 import Login from './Admin/Login.jsx'
+import QuestionPaperUpdate from './Pages/QuestionPaper/QuestionPaperUpdate/QuestionPaperUpdate.jsx'
 
 function App() {
 
@@ -119,6 +120,7 @@ function App() {
         <Route path='/admin/Calender_Update' element={<CalenderUpdate />} />
         <Route path='/admin/Prev_Year_Paper_Dislay' element={<QuestionPaperDisplay />} />
         <Route path='/admin/Prev_Year_Paper_Add' element={<QuestionPaperAdd />} />
+        <Route path='/admin/Prev_Year_Paper_Update/:course/:Year/:Semester' element={<QuestionPaperUpdate />} />
         <Route path='/admin-login' element={<Login />} />
         <Route path="/Prev_Year_Paper_PDF_Display/:_id/:index/:name" element={<QuestionPaperPDFDisplay />} />
 
