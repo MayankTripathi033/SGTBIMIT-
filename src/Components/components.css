@@ -270,6 +270,7 @@ nav a {
   display: flex;
   gap: min(.7rem, 1vw);
   align-items: center;
+  padding-block: min(1rem, 1vw);
 }
 
 nav>* {

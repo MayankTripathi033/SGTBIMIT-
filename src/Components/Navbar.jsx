@@ -59,7 +59,7 @@ export default function Navbar() {
           <button className="student-login-btn" type="button">STUDENT - ERP LOGIN</button>
         </div>
         <div className="nav-item" data-index="0">
-          <NavLink to="/" className='nav-item'>HOME</NavLink>
+          <div><NavLink to="/" className='nav-item'>HOME</NavLink></div>
         </div>
         <div className="nav-item" data-index="1">
           <div> ABOUT US<img src={arrow} alt="" /></div>
