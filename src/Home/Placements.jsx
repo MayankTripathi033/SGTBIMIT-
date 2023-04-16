@@ -6,16 +6,43 @@ import { motion } from 'framer-motion'
 
 export default function Placements() {
   const { data: placementArray, isPending } = useFetch("http://localhost:5000/Placement_Intership/PlacementInterships_Display")
-  console.log(placementArray ? placementArray : "")
 
   return (
 
     <section className='placements'>
       <div className="placements-container">
-        <h1>Placements and Internships.</h1>
+        <motion.h1
+          initial={{
+            opacity: 0,
+            x: 400,
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+          }}
+          transition={{
+            duration: 0.5,
+            type: "spring"
+          }}
+        >
+          Placements and Internships.
+
+        </motion.h1>
         <div className="placement-bg"></div>
         {isPending && <Loader />}
-        <div className="placement-grid">
+        <motion.div className="placement-grid"
+          initial={{
+            opacity: 0,
+            x: -100,
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+          }}
+          transition={{
+            duration: 1,
+            type: "spring"
+          }}>
           {placementArray &&
             placementArray.map((placement, i) => {
               return (
@@ -28,7 +55,7 @@ export default function Placements() {
             })
           }
           <div className="place-card blank"></div>
-        </div>
+        </motion.div>
       </div>
 
 

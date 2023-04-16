@@ -69,6 +69,7 @@ export default function Recruiters() {
             showStatus={false}
             autoPlay={true}
             infiniteLoop={true}
+            selectedItem={0}
             renderArrowNext={(onClickHandler, hasNext, label) => (
               <>
                 {hasNext && (
@@ -92,10 +93,10 @@ export default function Recruiters() {
           >
             {recruitersChunks.map((recruiters, i) => {
               return (
-                <div className="recruiters-item" key={`${i}recitem`}>
+                <div className="recruiters-item" key={`rec-item-${i}`}>
                   {recruiters.map((recruiter, i) => {
                     return (
-                      <div className="recruiter-img" key={`${i}recimg`}>
+                      <div className="recruiter-img" key={`rec-img-${i}`}>
                         <img src={`http://localhost:5000/Recruiters/Recruiter_Image_Display/${recruiter._id}`} key={recruiter._id} alt="cant load" />
 
                       </div>
