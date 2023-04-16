@@ -36,7 +36,7 @@ export default function Home() {
           <Testimonials />
           <DirectorMsg />
           <Committees />
-          {/* <Placements /> */}
+          <Placements />
           <Collaboration />
           <Recruiters />
           <Map />

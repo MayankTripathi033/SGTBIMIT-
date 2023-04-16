@@ -354,7 +354,8 @@
 /* Committees */
 .committees {
     padding: 4rem;
-    background-color: #E7F2FE;
+    background: linear-gradient(180deg, #E7F2FE 58.85%, #F1F7FE 100%);
+
 }
 
 .committees-container {
@@ -363,7 +364,6 @@
     grid-template-columns: repeat(2, 1fr);
     margin-inline: auto;
     gap: min(6rem, 6vw);
-    padding-block: 2rem;
 }
 
 .committee-item {
@@ -427,44 +427,75 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: min(3rem, 3vh);
     position: relative;
+    background: linear-gradient(180deg, #F0F6FD 0%, #E7F2FE 44.27%);
+    --padding: min(4rem, 4vw);
+    padding: var(--padding);
 }
 
 .placements-container {
-    margin-inline: auto;
-}
-
-.placements h1 {
-    font-size: min(2rem, 4vw);
-    font-family: "SF Pro Display-Bold";
+    --scroll-width: 9px;
+    width: 100%;
 }
 
 .placements-container>h1 {
-    color: var(--secondary-clr);
-    text-align: center;
-    font-size: min(3rem, 6vw);
+    font-size: min(3.75rem, 7.5vw);
+    font-family: "SF Pro Display-Bold";
 }
 
-.placements img {
-    width: min(300px, 80%);
-    aspect-ratio: 1;
-    border-radius: 10px;
-    border: 2px solid black;
+.placement-bg {
+    position: absolute;
+    width: 40%;
+    height: calc(100% - var(--scroll-width) - var(--padding));
+    left: 1236px;
+    top: 0px;
+    background: linear-gradient(270deg, #EDF5FD 15.76%, rgba(255, 255, 255, 0) 94.58%);
+    z-index: 10;
 }
 
 .placement-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    width: min(1000px, 100%);
-    place-items: center;
+    display: flex;
+    gap: min(3rem, 3vw);
+    overflow-x: scroll;
+    padding-bottom: min(4rem, 4vw);
+    position: relative;
+    scroll-snap-type: x mandatory;
 }
 
+.placement-grid > div{
+    scroll-snap-align: start;
+}
+
+.placement-grid::-webkit-scrollbar {
+    background-color: white;
+    height: 9px;
+}
+
+.placement-grid::-webkit-scrollbar-thumb {
+    background-color: #005E93;
+    border-radius: 9px;
+}
+
+.placements img {
+    border-radius: 10px;
+    width: 100%;
+    aspect-ratio: 91.6/100;
+}
+
+
 .place-card {
-    width: min(400px, 30vw);
+    --wdith: 420px;
+    min-width: var(--wdith);
+    max-width: var(--wdith);
+    aspect-ratio: 66/100;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    background-color: white;
+    padding: min(1rem, 1vw);
+    border-radius: 22px;
+    box-shadow: 0 10px 30px 10px rgba(125, 162, 178, 0.2);
 }
 
 .place-card p {

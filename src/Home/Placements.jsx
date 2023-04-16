@@ -4,27 +4,28 @@ import useFetch from '../useFetch'
 
 export default function Placements() {
   const { data: placementArray, isPending } = useFetch("http://localhost:5000/Placement_Intership/PlacementInterships_Display")
-
+  console.log(placementArray ? placementArray : "")
 
   return (
 
     <section className='placements'>
-      <div className="block left-block"></div>
-      <div className="block right-block"></div>
       <div className="placements-container">
-        <h1>PLACEMENTS AND INTERNSHIPS</h1>
+        <h1>Placements and Internships.</h1>
+        <div className="placement-bg"></div>
         {isPending && <Loader />}
-        {placementArray && <div className="placement-grid">
-          {placementArray.map((placement, i) => {
-            return (
-            <div className="place-card" key={placement._id}>
-              <img src="" alt="cant load" className='placement-img' />
-              <h1> {placement.name} </h1>
-              <p> {placement.companyName} </p>
-            </div>
-            )
-          })}
-        </div>}
+        <div className="placement-grid">
+          {placementArray &&
+            placementArray.map((placement, i) => {
+              return (
+                <div className="place-card" key={placement._id}>
+                  <img src={`http://localhost:5000/Placement_Intership/PlacementInterships_Image_Display/${placement._id}`} alt="cant load" className='placement-img' />
+                  <h1> {placement.name}  </h1>
+                  <p> {placement.companyName} </p>
+                </div>
+              )
+            })
+          }
+        </div>
       </div>
 
 
