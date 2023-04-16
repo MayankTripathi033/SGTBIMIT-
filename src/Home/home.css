@@ -445,7 +445,7 @@
 
 .placement-bg {
     position: absolute;
-    width: 40%;
+    width: 35%;
     height: calc(100% - var(--scroll-width) - var(--padding));
     left: 1236px;
     top: 0px;
@@ -462,7 +462,7 @@
     scroll-snap-type: x mandatory;
 }
 
-.placement-grid > div{
+.placement-grid>div {
     scroll-snap-align: start;
 }
 
@@ -498,8 +498,24 @@
     box-shadow: 0 10px 30px 10px rgba(125, 162, 178, 0.2);
 }
 
+.blank{
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.place-heading {
+    font-family: "Montserrat";
+    font-size: min(1.875rem, 3.75vw);
+    color: #181818;
+    margin-top: auto;
+    margin-bottom: 3px;
+}
+
 .place-card p {
-    font-size: min(1.5rem, 3vw);
+    font-size: min(1.25rem, 2.5vw);
+    color: #C0C0C0;
+    margin-top: 0;
+    margin-bottom: 1rem;
 }
 
 
