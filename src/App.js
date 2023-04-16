@@ -12,7 +12,6 @@ import EResources from './Academics/EResources/EResources.jsx'
 import Examination from './Academics/Examination/Examination'
 import Syllabus from './Academics/Syllabus/Syllabus.jsx'
 import Fees from './Fees/Fees'
-import Admin from "../src/Admin/Admin"
 import Testimonials_ADD from './Pages/Testimonials/Testimonials_ADD/Testimonials_ADD.jsx'
 import Testimonial_Display from './Pages/Testimonials/Testimonials_Display/Testimonial_Display.jsx'
 import Society_Add from "../src/Pages/Society/Society_Add/Society_Add"
@@ -32,6 +31,8 @@ import Placements from './Industry Interface/Placements/Placements.jsx'
 
 /* Admin imports */
 
+
+import Dashboard from './Login/Dashboard.jsx'
 import Testimonial_Update from './Pages/Testimonials/Testimonial_Update/Testimonial_Update.jsx'
 import Society_Update from './Pages/Society/Society_Update/Society_Update.jsx'
 import Questionpaper from './Academics/Questionpaper/Questionpaper'
@@ -56,7 +57,7 @@ import QuestionPaperPDFDisplay from './Pages/QuestionPaper/QuestionPaperDisplay/
 import CalenderAdd from './Pages/Academic Calender/Calender_Add/Calender_Add.jsx'
 import CalenderDisplay from './Pages/Academic Calender/Calender_Display/Calender_Display.jsx'
 import CalenderUpdate from './Pages/Academic Calender/Calender_Update/Calender_Update.jsx'
-import Login from './Admin/Login.jsx'
+import Login from './Login/Login.jsx'
 import QuestionPaperUpdate from './Pages/QuestionPaper/QuestionPaperUpdate/QuestionPaperUpdate.jsx'
 
 function App() {
@@ -91,7 +92,8 @@ function App() {
         {/* Admin Routes */}
 
 
-        <Route path='/admin' element={<Admin />} />
+        <Route path='/admin' element={<Login />} />
+        <Route path='/dashboard' element={<Dashboard />} />
         <Route path='/admin/Testimonials_Add' element={<Testimonials_ADD />} />
         <Route path='/admin/Testimonials_Display' element={<Testimonial_Display />} />
         <Route path='/admin/Testimonials_Update/:id' element={<Testimonial_Update />} />
@@ -119,7 +121,7 @@ function App() {
         <Route path='/admin/Prev_Year_Paper_Dislay' element={<QuestionPaperDisplay />} />
         <Route path='/admin/Prev_Year_Paper_Add' element={<QuestionPaperAdd />} />
         <Route path='/admin/Prev_Year_Paper_Update/:course/:Year/:Semester/:_id' element={<QuestionPaperUpdate />} />
-        <Route path='/admin-login' element={<Login />} />
+        <Route path='/admin/login' element={<Login />} />
         <Route path="/Prev_Year_Paper_PDF_Display/:_id/:index/:name" element={<QuestionPaperPDFDisplay />} />
 
 
