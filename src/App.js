@@ -28,6 +28,7 @@ import TestimonialsAL from './Alumni/Testimonials/TestimonialsAL.jsx'
 import Events from './Events/Events.jsx'
 import Gallery from './Alumni/Gallery/Gallery.jsx'
 import Placements from './Industry Interface/Placements/Placements.jsx'
+import Research from './Academics/Research/Research.jsx'
 
 /* Admin imports */
 
@@ -85,6 +86,7 @@ function App() {
         <Route path='/academics/courses/bcom' element={<Bcom />} />
         <Route path='/academics/prev-year-papers' element={<Questionpaper />} />
         <Route path='/academics/academic-calender' element={<AcademicCal />} />
+        <Route path='/academics/research' element={<Research />} />
         <Route path='/alumini/alumini-meet' element={<AlumniMeet />} />
         <Route path='/alumini/testimonials' element={<TestimonialsAL />} />
         <Route path="/events/past" element={<Events />} />
