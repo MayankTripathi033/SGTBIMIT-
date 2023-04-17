@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './login.css'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate ,useLocation} from 'react-router-dom'
 import axios from 'axios';
 import { useAuth } from '../Context/auth';
 
@@ -24,10 +24,10 @@ export default function Login() {
                     _id : data.admin._id,
                     token : data.token,
                 })
-                localStorage.setItem("authorization", JSON.stringify(data.token));
-                localStorage.setItem("_id",data.admin._id);
+                localStorage.setItem("auth", JSON.stringify(data));
+                // localStorage.setItem("_id",data.admin._id);
 
-                navigate("/admin/dashboard")
+                navigate("/dashboard/admin")
 
             }
         } catch (error) {

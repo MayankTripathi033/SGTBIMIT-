@@ -95,37 +95,38 @@ function App() {
         {/* Admin Routes */}
 
 
-        <Route path='/admin' element={<Login />} />
+        <Route path='/login' element={<Login />} />
         <Route path='/dashboard' element={<PrivateRouter />} >
           <Route path='admin' element={<Dashboard />} />
+          <Route path='admin/Testimonials_Add' element={<Testimonials_ADD />} />
+          <Route path='admin/Testimonials_Display' element={<Testimonial_Display />} />
+          <Route path='admin/Testimonials_Update/:id' element={<Testimonial_Update />} />
+          <Route path='admin/Society_Add' element={<Society_Add />} />
+          <Route path='admin/Society_Display' element={<Society_Display />} />
+          <Route path='admin/Society_Update/:_id' element={<Society_Update />} />
+          <Route path='admin/Faculty_Add' element={<FacultyAdd />} />
+          <Route path='admin/Faculty_Display' element={<FacultyDisplay />} />
+          <Route path='admin/Faculty_Update/:_id' element={<FacultyUpdate />} />
+          <Route path='admin/Administration_Add' element={<AdministrationAdd />} />
+          <Route path='admin/Administration_Display' element={<AdministrationDisplay />} />
+          <Route path='admin/Administration_Update/:_id' element={<AdministrationUpdate />} />
+          <Route path='admin/Placement_Add' element={<PlacementAdd />} />
+          <Route path='admin/Placement_Display' element={<PlacementDisplay />} />
+          <Route path='admin/Placement_Update/:_id' element={<PlacementUpdate />} />
+          <Route path='admin/Recruiters_Add' element={<RecruitersAdd />} />
+          <Route path='admin/Recruiters_Display' element={<RecruitersDisplay />} />
+          <Route path='admin/Recruiters_Update/:_id' element={<RecruitersUpdate />} />
+          <Route path='admin/EResources_Add' element={<EResourcesAdd />} />
+          <Route path='admin/EResources_Display' element={<EResourcesDisplay />} />
+          <Route path='admin/EResources_Update/:_id' element={<EResourcesUpdate />} />
+          <Route path='admin/Calender_Add' element={<CalenderAdd />} />
+          <Route path='admin/Calender_Display' element={<CalenderDisplay />} />
+          <Route path='admin/Calender_Update' element={<CalenderUpdate />} />
+          <Route path='admin/Prev_Year_Paper_Dislay' element={<QuestionPaperDisplay />} />
+          <Route path='admin/Prev_Year_Paper_Add' element={<QuestionPaperAdd />} />
+          <Route path='admin/Prev_Year_Paper_Update/:course/:Year/:Semester/:_id' element={<QuestionPaperUpdate />} />
         </Route>
-          <Route path='/admin/Testimonials_Add' element={<Testimonials_ADD />} />
-        <Route path='/admin/Testimonials_Display' element={<Testimonial_Display />} />
-        <Route path='/admin/Testimonials_Update/:id' element={<Testimonial_Update />} />
-        <Route path='/admin/Society_Add' element={<Society_Add />} />
-        <Route path='/admin/Society_Display' element={<Society_Display />} />
-        <Route path='/admin/Society_Update/:_id' element={<Society_Update />} />
-        <Route path='/admin/Faculty_Add' element={<FacultyAdd />} />
-        <Route path='/admin/Faculty_Display' element={<FacultyDisplay />} />
-        <Route path='/admin/Faculty_Update/:_id' element={<FacultyUpdate />} />
-        <Route path='/admin/Administration_Add' element={<AdministrationAdd />} />
-        <Route path='/admin/Administration_Display' element={<AdministrationDisplay />} />
-        <Route path='/admin/Administration_Update/:_id' element={<AdministrationUpdate />} />
-        <Route path='/admin/Placement_Add' element={<PlacementAdd />} />
-        <Route path='/admin/Placement_Display' element={<PlacementDisplay />} />
-        <Route path='/admin/Placement_Update/:_id' element={<PlacementUpdate />} />
-        <Route path='/admin/Recruiters_Add' element={<RecruitersAdd />} />
-        <Route path='/admin/Recruiters_Display' element={<RecruitersDisplay />} />
-        <Route path='/admin/Recruiters_Update/:_id' element={<RecruitersUpdate />} />
-        <Route path='/admin/EResources_Add' element={<EResourcesAdd />} />
-        <Route path='/admin/EResources_Display' element={<EResourcesDisplay />} />
-        <Route path='/admin/EResources_Update/:_id' element={<EResourcesUpdate />} />
-        <Route path='/admin/Calender_Add' element={<CalenderAdd />} />
-        <Route path='/admin/Calender_Display' element={<CalenderDisplay />} />
-        <Route path='/admin/Calender_Update' element={<CalenderUpdate />} />
-        <Route path='/admin/Prev_Year_Paper_Dislay' element={<QuestionPaperDisplay />} />
-        <Route path='/admin/Prev_Year_Paper_Add' element={<QuestionPaperAdd />} />
-        <Route path='/admin/Prev_Year_Paper_Update/:course/:Year/:Semester/:_id' element={<QuestionPaperUpdate />} />
+
         <Route path="/Prev_Year_Paper_PDF_Display/:_id/:index/:name" element={<QuestionPaperPDFDisplay />} />
         {/* <Route path='/admin/login' element={<Login />} /> */}
 

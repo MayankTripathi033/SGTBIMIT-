@@ -13,14 +13,16 @@ const AuthProvider = ({children}) =>{
     axios.defaults.headers.common["authorization"] = auth?.token;
     useEffect(() =>{
 
-        const data = localStorage.getItem("authorization");
+        const data = localStorage.getItem("auth");
+        console.log(data);
         if(data){
             const parseData = JSON.parse(data);
             setAuth({
                 ...auth,
-                _id :parseData._id,
+                _id :parseData.admin._id,
                 token : parseData.token,
             });
+            console.log(auth);
         }
         //eslint-disable-next-line
     },[]);
