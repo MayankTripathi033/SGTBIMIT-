@@ -4,8 +4,46 @@ import './research.css'
 import img from '../../images/research-img.png'
 import { Link } from 'react-router-dom'
 import { Carousel } from 'react-responsive-carousel'
+import researchCardImg from '../../images/research-card-img.png'
 
 export default function Research() {
+    const research = [
+        [
+            {
+                image: researchCardImg,
+                title: 'Research Card',
+                date: "dd-mm-yyyy"
+            },
+            {
+                image: researchCardImg,
+                title: 'Research Card',
+                date: "dd-mm-yyyy"
+            },
+            {
+                image: researchCardImg,
+                title: 'Research Card',
+                date: "dd-mm-yyyy"
+            },
+        ],
+        [
+            {
+                image: researchCardImg,
+                title: 'Research Card',
+                date: "dd-mm-yyyy"
+            },
+            {
+                image: researchCardImg,
+                title: 'Research Card',
+                date: "dd-mm-yyyy"
+            },
+            {
+                image: researchCardImg,
+                title: 'Research Card',
+                date: "dd-mm-yyyy"
+            },
+        ],
+    ]
+
     return (
         <>
             <Header />
@@ -27,8 +65,21 @@ export default function Research() {
                         </p>
                     </div>
                     <div className="research-box-right">
-                        <Carousel>
-                            
+                        <Carousel
+                        showThumbs={false}
+                        showIndicators={false}
+                        >
+                            {research.map((res, i)=>(
+                                <div className="res-grid" key={i}>
+                                    {res.map((re, i)=>(
+                                        <div className="research-card" key={i}>
+                                            <img src={re.image} alt="cant load" />
+                                            <h1>{re.title}</h1>
+                                            <p>{re.date}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                            ))}
                         </Carousel>
                     </div>
                 </section>

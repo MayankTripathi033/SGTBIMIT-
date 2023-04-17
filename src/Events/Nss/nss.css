@@ -1,0 +1,53 @@
+.nss-section {
+    background: #F5F5F5;
+    display: flex;
+    flex-direction: column;
+    padding: min(2rem, 2vw);
+    width: 100%;
+}
+
+.nss-header {
+    margin-inline: auto;
+    position: relative;
+}
+
+.nss-header-title {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    padding: min(2rem, 2vw);
+}
+
+.nss-header-title p {
+    color: #D4D4D4;
+    font-family: "SF Pro Display-Medium";
+    font-size: min(2rem, 4vw);
+}
+
+.nss-header-title h1 {
+    font-size: min(5rem, 10vw);
+    margin-block: 1.5rem;
+    font-family: "SF Pro Display-Medium";
+}
+
+.about-nss-section {
+    padding: min(2rem, 2vw);
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.about-nss h1 {
+    font-family: "SF Pro Display-Bold";
+    font-size: min(5rem, 10vw);
+}
+
+.about-nss p {
+    color: #383838;
+    font-size: min(1.6rem, 3.2vw);
+    line-height: 2rem;
+}
+.nss-carousel-img{
+    width: 600px;
+    object-fit: contain;
+    margin-left: auto;
+}

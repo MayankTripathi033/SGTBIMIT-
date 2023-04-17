@@ -29,6 +29,7 @@ import Events from './Events/Events.jsx'
 import Gallery from './Alumni/Gallery/Gallery.jsx'
 import Placements from './Industry Interface/Placements/Placements.jsx'
 import Research from './Academics/Research/Research.jsx'
+import Nss from './Events/Nss/Nss.jsx'
 
 /* Admin imports */
 
@@ -60,6 +61,8 @@ import CalenderDisplay from './Pages/Academic Calender/Calender_Display/Calender
 import CalenderUpdate from './Pages/Academic Calender/Calender_Update/Calender_Update.jsx'
 import Login from './Login/Login.jsx'
 import QuestionPaperUpdate from './Pages/QuestionPaper/QuestionPaperUpdate/QuestionPaperUpdate.jsx'
+import Registration from './Alumni/Registration/Registration.jsx'
+
 import PrivateRouter from './Routes/Private.js'
 
 function App() {
@@ -91,7 +94,10 @@ function App() {
         <Route path='/alumini/alumini-meet' element={<AlumniMeet />} />
         <Route path='/alumini/testimonials' element={<TestimonialsAL />} />
         <Route path="/events/past" element={<Events />} />
+        <Route path="events/nss" element={<Nss />} />
 
+        <Route path='/alumini/registration' element={<Registration/>} />
+ 
         {/* Admin Routes */}
 
 
