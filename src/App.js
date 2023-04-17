@@ -59,6 +59,7 @@ import CalenderDisplay from './Pages/Academic Calender/Calender_Display/Calender
 import CalenderUpdate from './Pages/Academic Calender/Calender_Update/Calender_Update.jsx'
 import Login from './Login/Login.jsx'
 import QuestionPaperUpdate from './Pages/QuestionPaper/QuestionPaperUpdate/QuestionPaperUpdate.jsx'
+import PrivateRouter from './Routes/Private.js'
 
 function App() {
 
@@ -93,8 +94,10 @@ function App() {
 
 
         <Route path='/admin' element={<Login />} />
-        <Route path='/admin/dashboard' element={<Dashboard />} />
-        <Route path='/admin/Testimonials_Add' element={<Testimonials_ADD />} />
+        <Route path='/dashboard' element={<PrivateRouter />} >
+          <Route path='admin' element={<Dashboard />} />
+          <Route path='/admin/Testimonials_Add' element={<Testimonials_ADD />} />
+        </Route>
         <Route path='/admin/Testimonials_Display' element={<Testimonial_Display />} />
         <Route path='/admin/Testimonials_Update/:id' element={<Testimonial_Update />} />
         <Route path='/admin/Society_Add' element={<Society_Add />} />
@@ -121,8 +124,8 @@ function App() {
         <Route path='/admin/Prev_Year_Paper_Dislay' element={<QuestionPaperDisplay />} />
         <Route path='/admin/Prev_Year_Paper_Add' element={<QuestionPaperAdd />} />
         <Route path='/admin/Prev_Year_Paper_Update/:course/:Year/:Semester/:_id' element={<QuestionPaperUpdate />} />
-        {/* <Route path='/admin/login' element={<Login />} /> */}
         <Route path="/Prev_Year_Paper_PDF_Display/:_id/:index/:name" element={<QuestionPaperPDFDisplay />} />
+        {/* <Route path='/admin/login' element={<Login />} /> */}
 
 
       </Routes>

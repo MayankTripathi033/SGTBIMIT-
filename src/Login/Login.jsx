@@ -1,20 +1,31 @@
 import React, { useState } from 'react'
 import './login.css'
-// import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import axios from 'axios';
+import { useAuth } from '../Context/auth';
 
 
 export default function Login() {
     const [email,setEamil] = useState();
     const [password , setPassword] = useState();
+    const navigate = useNavigate();
+    const [auth,setAuth] = useAuth();
+
 
     const handleLogin = async ()=>{
         try {
-            const data = await axios.post("http://localhost:5000/Admin/Login",{email,password});
+            const data = (await axios.post("http://localhost:5000/Admin/Login",{email,password})).data;
             console.log(data);
             if(data.token){
-                localStorage.setItem("authorization", data.token);
+                setAuth({
+                    ...auth,
+                    _id : data.admin._id,
+                    token : data.token,
+                })
+                localStorage.setItem("authorization", JSON.stringify(data.token));
                 localStorage.setItem("_id",data.admin._id);
+
+                navigate("/admin/dashboard")
             }
         } catch (error) {
             console.log(error);
