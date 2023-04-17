@@ -6,14 +6,16 @@ import { useAuth } from '../Context/auth';
 
 
 export default function Login() {
+
     const [email,setEamil] = useState();
     const [password , setPassword] = useState();
     const navigate = useNavigate();
     const [auth,setAuth] = useAuth();
 
 
-    const handleLogin = async ()=>{
+    const handleLogin = async () => {
         try {
+
             const data = (await axios.post("http://localhost:5000/Admin/Login",{email,password})).data;
             console.log(data);
             if(data.token){
@@ -26,6 +28,7 @@ export default function Login() {
                 localStorage.setItem("_id",data.admin._id);
 
                 navigate("/admin/dashboard")
+
             }
         } catch (error) {
             console.log(error);
@@ -42,29 +45,33 @@ export default function Login() {
                 <img className="login-logo" src={require("../images/sgtbimit.png")} alt="" />
                 <div className="form-container">
                     <p className="login-title">Login</p>
-                    <div className="form" method="POST">
+                    <div className="form" >
                         <div className="input-group">
                             <label for="email">Email</label>
-                            <input type="text" name="email" id="email" placeholder="" onChange={(e) =>{
+                            <input type="email" name="email" id="email" placeholder="" onChange={(e) => {
                                 setEamil(e.target.value);
-                            }}/>
+                            }}
+                                required
+                            />
                         </div>
                         <div className="input-group">
                             <label for="password">Password</label>
-                            <input type="password" name="password" id="password" placeholder="" onChange={(e)=>{
+                            <input type="password" name="password" id="password" placeholder="" onChange={(e) => {
                                 setPassword(e.target.value);
-                            }}/>
+                            }}
+                            maxLength="12"
+                             />
                             <div className="forgot">
                                 <a rel="noopener noreferrer" href="#">Forgot Password ?</a>
                             </div>
                         </div>
                         <button className="sign" onClick={handleLogin}>Sign in</button>
                     </div>
-                   
-                    </div>
-                    
+
+                </div>
+
             </section>
-            
+
         </>
     )
 }

@@ -1,0 +1,45 @@
+.research-section {
+    width: 100%;
+    position: relative;
+    padding: min(2rem, 2vw);
+    background: linear-gradient(252.16deg, #FFFFFF 12.88%, #E7F3FF 60.19%),
+        linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    font-family: "Spline Sans";
+}
+
+.research-img img {
+    width: 100%;
+}
+
+.research-content {
+    font-size: min(2.25rem, 4.5vw);
+    line-height: 44px;
+    text-align: justify;
+    padding: min(2rem, 2vw);
+
+}
+
+.research-box {
+    background-color: rgb(48, 62, 74);
+    color: white;
+    display: grid;
+    grid-template-columns: 35% 65%;
+}
+
+.research-box-left p {
+    font-size: min(2rem, 4vw);
+    font-weight: 400;
+    line-height: 34px;
+    padding: min(2rem, 2vw);
+
+}
+
+.research-box-left a{
+    font-size: min(2.25rem, 4.5vw);
+    color: white;
+    border-bottom: 2px solid rgba(255,255,255,0.5);
+}
+
+.research-box-right{
+    padding-inline: min(2rem, 2vw);
+}

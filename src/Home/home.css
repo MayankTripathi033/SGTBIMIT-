@@ -464,6 +464,7 @@
 
 .placement-grid>div {
     scroll-snap-align: start;
+    scroll-margin-inline: min(2rem, 2vw);
 }
 
 .placement-grid::-webkit-scrollbar {
