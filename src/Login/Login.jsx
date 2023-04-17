@@ -1,14 +1,29 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './login.css'
-import { useNavigate } from 'react-router-dom'
+// import { useNavigate } from 'react-router-dom'
+import axios from 'axios';
 
 
 export default function Login() {
-    const navigate = useNavigate()
+    const [email,setEamil] = useState();
+    const [password , setPassword] = useState();
 
-    const handleClick = ()=>{
-        navigate("/admin")
+    const handleLogin = async ()=>{
+        try {
+            const data = await axios.post("http://localhost:5000/Admin/Login",{email,password});
+            console.log(data);
+            if(data.token){
+                localStorage.setItem("authorization", data.token);
+                localStorage.setItem("_id",data.admin._id);
+            }
+        } catch (error) {
+            console.log(error);
+        }
     }
+
+    // const handleClick = ()=>{
+    //     navigate("/admin")
+    // }
 
     return (
         <>
@@ -16,20 +31,24 @@ export default function Login() {
                 <img className="login-logo" src={require("../images/sgtbimit.png")} alt="" />
                 <div className="form-container">
                     <p className="login-title">Login</p>
-                    <form className="form" method="POST" action="/login-auth">
+                    <div className="form" method="POST">
                         <div className="input-group">
-                            <label for="username">Username</label>
-                            <input type="text" name="username" id="username" placeholder="" />
+                            <label for="email">Email</label>
+                            <input type="text" name="email" id="email" placeholder="" onChange={(e) =>{
+                                setEamil(e.target.value);
+                            }}/>
                         </div>
                         <div className="input-group">
                             <label for="password">Password</label>
-                            <input type="password" name="password" id="password" placeholder="" />
+                            <input type="password" name="password" id="password" placeholder="" onChange={(e)=>{
+                                setPassword(e.target.value);
+                            }}/>
                             <div className="forgot">
                                 <a rel="noopener noreferrer" href="#">Forgot Password ?</a>
                             </div>
                         </div>
-                        <button className="sign">Sign in</button>
-                    </form>
+                        <button className="sign" onClick={handleLogin}>Sign in</button>
+                    </div>
                    
                     </div>
                     

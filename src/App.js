@@ -95,7 +95,7 @@ function App() {
 
 
         <Route path='/admin' element={<Login />} />
-        <Route path='/dashboard' element={<Dashboard />} />
+        <Route path='/admin/dashboard' element={<Dashboard />} />
         <Route path='/admin/Testimonials_Add' element={<Testimonials_ADD />} />
         <Route path='/admin/Testimonials_Display' element={<Testimonial_Display />} />
         <Route path='/admin/Testimonials_Update/:id' element={<Testimonial_Update />} />
@@ -123,7 +123,7 @@ function App() {
         <Route path='/admin/Prev_Year_Paper_Dislay' element={<QuestionPaperDisplay />} />
         <Route path='/admin/Prev_Year_Paper_Add' element={<QuestionPaperAdd />} />
         <Route path='/admin/Prev_Year_Paper_Update/:course/:Year/:Semester/:_id' element={<QuestionPaperUpdate />} />
-        <Route path='/admin/login' element={<Login />} />
+        {/* <Route path='/admin/login' element={<Login />} /> */}
         <Route path="/Prev_Year_Paper_PDF_Display/:_id/:index/:name" element={<QuestionPaperPDFDisplay />} />
 
 
