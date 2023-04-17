@@ -1,20 +1,34 @@
 import React, { useState } from 'react'
 import './login.css'
-// import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import axios from 'axios';
+import { useAuth } from '../Context/auth';
 
 
 export default function Login() {
-    const [email, setEamil] = useState();
-    const [password, setPassword] = useState();
+
+    const [email,setEamil] = useState();
+    const [password , setPassword] = useState();
+    const navigate = useNavigate();
+    const [auth,setAuth] = useAuth();
+
 
     const handleLogin = async () => {
         try {
-            const data = await axios.post("http://localhost:5000/Admin/Login", { email, password });
+
+            const data = (await axios.post("http://localhost:5000/Admin/Login",{email,password})).data;
             console.log(data);
-            if (data.token) {
-                localStorage.setItem("authorization", data.token);
-                localStorage.setItem("_id", data.admin._id);
+            if(data.token){
+                setAuth({
+                    ...auth,
+                    _id : data.admin._id,
+                    token : data.token,
+                })
+                localStorage.setItem("authorization", JSON.stringify(data.token));
+                localStorage.setItem("_id",data.admin._id);
+
+                navigate("/admin/dashboard")
+
             }
         } catch (error) {
             console.log(error);
@@ -31,7 +45,7 @@ export default function Login() {
                 <img className="login-logo" src={require("../images/sgtbimit.png")} alt="" />
                 <div className="form-container">
                     <p className="login-title">Login</p>
-                    <form className="form" method="POST">
+                    <div className="form" >
                         <div className="input-group">
                             <label for="email">Email</label>
                             <input type="email" name="email" id="email" placeholder="" onChange={(e) => {
@@ -52,7 +66,7 @@ export default function Login() {
                             </div>
                         </div>
                         <button className="sign" onClick={handleLogin}>Sign in</button>
-                    </form>
+                    </div>
 
                 </div>
 

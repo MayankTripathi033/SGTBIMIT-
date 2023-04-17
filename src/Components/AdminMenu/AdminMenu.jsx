@@ -27,7 +27,7 @@ const AdminMenu = () => {
         <div
           className="Categories"
           onClick={() => {
-            navigate("/admin");
+            navigate("/admin/dashboard");
           }}
         >
           <span className="categories_Header">
