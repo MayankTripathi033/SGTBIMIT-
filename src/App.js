@@ -29,6 +29,7 @@ import Events from './Events/Events.jsx'
 import Gallery from './Alumni/Gallery/Gallery.jsx'
 import Placements from './Industry Interface/Placements/Placements.jsx'
 import Research from './Academics/Research/Research.jsx'
+import Nss from './Events/Nss/Nss.jsx'
 
 /* Admin imports */
 
@@ -91,6 +92,7 @@ function App() {
         <Route path='/alumini/alumini-meet' element={<AlumniMeet />} />
         <Route path='/alumini/testimonials' element={<TestimonialsAL />} />
         <Route path="/events/past" element={<Events />} />
+        <Route path="events/nss" element={<Nss />} />
 
         {/* Admin Routes */}
 

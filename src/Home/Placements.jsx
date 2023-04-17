@@ -1,11 +1,20 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import Loader from '../Components/Loader'
 import useFetch from '../useFetch'
 import { motion } from 'framer-motion'
 
 
 export default function Placements() {
+  const scrollRef = useRef(null)
+  const handleClick = (e) => {
+    scrollRef.current.scrollLeft += 400
+  }
+
   const { data: placementArray, isPending } = useFetch("http://localhost:5000/Placement_Intership/PlacementInterships_Display")
+
+  useEffect(() => {
+    scrollRef.current.scrollLeft = 0
+  }, [placementArray])
 
   return (
 
@@ -26,11 +35,11 @@ export default function Placements() {
           }}
         >
           Placements and Internships.
-
         </motion.h1>
         <div className="placement-bg"></div>
         {isPending && <Loader />}
         <motion.div className="placement-grid"
+          ref={scrollRef}
           initial={{
             opacity: 0,
             x: -100,
@@ -54,8 +63,9 @@ export default function Placements() {
               )
             })
           }
-          <div className="place-card blank"></div>
+          <div className="blank place-card"></div>
         </motion.div>
+        <button type='button' onClick={(e) => { handleClick(e) }}>Scroll</button>
       </div>
 
 

@@ -460,6 +460,7 @@
     padding-bottom: min(4rem, 4vw);
     position: relative;
     scroll-snap-type: x mandatory;
+    scroll-behavior: 'smooth';
 }
 
 .placement-grid>div {

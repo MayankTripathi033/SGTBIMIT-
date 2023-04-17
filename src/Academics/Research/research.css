@@ -4,16 +4,17 @@
     padding: min(2rem, 2vw);
     background: linear-gradient(252.16deg, #FFFFFF 12.88%, #E7F3FF 60.19%),
         linear-gradient(0deg, #FFFFFF, #FFFFFF);
+
+}
+.research-section *{
     font-family: "Spline Sans";
 }
-
 .research-img img {
     width: 100%;
 }
 
 .research-content {
     font-size: min(2.25rem, 4.5vw);
-    line-height: 44px;
     text-align: justify;
     padding: min(2rem, 2vw);
 
@@ -24,22 +25,34 @@
     color: white;
     display: grid;
     grid-template-columns: 35% 65%;
+    padding-block: min(2rem, 2vw);
+    place-items: center;
 }
 
 .research-box-left p {
     font-size: min(2rem, 4vw);
-    font-weight: 400;
-    line-height: 34px;
     padding: min(2rem, 2vw);
 
 }
 
-.research-box-left a{
+.research-box-left a {
     font-size: min(2.25rem, 4.5vw);
     color: white;
-    border-bottom: 2px solid rgba(255,255,255,0.5);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
 }
 
-.research-box-right{
+.research-box-right {
     padding-inline: min(2rem, 2vw);
+}
+
+.res-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: min(2rem, 2vw);
+}
+.research-card{
+    width: 100%;
+    aspect-ratio: 74.5/100;
+    background-color: white;
+    color: black;
 }
