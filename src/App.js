@@ -61,6 +61,8 @@ import CalenderDisplay from './Pages/Academic Calender/Calender_Display/Calender
 import CalenderUpdate from './Pages/Academic Calender/Calender_Update/Calender_Update.jsx'
 import Login from './Login/Login.jsx'
 import QuestionPaperUpdate from './Pages/QuestionPaper/QuestionPaperUpdate/QuestionPaperUpdate.jsx'
+import Registration from './Alumni/Registration/Registration.jsx'
+
 import PrivateRouter from './Routes/Private.js'
 
 function App() {
@@ -94,6 +96,8 @@ function App() {
         <Route path="/events/past" element={<Events />} />
         <Route path="events/nss" element={<Nss />} />
 
+        <Route path='/alumini/registration' element={<Registration/>} />
+ 
         {/* Admin Routes */}
 
 

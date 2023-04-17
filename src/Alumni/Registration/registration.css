@@ -1,0 +1,44 @@
+.Alumniform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: min(4rem, 4vw);
+}
+
+
+.personal-details {
+    display: flex;
+    flex-direction: column;
+    width: min(800px, 100%);
+    gap: .25rem;
+    font-size: 1.2rem;
+}
+
+.personal-details h1{
+    text-align: center;
+    font-size: min(3rem, 3vw);
+}
+
+.personal-details h2{
+    background: linear-gradient(to right, var(--secondary-clr), transparent)
+}
+.personal-details button{
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    padding: 1rem 2rem;
+    background-color: #005E93;
+    color: white;
+    font-size: 1.5rem;
+}
+.personal-details label {
+    border: none;
+    outline: none;
+}
+.personal-details input:not(input[type=radio]) {
+    border: 2px solid rgba(20,20,20, 0.2);
+    border-radius: 5px;
+    outline: none;
+    height: 30px;
+
+}
