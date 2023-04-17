@@ -25,7 +25,6 @@ export default function Login() {
                     token : data.token,
                 })
                 localStorage.setItem("auth", JSON.stringify(data));
-                // localStorage.setItem("_id",data.admin._id);
 
                 navigate("/dashboard/admin")
 
@@ -35,10 +34,25 @@ export default function Login() {
         }
     }
 
-    // const handleClick = ()=>{
-    //     navigate("/admin")
-    // }
+    const handleForgetpassword = async () =>{
+        try {
+            if(email){
+                const data = (await axios.post(`http://localhost:5000/Admin/EmailCheck/${email}`)).data
+                console.log(data);
+                if(data.status){
+                    navigate(`/admin/forgetPassword/${data.status}`)
+                    window.alert(data.message)
+                }
+            }else{
+                window.alert("Enter please Email")
+            }
+            
+        } catch (error) {
+            console.log(error);
+        }
+    }
 
+    
     return (
         <>
             <section className="login-section">
@@ -62,7 +76,7 @@ export default function Login() {
                             maxLength="12"
                              />
                             <div className="forgot">
-                                <a rel="noopener noreferrer" href="#">Forgot Password ?</a>
+                                <a rel="noopener noreferrer" onClick={handleForgetpassword}>Forgot Password ?</a>
                             </div>
                         </div>
                         <button className="sign" onClick={handleLogin}>Sign in</button>
