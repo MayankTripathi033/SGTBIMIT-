@@ -79,6 +79,7 @@ const FacultyDisplay = () => {
                     >
                       <div className="FacultyCardtitle">
                         <Meta title={value?.name} bordered={false} style={{ padding: "10px" }} />
+                        <Meta title={value?.Department}/>
                         <Meta
                           title={value?.post}
                           description={value?.detail}
@@ -94,7 +95,7 @@ const FacultyDisplay = () => {
                             color: "#adb5bd",
                           }}
                           onClick={() => {
-                            navigator(`/admin/Faculty_Update/${value._id}`);
+                            navigator(`/dashboard/admin/Faculty_Update/${value._id}`);
                           }}
                         />
                         <RiDeleteBin6Line
