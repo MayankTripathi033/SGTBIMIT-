@@ -13,29 +13,29 @@ export default function Registration() {
                     <h1>Alumni Registration Form</h1>
                     <h2>Personal Details</h2>
                     <label for="fname">First Name</label>
-                    <input type="text" name="" id="" />
+                    <input type="text" name="fname" id="fname" />
                     <label for="lname">Last Name</label>
-                    <input type="text" />
+                    <input type="text" name= "lname" id="lname"/>
                     <label for="email">Email</label>
                     <input type="email" name="email" id="email" />
                     <label for="Mobile">Mobile No.</label>
-                    <input type="text" name="" id="" />
+                    <input type="text" name="mobile" id="Mobile" />
                     <label for="Address">Address</label>
-                    <input type="text" name="" id="" />
+                    <input type="text" name="address" id="Address" />
                     <label for="Adhaar">Adhaar No.</label>
-                    <input type="text" name="" id="" />
+                    <input type="text" name="aadhaar" id="Adhaar" />
 
                     <h2>Higher Education Details</h2>
 
                     <label for="higher-studies">Higher Studies</label>
-                    <select name="select" id="">
+                    <select name="select">
                         <option value="BCA">BCA</option>
                         <option value="BBA">BBA</option>
                         <option value="BBA (B&I)">BBA(B&I)</option>
                         <option value="BCOMM">BCOMM</option>
                     </select>
                     <label for="Year">Year</label>
-                    <input type="text" />
+                    <input type="text" id="Year" name="year"/>
                     <label for="Employed">Employed</label>
                     <div>
                         <div>
