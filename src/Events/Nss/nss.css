@@ -36,6 +36,11 @@
     grid-template-columns: 40% 60%;
 }
 
+.about-nss {
+    display: flex;
+    flex-direction: column;
+}
+
 .about-nss h1 {
     font-family: "SF Pro Display-Bold";
     font-size: min(5rem, 10vw);
@@ -46,8 +51,74 @@
     font-size: min(1.6rem, 3.2vw);
     line-height: 2rem;
 }
-.nss-carousel-img{
+
+.nss-carousel-img {
     width: 600px;
     object-fit: contain;
     margin-left: auto;
+}
+
+.walkathon-section > button {
+    background-color: #005E93;
+    border-radius: 2rem;
+    padding: min(1rem, 1vw) min(4rem, 4vw);
+    color: white;
+    font-family: "Montserrat";
+    font-size: min(1.6rem, 3.2vw);
+    width: max-content;
+    margin-block: min(4rem, 4vw);
+}
+
+.walk-card {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: min(2rem, 2vw);
+}
+
+.walk-card-item {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 30px;
+    aspect-ratio: 410/500;
+    padding: min(2rem, 2vw);
+    border: 1.48px solid #B7B7B7;
+}
+
+.walk-card-item h1 {
+    color: #4E4E4E;
+    font-family: "SF Pro Display-Medium";
+    font-size: min(3rem, 6vw);
+    text-align: left;
+    margin: 0;
+    padding-block: min(2rem, 2vw);
+    border-bottom: 2px solid rgba(0,0,0,0.2) ;
+}
+.walk-card-item p {
+    text-align: left;
+    color: #9F9F9F;
+    font-size: min(1rem, 2vw);
+}
+.walk-card-bottom{
+    margin-top: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: min(2rem, 2vw);
+}
+
+.date-chip{
+    background-color: #005E93;
+    color: white;
+    padding: min(.5rem, .5vw) min(2rem, 2vw);
+    border-radius: 2rem;
+    font-size: min(0.875rem, 1.5vw);
+}
+.register-btn{
+    background-color: white;
+    color: #005E93;
+    padding: min(.5rem, .5vw) min(2rem, 2vw);
+    border-radius: 2rem;
+    font-size: min(0.875rem, 1.5vw);
+    outline: 2px solid #005E93
+
 }

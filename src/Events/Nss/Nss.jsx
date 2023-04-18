@@ -6,6 +6,54 @@ import nssImg2 from '../../images/nss-img-2.png'
 import { Carousel } from 'react-responsive-carousel'
 
 export default function Nss() {
+    const walkathon = [
+        [
+            {
+                title: 'WALKATHON',
+                detail: 'On Jan 29, 2023, Sri Guru Tegh Bahadur Institute of Management & Information Technology will be organizing  a “WALKATHON”.',
+                date: "29 JAN 2023",
+            },
+            {
+                title: 'WALKATHON',
+                detail: 'On Jan 29, 2023, Sri Guru Tegh Bahadur Institute of Management & Information Technology will be organizing  a “WALKATHON”.',
+                date: "29 JAN 2023",
+            },
+            {
+                title: 'WALKATHON',
+                detail: 'On Jan 29, 2023, Sri Guru Tegh Bahadur Institute of Management & Information Technology will be organizing  a “WALKATHON”.',
+                date: "29 JAN 2023",
+            },
+            {
+                title: 'WALKATHON',
+                detail: 'On Jan 29, 2023, Sri Guru Tegh Bahadur Institute of Management & Information Technology will be organizing  a “WALKATHON”.',
+                date: "29 JAN 2023",
+            },
+        ],
+        [
+            {
+                title: 'WALKATHON',
+                detail: 'On Jan 29, 2023, Sri Guru Tegh Bahadur Institute of Management & Information Technology will be organizing  a “WALKATHON”.',
+                date: "29 JAN 2023",
+            },
+            {
+                title: 'WALKATHON',
+                detail: 'On Jan 29, 2023, Sri Guru Tegh Bahadur Institute of Management & Information Technology will be organizing  a “WALKATHON”.',
+                date: "29 JAN 2023",
+            },
+            {
+                title: 'WALKATHON',
+                detail: 'On Jan 29, 2023, Sri Guru Tegh Bahadur Institute of Management & Information Technology will be organizing  a “WALKATHON”.',
+                date: "29 JAN 2023",
+            },
+            {
+                title: 'WALKATHON',
+                detail: 'On Jan 29, 2023, Sri Guru Tegh Bahadur Institute of Management & Information Technology will be organizing  a “WALKATHON”.',
+                date: "29 JAN 2023",
+            },
+        ],
+    ]
+
+
     return (
         <>
             <Header />
@@ -25,10 +73,10 @@ export default function Nss() {
                     </div>
                     <div className="about-nss-carousel">
                         <Carousel
-                        showThumbs={false}
-                        showIndicators={false}
+                            showThumbs={false}
+                            showIndicators={false}
                         >
-                            {[...Array(3)].map(()=>(
+                            {[...Array(3)].map(() => (
                                 <div className="nss-carousel-img">
                                     <img src={nssImg2} alt="cant load" />
                                 </div>
@@ -36,6 +84,33 @@ export default function Nss() {
                         </Carousel>
                     </div>
                 </div>
+                <section className="walkathon-section">
+                    <button type='button'>Upcoming Events</button>
+                    <Carousel
+                        showThumbs={false}
+                        showIndicators={false}
+                        showStatus={false}
+                    >
+                        {walkathon.map(walk => (
+                            <div className="walk-card">
+                                {walk.map(wal => (
+                                    <div className="walk-card-item">
+                                        <h1> {wal.title} </h1>
+                                        <p> {wal.detail} </p>
+                                        <div className="walk-card-bottom">
+                                            <div className="date-chip">
+                                                {wal.date}
+                                            </div>
+                                            <div className="register-btn">
+                                                <div>Register Now</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        ))}
+                    </Carousel>
+                </section>
             </section>
             <Footer />
         </>
