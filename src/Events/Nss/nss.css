@@ -11,6 +11,10 @@
     position: relative;
 }
 
+.nss-header img{
+    width: 100%;
+}
+
 .nss-header-title {
     position: absolute;
     bottom: 0;
@@ -57,8 +61,12 @@
     object-fit: contain;
     margin-left: auto;
 }
-
-.walkathon-section > button {
+.events-header{
+    display: flex;
+    align-items: center;
+    gap: min(2rem, 2vw);
+}
+.events-header >  button {
     background-color: #005E93;
     border-radius: 2rem;
     padding: min(1rem, 1vw) min(4rem, 4vw);
@@ -69,37 +77,36 @@
     margin-block: min(4rem, 4vw);
 }
 
-.walk-card {
+.event-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: min(2rem, 2vw);
 }
 
-.walk-card-item {
+.event-card {
     display: flex;
     flex-direction: column;
     background-color: white;
     border-radius: 30px;
-    aspect-ratio: 410/500;
-    padding: min(2rem, 2vw);
-    border: 1.48px solid #B7B7B7;
+    aspect-ratio: 390/500;
+    padding: min(1rem, 1vw);
+    border: 1.31944px solid #E2E2E2;
 }
 
-.walk-card-item h1 {
-    color: #4E4E4E;
-    font-family: "SF Pro Display-Medium";
-    font-size: min(3rem, 6vw);
+.event-card h1 {
+    color: #2D2D2D;
+    font-size: min(1.1rem, 2.2vw);
     text-align: left;
     margin: 0;
     padding-block: min(2rem, 2vw);
     border-bottom: 2px solid rgba(0,0,0,0.2) ;
 }
-.walk-card-item p {
+.event-card p {
     text-align: left;
     color: #9F9F9F;
     font-size: min(1rem, 2vw);
 }
-.walk-card-bottom{
+.event-card-bottom{
     margin-top: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;

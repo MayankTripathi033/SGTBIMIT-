@@ -12,7 +12,7 @@ import Map from './Map'
 import Admission from '../Components/Admission'
 import { Header, Navbar, Footer, Loader2 } from '../Components'
 import Committees from './Committees'
-
+import { Helmet } from 'react-helmet'
 
 export default function Home() {
 
@@ -26,9 +26,13 @@ export default function Home() {
   return (
 
     <>
+      <Helmet>
+        <title>SGTBIMIT | Home</title>
+      </Helmet>
       {isPending && <Loader2 />}
       {!isPending && (
         <>
+          
           <Header />
           <Navbar />
           <ImageCarousel />

@@ -48,8 +48,6 @@ header {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding-top: min(1rem, 1vw);
-  padding-inline: min(0.5rem, 0.5vw);
 }
 
 .header-top {
@@ -57,37 +55,45 @@ header {
   width: 100%;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
+  padding: min(1rem, 1vw) min(0.5rem, 0.5vw);
 }
 
 .header-btns button {
   border: none;
-  outline: none;
-  background-color: var(--primary-clr);
-  padding: min(1rem, 1vw);
-  color: white;
+  outline: 2px solid #005e93;
+  background-color: white;
+  padding: min(1.5rem, 1.5vw);
+  color: #005e93;
   letter-spacing: .125em;
-  font-weight: 700;
-  border-radius: 1.5rem;
-  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 3rem;
   font-size: min(1rem, 2vw);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  width: 300px;
 }
 
 .header-btns {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  gap: min(1.5rem, 1.5vw);
-  width: min(300px, 20%);
-}
-
-.header-btns button:hover {
-  outline: 3px solid white;
+  margin-top: auto;
 }
 
 .logo {
-  width: min(300px, 20%);
+  width: min(175px, 20%);
+  position: relative;
 }
-.logo img{
- width: min(175px, 100%);
+
+.logo img {
+  width: 100%;
+}
+
+.clg-heading-wrapper {
+  width: max-content;
+  display: flex;
+  gap: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  align-items: center ;
 }
 
 .clg-heading-wrapper p {
@@ -97,30 +103,27 @@ header {
 .clg-heading {
   color: red;
   font-size: min(1.5rem, 3vw);
-  font-weight: 800;
-  text-align: center;
-  transform: scaleY(1.3);
+  font-family: "SF Pro Display-Bold";
 }
 
 .clg-sub-heading {
   color: var(--primary-clr);
   font-weight: 500;
-  text-align: center;
   font-size: min(1.3rem, 2.6vw);
 }
 
 .clg-committee {
-  text-align: center;
   font-size: min(1rem, 2vw);
   font-weight: 500;
   color: red;
-  transform: scaleY(1.2);
 }
 
 
 .header-news {
   width: 100%;
   color: black;
+  padding-block: 1rem;
+  background-color: #eef9ff;
 }
 
 
