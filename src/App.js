@@ -99,6 +99,7 @@ function App() {
         <Route path="events/nss" element={<Nss />} />
         <Route path='/committees/:id' element={<CommitteePDF />}></Route>
         <Route path='/alumini/registration' element={<Registration />} />
+        <Route path='/industry/placements' element={<Placements />}/>
 
         {/* Admin Routes */}
 

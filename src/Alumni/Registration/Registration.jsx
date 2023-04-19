@@ -7,10 +7,9 @@ export default function Registration() {
         <>
             <Header />
             <Navbar />
-            <div className='Alumniform'>
-
+            <h1>Alumni Registration Form</h1>
                 <form className="personal-details">
-                    <h1>Alumni Registration Form</h1>
+                    
                     <h2>Personal Details</h2>
                     <label for="fname">First Name</label>
                     <input type="text" name="fname" id="fname" />
@@ -24,7 +23,10 @@ export default function Registration() {
                     <input type="text" name="address" id="Address" />
                     <label for="Adhaar">Adhaar No.</label>
                     <input type="text" name="aadhaar" id="Adhaar" />
-
+                    
+               
+                    <div className='alumniform-other'>
+                
                     <h2>Higher Education Details</h2>
 
                     <label for="higher-studies">Higher Studies</label>
@@ -68,9 +70,10 @@ export default function Registration() {
                     <button>Submit</button>
 
 
-                </form>
+                
 
-            </div>
+                    </div>
+                </form>
             <Footer />
         </>
     )

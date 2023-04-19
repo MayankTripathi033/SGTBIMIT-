@@ -1,0 +1,36 @@
+.placement-cell-container{
+    text-align: justify;
+    width: 95rem;
+    margin-left: 4.2rem;
+}
+
+.placement-cell-container>h1{
+    font-size:min(3rem,5vw);
+    text-align: center;
+    font-weight: bold;
+   
+}
+.placement-cell-container>h2{
+    font-size: min(2rem,4vw);
+    text-align: center;
+}
+.placement-cell-container>h3{
+    font-size: min(2rem,4vw);
+    
+}
+.placement-cell-container>p{
+    font-size: min(1.4rem,2.8vw);
+    
+}
+.pieimg{
+    text-align: center;
+   
+}
+.graphimg{
+    text-align: center;
+
+}
+
+
+
+
