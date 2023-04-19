@@ -11,7 +11,7 @@ import Recruiters from './Recruiters'
 import Map from './Map'
 import Admission from '../Components/Admission'
 import { Header, Navbar, Footer, Loader2 } from '../Components'
-import Committees from './Committees'
+import Committees from './Committees/Committees'
 import { Helmet } from 'react-helmet'
 
 export default function Home() {

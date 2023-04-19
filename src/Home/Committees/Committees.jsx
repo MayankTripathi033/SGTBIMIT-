@@ -1,33 +1,10 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-export default function Committees() {
-  const committees = [
-    {
-      name: "ANTI-RAGGING",
-      image: require("../images/anti-ragging.png"),
-      pdf: "../Assets/anti_ragging_poster.pdf",
-      detail: "Ragging is a punishable offence as per Hon'ble Supreme Court order."
-    },
-    {
-      name: "QUALITY POLICY",
-      image: require("../images/quality-policy.png"),
-      pdf: "../Assets/anti_ragging_poster.pdf",
-      detail: "Top Recruiters having placement drives at SGTBIMIT."
-    },
-    {
-      name: "SEXUAL HARRASMENT",
-      image: require("../images/sexual-harrassment.png"),
-      pdf: "../Assets/anti_ragging_poster.pdf",
-      detail: "Ragging is a punishable offence as per Hon'ble Supreme Court order."
-    },
-    {
-      name: "FEMALE FOETICIDE COMMITTEE",
-      image: require("../images/foeticide.png"),
-      pdf: "../Assets/anti_ragging_poster.pdf",
-      detail: "Caste Discrimination Complaint."
-    }
+import { committees } from './constant'
+import { Link } from 'react-router-dom'
 
-  ]
+export default function Committees() {
+
   return (
     <section className="committees">
       <div className="committees-container" >
@@ -68,23 +45,27 @@ export default function Committees() {
                 }}
               />
             </div>
-            <motion.a
-              href={committee.pdf}
-              download
-              initial={{
-                scale: 0,
-              }}
-              whileInView={{
-                scale: 1,
-              }}
-              transition={{
-                duration: 0.2,
-                delay: i * 0.15,
-              }}
+            <Link
+            to={`/committees/${committee.id}`}
             >
-              <img src={require("../images/pdf-icon.png")} alt="" />
-              <span>Download PDF</span>
-            </motion.a>
+              <motion.a
+                href={committee.pdf}
+                download
+                initial={{
+                  scale: 0,
+                }}
+                whileInView={{
+                  scale: 1,
+                }}
+                transition={{
+                  duration: 0.2,
+                  delay: i * 0.15,
+                }}
+              >
+                <img src={require("../../images/pdf-icon.png")} alt="" />
+                <span>View PDF</span>
+              </motion.a>
+            </Link>
             <motion.div
               className="committee-content"
               initial={{
