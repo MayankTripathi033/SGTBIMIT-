@@ -30,6 +30,10 @@ import Gallery from './Alumni/Gallery/Gallery.jsx'
 import Placements from './Industry Interface/Placements/Placements.jsx'
 import Research from './Academics/Research/Research.jsx'
 import Nss from './Events/Nss/Nss.jsx'
+import NoticePDF from './Notices/NoticePDF.jsx'
+import Questionpaper from './Academics/Questionpaper/Questionpaper'
+import Registration from './Alumni/Registration/Registration.jsx'
+import CommitteePDF from './Home/Committees/CommitteePDF.jsx'
 
 /* Admin imports */
 
@@ -37,7 +41,6 @@ import Nss from './Events/Nss/Nss.jsx'
 import Dashboard from './Login/Dashboard.jsx'
 import Testimonial_Update from './Pages/Testimonials/Testimonial_Update/Testimonial_Update.jsx'
 import Society_Update from './Pages/Society/Society_Update/Society_Update.jsx'
-import Questionpaper from './Academics/Questionpaper/Questionpaper'
 import FacultyAdd from './Pages/Faculty/Faculty_Add/FacultyAdd.jsx'
 import FacultyDisplay from './Pages/Faculty/Faculty_Display/FacultyDisplay.jsx'
 import FacultyUpdate from './Pages/Faculty/Faculty_Update/FacultyUpdate.jsx'
@@ -61,8 +64,6 @@ import CalenderDisplay from './Pages/Academic Calender/Calender_Display/Calender
 import CalenderUpdate from './Pages/Academic Calender/Calender_Update/Calender_Update.jsx'
 import Login from './Login/Login.jsx'
 import QuestionPaperUpdate from './Pages/QuestionPaper/QuestionPaperUpdate/QuestionPaperUpdate.jsx'
-import Registration from './Alumni/Registration/Registration.jsx'
-
 import PrivateRouter from './Routes/Private.js'
 
 function App() {
@@ -83,6 +84,7 @@ function App() {
         <Route path='/academics/syllabus' element={<Syllabus />} />
         <Route path='/admission/courses-eligibility' element={<Eligibility />} />
         <Route path='/admission/notices' element={<Notice />} />
+        <Route path='/admission/notices/:id' element={<NoticePDF />} />
         <Route path='/alumini/gallery' element={<Gallery />} />
         <Route path='/academics/courses/bba' element={<Bba />} />
         <Route path='/academics/courses/bbab&i' element={<BbaBI />} />
@@ -95,9 +97,9 @@ function App() {
         <Route path='/alumini/testimonials' element={<TestimonialsAL />} />
         <Route path="/events/past" element={<Events />} />
         <Route path="events/nss" element={<Nss />} />
+        <Route path='/committees/:id' element={<CommitteePDF />}></Route>
+        <Route path='/alumini/registration' element={<Registration />} />
 
-        <Route path='/alumini/registration' element={<Registration/>} />
- 
         {/* Admin Routes */}
 
 

@@ -387,6 +387,15 @@
     border-radius: 2rem;
 }
 
+.committee-item>a {
+    margin-left: auto;
+    padding-block: 0em;
+    padding-inline: 0em;
+}
+.com-pdf{
+    height: 100vh;
+}
+
 .committee-img {
     position: absolute;
     top: 0;
@@ -447,10 +456,14 @@
     position: absolute;
     width: 35%;
     height: calc(100% - var(--scroll-width) - var(--padding));
-    left: 1236px;
+    right: 0;
     top: 0px;
     background: linear-gradient(270deg, #EDF5FD 15.76%, rgba(255, 255, 255, 0) 94.58%);
     z-index: 10;
+}
+
+.scroll-btn {
+    position: absolute;
 }
 
 .placement-grid {
@@ -500,7 +513,7 @@
     box-shadow: 0 10px 30px 10px rgba(125, 162, 178, 0.2);
 }
 
-.blank{
+.blank {
     box-shadow: none;
     background-color: transparent;
 }
