@@ -203,16 +203,16 @@
 
 .testimonial-img {
     background: linear-gradient(123.5deg, #FFFFFF 23.2%, #EAF4FF 74.08%);
-    height: 100%;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    align-items: flex-end;
     padding-top: 2rem;
 }
 
 .testimonial-img img {
-    width: 100%;
+    width: 50% !important;
 }
 
 @media(max-width: 1000px) {
@@ -519,7 +519,6 @@
 }
 
 .place-heading {
-    font-family: "Montserrat";
     font-size: min(1.875rem, 3.75vw);
     color: #181818;
     margin-top: auto;
