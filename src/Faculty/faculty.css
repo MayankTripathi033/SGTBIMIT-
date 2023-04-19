@@ -1,47 +1,80 @@
-.faculty * {
-    text-align: center;
-}
-
 .faculty {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: min(2rem, 2vw);
 }
 
-.faculty-content, .note {
-    font-style: italic;
+.faculty-content{
     color: rgba(0, 0, 0, 0.75);
+    font-size: min(1.5rem, 3vw);
 }
 
 .faculty-container {
-    width: min(1100px, 100%);
+    position: relative;
 }
 
 .faculty-container h1 {
-    color: var(--secondary-clr);
-    font-size: min(3rem, 8vw);
+    font-size: min(3rem, 6vw);
+    font-family: "SF Pro Display-Bold";
 }
 
 .faculty-grid {
-    margin: min(2rem, 2vw);
+    width: min(1500px, 100%);
+    margin-inline: auto;
     display: grid;
-    grid-template-columns: repeat(3, min(380px, 40%));
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     gap: min(2rem, 2vw);
 }
 
-.position {
-    color: var(--secondary-clr);
-    font-weight: 700;
+.faculty-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    padding: min(1rem, 1vw);
+    padding-top: 0;
 }
 
-.faculty-card img{
-    width: 90%;
+.faculty-card img {
+    width: min(300px, 100%);
     margin-inline: auto;
+    aspect-ratio: 1;
+    object-fit: contain;
+    border-radius: 10px;
 }
 
-@media(max-width: 1200px){
-    .faculty-grid{
+.faculty-card h2 {
+    font-family: "SF Pro Display-Bold";
+    font-size: min(2.5rem, 5vw);
+}
+
+.fac-name{
+    display: flex;
+    flex-direction: column;
+    padding: min(1rem, 1vw);
+    
+}
+.fac-name h2,
+.fac-name p{
+    margin: 0;
+}
+.fac-name >p{
+    color: rgba(0, 0, 0, 0.6);
+    font-size: min(1.2rem, 2.4vw);
+}
+.fac-details {
+    padding-top: min(3rem, 3vw);
+    font-size: min(1.5rem, 3vw);
+    border-top: 2px solid rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: min(1rem, 1vw);
+}
+
+@media(max-width: 1200px) {
+    .faculty-grid {
         grid-template-columns: repeat(2, min(380px, 45%));
         place-content: center;
     }
