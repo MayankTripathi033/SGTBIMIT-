@@ -68,7 +68,7 @@ export default function Testimonials() {
                                         </motion.div>
                                         <div className="testimonial-img">
                                             <motion.img 
-                                            src={require("../images/diljit.png")} 
+                                            src={require("../images/jitu.jpg")} 
                                             alt=""
                                             initial={{
                                                 y: -400
