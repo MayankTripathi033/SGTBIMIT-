@@ -1,7 +1,7 @@
 import React from "react"
-import { Header, Navbar, Footer, Loader } from '../Components'
+import { Header, Navbar, Footer, Loader } from '../../Components'
 import "./Notices.css"
-import useFetch from "../useFetch"
+import useFetch from "../../useFetch"
 import { Link } from "react-router-dom"
 import { Helmet } from "react-helmet"
 

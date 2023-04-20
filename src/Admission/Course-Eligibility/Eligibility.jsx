@@ -1,7 +1,5 @@
 import React from "react";
-import Header from "../Components/Header";
-import Navbar from "../Components/Navbar";
-import Footer from "../Components/Footer";
+import { Header, Navbar, Footer } from "../../Components";
 import "./Eligibility.css";
 
 export default function Eligibility() {

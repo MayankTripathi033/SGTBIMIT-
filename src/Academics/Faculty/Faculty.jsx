@@ -1,7 +1,7 @@
 import React from 'react'
 import './faculty.css'
-import useFetch from '../useFetch'
-import { Header, Navbar, Footer, Loader } from '../Components'
+import useFetch from '../../useFetch'
+import { Header, Navbar, Footer, Loader } from '../../Components'
 export default function Faculty() {
     const { data: facultyData, isPending } = useFetch("http://localhost:5000/Faculty/Faculty_Display")
 

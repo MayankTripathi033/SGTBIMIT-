@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import useFetch from '../useFetch'
-import { Loader2 } from '../Components'
+import useFetch from '../../useFetch'
+import { Loader2 } from '../../Components'
 import { Helmet } from 'react-helmet'
 
 

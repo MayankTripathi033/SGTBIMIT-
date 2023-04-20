@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     padding: min(2rem, 2vw);
-    background: url(../images//bg-frame.png);
+    background: url("../../images/bg-frame.png");
 }
 
 .faculty-content{
