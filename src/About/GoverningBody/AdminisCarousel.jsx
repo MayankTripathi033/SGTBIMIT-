@@ -31,12 +31,11 @@ export default function AdminisCarousel() {
           {
             numAscending?.map((adminis) => (
               <div className="adminis" key={adminis?.Index}>
-                <div className="adminis-img">
+
                 <img
                   src={`http://localhost:5000/Administration/AdministrationImageDisplay/${adminis._id}`}
                   alt="cant load"
                 />
-                </div>
                 <h2 className="adminis-heading">
                   {adminis?.name}
                   <strong className="position"> {adminis?.position}</strong>

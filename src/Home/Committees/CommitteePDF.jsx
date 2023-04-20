@@ -1,6 +1,7 @@
 import React from 'react'
 import { committees } from './constant'
 import { useParams } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 
 export default function CommitteePDF() {
     const { id } = useParams()
@@ -12,8 +13,10 @@ export default function CommitteePDF() {
     console.log(filteredCommittee)
     return (
         <>
-            <h1>{filteredCommittee.name}</h1>
-            <embed
+            <Helmet>
+                <title>{filteredCommittee.name} </title>
+            </Helmet>
+            <iframe
                 src={filteredCommittee.pdf}
                 className='com-pdf'
             />

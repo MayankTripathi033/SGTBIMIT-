@@ -2,28 +2,13 @@ import React, { useState } from 'react'
 import { Carousel } from 'react-responsive-carousel'
 import { CustomArrow, CustomArrowNotActive } from '../Components/Carousel'
 import { motion } from 'framer-motion'
+import useFetch from '../useFetch'
+
 export default function Collaboration() {
-  const img = require("../images/Sharekhan.jpg")
-  const collabs = [
-    {
-      image: img
-    },
-    {
-      image: img
-    },
-    {
-      image: img
-    },
-    {
-      image: img
-    },
-    {
-      image: img
-    },
-    {
-      image: img
-    },
-  ]
+  const img = require("../images/Sharekhan.jpg") 
+  const { data: collabs, isPending } = useFetch("http://localhost:5000/Collaborations/Collaborations_Display")
+
+  
 
   let collabsChunks = []
   let i = 0
@@ -46,32 +31,32 @@ export default function Collaboration() {
     <section className='collab'>
       <div className="collab-container">
         <motion.h1
-        initial={{
-          x: 400
-        }}
-        whileInView={{
-          x: 0
-        }}
-        transition={{
-          duration: 0.5,
-          type: 'spring'
-        }}
+          initial={{
+            x: 400
+          }}
+          whileInView={{
+            x: 0
+          }}
+          transition={{
+            duration: 0.5,
+            type: 'spring'
+          }}
         >
           Collaborations.
         </motion.h1>
 
-        <motion.div 
-        className="collab-grid-container"
-        initial={{
-          x: -400
-        }}
-        whileInView={{
-          x: 0
-        }}
-        transition={{
-          duration: 0.5,
-          type: 'spring'
-        }}
+        <motion.div
+          className="collab-grid-container"
+          initial={{
+            x: -400
+          }}
+          whileInView={{
+            x: 0
+          }}
+          transition={{
+            duration: 0.5,
+            type: 'spring'
+          }}
         >
           <Carousel
             showThumbs={false}
@@ -99,11 +84,11 @@ export default function Collaboration() {
               </>
             )}
           >
-            {collabsChunks && collabsChunks.map((collabs, i) => (
+            {collabs && collabsChunks.map((collabss, i) => (
               <div className="collab-grid" key={`${i}collabgrid`}>
-                {collabs.map((collab, i) => (
+                {collabss.map((collab, i) => (
                   <div className="collab-img" key={`${i}collabimg`}>
-                    <img src={collab.image} alt="" />
+                    <img src={`http://localhost:5000/Collaborations/Collaborations_Image_Display/${collab._id}`} alt="" />
                   </div>
                 ))}
               </div>

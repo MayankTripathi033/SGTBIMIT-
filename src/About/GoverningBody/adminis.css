@@ -30,17 +30,13 @@
     padding-inline: min(4rem, 8vw);
 }
 
-.adminis-img {
+.adminis img {
     margin-inline: auto;
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     overflow: hidden;
-    width: 400px;
-}
-
-.adminis-img img {
-    object-fit: contain;
-    aspect-ratio: 1;
+    width: 400px !important;
+    position: relative;
 }
 
 .adminis-heading,

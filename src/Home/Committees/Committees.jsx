@@ -47,10 +47,9 @@ export default function Committees() {
             </div>
             <Link
             to={`/committees/${committee.id}`}
+            target='_blank'
             >
               <motion.a
-                href={committee.pdf}
-                download
                 initial={{
                   scale: 0,
                 }}

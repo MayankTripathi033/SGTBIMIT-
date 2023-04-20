@@ -3,6 +3,7 @@ import { Header, Navbar, Footer, Loader } from '../Components'
 import "./Notices.css"
 import useFetch from "../useFetch"
 import { Link } from "react-router-dom"
+import { Helmet } from "react-helmet"
 
 export default function Notice() {
 
@@ -10,6 +11,9 @@ export default function Notice() {
 
     return (
         <>
+        <Helmet>
+            <title>SGTBIMIT | Notices</title>
+        </Helmet>
             <Header />
             <Navbar />
             <>
@@ -22,11 +26,11 @@ export default function Notice() {
                                 <h1>{notice.Name}</h1>
                                 <p> {notice.Detail} </p>
                                 <div className="notice-file">
-                                    <Link to={`/admission/notices/${notice._id}`}>Read More</Link>
+                                    <Link to={`/admission/notices/${notice._id}`} target="_blank">Read More</Link>
                                 </div>
                             </div>
 
-                        ))}
+                        )).reverse()}
                     </div>
                 </section>
             </>
