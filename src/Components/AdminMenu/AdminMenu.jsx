@@ -13,6 +13,7 @@ const AdminMenu = () => {
   const [isSUBRecruitersActive, setIsSUBRecruitersActive] = useState(false);
   const [isSUBAdministrationActive, setIsSUBAdministrationActive] =
     useState(false);
+  const [isSUBAdmissionActive, setIsSUBAdmissionActive] = useState(false);
   const [isAboutActive, setIsAboutActive] = useState(false);
   const [isAcademicsActive, setIsAcademicsActive] = useState(false);
   const [isSUBEresourcesActive, setIsSUBEresourcesActive] = useState(false);
@@ -370,6 +371,40 @@ const AdminMenu = () => {
                     </span>
                   </div>
                 )}
+              </span>
+            </div>
+          )}
+        </div>
+        <div className="Categories">
+          <span
+            className="categories_Header"
+            onClick={() => {
+              setIsSUBAdmissionActive(!isSUBAdmissionActive);
+            }}
+          >
+            <span>
+              <ImBoxAdd className="CatHeadIcons" />
+              <h3>ADMISSION</h3>
+            </span>
+            <IoIosArrowDown className="CatHeadIcons" />
+          </span>
+          {isSUBAdmissionActive && (
+            <div className="Categoriesdropdown">
+              <span>
+                <p
+                  onClick={() => {
+                    navigate("/dashboard/admin/Notice_Add");
+                  }}
+                >
+                  NOTICE ADD
+                </p>
+                <p
+                  onClick={() => {
+                    navigate("/dashboard/admin/Notice_Display");
+                  }}
+                >
+                  NOTICE DISPLAY
+                </p>
               </span>
             </div>
           )}
