@@ -7,12 +7,12 @@
     background-color: #eef9ff;
 }
 .alumniform-other{
-    grid-column: span 2;
+    grid-column: 2;
 }
 
-.h1{
+.Alumniform h1,
+.Alumniform h1{
     font-family: "SF Pro Display-Bold";
-    
 }
 
 
