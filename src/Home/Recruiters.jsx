@@ -1,11 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import useFetch from '../useFetch'
 import Loader from '../Components/Loader'
 import { Carousel } from 'react-responsive-carousel'
 import { CustomArrow, CustomArrowNotActive } from '../Components/Carousel'
 import { motion } from 'framer-motion'
+import useIntersection from '../useIntersection'
 
 export default function Recruiters() {
+  const carouselRef = useRef(null)
+
+  const isVisible = useIntersection(carouselRef, '0px')
+
 
   const { data: recruiters, isPending } = useFetch("http://localhost:5000/Recruiters/recruiters_Display")
 
@@ -46,6 +51,7 @@ export default function Recruiters() {
       </motion.h1>
       <motion.div
         className="recruiters-container"
+        ref={carouselRef} 
         initial={{
           x: -400
         }}
@@ -62,12 +68,13 @@ export default function Recruiters() {
 
         {recruiters &&
           <Carousel
+            
             onChange={handleSlideChange}
             transitionTime={1000}
             showThumbs={false}
             showIndicators={false}
             showStatus={false}
-            autoPlay={true}
+            autoPlay={isVisible}
             infiniteLoop={true}
             selectedItem={0}
             renderArrowNext={(onClickHandler, hasNext, label) => (

@@ -375,7 +375,7 @@
     position: relative;
 }
 
-.committee-item a {
+.committee-item a >a {
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -491,16 +491,10 @@
     border-radius: 9px;
 }
 
-.placements img {
-    border-radius: 10px;
-    width: 100%;
-    aspect-ratio: 91.6/100;
-    object-fit: contain;
-}
 
 
 .place-card {
-    --wdith: 420px;
+    --wdith: 350px;
     min-width: var(--wdith);
     max-width: var(--wdith);
     aspect-ratio: 66/100;
@@ -514,6 +508,11 @@
     box-shadow: 0 10px 30px 10px rgba(125, 162, 178, 0.2);
 }
 
+.placements img {
+    border-radius: 10px;
+    width: 100%;
+    aspect-ratio: 91.6/100;
+}
 .blank {
     box-shadow: none;
     background-color: transparent;
