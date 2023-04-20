@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './styles.css'
 import AdminisCarousel from './About/GoverningBody/AdminisCarousel.jsx'
 import About from './About/About'
-import Vision from './Vision/Vision'
+import Vision from './About/Vision/Vision'
 import DirectorReadMore from './DirectorReadMore/DirectorReadMore'
 import Society from './Society/pages/Society.jsx'
 import Faculty from './Faculty/Faculty'
@@ -34,6 +34,7 @@ import NoticePDF from './Notices/NoticePDF.jsx'
 import Questionpaper from './Academics/Questionpaper/Questionpaper'
 import Registration from './Alumni/Registration/Registration.jsx'
 import CommitteePDF from './Home/Committees/CommitteePDF.jsx'
+import QuestionPaper from './Academics/QuestionPaperDisplay/QuestionPaper.jsx'
 
 /* Admin imports */
 
@@ -90,7 +91,7 @@ function App() {
         <Route path='/academics/courses/bbab&i' element={<BbaBI />} />
         <Route path='/academics/courses/bca' element={<Bca />} />
         <Route path='/academics/courses/bcom' element={<Bcom />} />
-        <Route path='/academics/prev-year-papers' element={<Questionpaper />} />
+        <Route path='/academics/prev-year-papers' element={<QuestionPaper />} />
         <Route path='/academics/academic-calender' element={<AcademicCal />} />
         <Route path='/academics/research' element={<Research />} />
         <Route path='/alumini/alumini-meet' element={<AlumniMeet />} />

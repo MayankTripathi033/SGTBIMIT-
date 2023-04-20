@@ -19,6 +19,7 @@ export default function CommitteePDF() {
             <iframe
                 src={filteredCommittee.pdf}
                 className='com-pdf'
+                title="com-pdf"
             />
         </>
     )

@@ -1,14 +1,13 @@
-/* About */
-
 .about {
     width: 100%;
     margin-inline: auto;
     margin-bottom: min(7rem, 7vw);
     position: relative;
     background: url("../images/bg-frame.png");
-    background-size:contain;
+    background-size: contain;
 }
-.about-container{
+
+.about-container {
     width: min(1000px, 100%);
     margin-inline: auto;
 }
@@ -16,8 +15,7 @@
 .about-title {
     text-align: center;
     font-size: min(3rem, 6vw);
-    color: var(--secondary-clr);
-    font-weight: 700;
+    font-family: "SF Pro Display-Bold";
     margin-top: 2.5rem;
 }
 
@@ -49,14 +47,15 @@
     padding: 0px 15px;
     width: min(1000px, 100%);
     margin-inline: auto;
-    
+
 
 }
 
 @media(max-width: 1400px) {
-    .about{
+    .about {
         background-image: none;
     }
+
     .about-content {
         flex-direction: column;
         justify-content: center;

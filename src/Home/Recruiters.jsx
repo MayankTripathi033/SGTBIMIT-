@@ -9,7 +9,7 @@ import useIntersection from '../useIntersection'
 export default function Recruiters() {
   const carouselRef = useRef(null)
 
-  const isVisible = useIntersection(carouselRef, '0px')
+  /*   const isVisible = useIntersection(carouselRef, '0px') */
 
 
   const { data: recruiters, isPending } = useFetch("http://localhost:5000/Recruiters/recruiters_Display")
@@ -51,7 +51,7 @@ export default function Recruiters() {
       </motion.h1>
       <motion.div
         className="recruiters-container"
-        ref={carouselRef} 
+        ref={carouselRef}
         initial={{
           x: -400
         }}
@@ -68,13 +68,13 @@ export default function Recruiters() {
 
         {recruiters &&
           <Carousel
-            
+
             onChange={handleSlideChange}
             transitionTime={1000}
             showThumbs={false}
             showIndicators={false}
             showStatus={false}
-            autoPlay={isVisible}
+            autoPlay={recruiters ? true : false}
             infiniteLoop={true}
             selectedItem={0}
             renderArrowNext={(onClickHandler, hasNext, label) => (

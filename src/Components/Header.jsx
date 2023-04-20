@@ -37,8 +37,8 @@ export default function Header() {
           </p>
         </div>
         <div className="desktop header-btns">
-          <button className="admission-btn" type="button">CLICK HERE FOR ADMISSIONS</button>
-          <button className="student-login-btn" type="button">STUDENT - ERP LOGIN</button>
+          <button className="admission-btn" type="button">Enroll for Admissions</button>
+          <button className="student-login-btn" type="button">Student - ERP Login</button>
         </div>
         <div className="mobile">
           <img src={require("../images/menu.png")} alt="" height={"50px"} className="menu" />

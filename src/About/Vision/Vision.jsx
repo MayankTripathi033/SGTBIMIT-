@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
-import Header from "../Components/Header";
-import Navbar from "../Components/Navbar";
-import Footer from "../Components/Footer";
-import visionimage from "../images/vision.jpg"
+import { Header, Navbar, Footer } from "../../Components";
+import visionimage from "../../images/vision.jpg"
 import "./Vision.css";
 
 export default function Vision() {
@@ -48,7 +46,7 @@ export default function Vision() {
             </ul>
           </div>
           <div className="VisionImage">
-          <img src={require("../images/vm.jpg")} alt="" />
+          <img src={require("../../images/vm.jpg")} alt="" />
           </div>
         </div>
       </div>

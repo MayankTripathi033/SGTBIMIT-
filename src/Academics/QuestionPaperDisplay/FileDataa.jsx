@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { RiDeleteBin6Line } from "react-icons/ri";
 import axios from "axios";
 
 const FileData = (props) => {
@@ -27,20 +26,7 @@ const FileData = (props) => {
     }
   }, [render,props]);
 
-  const SocietyDelete = async (value, Index) => {
-    try {
-      const _id = value;
-      console.log(_id);
-      await axios.get(
-        `http://localhost:5000/QuestionPaper/Paper_Delete/${_id}/${Number(
-          Index
-        )}`
-      );
-      setRender(1);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+
 
   return (
     <div className="FileNames Paper_detail">
@@ -56,8 +42,7 @@ const FileData = (props) => {
               }}
             >
               <h4
-                style={{
-                  fontFamily: "'Edu NSW ACT Foundation', cursive",
+                style={{  
                   cursor: "pointer",
                 }}
                 onClick={() => {
@@ -69,13 +54,6 @@ const FileData = (props) => {
               >
                 {value}
               </h4>
-              <RiDeleteBin6Line
-                className="TestBin"
-                onClick={() => {
-                  SocietyDelete(props._id, Index);
-                }}
-                style={{ color: "#d00000" }}
-              />
             </span>
           </div>
         );

@@ -123,8 +123,11 @@ header {
 
 }
 .header-news a{
-  color: red;
+  color: blue;
   text-transform: uppercase;
+}
+.header-news a:hover{
+  color: red;
 }
 
 

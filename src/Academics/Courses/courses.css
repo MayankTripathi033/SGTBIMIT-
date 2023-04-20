@@ -1,17 +1,15 @@
 .courses>h1{
     font-size: min(3rem,6vw);
-    font-weight: 800;
+    font-family: "SF Pro Display-Bold";
     text-align: center;
-    color: var(--secondary-clr);
 }
 .courses>p{
     font-size: min(1.5rem,4vw);
     text-align: justify;
-    margin: 4rem;
 }
 .diploma h1{
     font-size: min(2rem,4vw);
-    color: var(--secondary-clr);
+    font-family: "SF Pro Display-Bold";
 }
 
 .list-wrapper{
@@ -24,7 +22,7 @@
     color: black;
 }
 .list-wrapper p{
-    font-size: min(1.3rem,2.6vw);
+    font-size: min(1.37rem,3vw);
     text-align: justify;
     min-width: 90%;
     margin-inline: auto;

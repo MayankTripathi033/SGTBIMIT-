@@ -1,13 +1,13 @@
 .Vision_Container {
     text-align: center;
     padding: 10px 0px;
-    background: url("../images/bg-frame.png");
+    background: url("../../images/bg-frame.png");
     background-size: 100%;
 }
 
 .Vision_Container h1 {
-    color: var(--secondary-clr);    
     font-size: 45px;
+    font-family: "SF Pro Display-Bold";
 }
 
 .Detail_ImageContainer {
@@ -23,9 +23,9 @@
     padding: 50px;
 }
 
-.VisionDetail h3 {
-    color: var(--secondary-clr);
+.VisionDetail h3 {  
     font-size: 30px;
+    font-family: "SF Pro Display-Bold";
 }
 
 .VisionDetail p, ul {
