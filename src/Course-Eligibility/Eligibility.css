@@ -1,12 +1,17 @@
+.eli-section {
+    background: url("../images/bg-frame.png");
+}
+
 .eli_container {
     text-align: center;
     padding: 10px 0;
+    width: min(1500px, 100%);
+    margin-inline: auto;
 }
 
 .eli_container>h1 {
-    color: var(--secondary-clr);
-    font-size: 45px;
-    font-weight: 700;
+    font-size: min(4rem, 8vw);
+    font-family: "SF Pro Display-Bold";
 }
 
 .btns>h2 {

@@ -23,7 +23,12 @@ export default function Faculty() {
                                     <p>{post}</p>
                                     <div className='fac-details'>
                                         <p className="faculty-note">{detail}</p>
-                                        <p className="faculty-department">{"Department: " + Department}</p>
+                                        <p className="faculty-department">
+                                            <span style={{
+                                                fontFamily: "SF Pro Display-Bold"
+                                            }}>{"Department: "}</span>
+                                            {Department}
+                                            </p>
                                     </div>
                                 </div>
                             </div>

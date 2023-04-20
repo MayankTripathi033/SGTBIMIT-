@@ -1,26 +1,35 @@
-.examination{
+.examination-section {
+    background: url("../../images//bg-frame.png");
+    background-size: 100%;
+
+}
+
+.examination {
     text-align: justify;
-    padding: min(3.5rem,3.5vw);
+    padding: 1rem;
+    width: min(1500px, 100%);
+    margin-inline: auto;
 }
 
 
-.examination p{
-    font-size: min(1.5rem,4vw);
+.examination p {
+    font-size: min(1.37rem, 3vw);
     color: rgba(0, 0, 0, 0.9);
 }
 
-.examination h1{
-    font-size: min(4rem,8vw);
-    background-color:var(--primary-clr);
-    color: var(--secondary-clr);
+.examination h1 {
+    font-size: min(4rem, 8vw);
     text-align: center;
     border-radius: 10px;
+    font-family: "SF Pro Display-Bold";
 }
-.examination h2{
-    font-size: min(1.8rem,5vw);
-    color: var(--primary-clr);
+
+.examination h2 {
+    font-size: min(1.8rem, 5vw);
+    font-family: "SF Pro Display-Bold";
+
 }
-.examination li{
-    font-size: min(1.5rem,4vw);
-    color: var(--secondary-clr);
+
+.examination li {
+    font-size: min(1.37em, 3vw);
 }

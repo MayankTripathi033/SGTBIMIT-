@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { Header, Navbar, Footer } from "../../Components";
-import visionimage from "../../images/vision.jpg"
 import "./Vision.css";
 
 export default function Vision() {

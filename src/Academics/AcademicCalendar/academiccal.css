@@ -35,7 +35,7 @@
 .acad-cal h1{
     font-size: min(3rem,6vw);
     text-align: center;
-    color:var(--secondary-clr) ;
+    font-family: "SF Pro Display-Bold";
 }
 @media(max-width: 1000px){
     .acad-cal{

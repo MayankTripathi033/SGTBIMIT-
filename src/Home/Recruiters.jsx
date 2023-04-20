@@ -4,7 +4,7 @@ import Loader from '../Components/Loader'
 import { Carousel } from 'react-responsive-carousel'
 import { CustomArrow, CustomArrowNotActive } from '../Components/Carousel'
 import { motion } from 'framer-motion'
-import useIntersection from '../useIntersection'
+/* import useIntersection from '../useIntersection' */
 
 export default function Recruiters() {
   const carouselRef = useRef(null)

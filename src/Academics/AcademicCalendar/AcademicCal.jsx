@@ -11,9 +11,10 @@ export default function AcademicCal() {
         <>
             <Header />
             <Navbar />
-            {isPending && <Loader />}
+
             <section className='acad-cal'>
-                <h1>Academic Calendar</h1>
+                <h1>Academic Calendar</h1>  
+                {isPending && <Loader />}
                 <div className="cal-container">
                     <div className="cal-grid heading">
                         <div className="cal-date">

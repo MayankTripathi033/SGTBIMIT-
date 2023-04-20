@@ -5,7 +5,6 @@ import { motion } from 'framer-motion'
 import useFetch from '../useFetch'
 
 export default function Collaboration() {
-  const img = require("../images/Sharekhan.jpg") 
   const { data: collabs, isPending } = useFetch("http://localhost:5000/Collaborations/Collaborations_Display")
 
   

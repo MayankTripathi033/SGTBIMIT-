@@ -1,8 +1,6 @@
 import React from 'react'
 import './syllabus.css'
-import Navbar from '../../Components/Navbar.jsx'
-import Header from '../../Components/Header.jsx'
-import Footer from '../../Components/Footer.jsx'
+import { Header, Navbar, Footer } from '../../Components'
 import BCA from '../../Assets/BCA-SYLLABUS .pdf';
 import BCOM from '../../Assets/B.com_Syllabus.pdf';
 import BBABI from '../../Assets/BBA-BI-Syllabus.pdf';
@@ -72,7 +70,7 @@ export default function Syllabus() {
             <Header />
             <Navbar />
                 <div className="syllabus">
-                    <h1>SYLLABUS</h1>
+                    <h1>Syllabus</h1>
                     <div className="imptop">
                         <table>
                             <tr>

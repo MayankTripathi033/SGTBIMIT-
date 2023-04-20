@@ -1,22 +1,27 @@
+.alumini-meet-section {
+    background-image: url("../../images/bg-frame.png");
+}
+.alumnimeet {
+    width: min(1500px, 100%);
+    margin-inline: auto;
+}
 .alumnimeet h1{
-    font-size: min(3rem,6vw);
+    font-size: min(4rem,8vw);
     text-align: center;
-    color: var(--secondary-clr);  
+    font-family: "SF Pro Display-Bold";
 }
 .alumnimeet h2{
+    font-family: "SF Pro Display-Bold";
     font-size: min(2rem,4vw);
-    background-color: var(--primary-clr);
-    color: white;
-    padding: min(0.8rem,0.8vw);
     width: min(1500px,90%);
     margin-inline: auto;
 }
 .alumnimeet p{
-    font-size: min(1.3rem,3vw);
+    font-size: min(1.37rem,3vw);
     text-align: justify;
     width: min(1500px,90%);
     margin-inline: auto;
 }
 .alumnimeet li{
-    font-size: min(1.3rem,3vw);
+    font-size: min(1.37rem,3vw);
 }

@@ -1,8 +1,13 @@
+.Fees {
+    background-image: url("../images/bg-frame.png");
+    background-size: 100%;
+}
+
 .Fees > h1{
-    color: var(--secondary-clr);
     font-size: min(4rem, 8vw);
     text-align: center;
-    font-weight: 700;
+    font-family: "SF Pro Display-Bold";
+
 }
 
 .structure

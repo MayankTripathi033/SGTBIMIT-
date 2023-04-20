@@ -1,9 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import Footer from '../../Components/Footer'
-import Header from '../../Components/Header'
-import Loader from '../../Components/Loader'
-import Navbar from '../../Components/Navbar'
+import { Header, Navbar, Footer, Loader } from '../../Components'
 import useFetch from '../../useFetch'
 import '../society.css'
 export default function Society() {

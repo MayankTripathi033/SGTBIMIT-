@@ -3,11 +3,14 @@
     padding: min(2rem, 2vw);
     display: flex;
     flex-direction: column;
-    background: rgba(0, 0, 0, 0.05);
+    background: url("../images/bg-frame.png");
+    background-size: 100%;
 }
 
 .notices-section>h1 {
-    font-size: min(4rem, 4vw);
+    font-size: min(4rem, 8vw);
+    text-align: center;
+    font-family: "SF Pro Display-Bold";
 }
 
 .notices-grid {

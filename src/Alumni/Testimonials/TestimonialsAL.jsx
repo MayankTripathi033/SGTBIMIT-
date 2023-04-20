@@ -6,11 +6,10 @@ import { Header, Navbar, Footer } from '../../Components'
 export default function TestimonialsAL() {
     return (
         <>
-            <Header></Header>
-            <Navbar></Navbar>
-
+            <Header />
+            <Navbar />
             <section className='test-al-section'>
-
+                <h1>Testimonials</h1>
                 <div className="t-grid">
                     {[...Array(12)].map((x, i) => {
                         return (
@@ -24,10 +23,8 @@ export default function TestimonialsAL() {
                         )
                     })}
                 </div>
-
             </section>
-
-            <Footer></Footer>
+            <Footer />
         </>
     )
 }
