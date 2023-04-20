@@ -10,9 +10,9 @@
     grid-column: 2;
 }
 
-.Alumniform h1,
 .Alumniform h1{
     font-family: "SF Pro Display-Bold";
+    color: #2d2d2d;
 }
 
 

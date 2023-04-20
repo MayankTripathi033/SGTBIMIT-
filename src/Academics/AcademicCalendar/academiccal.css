@@ -33,9 +33,10 @@
     text-decoration: underline;
 }
 .acad-cal h1{
-    font-size: min(3rem,6vw);
+    font-size: min(4rem,8vw);
     text-align: center;
     font-family: "SF Pro Display-Bold";
+    color: #2d2d2d;
 }
 @media(max-width: 1000px){
     .acad-cal{

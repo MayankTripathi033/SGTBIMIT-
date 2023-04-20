@@ -5,11 +5,12 @@
 }
 
 .syllabus h1 {
-    font-size: min(3rem, 6vw);
+    font-size: min(4rem, 8vw);
     width: 90%;
     text-align: center;
     margin: 40px 5%;
     font-family: "SF Pro Display-Bold";
+    color: #2d2d2d;
 }
 
 .imptop {

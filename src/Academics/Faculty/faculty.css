@@ -16,8 +16,13 @@
 }
 
 .faculty-container h1 {
-    font-size: min(3rem, 6vw);
+    font-size: min(4rem, 8vw);
     font-family: "SF Pro Display-Bold";
+    color: #2d2d2d;
+    text-align: center;
+}
+.faculty-container > p {
+    text-align: center;
 }
 
 .faculty-grid {
@@ -48,7 +53,8 @@
 
 .faculty-card h2 {
     font-family: "SF Pro Display-Bold";
-    font-size: min(2.5rem, 5vw);
+    font-size: min(3rem, 6vw);
+    color: #2d2d2d;
 }
 
 .fac-name{

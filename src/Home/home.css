@@ -448,8 +448,9 @@
 }
 
 .placements-container>h1 {
-    font-size: min(3.75rem, 7.5vw);
+    font-size: min(4rem, 8vw);
     font-family: "SF Pro Display-Bold";
+    color: #2d2d2d;
 }
 
 .placement-bg {
@@ -558,6 +559,7 @@
 .collab-container h1 {
     font-size: min(4rem, 8vw);
     font-family: "SF Pro Display-Bold";
+    color: #2d2d2d;
 }
 
 .collab-grid {
@@ -601,8 +603,9 @@
 }
 
 .recruiters h1 {
-    font-size: min(3.75rem, 7.5vw);
+    font-size: min(4rem, 8vw);
     font-family: "SF Pro Display-Bold";
+    color: #2d2d2d;
 }
 
 .recruiters-item {

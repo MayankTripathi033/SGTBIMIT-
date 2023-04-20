@@ -6,8 +6,9 @@
 }
 
 .Vision_Container h1 {
-    font-size: 45px;
+    font-size: min(4rem, 8vw);
     font-family: "SF Pro Display-Bold";
+    color: #2d2d2d;
 }
 
 .Detail_ImageContainer {
