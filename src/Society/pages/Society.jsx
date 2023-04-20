@@ -3,11 +3,13 @@ import { useParams } from 'react-router-dom'
 import { Header, Navbar, Footer, Loader } from '../../Components'
 import useFetch from '../../useFetch'
 import '../society.css'
+import { Helmet } from 'react-helmet'
 export default function Society() {
     const { id } = useParams()
     const { data: society } = useFetch(`http://localhost:5000/Society/Single_Society_Display/${id}`)
     return (
         <>
+            <Helmet title={society?.title} />
             <Header />
             <Navbar />
             {!society && <Loader />}

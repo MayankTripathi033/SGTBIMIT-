@@ -1,11 +1,13 @@
 import React from "react";
 import { Header, Navbar, Footer } from "../../Components";
 import "./Eligibility.css";
+import { Helmet } from "react-helmet";
 
 export default function Eligibility() {
 
     return (
         <>
+            <Helmet title="SGTBIMIT | Courses Eligibility" />
             <Header />
             <Navbar />
             <section className="eli-section">

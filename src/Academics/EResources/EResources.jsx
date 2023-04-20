@@ -1,19 +1,19 @@
 import React from 'react'
 import './eresources.css'
 import { Link } from 'react-router-dom'
-import NavBar from '../../Components/Navbar'
-import Header from '../../Components/Header'
-import Footer from '../../Components/Footer'
+import { Header, Navbar, Footer, Loader } from '../../Components'
 import useFetch from '../../useFetch'
-import Loader from '../../Components/Loader'
+import { Helmet } from 'react-helmet'
+
 
 export default function EResources() {
 
     const { data: eResources, isPending } = useFetch("http://localhost:5000/E_Resources/EResources_Display")
     return (
         <>
-            <Header></Header>
-            <NavBar></NavBar>
+        <Helmet title="SGTBIMIT | E-Resources" />
+            <Header />
+            <Navbar />
             <section className='e-resources'>
                 <div className="e-resources-container">
                     <h1>SGTBIMIT Digital Library (E-Resources)</h1>
@@ -42,7 +42,7 @@ export default function EResources() {
                     </div>
                 </div>
             </section>
-            <Footer></Footer>
+            <Footer />
         </>
     )
 }

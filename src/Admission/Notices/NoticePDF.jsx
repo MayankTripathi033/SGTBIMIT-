@@ -27,9 +27,7 @@ export default function NoticePDF() {
 
   return (
     <>
-    <Helmet>    
-      <title>{filteredNotice.Name}</title>
-    </Helmet>
+    <Helmet title={filteredNotice.Name} />
       {isPending && <Loader2 />}
       {!isPending &&
         <>

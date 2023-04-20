@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import FileData from "./FileDataa";
 import "./QuestionPaperDisplay.css"
 import { Header, Navbar, Footer } from "../../Components";
+import { Helmet } from "react-helmet";
 
 const QuestionPaperDisplay = () => {
   const [render, setRender] = useState(0);
@@ -102,6 +103,7 @@ const QuestionPaperDisplay = () => {
   };
   return (
     <>
+    <Helmet title="SGTBIMIT | Previous Year Papers" />
     <Header />
     <Navbar />
       <div className="SocietyDisplayContainer"

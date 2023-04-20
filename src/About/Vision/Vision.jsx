@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Header, Navbar, Footer } from "../../Components";
 import "./Vision.css";
+import { Helmet } from "react-helmet";
 
 export default function Vision() {
   useEffect(()=>{
@@ -9,6 +10,7 @@ export default function Vision() {
  
   return (
     <>
+    <Helmet title="SGTBIMIT | Vision" />
       <Header />
       <Navbar />
       <div className="Vision_Container">

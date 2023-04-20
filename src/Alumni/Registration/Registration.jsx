@@ -1,10 +1,12 @@
 import React from 'react'
 import './registration.css'
 import { Header, Navbar, Footer } from '../../Components'
+import { Helmet } from 'react-helmet'
 
 export default function Registration() {
     return (
         <>
+        <Helmet title='SGTBIMIT | Alumini Registeration' />
             <Header />
             <Navbar />
             <h1>Alumni Registration Form</h1>

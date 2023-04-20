@@ -5,6 +5,7 @@ import BCA from '../../Assets/BCA-SYLLABUS .pdf';
 import BCOM from '../../Assets/B.com_Syllabus.pdf';
 import BBABI from '../../Assets/BBA-BI-Syllabus.pdf';
 import BBA from '../../Assets/BBA-SYLLABUS.pdf';
+import { Helmet } from 'react-helmet';
 
 export default function Syllabus() {
 
@@ -67,6 +68,7 @@ export default function Syllabus() {
 
     return (
         <>
+        <Helmet title="SGTBIMIT | Syllabus" />
             <Header />
             <Navbar />
                 <div className="syllabus">

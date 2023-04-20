@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 
 export default function Header() {
   const { data: notices } = useFetch("http://localhost:5000/Notice/Notice_Data_Display")
-  const filteredNotices = notices ? notices.filter((notice)=>(
+  const filteredNotices = notices ? notices.filter((notice) => (
     notice.Categories === "Important"
   )) : null
 
@@ -21,12 +21,13 @@ export default function Header() {
 
 
     <header>
+      <script src="//code.tidio.co/djv7qpldihqart98bhpeazlxworceabc.js" async></script>
       <Admission />
       <div className="header-top">
         <div className="logo">
-        <img src={logo} alt="" />
+          <img src={logo} alt="" />
         </div>
-        
+
         <div className="clg-heading-wrapper">
           <p className="clg-heading">SRI GURU TEGH BAHADUR INSTITUTE OF MANAGEMENT AND INFORMATION TECHNOLOGY</p>
           <p className="clg-sub-heading">
@@ -46,9 +47,9 @@ export default function Header() {
       </div>
       <div className="header-news">
         <marquee direction="left">
-          {notices && filteredNotices.map((notice)=>(
+          {notices && filteredNotices.map((notice) => (
             <span key={notice._id}>
-              <Link to = {`/admission/notices/${notice._id}`}>{` ${notice.Name} ||`}</Link>
+              <Link to={`/admission/notices/${notice._id}`}>{` ${notice.Name} ||`}</Link>
             </span>
           ))}
         </marquee>

@@ -1,12 +1,12 @@
 import React from 'react'
 import './examination.css'
-import Navbar from '../../Components/Navbar.jsx'
-import Header from '../../Components/Header.jsx'
-import Footer from '../../Components/Footer.jsx'
+import { Header, Navbar, Footer } from '../../Components'
+import { Helmet } from 'react-helmet'
 
 export default function Examination() {
   return (
     <>
+      <Helmet title="SGTBIMIT | Examination" />
       <Header></Header>
       <Navbar></Navbar>
       <section className="examination-section">

@@ -2,11 +2,13 @@ import React from 'react'
 import './faculty.css'
 import useFetch from '../../useFetch'
 import { Header, Navbar, Footer, Loader } from '../../Components'
+import { Helmet } from 'react-helmet'
 export default function Faculty() {
     const { data: facultyData, isPending } = useFetch("http://localhost:5000/Faculty/Faculty_Display")
 
     return (
         <>
+            <Helmet title="SGTBIMIT | Faculty" />
             <Header />
             <Navbar />
             <section className='faculty'>
@@ -28,7 +30,7 @@ export default function Faculty() {
                                                 fontFamily: "SF Pro Display-Bold"
                                             }}>{"Department: "}</span>
                                             {Department}
-                                            </p>
+                                        </p>
                                     </div>
                                 </div>
                             </div>

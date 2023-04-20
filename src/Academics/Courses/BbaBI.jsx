@@ -2,11 +2,13 @@ import React from 'react'
 import './courses.css'
 import { Header, Navbar, Footer } from '../../Components'
 import AdditionalDiploma from './AdditionalDiploma'
+import { Helmet } from 'react-helmet'
 
 
 export default function BbaBI() {
   return (
     <>
+      <Helmet title="SGTBIMIT | BBA (B&I)" />
       <Header />
       <Navbar />
       <section className="courses-section">

@@ -26,9 +26,7 @@ export default function Home() {
   return (
 
     <>
-      <Helmet>
-        <title>SGTBIMIT | Home</title>
-      </Helmet>
+      <Helmet title='SGTBIMIT | Home' />
       {isPending && <Loader2 />}
       {!isPending && (
         <>

@@ -1,11 +1,13 @@
 import React from 'react'
 import './testAl.css'
 import { Header, Navbar, Footer } from '../../Components'
+import { Helmet } from 'react-helmet'
 
 
 export default function TestimonialsAL() {
     return (
         <>
+        <Helmet title='SGTBIMIT | Alumini Testimonials' />
             <Header />
             <Navbar />
             <section className='test-al-section'>

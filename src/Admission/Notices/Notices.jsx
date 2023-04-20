@@ -11,9 +11,7 @@ export default function Notice() {
 
     return (
         <>
-        <Helmet>
-            <title>SGTBIMIT | Notices</title>
-        </Helmet>
+            <Helmet title="SGTBIMIT | Notices" />
             <Header />
             <Navbar />
             <>

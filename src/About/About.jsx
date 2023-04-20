@@ -3,9 +3,11 @@ import './about.css'
 import Navbar from '../Components/Navbar'
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'
+import { Helmet } from 'react-helmet'
 export default function About() {
     return (
         <>
+        <Helmet title="SGTBIMIT | About us" />
             <Header />
             <Navbar />
             <section className='about'>

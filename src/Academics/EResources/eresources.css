@@ -1,13 +1,13 @@
 .e-resources-container{
-    width: min(1100px, 100%);
+    width: min(1500px, 100%);
     margin-inline: auto;
     margin-block: 2rem;
 }
 .e-resources-container h1{
-    color: var(--secondary-clr);
-    font-size: min(3rem, 8vw);
+    font-size: min(4rem, 8vw);
     text-align: center;
-
+    font-family: "SF Pro Display-Bold";
+    
 }
 
 
@@ -15,13 +15,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    background-color: var(--primary-clr);
-    color: var(--secondary-clr);
-    font-weight: bolder;
+    background-color: black;
+    color: white;
 }
 
 .resources-headings>*{
-    border: 2px solid black;
+    font-family: "SF Pro Display-Bold";
     padding: min(1rem, 2vw);
     font-size: min(1.5rem, 4vw);
     text-align: center;

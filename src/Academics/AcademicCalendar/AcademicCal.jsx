@@ -2,6 +2,7 @@ import React from 'react'
 import './academiccal.css'
 import { Header, Navbar, Footer, Loader } from '../../Components'
 import useFetch from '../../useFetch'
+import { Helmet } from 'react-helmet'
 
 export default function AcademicCal() {
     const { data: calendar, isPending } = useFetch("http://localhost:5000/Calendar/CalendarDisplay")
@@ -9,11 +10,12 @@ export default function AcademicCal() {
 
     return (
         <>
+            <Helmet title="SGTBIMIT | Acamdeic Calendar" />
             <Header />
             <Navbar />
 
             <section className='acad-cal'>
-                <h1>Academic Calendar</h1>  
+                <h1>Academic Calendar</h1>
                 {isPending && <Loader />}
                 <div className="cal-container">
                     <div className="cal-grid heading">

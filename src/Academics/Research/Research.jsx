@@ -5,6 +5,7 @@ import img from '../../images/research-img.png'
 import { Link } from 'react-router-dom'
 import { Carousel } from 'react-responsive-carousel'
 import researchCardImg from '../../images/research-card-img.png'
+import { Helmet } from 'react-helmet'
 
 export default function Research() {
     const research = [
@@ -46,6 +47,7 @@ export default function Research() {
 
     return (
         <>
+        <Helmet title="SGTBIMIT | Research" />
             <Header />
             <Navbar />
             <section className='research-section'>
