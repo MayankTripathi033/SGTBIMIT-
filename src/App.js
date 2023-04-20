@@ -65,6 +65,7 @@ import CalenderUpdate from './Pages/Academic Calender/Calender_Update/Calender_U
 import Login from './Login/Login.jsx'
 import QuestionPaperUpdate from './Pages/QuestionPaper/QuestionPaperUpdate/QuestionPaperUpdate.jsx'
 import PrivateRouter from './Routes/Private.js'
+import NoticeAdd from './Pages/Notice/Notice_Add/Notice_Add.jsx'
 
 function App() {
 
@@ -134,6 +135,7 @@ function App() {
           <Route path='admin/Prev_Year_Paper_Dislay' element={<QuestionPaperDisplay />} />
           <Route path='admin/Prev_Year_Paper_Add' element={<QuestionPaperAdd />} />
           <Route path='admin/Prev_Year_Paper_Update/:course/:Year/:Semester/:_id' element={<QuestionPaperUpdate />} />
+          <Route path='admin/Notice_Add' element={<NoticeAdd />} />
         </Route>
 
         <Route path="/Prev_Year_Paper_PDF_Display/:_id/:index/:name" element={<QuestionPaperPDFDisplay />} />

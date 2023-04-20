@@ -56,7 +56,7 @@ export default function Fees() {
                             <h1>BBA(B&I)</h1>
                         </div>
                         <div className="info">
-                            <h3>Bachelor of Business Administration(Banking & Insurance)</h3>
+                            <h3>Bachelor of Business Administration(B & I)</h3>
                             <p>
                                 Fees :<b> Rs. 1,26,300/-</b><br />
                                 Duration : 3 Years And 120 seats in both shifts<br/>
