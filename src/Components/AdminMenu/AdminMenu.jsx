@@ -13,10 +13,12 @@ const AdminMenu = () => {
   const [isSUBRecruitersActive, setIsSUBRecruitersActive] = useState(false);
   const [isSUBAdministrationActive, setIsSUBAdministrationActive] =
     useState(false);
+  const [isSUBAdmissionActive, setIsSUBAdmissionActive] = useState(false);
   const [isAboutActive, setIsAboutActive] = useState(false);
   const [isAcademicsActive, setIsAcademicsActive] = useState(false);
   const [isSUBEresourcesActive, setIsSUBEresourcesActive] = useState(false);
   const [isQuestionPaperActive, setIsQuestionPaperActive] = useState(false);
+  const [isCalenderActive, setIsCalenderActive] = useState(false);
 
   const navigate = useNavigate();
 
@@ -26,7 +28,7 @@ const AdminMenu = () => {
         <div
           className="Categories"
           onClick={() => {
-            navigate("/admin");
+            navigate("/dashboard/admin");
           }}
         >
           <span className="categories_Header">
@@ -67,14 +69,14 @@ const AdminMenu = () => {
                     <span>
                       <p
                         onClick={() => {
-                          navigate("/admin/Testimonials_Add");
+                          navigate("/dashboard/admin/Testimonials_Add");
                         }}
                       >
                         TESTIMONIAL ADD
                       </p>
                       <p
                         onClick={() => {
-                          navigate("/admin/Testimonials_Display");
+                          navigate("/dashboard/admin/Testimonials_Display");
                         }}
                       >
                         TESTIMONIALS DISPLAY
@@ -98,14 +100,14 @@ const AdminMenu = () => {
                     <span>
                       <p
                         onClick={() => {
-                          navigate("/admin/Faculty_Add");
+                          navigate("/dashboard/admin/Faculty_Add");
                         }}
                       >
                         FACULTY ADD
                       </p>
                       <p
                         onClick={() => {
-                          navigate("/admin/Faculty_Display");
+                          navigate("/dashboard/admin/Faculty_Display");
                         }}
                       >
                         FACULTY DISPLAY
@@ -129,14 +131,14 @@ const AdminMenu = () => {
                     <span>
                       <p
                         onClick={() => {
-                          navigate("/admin/Placement_Add");
+                          navigate("/dashboard/admin/Placement_Add");
                         }}
                       >
                         PLACEMENT ADD
                       </p>
                       <p
                         onClick={() => {
-                          navigate("/admin/Placement_Display");
+                          navigate("/dashboard/admin/Placement_Display");
                         }}
                       >
                         PLACEMENT DISPLAY
@@ -160,14 +162,14 @@ const AdminMenu = () => {
                     <span>
                       <p
                         onClick={() => {
-                          navigate("/admin/Recruiters_Add");
+                          navigate("/dashboard/admin/Recruiters_Add");
                         }}
                       >
                         RECRUITERS ADD
                       </p>
                       <p
                         onClick={() => {
-                          navigate("/admin/Recruiters_Display");
+                          navigate("/dashboard/admin/Recruiters_Display");
                         }}
                       >
                         RECRUITERS DISPLAY
@@ -210,14 +212,14 @@ const AdminMenu = () => {
                     <span>
                       <p
                         onClick={() => {
-                          navigate("/admin/Administration_Add");
+                          navigate("/dashboard/admin/Administration_Add");
                         }}
                       >
                         GOVERNING BODY ADD
                       </p>
                       <p
                         onClick={() => {
-                          navigate("/admin/Administration_Display");
+                          navigate("/dashboard/admin/Administration_Display");
                         }}
                       >
                         GOVERNING BODY DISPLAY
@@ -247,14 +249,14 @@ const AdminMenu = () => {
               <span>
                 <p
                   onClick={() => {
-                    navigate("/admin/Society_Add");
+                    navigate("/dashboard/admin/Society_Add");
                   }}
                 >
                   SOCIETY ADD
                 </p>
                 <p
                   onClick={() => {
-                    navigate("/admin/Society_Display");
+                    navigate("/dashboard/admin/Society_Display");
                   }}
                 >
                   SOCIETY DISPLAY
@@ -294,14 +296,14 @@ const AdminMenu = () => {
                     <span>
                       <p
                         onClick={() => {
-                          navigate("/admin/EResources_Add");
+                          navigate("/dashboard/admin/EResources_Add");
                         }}
                       >
                         E-RESOURCES ADD
                       </p>
                       <p
                         onClick={() => {
-                          navigate("/admin/EResources_Display");
+                          navigate("/dashboard/admin/EResources_Display");
                         }}
                       >
                         E-RESOURCES DISPLAY
@@ -324,14 +326,14 @@ const AdminMenu = () => {
                     <span>
                       <p
                         onClick={() => {
-                          navigate("/admin/Prev_Year_Paper_Add");
+                          navigate("/dashboard/admin/Prev_Year_Paper_Add");
                         }}
                       >
                         PREV YEAR PAPERS ADD
                       </p>
                       <p
                         onClick={() => {
-                          navigate("/admin/Prev_Year_Paper_Dislay");
+                          navigate("/dashboard/admin/Prev_Year_Paper_Dislay");
                         }}
                       >
                         PREV YEAR PAPERS DISPLAY
@@ -339,6 +341,70 @@ const AdminMenu = () => {
                     </span>
                   </div>
                 )}
+                <p
+                  onClick={() => {
+                    setIsCalenderActive(!isCalenderActive);
+                  }}
+                  style={{
+                    backgroundColor: "#e0e1dd",
+                  }}
+                >
+                  ACADEMIC CALENDER <IoIosArrowDown className="CatHeadIcons" />
+                </p>
+                {isCalenderActive && (
+                  <div className="Categoriesdropdown">
+                    <span>
+                      <p
+                        onClick={() => {
+                          navigate("/dashboard/admin/Calender_Add");
+                        }}
+                      >
+                        CALENDER ADD
+                      </p>
+                      <p
+                        onClick={() => {
+                          navigate("/dashboard/admin/Calender_Display");
+                        }}
+                      >
+                        CALENDER DISPLAY
+                      </p>
+                    </span>
+                  </div>
+                )}
+              </span>
+            </div>
+          )}
+        </div>
+        <div className="Categories">
+          <span
+            className="categories_Header"
+            onClick={() => {
+              setIsSUBAdmissionActive(!isSUBAdmissionActive);
+            }}
+          >
+            <span>
+              <ImBoxAdd className="CatHeadIcons" />
+              <h3>ADMISSION</h3>
+            </span>
+            <IoIosArrowDown className="CatHeadIcons" />
+          </span>
+          {isSUBAdmissionActive && (
+            <div className="Categoriesdropdown">
+              <span>
+                <p
+                  onClick={() => {
+                    navigate("/dashboard/admin/Notice_Add");
+                  }}
+                >
+                  NOTICE ADD
+                </p>
+                <p
+                  onClick={() => {
+                    navigate("/dashboard/admin/Notice_Display");
+                  }}
+                >
+                  NOTICE DISPLAY
+                </p>
               </span>
             </div>
           )}

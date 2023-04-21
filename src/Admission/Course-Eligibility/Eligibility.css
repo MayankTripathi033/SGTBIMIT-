@@ -1,0 +1,64 @@
+.eli-section {
+    background: url("../../images/bg-frame.png");
+}
+
+.eli_container {
+    text-align: center;
+    padding: 10px 0;
+    width: min(1500px, 100%);
+    margin-inline: auto;
+}
+
+.eli_container>h1 {
+    font-size: min(4rem, 8vw);
+    font-family: "SF Pro Display-Bold";
+    color: #2d2d2d;
+}
+
+.btns>h2 {
+    font-size: 30px;
+    font-weight: 600;
+    width: 200px;
+    height: 70px;
+    border-radius: 20px;
+    margin: 20px 45%;
+    background-color: var(--primary-clr);
+    color: white;
+    padding-top: 14px;
+}
+
+
+
+.infos {
+    margin: 10px 65px;
+    padding: 20px;
+    border: 3px solid var(--secondary-clr);
+    border-radius: 15px;
+    font-size: 20px;
+}
+
+@media (max-width:1000px) {
+    .btns > h2{
+        margin: 10px 36.5%;
+        font-size: 25px;
+        height: 60px;
+        padding: 10px;
+    }
+    .infos{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 500px) {
+    .btns > h2{
+        margin: 10px 30%;
+        font-size: 20px;
+        width: 150px;
+        height: 50px;
+        padding: 10px;
+    }
+
+    .infos{
+        font-size: 12px;
+    }
+}

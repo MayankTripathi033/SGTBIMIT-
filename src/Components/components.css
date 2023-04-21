@@ -120,9 +120,15 @@ header {
 
 .header-news {
   width: 100%;
-  color: black;
-}
 
+}
+.header-news a{
+  color: blue;
+  text-transform: uppercase;
+}
+.header-news a:hover{
+  color: red;
+}
 
 
 @media(max-width: 1000px) {
@@ -252,7 +258,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: var(--primary-clr);
+  background: linear-gradient(105.7deg, #616871 0%, #0B1E2C 100%);
   color: white;
   padding: min(1.5rem, 1.5vw);
   gap: min(2rem, 4vw);
@@ -270,6 +276,7 @@ nav a {
   display: flex;
   gap: min(.7rem, 1vw);
   align-items: center;
+  padding-block: min(1rem, 1vw);
 }
 
 nav>* {

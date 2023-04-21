@@ -1,16 +1,17 @@
 import React from 'react'
 import './testAl.css'
 import { Header, Navbar, Footer } from '../../Components'
+import { Helmet } from 'react-helmet'
 
 
 export default function TestimonialsAL() {
     return (
         <>
-            <Header></Header>
-            <Navbar></Navbar>
-
+        <Helmet title='SGTBIMIT | Alumini Testimonials' />
+            <Header />
+            <Navbar />
             <section className='test-al-section'>
-
+                <h1>Testimonials</h1>
                 <div className="t-grid">
                     {[...Array(12)].map((x, i) => {
                         return (
@@ -24,10 +25,8 @@ export default function TestimonialsAL() {
                         )
                     })}
                 </div>
-
             </section>
-
-            <Footer></Footer>
+            <Footer />
         </>
     )
 }

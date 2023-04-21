@@ -1,43 +1,47 @@
 import React from 'react'
-import { calInfo } from './Calinfo'
 import './academiccal.css'
-import Navbar from '../../Components/Navbar.jsx'
-import Header from '../../Components/Header.jsx'
-import Footer from '../../Components/Footer.jsx'
+import { Header, Navbar, Footer, Loader } from '../../Components'
+import useFetch from '../../useFetch'
+import { Helmet } from 'react-helmet'
 
 export default function AcademicCal() {
-    return (<>
-        <Header />
-        <Navbar />
-        <section className='acad-cal'>
-            <h1>ACADEMIC CALENDAR</h1>
-            <div className="cal-container">
-                <div className="cal-grid heading">
-                    <div className="cal-date">
-                        PROPOSED DATE
-                    </div>
-                    <div className="cal-event">
-                        EVENT
-                    </div>
-                </div>
-                {calInfo.map((cal) => {
-                    return (<div className="cal-grid">
-                        <div className="cal-date">
-                            {cal.date}
+    const { data: calendar, isPending } = useFetch("http://localhost:5000/Calendar/CalendarDisplay")
+    console.log(calendar && calendar)
 
+    return (
+        <>
+            <Helmet title="SGTBIMIT | Acamdeic Calendar" />
+            <Header />
+            <Navbar />
+
+            <section className='acad-cal'>
+                <h1>Academic Calendar</h1>
+                {isPending && <Loader />}
+                <div className="cal-container">
+                    <div className="cal-grid heading">
+                        <div className="cal-date">
+                            Proposed Date
                         </div>
                         <div className="cal-event">
-                            {cal.event}
+                            Event
                         </div>
-                    </div>)
-                })}
-            </div>
+                    </div>
+                    {calendar && calendar.map((cal) => {
+                        return (
+                            <div className="cal-grid">
+                                <div className="cal-date">
+                                    {cal.Date}
 
-
-
-
-        </section>
-        <Footer />
-    </>
+                                </div>
+                                <div className="cal-event">
+                                    {cal.Event}
+                                </div>
+                            </div>
+                        )
+                    })}
+                </div>
+            </section>
+            <Footer />
+        </>
     )
 }

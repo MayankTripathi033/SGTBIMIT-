@@ -11,6 +11,7 @@ const FacultyAdd = () => {
         name: "",
         post: "",
         detail: "",
+        Department : "",
       });
       const [filedata, setFileData] = useState();
     
@@ -33,6 +34,7 @@ const FacultyAdd = () => {
           formData.append("name", facultyUpdate.name);
           formData.append("post", facultyUpdate.post);
           formData.append("detail", facultyUpdate.detail);
+          formData.append("Department", facultyUpdate.Department);
           const data1 = (
             await axios.post(
               "http://localhost:5000/Faculty/Faculty_Add",
@@ -74,6 +76,13 @@ const FacultyAdd = () => {
                     name="post"
                     id=""
                     placeholder="Post"
+                    onChange={Onchagetesdetail}
+                  />
+                   <input
+                    type="text"
+                    name="Department"
+                    id=""
+                    placeholder="Department"
                     onChange={Onchagetesdetail}
                   />
                   <div className="Message_image">

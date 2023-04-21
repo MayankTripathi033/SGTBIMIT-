@@ -1,0 +1,108 @@
+.notices-section {
+    position: relative;
+    padding: min(2rem, 2vw);
+    display: flex;
+    flex-direction: column;
+    background: url("../../images/bg-frame.png");
+    background-size: 100%;
+}
+
+.notices-section>h1 {
+    font-size: min(4rem, 8vw);
+    text-align: center;
+    font-family: "SF Pro Display-Bold";
+    color: #2d2d2d;
+}
+
+.notices-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    gap: min(2rem, 2vw);
+}
+
+.notice-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: min(1.5rem, 1.5vw);
+    display: flex;
+    flex-direction: column;
+}
+
+/* .notice-card:nth-child(2n-2) {
+    border: 2px solid #21548c;
+} */        
+
+.notice-card:nth-child(2n-1) {
+    border: 2px solid #d74746;
+}
+
+.notice-card:nth-child(2n) {
+    border: 2px solid rgb(31, 179, 238);
+}
+
+/* .notice-card:nth-child(2n-2) h1 {
+    color: #21548c;
+} */
+
+/* .notice-card:nth-child(2n-1) h1 {
+    color: #d74746;
+}
+
+.notice-card:nth-child(2n) h1 {
+    color: #dba63c;
+} */
+/* .notice-card:nth-child(2n-2) .notice-file a {
+    color: rgba(33, 84, 140);
+    background-color: rgba(33, 84, 140, 0.2);
+} */
+
+.notice-card:nth-child(2n-1) .notice-file a {
+    color: rgba(215, 71, 70);
+    background-color: rgba(215, 71, 70, 0.2);
+}
+
+.notice-card:nth-child(2n) .notice-file a {
+    color: rgba(31, 179, 238);
+    background-color: rgba(31, 179, 238, 0.2);
+}
+
+.notice-card h1 {
+    text-transform: uppercase;
+    margin-top: 0;
+    font-family: "SF Pro Display-Bold";
+    font-size: min(2.5rem, 5vw);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    padding-block: min(1rem, 1vw);
+    color: #2d2d2d;
+}
+
+.notice-card p {
+    font-size: min(1.5rem, 3vw);
+    color: rgba(0, 0, 0, 0.75);
+    font-family: "SF Pro Display-Medium";
+}
+
+.notice-file {
+    margin-top: auto;
+    padding-top: min(3rem, 3vw);
+    cursor: pointer;
+}
+
+.notice-file a {
+    border-radius: 10px;
+    font-size: min(2rem, 4vw);
+    font-family: "SF Pro Display-Bold";
+    padding: min(.5rem, .5vw) min(2rem, 2vw);
+
+}
+
+.embed-pdf {
+    height: 100vh;
+}
+
+@media(max-width: 1300px) {
+    .notices-grid{
+        grid-template-columns: 1fr;
+    }
+}

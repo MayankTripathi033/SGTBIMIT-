@@ -1,5 +1,5 @@
 .acad-cal{
-    background: url("../../images/bg-2.png");
+    background: url("../../images/bg-frame.png");
     background-size:contain;
     margin-bottom: min(2rem,2vw);
 }
@@ -33,9 +33,10 @@
     text-decoration: underline;
 }
 .acad-cal h1{
-    font-size: min(3rem,6vw);
+    font-size: min(4rem,8vw);
     text-align: center;
-    color:var(--secondary-clr) ;
+    font-family: "SF Pro Display-Bold";
+    color: #2d2d2d;
 }
 @media(max-width: 1000px){
     .acad-cal{

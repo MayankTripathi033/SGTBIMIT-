@@ -1,12 +1,13 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { NavLink } from 'react-router-dom'
 import useFetch from '../useFetch'
 export default function Navbar() {
+
   const arrow = require("../images/down.png")
   const { data: societies } = useFetch("http://localhost:5000/Society/Society_Display")
 
+  const myRef = useRef(null)
   useEffect(() => {
-    console.log(document.body.offsetWidth)
     document.querySelector(".menu").addEventListener("click", e => {
       document.querySelector("nav").style.transform = "translateX(0%)"
       document.querySelector("nav").style.visibility = "visible"
@@ -39,6 +40,7 @@ export default function Navbar() {
   }, [])
 
   const handleFloatClick = (e) => {
+    console.log(myRef)
     document.querySelector(".admission-dialog").classList.add("show")
     document.querySelector(".admission-bg").classList.add("show-bg")
   }
@@ -51,7 +53,7 @@ export default function Navbar() {
         ADMISSION
       </div>
       <nav>
-        <div className='nav-close mobile'><img src={require("../images/cancel.png")} alt="cant load" className='nav-close-btn'/></div>
+        <div className='nav-close mobile'><img src={require("../images/cancel.png")} alt="cant load" className='nav-close-btn' /></div>
         <div className="header-btns mobile-header-btns mobile">
           <button className="admission-btn" type="button" onClick={() => {
             document.querySelector(".admission-dialog").classList.add("show")
@@ -59,7 +61,7 @@ export default function Navbar() {
           <button className="student-login-btn" type="button">STUDENT - ERP LOGIN</button>
         </div>
         <div className="nav-item" data-index="0">
-          <NavLink to="/" className='nav-item'>HOME</NavLink>
+          <div><NavLink to="/" className='nav-item'>HOME</NavLink></div>
         </div>
         <div className="nav-item" data-index="1">
           <div> ABOUT US<img src={arrow} alt="" /></div>
@@ -184,16 +186,16 @@ export default function Navbar() {
         <div className="nav-item" data-index="7">
           <div>INDUSTRY INTERFACE<img src={arrow} alt="" /></div>
           <div className="dropdown" data-index="7">
-            <NavLink to="/industry-interface/industrial-visit" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/industry/industrial-visit" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">INDUSTRIAL VISIT</div>
             </NavLink>
-            <NavLink to="/industry-interface/placements" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/industry/placements" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">PLACEMENTS</div>
             </NavLink>
-            <NavLink to="/industry-interface/summer-internship" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/industry/summer-internship" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">SUMMER INTERNSHIP</div>
             </NavLink>
-            <NavLink to="/industry-interface/corporate-speak" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
+            <NavLink to="/industry/corporate-speak" className={({ isActive }) => isActive ? 'dropdown-active-item' : 'non-active'}>
               <div className="dropdown-item">CORPORATE SPEAK</div>
             </NavLink>
           </div>

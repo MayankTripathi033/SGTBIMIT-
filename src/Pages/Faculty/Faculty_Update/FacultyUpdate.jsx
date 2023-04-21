@@ -12,6 +12,7 @@ const FacultyUpdate = () => {
     name: "",
     post: "",
     detail: "",
+    Department: "",
   });
   const { _id } = useParams();
 
@@ -39,6 +40,7 @@ const FacultyUpdate = () => {
           name: data?.name,
           post: data?.post,
           detail: data?.detail,
+          Department: data?.Department,
         });
       } catch (error) {
         console.log(error);
@@ -51,7 +53,7 @@ const FacultyUpdate = () => {
     if (filedata) {
       const compressedFile = await imageCompression(filedata, options);
       return compressedFile
-    }else{
+    } else {
       return filedata
     }
   };
@@ -62,10 +64,11 @@ const FacultyUpdate = () => {
     try {
       let formData = new FormData();
       let Imagefile = await compresFile()
-      formData.append("image", Imagefile,filedata.name);
+      formData.append("image", Imagefile, filedata.name);
       formData.append("name", facultyUpdate.name);
       formData.append("post", facultyUpdate.post);
       formData.append("detail", facultyUpdate.detail);
+      formData.append("Department", facultyUpdate.Department);
       const data1 = (
         await axios.post(
           `http://localhost:5000/Faculty/Faculty_Update/${_id}`,
@@ -82,7 +85,7 @@ const FacultyUpdate = () => {
       console.log(error);
     }
   };
-
+  console.log(facultyUpdate);
   return (
     <>
       <div className="societyAddConatiner">
@@ -101,7 +104,7 @@ const FacultyUpdate = () => {
                 name="name"
                 id=""
                 placeholder="Name"
-                value={facultyUpdate.name}
+                value={facultyUpdate?.name}
                 onChange={Onchagetesdetail}
               />
               <input
@@ -109,7 +112,15 @@ const FacultyUpdate = () => {
                 name="post"
                 id=""
                 placeholder="Post"
-                value={facultyUpdate.post}
+                value={facultyUpdate?.post}
+                onChange={Onchagetesdetail}
+              />
+              <input
+                type="text"
+                name="Department"
+                id=""
+                placeholder="Department"
+                value={facultyUpdate?.Department}
                 onChange={Onchagetesdetail}
               />
               <textarea
@@ -118,7 +129,7 @@ const FacultyUpdate = () => {
                 cols="15"
                 rows="5"
                 placeholder="Detail"
-                value={facultyUpdate.detail}
+                value={facultyUpdate?.detail}
                 onChange={Onchagetesdetail}
               ></textarea>
               <div className="Message_image">

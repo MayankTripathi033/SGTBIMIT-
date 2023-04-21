@@ -1,17 +1,21 @@
+.courses-section{
+    background-image: url("../../images/bg-frame.png");
+    width: 100%;
+}
+
 .courses>h1{
-    font-size: min(3rem,6vw);
-    font-weight: 800;
+    font-size: min(4rem,8vw);
+    font-family: "SF Pro Display-Bold";
     text-align: center;
-    color: var(--secondary-clr);
+    color: #2d2d2d;
 }
 .courses>p{
     font-size: min(1.5rem,4vw);
     text-align: justify;
-    margin: 4rem;
 }
 .diploma h1{
     font-size: min(2rem,4vw);
-    color: var(--secondary-clr);
+    font-family: "SF Pro Display-Bold";
 }
 
 .list-wrapper{
@@ -20,11 +24,11 @@
     position: relative;
 }
 .list-wrapper h1{
-    font-size: min(1.3rem, 4vw);
+    font-size: min(1.37rem, 3vw);
     color: black;
 }
 .list-wrapper p{
-    font-size: min(1.3rem,2.6vw);
+    font-size: min(1.37rem,3vw);
     text-align: justify;
     min-width: 90%;
     margin-inline: auto;
@@ -47,6 +51,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: min(1500px, 100%);
+    padding: 1rem;
+    margin-inline: auto;
 }
 .content,
 .content-1,

@@ -1,16 +1,16 @@
 .syllabus {
-    background: url("../../images/bg-2.png");
+    background: url("../../images/bg-frame.png");
     background-size:100%;
     margin-bottom: min(2rem,2vw);
 }
 
 .syllabus h1 {
-    font-size: min(3rem, 8vw);
-    background-color: var(--secondary-clr);
+    font-size: min(4rem, 8vw);
     width: 90%;
     text-align: center;
-    color: white;
     margin: 40px 5%;
+    font-family: "SF Pro Display-Bold";
+    color: #2d2d2d;
 }
 
 .imptop {

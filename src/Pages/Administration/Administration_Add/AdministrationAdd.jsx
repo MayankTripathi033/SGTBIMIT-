@@ -27,6 +27,9 @@ const AdministrationAdd = () => {
 
   const AdminiAdd = async () => {
     try {
+      axios.defaults.headers = {
+        authorization: localStorage.getItem("token"),
+      };
       let formData = new FormData();
       const compressedFile = await imageCompression(filedata, options);
       console.log(compressedFile);

@@ -1,6 +1,6 @@
 .gallery-section {
     padding-block: 2rem;
-    background: url("../../images/bg-2.png");
+    background: url("../../images/bg-frame.png");
     background-size: 100%;
 }
 
@@ -66,6 +66,9 @@
     position: relative;
     width: min(1200px, 90%);
     margin-inline: auto;
+    display: grid;
+    grid-template-columns: 70%;
+    place-content: center;
 }
 
 .carousel-close-btn {
@@ -79,7 +82,7 @@
 }
 
 .gallery-carousel-item {
-    padding: 5rem;
+    padding: min(5rem, 5vw);
     background: white;
     border-radius: 5px;
 }

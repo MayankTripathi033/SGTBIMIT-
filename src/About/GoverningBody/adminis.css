@@ -5,18 +5,19 @@
     align-items: center;
     width: 100%;
     position: relative;
-    background: url("../../images/bg-2.png");
+    background: url("../../images/bg-frame.png");
     background-size: 100%;
-    
+
 }
 
 .adminis-carousel {
     margin-inline: auto;
-    width: min(1000px, 100%) !important;
-    padding: min(2rem,2vw);
+    width: min(1500px, 100%) !important;
+    padding: min(2rem, 2vw);
     overflow: visible !important;
 }
-.carousel-root{
+
+.carousel-root {
     overflow: visible !important;
 }
 
@@ -31,9 +32,11 @@
 
 .adminis img {
     margin-inline: auto;
-    width: 200px !important;
-    aspect-ratio: 1;
-    border-radius: 50%;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 400px !important;
+    position: relative;
 }
 
 .adminis-heading,
@@ -47,15 +50,16 @@
 .long-note {
     text-align: justify;
     line-height: clamp(1.5rem, 2vw, 2rem);
-    color: rgba(0,0,0,0.9);
-    background-color: rgba(255,255,255,0.8);
-    border-radius: 2rem;
+    color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 2rem;
 }
-.position{
+
+.position {
     color: var(--primary-clr) !important;
 }
-@media(max-width: 1000px){
+
+@media(max-width: 1000px) {
     .adminis-section {
         background-image: none;
     }

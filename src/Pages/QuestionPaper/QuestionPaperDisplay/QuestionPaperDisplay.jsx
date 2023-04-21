@@ -190,11 +190,11 @@ const QuestionPaperDisplay = () => {
               <button onClick={ResetPaperData} className="button-30">Clear</button>
             </div>
             {dataReset ? (
-              <div className="TesDisplayCardContainer">
+              <div className="PaperDisplayCardContainer">
                 {console.log(dataReset)}
                 {getSociety.map((value) => {
                   return (
-                    <div className="Society_Card">
+                    <div className="Society_Card Paper_Card">
                       <h3>
                         {value.course}
                         <span>
@@ -205,7 +205,7 @@ const QuestionPaperDisplay = () => {
                               color: "#adb5bd",
                             }}
                             onClick={() => {
-                              navigator(`/admin/Society_Update/${value._id}`);
+                              navigator(`/admin/Prev_Year_Paper_Update/${value?.course}/${value?.Year}/${value?.Semester}/${value?._id}`);
                             }}
                           />
                           <RiDeleteBin6Line
@@ -217,7 +217,7 @@ const QuestionPaperDisplay = () => {
                           />
                         </span>
                       </h3>
-                      <div className="Society_Card_ImageDescription">
+                      <div className="Society_Card_ImageDescription ">
                         <FileData
                           course={value?.course}
                           Year={value?.Year}

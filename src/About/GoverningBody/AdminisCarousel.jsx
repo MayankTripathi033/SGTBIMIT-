@@ -3,6 +3,7 @@ import useFetch from "../../useFetch";
 import { Carousel } from "react-responsive-carousel";
 import "./adminis.css";
 import { Header, Navbar, Footer, Loader } from '../../Components'
+import { Helmet } from "react-helmet";
 export default function AdminisCarousel() {
 
   const { data: adminisArray, isPending, error } = useFetch("http://localhost:5000/Administration/Administration_Display")
@@ -16,13 +17,14 @@ export default function AdminisCarousel() {
     const numAscending = adminisArray ? [...adminisArray].sort((a, b) => a.Index - b.Index) : adminisArray
   return (
     <>
+    <Helmet title="SGTBIMIT | Governing Body" />
       <Header></Header>
       <Navbar></Navbar>
       <section className="adminis-section">
         {isPending && <Loader />}
         {error && <div className="error">{error}</div> }
         <Carousel
-
+          showThumbs={false}
           interval={4000}
           className="adminis-carousel"
           autoPlay={true}
@@ -31,10 +33,10 @@ export default function AdminisCarousel() {
           {
             numAscending?.map((adminis) => (
               <div className="adminis" key={adminis?.Index}>
+
                 <img
                   src={`http://localhost:5000/Administration/AdministrationImageDisplay/${adminis._id}`}
                   alt="cant load"
-                  className="adminis-img"
                 />
                 <h2 className="adminis-heading">
                   {adminis?.name}

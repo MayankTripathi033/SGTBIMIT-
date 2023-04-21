@@ -5,6 +5,13 @@
   margin-bottom: 50px;
 }
 
+.PaperDisplayCardContainer{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
 .filterContainer h4 {
   font-family: 'Edu NSW ACT Foundation', cursive;
   font-size: 18px;
@@ -35,7 +42,14 @@
   font-family: "Edu NSW ACT Foundation", cursive;
   border: none;
 }
-
+.Paper_Card{
+  width: 600px;
+  height: auto;
+  
+}
+.Paper_detail{
+  overflow: hidden;
+}
 .button-30 {
   align-items: center;
   appearance: none;

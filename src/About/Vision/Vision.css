@@ -1,0 +1,119 @@
+.Vision_Container {
+    text-align: center;
+    padding: 10px 0px;
+    background: url("../../images/bg-frame.png");
+    background-size: 100%;
+}
+
+.Vision_Container h1 {
+    font-size: min(4rem, 8vw);
+    font-family: "SF Pro Display-Bold";
+    color: #2d2d2d;
+}
+
+.Detail_ImageContainer {
+    display: flex;
+    flex-direction: row;
+    width: 1150px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.VisionDetail {
+    padding: 50px;
+}
+
+.VisionDetail h3 {  
+    font-size: 30px;
+    font-family: "SF Pro Display-Bold";
+}
+
+.VisionDetail p, ul {
+    text-align: justify;
+    font-size: min(1.37rem, 3vw);
+    line-height: 27px;
+}
+
+.VisionDetail ul {
+    padding: 0px;
+}
+
+.VisionImage {
+    height: 750px;
+    width: 550px;
+}
+
+.VisionImage img {
+    height: 450px;
+    width: 600px;
+    margin-top: 10rem; 
+    margin-inline: 2rem;
+    border-radius: 3rem;
+}
+
+
+@media (max-width: 1300px) {
+    .Detail_ImageContainer {
+        width: 900px;
+    }
+
+
+    .VisionImage {
+        height: 850px;
+        width: 450px;
+    }
+
+    .VisionImage img {
+        height: 850px;
+        width: 450px;
+    }
+
+}
+
+@media (max-width:1000px) {
+    .Detail_ImageContainer {
+        flex-wrap: wrap-reverse;
+        width: 500px;
+    }
+
+    .VisionImage {
+        height: 450px;
+        width: 450px;
+    }
+
+    .VisionImage img {
+        height: 450px;
+        width: 450px;
+    }
+    .Vision_Container{
+        background-image: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .Detail_ImageContainer {
+        width: 300px;
+    }
+
+    .VisionDetail {
+        padding: 0px;
+    }
+
+    .VisionDetail p,
+    ul li {
+        font-size: 15px;
+        padding: 0px;
+    }
+
+
+    .VisionImage {
+        height: 350px;
+        width: 320px;
+    }
+
+    .VisionImage img {
+        height: 350px;
+        width: 320px;
+    }
+}

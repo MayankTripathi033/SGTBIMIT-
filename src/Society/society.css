@@ -3,13 +3,13 @@
     text-align: center;
     margin-inline: auto;
     padding-top: min(2rem, 2vh);
-    background: url("../images/bg-2.png");
+    background: url("../images/bg-frame.png");
     background-size: 100%;
 }
 
 .society h1 {
-    font-size: min(3rem, 6vw);
-    color: var(--secondary-clr);
+    font-size: min(4rem, 8vw);
+    font-family: "SF Pro Display-Bold";
 }
 
 .society-sub-heading {
@@ -19,7 +19,7 @@
 }
 
 .society-p {
-    font-size: min(1.7rem, 3.5vw);
+    font-size: min(1.37rem, 3vw);
     color: rgba(0, 0, 0, 0.8);
     width: min(1000px, 90%);
     text-align: justify;

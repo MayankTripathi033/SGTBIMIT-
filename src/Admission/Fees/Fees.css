@@ -1,0 +1,117 @@
+.Fees {
+    background-image: url("../../images/bg-frame.png");
+    background-size: 100%;
+}
+
+.Fees > h1{
+    font-size: min(4rem, 8vw);
+    text-align: center;
+    font-family: "SF Pro Display-Bold";
+    color: #2d2d2d;
+
+}
+
+.structure
+{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    place-items: center;
+    width: min(1200px, 100%);
+    height: auto;
+    margin-inline: auto;
+    gap: min(2rem, 4vw);
+    margin-bottom: 2rem;
+}
+
+.box 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 1.6rem;
+    max-width: 90%;
+    height: 540px;
+}
+
+.icon
+{
+    width: 100%;
+    margin-inline: auto;
+    background-color: var(--primary-clr);
+    /* border: 1px solid black; */
+    border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.icon> h1{
+    /* border: 1px solid; */
+    font-size: min(3.4rem, 6.8vw);
+    text-align: center;
+    color: white;
+}
+
+.info{
+    /* border: 1px solid; */
+    margin: min(1.5rem, 2vw);
+}
+
+.info> h3{
+    text-align: center;
+    font-size: 30px;
+    margin: 10px;
+}
+
+.info > p{
+    font-size: min(1.5rem, 3vw);
+    line-height: 30px;
+    text-align: justify;
+}
+
+.less > button{
+    margin-block: 0;
+    bottom: 10px;
+}
+
+.more
+{
+    border: none;
+    border-radius: 20px;
+    font-size: min(2rem, 3vw);
+    margin-inline: auto;
+    padding: 1rem 3rem;
+    margin-block: 1rem;
+    background-color: var(--secondary-clr);
+    color: white;
+    position: relative;
+}
+
+/* @media (max-width: 1300px) { 
+    .structure{
+        grid-template-columns: 2;
+        margin: 40px 10px 0 150px;
+    }
+ }
+
+ @media (max-width: 1000px) { 
+    .structure{
+        grid-template-columns: 1fr 1fr;
+        margin: 40px 0 0 40px;
+    }
+ }
+
+ @media (max-width: 500px) { 
+    .structure{
+        grid-template-columns: 1fr;
+        margin: 40px 0 0 12px;
+    }
+ } */
+
+ @media(max-width: 800px){
+    .structure{
+        grid-template-columns: 1fr;
+    }
+    .box{
+        height: 450px;
+        width: 90%;
+    }
+ }
