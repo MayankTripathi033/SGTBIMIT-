@@ -183,7 +183,7 @@ const QuestionPaperDisplay = () => {
               <button onClick={SinglePaperDisplay} className="button-30-f">Search</button>
               <button onClick={ResetPaperData} className="button-30-f">Clear</button>
             </div>
-            {dataReset ? (
+            {/* {dataReset ? (
               <div className="PaperDisplayCardContainer">
                 {console.log(dataReset)}
                 {getSociety.map((value) => {
@@ -218,7 +218,7 @@ const QuestionPaperDisplay = () => {
                   );
                 })}
               </div>
-            ) : (
+            ) : ( */}
               <div className="TesDisplayCardContainer">
                 {/* {console.log(getPaperFilterData)} */}
                 <div className="Society_Card">
@@ -244,7 +244,7 @@ const QuestionPaperDisplay = () => {
                   </div>
                 </div>
               </div>
-            )}
+            {/* )} */}
           </div>
         </div>
       </div>
