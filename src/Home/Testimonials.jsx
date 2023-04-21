@@ -5,7 +5,7 @@ import { Carousel } from 'react-responsive-carousel'
 import Loader from '../Components/Loader'
 import { motion } from 'framer-motion'
 export default function Testimonials() {
-    const { data: testimonials, isPending } = useFetch("http://localhost:5000/Testimonial/Testimonial_Display")
+    const { data: testimonials, isPending } = useFetch(`${process.env.REACT_APP_API_URL}/Testimonial/Testimonial_Display`)
     return (
 
         <section className="test-section">
